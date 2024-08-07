@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.modal-content > span{
+  text-align: center;
+  height: 30px;
+  padding: 3px;
+  line-height: .8;
+}
+
+.panel button::after{
+  position: absolute;
+  top: 100%;
+  color: white;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  background-color: #1e1e1e;
+  padding: 5px;
+  border: 1px solid white;
+  font-size: smaller;
+  width: 150px;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.panel > .add::after{
+  content: "Add Test Scenario";
+  right: -30px;
+}
+
+.panel .save::after{
+  content: "Save Changes";
+  right: -50px;
+}
+
+.panel .delete::after{
+  content: "Delete Test Scenario";
+  right: -0;
+}
+
+.panel button:hover::after{
+  opacity: 1;
+  visibility: visible;
+}
+
+.grow-wrap {
+  display: grid;
+}
+.grow-wrap::after {
+  content: attr(data-replicated-value) " ";
+  white-space: pre-wrap;
+  visibility: hidden;
+}
+.grow-wrap > textarea {
+  resize: none;
+  overflow: hidden;
+}
+.grow-wrap > textarea,
+.grow-wrap::after {
+  border: 1px solid black;
+  padding: 0.5rem;
+  font: inherit;
+  grid-area: 1 / 1 / 2 / 2;
+}
