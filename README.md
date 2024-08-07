@@ -1,7 +1,7 @@
 <h1>Dynamic Test Case Management Website</h1>
 
 <h2>Overview</h2>
-<p>This project is a personal web application for managing and visualizing test cases and user journeys. It allows you to create, organize, and edit test scenarios through a dynamic flowchart interface.</p>
+<p>This project is a personal web application for managing and visualizing test cases and user journeys. It allows you to create, organize, and edit test scenarios through a dynamic flowchart interface. Currently under development</p>
 
 <h2>Features</h2>
 <ul>
