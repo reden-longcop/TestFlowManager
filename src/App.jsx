@@ -33,11 +33,13 @@ import "react-toastify/dist/ReactToastify.css";
 import "@xyflow/react/dist/style.css";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFile, faFloppyDisk, faPlus, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFloppyDisk, faPlus, faTrashAlt, faCircle, faPlusCircle, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
 import { initialNodes, nodeTypes } from "./nodes";
 import { initialEdges, edgeTypes } from "./edges";
 import Modal from "./nodes/Modal";
+
+import { v4 as uuidv4 } from 'uuid';
 
 const flowKey = 'example-flow';
 
@@ -88,9 +90,9 @@ export default function App() {
   const addNode = () => {
     const lastNode = nodes[nodes.length - 1];
     const lastNodePosition = lastNode ? lastNode.position : { x: 0, y: 0 };
-
+  
     const newNode = {
-      id: `node_${nodes.length + 1}`,
+      id: uuidv4(),
       position: {
         x: lastNodePosition.x + 100,
         y: lastNodePosition.y + 100,
@@ -99,23 +101,50 @@ export default function App() {
       sourcePosition: 'right',
       targetPosition: 'left',
     };
-
+  
     setNodes((nds) => [...nds, newNode]);
+  };
+
+  const addConnectorNode = () => {
+    const lastNode = nodes[nodes.length - 1];
+    const lastNodePosition = lastNode ? lastNode.position : { x: 0, y: 0 };
+  
+    const newConnectorNode = {
+      id: uuidv4(),
+      position: {
+        x: lastNodePosition.x + 100,
+        y: lastNodePosition.y + 100,
+      },
+      type: 'connectorNode',
+      data: { label: `${nodes.length + 1}` },
+      sourcePosition: 'right',
+      targetPosition: 'left',
+      style: { 
+        borderRadius: '50%', 
+        width: '50px', 
+        height: '50px',
+        display: 'flex',         
+        justifyContent: 'center', 
+        alignItems: 'center',     
+        backgroundColor: '#059669',  
+        textAlign: 'center',    
+      },
+    };
+  
+    setNodes((nds) => [...nds, newConnectorNode]);
   };
 
   const handleNodeClick = (event, node) => {
     if (clickTimeoutRef.current) {
       clearTimeout(clickTimeoutRef.current);
       clickTimeoutRef.current = null;
-      // If timeout is cleared, it's a double-click
       setSelectedNode(node);
       setModalOpen(true);
     } else {
       clickTimeoutRef.current = setTimeout(() => {
         setSelectedNode(node);
         clickTimeoutRef.current = null;
-        // Single click logic here (e.g., highlighting node)
-      }, 200); // Adjust delay as needed
+      }, 200);
     }
   };
 
@@ -186,7 +215,10 @@ export default function App() {
             <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
           </button>
           <button className="add p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12" onClick={addNode}>
-            <FontAwesomeIcon icon={faPlus} size="lg" color="white" />
+            <FontAwesomeIcon icon={faPlusSquare} size="lg" color="white" />
+          </button>
+          <button className="connector p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12" onClick={addConnectorNode}>
+            <FontAwesomeIcon icon={faPlusCircle} size="lg" color="white" />
           </button>
           <button className="save p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12" onClick={onSave}>
             <FontAwesomeIcon icon={faFloppyDisk} size="lg" color="white" />
