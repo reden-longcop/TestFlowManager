@@ -17,13 +17,6 @@ body,
   font-family: "Montserrat", sans-serif;
 }
 
-.modal-content > span{
-  text-align: center;
-  height: 30px;
-  padding: 3px;
-  line-height: .8;
-}
-
 .panel button::after{
   position: absolute;
   top: 100%;
@@ -48,6 +41,11 @@ body,
 
 .panel .save::after{
   content: "Save Changes";
+  right: -70px;
+}
+
+.panel .connector::after{
+  content: "Add Connector";
   right: -50px;
 }
 
@@ -59,24 +57,4 @@ body,
 .panel button:hover::after{
   opacity: 1;
   visibility: visible;
-}
-
-.grow-wrap {
-  display: grid;
-}
-.grow-wrap::after {
-  content: attr(data-replicated-value) " ";
-  white-space: pre-wrap;
-  visibility: hidden;
-}
-.grow-wrap > textarea {
-  resize: none;
-  overflow: hidden;
-}
-.grow-wrap > textarea,
-.grow-wrap::after {
-  border: 1px solid black;
-  padding: 0.5rem;
-  font: inherit;
-  grid-area: 1 / 1 / 2 / 2;
 }

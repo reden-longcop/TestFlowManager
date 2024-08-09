@@ -46,7 +46,6 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
       setLabel(storedLabel);
     }
 
-    // Update data-replicated-value attribute to ensure correct height calculation
     setTimeout(() => {
       const textareas = document.querySelectorAll(`.modal-content .grow-wrap textarea`);
       textareas.forEach(textarea => {
@@ -64,18 +63,17 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
 
     document.addEventListener('keydown', handleKeyDown);
 
-    // Cleanup event listener when component unmounts or dependencies change
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
-  useEffect(() => {
-    // Focus the most recently added textarea
-    if (textareasRef.current.length > 0) {
-      textareasRef.current[textareasRef.current.length - 1]?.focus();
-    }
-  }, [testCases]);
+  // useEffect(() => {
+  //   // Focus the most recently added textarea
+  //   if (textareasRef.current.length > 0) {
+  //     textareasRef.current[textareasRef.current.length - 1]?.focus();
+  //   }
+  // }, [testCases]);
 
   const handleTestCaseChange = (id, newContent) => {
     setTestCases(testCases.map(tc => 
@@ -87,9 +85,16 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
     const newTestCase = { id: Date.now(), content: "" };
     setTestCases(prevTestCases => {
       const updatedTestCases = [...prevTestCases, newTestCase];
+  
+      // Focus the newly added textarea after updating the state
+      setTimeout(() => {
+        textareasRef.current[textareasRef.current.length - 1]?.focus();
+      }, 0);
+  
       return updatedTestCases;
     });
   };
+  
 
   const deleteSelectedTestCases = () => {
     setTestCases(testCases.filter(tc => !selectedTestCases.includes(tc.id)));
@@ -132,7 +137,7 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
         />
         <hr className='mb-4 border-gray-600 border-1'/>
         {testCases.map((testCase, index) => (
-          <div className='flex items-center' key={testCase.id} data-replicated-value={testCase.content} style={{ marginBottom: '10px' }}>
+          <div className='flex items-center border-b-2 border-gray-600' key={testCase.id} data-replicated-value={testCase.content} style={{ marginBottom: '10px' }}>
             <input
               type="checkbox"
               checked={selectedTestCases.includes(testCase.id)}
@@ -140,18 +145,19 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
               className="mr-2"
             />
             <div className='grow-wrap w-full'>
-              <textarea
-                ref={el => textareasRef.current[index] = el} // Set the ref for each textarea
-                className='focus:border-2 bg-[#3e3e3e] text-white rounded-lg w-full resize-none'
-                value={testCase.content}
-                onChange={(e) => {
-                  handleTestCaseChange(testCase.id, e.target.value);
-                  e.target.parentNode.dataset.replicatedValue = e.target.value;
-                }}
-                rows="1"
-                placeholder={`Test case ${testCase.id}`}
-                style={{ overflow: 'hidden', fontSize: '13px', border: 'none'}}
-              />
+            <textarea
+              ref={el => textareasRef.current[index] = el}
+              className='bg-inherit text-white rounded w-full resize-none focus:outline-none'
+              value={testCase.content}
+              onChange={(e) => {
+                handleTestCaseChange(testCase.id, e.target.value);
+                e.target.parentNode.dataset.replicatedValue = e.target.value;
+              }}
+              rows="1"
+              placeholder={`Test case ${testCase.id}`}
+              style={{ overflow: 'hidden', fontSize: '13px'}}
+            />
+
             </div>
           </div>
         ))}
