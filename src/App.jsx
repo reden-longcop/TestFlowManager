@@ -16,7 +16,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "@xyflow/react/dist/style.css";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFloppyDisk, faPlus, faTrashAlt, faCircle, faPlusCircle, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import { faFloppyDisk, faPlus, faTrashAlt, faPlusCircle, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
 import { initialNodes, nodeTypes } from "./nodes";
 import { initialEdges, edgeTypes } from "./edges";
@@ -39,39 +39,47 @@ export default function App() {
   useEffect(() => {
     const restoreFlow = async () => {
       try {
-        // Attempt to retrieve data from local storage
-        const savedFlow = localStorage.getItem('flowData');
-        if (savedFlow) {
-          const flow = JSON.parse(savedFlow);
+        const response = await fetch('https://code-me-n0t.github.io/TestCaseManager/flow.json');
+        
+        if (response.ok) {
+          const flow = await response.json();
           const { x = 0, y = 0, zoom = 1 } = flow.viewport || {};
-          setNodes(flow.nodes || []);
+          
+          // Validate nodes
+          const validatedNodes = (flow.nodes || []).map(node => ({
+            ...node,
+            position: {
+              x: typeof node.position?.x === 'number' ? node.position.x : 0,
+              y: typeof node.position?.y === 'number' ? node.position.y : 0,
+            }
+          }));
+    
+          // Apply default styles if not present
           const edgesWithDefaultStyle = (flow.edges || []).map(edge => ({
             ...edge,
             style: edge.style || { stroke: 'white', strokeWidth: 2 },
           }));
+    
+          // Update state with validated and styled data
+          setNodes(validatedNodes);
           setEdges(edgesWithDefaultStyle);
           setViewport({ x, y, zoom });
+    
+          // Fit the view if React Flow instance is available
           if (rfInstance) {
             rfInstance.fitView();
           }
         } else {
-          // If local storage is empty, fetch from API
-          const response = await fetch('/api/flow');
-          const flow = await response.json();
-          const { x = 0, y = 0, zoom = 1 } = flow.viewport || {};
-          setNodes(flow.nodes || []);
-          const edgesWithDefaultStyle = (flow.edges || []).map(edge => ({
-            ...edge,
-            style: edge.style || { stroke: 'white', strokeWidth: 2 },
-          }));
-          setEdges(edgesWithDefaultStyle);
-          setViewport({ x, y, zoom });
-          if (rfInstance) {
-            rfInstance.fitView();
-          }
+          // Handle non-200 responses by using initial data
+          console.warn('Failed to fetch data, using initial data.');
+          setNodes(initialNodes);
+          setEdges(initialEdges);
         }
       } catch (error) {
         console.error('Failed to load flow data:', error);
+        // Fallback to initial data in case of errors
+        setNodes(initialNodes);
+        setEdges(initialEdges);
       }
     };
   
@@ -185,26 +193,39 @@ export default function App() {
     if (rfInstance) {
       const flow = rfInstance.toObject();
       
-      try {
-        localStorage.setItem('flowData', JSON.stringify(flow));
-        toast.success("Changes saved successfully!", {
-          position: 'top-left',
-          autoClose: 3000,
+      // Save to server
+      fetch('/api/flow', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(flow),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.message === 'Data saved successfully.') {
+            toast.success("Changes saved successfully!", {
+              position: 'top-left',
+              autoClose: 3000,
+            });
+          } else {
+            throw new Error('Server responded with an error.');
+          }
+        })
+        .catch((error) => {
+          console.error('Failed to save flow data:', error);
+          toast.error("Failed to save changes. Please try again.", {
+            position: 'top-left',
+            autoClose: 5000,
+          });
         });
-      } catch (error) {
-        console.error('Failed to save flow data:', error);
-        toast.error("Failed to save changes. Please try again.", {
-          position: 'top-left',
-          autoClose: 5000,
-        });
-      }
     } else {
       toast.error("Failed to save changes. React Flow instance is not initialized.", {
         position: 'top-left',
         autoClose: 5000,
       });
     }
-  }, [rfInstance]);
+  }, [rfInstance]);  
      
 
   return (
