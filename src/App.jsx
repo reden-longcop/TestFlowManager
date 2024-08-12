@@ -1,20 +1,3 @@
-/*
- * This file is part of Test Case Manager.
- *
- * Test Case Manager is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or (at your
- * option) any later version.
- *
- * Test Case Manager is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with Test Case Manager. If not, see <https://www.gnu.org/licenses/>.
-*/
-
 import { useCallback, useState, useEffect, useRef } from "react";
 import {
   Background,
@@ -44,8 +27,8 @@ import { v4 as uuidv4 } from 'uuid';
 const flowKey = 'example-flow';
 
 export default function App() {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [nodes, setNodes, onNodesChange] = useNodesState([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedNode, setSelectedNode] = useState(null);
   const [rfInstance, setRfInstance] = useState(null);
@@ -56,23 +39,42 @@ export default function App() {
   useEffect(() => {
     const restoreFlow = async () => {
       try {
-        const response = await fetch('/api/flow');
-        const flow = await response.json();
-        const { x = 0, y = 0, zoom = 1 } = flow.viewport || {};
-        setNodes(flow.nodes || []);
-        const edgesWithDefaultStyle = (flow.edges || []).map(edge => ({
-          ...edge,
-          style: edge.style || { stroke: 'white', strokeWidth: 2 },
-        }));
-        setEdges(edgesWithDefaultStyle);
-        setViewport({ x, y, zoom });
-        if (rfInstance) {
-          rfInstance.fitView();
+        // Attempt to retrieve data from local storage
+        const savedFlow = localStorage.getItem('flowData');
+        if (savedFlow) {
+          const flow = JSON.parse(savedFlow);
+          const { x = 0, y = 0, zoom = 1 } = flow.viewport || {};
+          setNodes(flow.nodes || []);
+          const edgesWithDefaultStyle = (flow.edges || []).map(edge => ({
+            ...edge,
+            style: edge.style || { stroke: 'white', strokeWidth: 2 },
+          }));
+          setEdges(edgesWithDefaultStyle);
+          setViewport({ x, y, zoom });
+          if (rfInstance) {
+            rfInstance.fitView();
+          }
+        } else {
+          // If local storage is empty, fetch from API
+          const response = await fetch('/api/flow');
+          const flow = await response.json();
+          const { x = 0, y = 0, zoom = 1 } = flow.viewport || {};
+          setNodes(flow.nodes || []);
+          const edgesWithDefaultStyle = (flow.edges || []).map(edge => ({
+            ...edge,
+            style: edge.style || { stroke: 'white', strokeWidth: 2 },
+          }));
+          setEdges(edgesWithDefaultStyle);
+          setViewport({ x, y, zoom });
+          if (rfInstance) {
+            rfInstance.fitView();
+          }
         }
       } catch (error) {
         console.error('Failed to load flow data:', error);
       }
     };
+  
     restoreFlow();
   }, [setNodes, setEdges, setViewport, rfInstance]);  
 
@@ -182,37 +184,28 @@ export default function App() {
   const onSave = useCallback(() => {
     if (rfInstance) {
       const flow = rfInstance.toObject();
-      fetch('/api/flow', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(flow),
-      })
-        .then((response) => {
-          if (response.ok) {
-            toast.success("Changes saved successfully!", {
-              position: 'top-left',
-              autoClose: 3000, // Show the toast for 3 seconds
-            });
-          } else {
-            throw new Error('Server responded with an error.');
-          }
-        })
-        .catch((error) => {
-          console.error('Failed to save flow data:', error);
-          toast.error("Failed to save changes. Please try again.", {
-            position: 'top-left',
-            autoClose: 5000, // Show the toast for 5 seconds
-          });
+      
+      try {
+        localStorage.setItem('flowData', JSON.stringify(flow));
+        toast.success("Changes saved successfully!", {
+          position: 'top-left',
+          autoClose: 3000,
         });
+      } catch (error) {
+        console.error('Failed to save flow data:', error);
+        toast.error("Failed to save changes. Please try again.", {
+          position: 'top-left',
+          autoClose: 5000,
+        });
+      }
     } else {
       toast.error("Failed to save changes. React Flow instance is not initialized.", {
         position: 'top-left',
-        autoClose: 5000, // Show the toast for 5 seconds
+        autoClose: 5000,
       });
     }
-  }, [rfInstance]);    
+  }, [rfInstance]);
+     
 
   return (
     <div style={{ height: '100vh', width: '100%' }}>
