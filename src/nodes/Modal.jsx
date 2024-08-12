@@ -1,21 +1,3 @@
-/*
- * This file is part of Test Case Manager.
- *
- * Test Case Manager is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or (at your
- * option) any later version.
- *
- * Test Case Manager is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with Test Case Manager. If not, see <https://www.gnu.org/licenses/>.
- */
-
-
 import React, { useState, useEffect, useRef } from 'react';
 import './Modal.css'; // Import your CSS for styling
 import { toast, ToastContainer } from "react-toastify";
@@ -68,13 +50,6 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
     };
   }, []);
 
-  // useEffect(() => {
-  //   // Focus the most recently added textarea
-  //   if (textareasRef.current.length > 0) {
-  //     textareasRef.current[textareasRef.current.length - 1]?.focus();
-  //   }
-  // }, [testCases]);
-
   const handleTestCaseChange = (id, newContent) => {
     setTestCases(testCases.map(tc => 
       tc.id === id ? { ...tc, content: newContent } : tc
@@ -95,20 +70,51 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
     });
   };
   
-
   const deleteSelectedTestCases = () => {
     setTestCases(testCases.filter(tc => !selectedTestCases.includes(tc.id)));
     setSelectedTestCases([]);
   };
 
-  const handleSave = () => {
-    onSave(testCases, label);
-    localStorage.setItem(`testCases-${nodeId}`, JSON.stringify(testCases));
-    localStorage.setItem(`label-${nodeId}`, label);
-    toast.success('Test case/s saved!', {
-      position: 'top-left'
-    });
-    onClose();
+  const handleSave = async () => {
+    try {
+      // Update the local storage
+      localStorage.setItem(`testCases-${nodeId}`, JSON.stringify(testCases));
+      localStorage.setItem(`label-${nodeId}`, label);
+
+      // Call the onSave callback if provided
+      if (onSave) {
+        onSave(testCases, label);
+      }
+
+      // Save to server or GitHub Pages
+      const response = await fetch('https://code-me-n0t.github.io/TestCaseManager', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          nodes: [], // Update with actual nodes data if needed
+          edges: [], // Update with actual edges data if needed
+          viewport: { x: 0, y: 0, zoom: 1 }, // Update with actual viewport data if needed
+          testCases: testCases, // Add test cases
+          label: label // Add label
+        }),
+      });
+
+      if (response.ok) {
+        toast.success('Test case/s saved!', {
+          position: 'top-left'
+        });
+        onClose();
+      } else {
+        throw new Error('Failed to save data.');
+      }
+    } catch (error) {
+      console.error('Failed to save data:', error);
+      toast.error('Failed to save data. Please try again.', {
+        position: 'top-left'
+      });
+    }
   };
 
   const handleCheckboxChange = (id) => {
@@ -145,19 +151,18 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
               className="mr-2"
             />
             <div className='grow-wrap w-full'>
-            <textarea
-              ref={el => textareasRef.current[index] = el}
-              className='bg-inherit text-white rounded w-full resize-none focus:outline-none'
-              value={testCase.content}
-              onChange={(e) => {
-                handleTestCaseChange(testCase.id, e.target.value);
-                e.target.parentNode.dataset.replicatedValue = e.target.value;
-              }}
-              rows="1"
-              placeholder={`Test case ${testCase.id}`}
-              style={{ overflow: 'hidden', fontSize: '13px'}}
-            />
-
+              <textarea
+                ref={el => textareasRef.current[index] = el}
+                className='bg-inherit text-white rounded w-full resize-none focus:outline-none'
+                value={testCase.content}
+                onChange={(e) => {
+                  handleTestCaseChange(testCase.id, e.target.value);
+                  e.target.parentNode.dataset.replicatedValue = e.target.value;
+                }}
+                rows="1"
+                placeholder={`Test case ${testCase.id}`}
+                style={{ overflow: 'hidden', fontSize: '13px'}}
+              />
             </div>
           </div>
         ))}

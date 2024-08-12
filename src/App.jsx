@@ -45,7 +45,6 @@ export default function App() {
           const flow = await response.json();
           const { x = 0, y = 0, zoom = 1 } = flow.viewport || {};
           
-          // Validate nodes
           const validatedNodes = (flow.nodes || []).map(node => ({
             ...node,
             position: {
@@ -193,8 +192,8 @@ export default function App() {
     if (rfInstance) {
       const flow = rfInstance.toObject();
       
-      // Save to server
-      fetch('/api/flow', {
+      
+      fetch('https://code-me-n0t.github.io/TestCaseManager/flow.json', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
