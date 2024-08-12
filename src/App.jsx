@@ -39,7 +39,7 @@ export default function App() {
   useEffect(() => {
     const restoreFlow = async () => {
       try {
-        const response = await fetch('public/flow.json');
+        const response = await fetch('https://code-me-n0t.github.io/TestCaseManager/flow.json');
         
         if (response.ok) {
           const flow = await response.json();
@@ -192,7 +192,6 @@ export default function App() {
     if (rfInstance) {
       const flow = rfInstance.toObject();
       
-      // Attempt to save to server
       fetch('/api/flow', {
         method: 'POST',
         headers: {
@@ -214,7 +213,6 @@ export default function App() {
         .catch((error) => {
           console.error('Failed to save flow data to server:', error);
           
-          // Save to localStorage as fallback
           try {
             localStorage.setItem('flowData', JSON.stringify(flow));
             toast.success("Changes saved locally!", {
