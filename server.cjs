@@ -1,34 +1,39 @@
 const express = require('express');
-const fs = require('fs').promises;
+const bodyParser = require('body-parser');
+const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = 3001; // Change this port number if needed
+const port = 3000; // You can change this port if needed
 
-app.use(express.json());
+app.use(bodyParser.json());
 
-const jsonFilePath = path.join(__dirname, 'data.json');
+// Path to your JSON file
+const jsonFilePath = path.join(__dirname, 'flow.json');
 
-// Load the flow data from the JSON file
-app.get('/api/flow', async (req, res) => {
-  try {
-    const data = await fs.readFile(jsonFilePath, 'utf-8');
-    res.json(JSON.parse(data));
-  } catch (err) {
-    res.status(500).send('Failed to read data.');
-  }
+// Handle GET request to /api/flow
+app.get('/api/flow', (req, res) => {
+  fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).json({ error: 'Failed to read flow data' });
+    } else {
+      res.json(JSON.parse(data));
+    }
+  });
 });
 
-// Save the flow data to the JSON file
-app.post('/api/flow', async (req, res) => {
-  try {
-    await fs.writeFile(jsonFilePath, JSON.stringify(req.body, null, 2));
-    res.sendStatus(200);
-  } catch (err) {
-    res.status(500).send('Failed to save data.');
-  }
+// Handle POST request to /api/flow
+app.post('/api/flow', (req, res) => {
+  const flowData = req.body;
+  fs.writeFile(jsonFilePath, JSON.stringify(flowData, null, 2), 'utf8', (err) => {
+    if (err) {
+      res.status(500).json({ error: 'Failed to save flow data' });
+    } else {
+      res.status(200).json({ message: 'Flow data saved successfully' });
+    }
+  });
 });
 
 app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });

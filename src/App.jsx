@@ -189,17 +189,28 @@ export default function App() {
         },
         body: JSON.stringify(flow),
       })
-        .then(() => {
-          toast.success("Changes saved successfully!", {
-            position: 'top-left'
-          });
+        .then((response) => {
+          if (response.ok) {
+            toast.success("Changes saved successfully!", {
+              position: 'top-left',
+              autoClose: 3000, // Show the toast for 3 seconds
+            });
+          } else {
+            throw new Error('Server responded with an error.');
+          }
         })
         .catch((error) => {
           console.error('Failed to save flow data:', error);
-          toast.error("Failed to save changes.", {
-            position: 'top-left'
+          toast.error("Failed to save changes. Please try again.", {
+            position: 'top-left',
+            autoClose: 5000, // Show the toast for 5 seconds
           });
         });
+    } else {
+      toast.error("Failed to save changes. React Flow instance is not initialized.", {
+        position: 'top-left',
+        autoClose: 5000, // Show the toast for 5 seconds
+      });
     }
   }, [rfInstance]);    
 
