@@ -1,0 +1,143 @@
+{
+  "nodes": [
+    {
+      "id": "a",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "type": "input",
+      "sourcePosition": "right",
+      "data": {
+        "label": "C: CLIENT (C)",
+        "testCases": []
+      },
+      "measured": {
+        "width": 150,
+        "height": 40
+      },
+      "selected": false
+    },
+    {
+      "id": "b",
+      "position": {
+        "x": 200,
+        "y": 0
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left",
+      "data": {
+        "label": "L: LOADING (CL)",
+        "testCases": []
+      },
+      "measured": {
+        "width": 150,
+        "height": 40
+      }
+    },
+    {
+      "id": "c",
+      "position": {
+        "x": 398.3158757790718,
+        "y": -17.402616949591632
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left",
+      "data": {
+        "label": "OGL: OG LAUNCHING URL (CLS-OGL)",
+        "testCases": []
+      },
+      "measured": {
+        "width": 150,
+        "height": 76
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "d",
+      "position": {
+        "x": 600,
+        "y": -8.42062110464111
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left",
+      "data": {
+        "label": "S: SUCCESS (CLS-OGLS) LOBBY",
+        "testCases": []
+      },
+      "measured": {
+        "width": 150,
+        "height": 58
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "712a30ce-161d-4fb2-994f-c93803b8b148",
+      "position": {
+        "x": 780.2765878642452,
+        "y": 0.07529622492548427
+      },
+      "data": {
+        "label": "Try",
+        "testCases": []
+      },
+      "sourcePosition": "right",
+      "targetPosition": "left",
+      "measured": {
+        "width": 150,
+        "height": 40
+      },
+      "selected": true,
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "a->b",
+      "source": "a",
+      "target": "b",
+      "animated": true,
+      "style": {
+        "stroke": "white",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "b->c",
+      "source": "b",
+      "target": "c",
+      "animated": true,
+      "style": {
+        "stroke": "white",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "c->d",
+      "source": "c",
+      "target": "d",
+      "animated": true,
+      "style": {
+        "stroke": "white",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "source": "d",
+      "target": "712a30ce-161d-4fb2-994f-c93803b8b148",
+      "animated": true,
+      "style": {
+        "stroke": "white",
+        "strokeWidth": 2
+      },
+      "id": "xy-edge__d-712a30ce-161d-4fb2-994f-c93803b8b148"
+    }
+  ],
+  "viewport": {
+    "x": 87.27272727272725,
+    "y": 416.85364864728797,
+    "zoom": 1.8762748286096378
+  }
+}

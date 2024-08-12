@@ -55,26 +55,26 @@ export default function App() {
 
   useEffect(() => {
     const restoreFlow = async () => {
-      const flow = JSON.parse(localStorage.getItem(flowKey));
-      if (flow) {
+      try {
+        const response = await fetch('/api/flow');
+        const flow = await response.json();
         const { x = 0, y = 0, zoom = 1 } = flow.viewport || {};
         setNodes(flow.nodes || []);
-        
         const edgesWithDefaultStyle = (flow.edges || []).map(edge => ({
           ...edge,
           style: edge.style || { stroke: 'white', strokeWidth: 2 },
         }));
-        
         setEdges(edgesWithDefaultStyle);
         setViewport({ x, y, zoom });
-  
         if (rfInstance) {
           rfInstance.fitView();
         }
+      } catch (error) {
+        console.error('Failed to load flow data:', error);
       }
     };
     restoreFlow();
-  }, [setNodes, setEdges, setViewport, rfInstance]);
+  }, [setNodes, setEdges, setViewport, rfInstance]);  
 
   const onConnect = useCallback(
     (connection) => setEdges((eds) => addEdge({ 
@@ -182,12 +182,26 @@ export default function App() {
   const onSave = useCallback(() => {
     if (rfInstance) {
       const flow = rfInstance.toObject();
-      localStorage.setItem(flowKey, JSON.stringify(flow));
-      toast.success("Changes saved successfully!", {
-        position: 'top-left'
-      });
+      fetch('/api/flow', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(flow),
+      })
+        .then(() => {
+          toast.success("Changes saved successfully!", {
+            position: 'top-left'
+          });
+        })
+        .catch((error) => {
+          console.error('Failed to save flow data:', error);
+          toast.error("Failed to save changes.", {
+            position: 'top-left'
+          });
+        });
     }
-  }, [rfInstance]);
+  }, [rfInstance]);    
 
   return (
     <div style={{ height: '100vh', width: '100%' }}>
