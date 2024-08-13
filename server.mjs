@@ -9,9 +9,11 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 
-// Handle saving the JSON file
-app.post('/save-flow', (req, res) => {
-  fs.writeFile(path.join(__dirname, 'public', 'flow.json'), JSON.stringify(req.body), (err) => {
+app.post('/flow', (req, res) => {
+  // Format the JSON data with 4 spaces of indentation
+  const formattedData = JSON.stringify(req.body, null, 4);
+
+  fs.writeFile(path.join(__dirname, 'public', 'flow.json'), formattedData, (err) => {
     if (err) {
       console.error('Failed to save data:', err);
       return res.status(500).json({ message: 'Failed to save data.' });

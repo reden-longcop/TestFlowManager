@@ -39,7 +39,7 @@ export default function App() {
   useEffect(() => {
     const restoreFlow = async () => {
       try {
-        const response = await fetch('/flow.json');
+        const response = await fetch('public/flow.json');
         
         if (response.ok) {
           const flow = await response.json();
@@ -191,13 +191,16 @@ export default function App() {
   const onSave = useCallback(() => {
     if (rfInstance) {
       const flow = rfInstance.toObject();
-      
+  
+      // Format the JSON data with 4 spaces of indentation
+      const formattedFlow = JSON.stringify(flow, null, 4); // Indent with 4 spaces
+  
       fetch('/api/flow', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(flow),
+        body: formattedFlow,
       })
         .then((response) => response.json())
         .then((data) => {
@@ -212,9 +215,9 @@ export default function App() {
         })
         .catch((error) => {
           console.error('Failed to save flow data to server:', error);
-          
+  
           try {
-            localStorage.setItem('flowData', JSON.stringify(flow));
+            localStorage.setItem('flowData', formattedFlow);
             toast.success("Changes saved locally!", {
               position: 'top-left',
               autoClose: 3000,
