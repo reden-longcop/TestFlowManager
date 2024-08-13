@@ -191,15 +191,11 @@ export default function App() {
   const onSave = useCallback(() => {
     if (rfInstance) {
       const flow = rfInstance.toObject();
-<<<<<<< HEAD
   
       // Format the JSON data with 4 spaces of indentation
       const formattedFlow = JSON.stringify(flow, null, 4); // Indent with 4 spaces
-  
-=======
       
       // Attempt to save to server
->>>>>>> parent of c3b0671 (added nodes)
       fetch('/api/flow', {
         method: 'POST',
         headers: {
@@ -220,12 +216,8 @@ export default function App() {
         })
         .catch((error) => {
           console.error('Failed to save flow data to server:', error);
-<<<<<<< HEAD
-  
-=======
           
           // Save to localStorage as fallback
->>>>>>> parent of c3b0671 (added nodes)
           try {
             localStorage.setItem('flowData', formattedFlow);
             toast.success("Changes saved locally!", {
