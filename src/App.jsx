@@ -39,8 +39,8 @@ export default function App() {
   useEffect(() => {
     const restoreFlow = async () => {
       try {
-        // const response = await fetch('pu/flow.json');
-        const response = await fetch('https://code-me-n0t.github.io/TestCaseManager/flow.json');
+        const response = await fetch('/flow.json');
+        // const response = await fetch('https://code-me-n0t.github.io/TestCaseManager/flow.json');
         
         if (response.ok) {
           const flow = await response.json();
