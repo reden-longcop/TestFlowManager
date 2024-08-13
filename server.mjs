@@ -10,7 +10,6 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.post('/flow', (req, res) => {
-  // Format the JSON data with 4 spaces of indentation
   const formattedData = JSON.stringify(req.body, null, 4);
 
   fs.writeFile(path.join(__dirname, 'public', 'flow.json'), formattedData, (err) => {

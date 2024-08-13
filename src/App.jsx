@@ -39,12 +39,12 @@ export default function App() {
   useEffect(() => {
     const restoreFlow = async () => {
       try {
-        const response = await fetch('public/flow.json');
-        
+        const response = await fetch('http://localhost:3000/flow.json');
+  
         if (response.ok) {
           const flow = await response.json();
           const { x = 0, y = 0, zoom = 1 } = flow.viewport || {};
-          
+  
           const validatedNodes = (flow.nodes || []).map(node => ({
             ...node,
             position: {
@@ -52,38 +52,34 @@ export default function App() {
               y: typeof node.position?.y === 'number' ? node.position.y : 0,
             }
           }));
-    
-          // Apply default styles if not present
+  
           const edgesWithDefaultStyle = (flow.edges || []).map(edge => ({
             ...edge,
             style: edge.style || { stroke: 'white', strokeWidth: 2 },
           }));
-    
-          // Update state with validated and styled data
+  
           setNodes(validatedNodes);
           setEdges(edgesWithDefaultStyle);
           setViewport({ x, y, zoom });
-    
-          // Fit the view if React Flow instance is available
+  
           if (rfInstance) {
             rfInstance.fitView();
           }
         } else {
-          // Handle non-200 responses by using initial data
           console.warn('Failed to fetch data, using initial data.');
           setNodes(initialNodes);
           setEdges(initialEdges);
         }
       } catch (error) {
         console.error('Failed to load flow data:', error);
-        // Fallback to initial data in case of errors
         setNodes(initialNodes);
         setEdges(initialEdges);
       }
     };
   
     restoreFlow();
-  }, [setNodes, setEdges, setViewport, rfInstance]);  
+  }, [setNodes, setEdges, setViewport, rfInstance]);
+   
 
   const onConnect = useCallback(
     (connection) => setEdges((eds) => addEdge({ 
@@ -196,7 +192,7 @@ export default function App() {
       const formattedFlow = JSON.stringify(flow, null, 4); // Indent with 4 spaces
       
       // Attempt to save to server
-      fetch('/api/flow', {
+      fetch('http://localhost:3000/flow', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -216,7 +212,7 @@ export default function App() {
         })
         .catch((error) => {
           console.error('Failed to save flow data to server:', error);
-          
+      
           // Save to localStorage as fallback
           try {
             localStorage.setItem('flowData', formattedFlow);
@@ -232,6 +228,7 @@ export default function App() {
             });
           }
         });
+      
     } else {
       toast.error("Failed to save changes. React Flow instance is not initialized.", {
         position: 'top-left',
