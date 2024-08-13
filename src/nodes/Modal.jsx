@@ -87,7 +87,7 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
       }
 
       // Save to server or GitHub Pages
-      const response = await fetch('api/data', {
+      const response = await fetch('https://code-me-n0t.github.io/TestCaseManager', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
