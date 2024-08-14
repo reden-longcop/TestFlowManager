@@ -10,13 +10,18 @@
             "sourcePosition": "right",
             "data": {
                 "label": "C: CLIENT (C)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1723607019410,
+                        "content": "SAMPLE TEST CASE"
+                    }
+                ]
             },
             "measured": {
                 "width": 150,
                 "height": 40
             },
-            "selected": false,
+            "selected": true,
             "dragging": false
         },
         {
@@ -77,7 +82,7 @@
         {
             "id": "fdd88f4a-290e-4c4d-861a-6358bfd68801",
             "position": {
-                "x": 131.38195447523816,
+                "x": 120.94328475371981,
                 "y": 130.86586469017584
             },
             "data": {
@@ -134,8 +139,8 @@
         {
             "id": "bfb0c4e6-24ff-4694-b817-e06f6e15727a",
             "position": {
-                "x": 46.47127750463022,
-                "y": 133.43488703106962
+                "x": 42.121831787330905,
+                "y": 135.17466531798934
             },
             "type": "connectorNode",
             "data": {
@@ -233,19 +238,155 @@
             "id": "8ff8ac04-23f4-44d3-851d-db8e76dce285",
             "position": {
                 "x": 921.3997241486908,
-                "y": 1.1570560734296507
+                "y": -7.540212154914052
             },
             "data": {
-                "label": "Test Scenario 12",
+                "label": "S: SUCCESS (CLSO-GLS-NBFS)",
                 "testCases": []
             },
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 40
+                "height": 58
             },
-            "selected": true,
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "1f76f5bb-e8a5-4b79-b37c-24ce48782b30",
+            "position": {
+                "x": 41.9045486128844,
+                "y": 235.12160737250355
+            },
+            "type": "connectorNode",
+            "data": {
+                "label": "B",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "style": {
+                "borderRadius": "50%",
+                "width": "50px",
+                "height": "50px",
+                "display": "flex",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "backgroundColor": "#059669",
+                "textAlign": "center"
+            },
+            "measured": {
+                "width": 50,
+                "height": 50
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "b5381574-b920-479e-a658-03d9e0ca12e3",
+            "position": {
+                "x": 121.89709831330754,
+                "y": 222.9059078661811
+            },
+            "data": {
+                "label": "BP:BETTING PLAY ALL SENAIRO (CLS-OGLS-GCLS-BP)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 76
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "a5591ab5-4766-417c-9ce3-3ee14faed247",
+            "position": {
+                "x": 301.0570103681551,
+                "y": 232.2199646604903
+            },
+            "data": {
+                "label": "S: SUCCESS (CLS-OGLS-GCLS-BPS)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 58
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "190132bd-143a-4b10-bc3c-4704d53d5a67",
+            "position": {
+                "x": 829.912358093868,
+                "y": -163.6168471116319
+            },
+            "type": "connectorNode",
+            "data": {
+                "label": "B",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "style": {
+                "borderRadius": "50%",
+                "width": "50px",
+                "height": "50px",
+                "display": "flex",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "backgroundColor": "#059669",
+                "textAlign": "center"
+            },
+            "measured": {
+                "width": 50,
+                "height": 50
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "02a2ed05-df7c-43a0-820a-155d282ca45b",
+            "position": {
+                "x": 922.9532449461889,
+                "y": -177.572324904874
+            },
+            "data": {
+                "label": "BL:BACK TO LOBBY (CLS-OGLS-GCLS-BPS-BL)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 76
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "7e67acc4-86a1-4905-94b3-5db027fc8f3e",
+            "position": {
+                "x": 1112.5518267225548,
+                "y": -176.73968725929848
+            },
+            "data": {
+                "label": "S: SUCCESS (CLS-OGLS-GCLS-BPS-BLS)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 76
+            },
+            "selected": false,
             "dragging": false
         }
     ],
@@ -349,11 +490,61 @@
                 "strokeWidth": 2
             },
             "id": "xy-edge__d2e8ed3e-8f30-4e20-9372-18c811e835a0-8ff8ac04-23f4-44d3-851d-db8e76dce285"
+        },
+        {
+            "source": "1f76f5bb-e8a5-4b79-b37c-24ce48782b30",
+            "target": "b5381574-b920-479e-a658-03d9e0ca12e3",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__1f76f5bb-e8a5-4b79-b37c-24ce48782b30-b5381574-b920-479e-a658-03d9e0ca12e3"
+        },
+        {
+            "source": "b5381574-b920-479e-a658-03d9e0ca12e3",
+            "target": "a5591ab5-4766-417c-9ce3-3ee14faed247",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__b5381574-b920-479e-a658-03d9e0ca12e3-a5591ab5-4766-417c-9ce3-3ee14faed247"
+        },
+        {
+            "source": "7bc86ead-8295-4e96-be33-4c2ab73ec732",
+            "target": "190132bd-143a-4b10-bc3c-4704d53d5a67",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__7bc86ead-8295-4e96-be33-4c2ab73ec732-190132bd-143a-4b10-bc3c-4704d53d5a67"
+        },
+        {
+            "source": "190132bd-143a-4b10-bc3c-4704d53d5a67",
+            "target": "02a2ed05-df7c-43a0-820a-155d282ca45b",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__190132bd-143a-4b10-bc3c-4704d53d5a67-02a2ed05-df7c-43a0-820a-155d282ca45b"
+        },
+        {
+            "source": "02a2ed05-df7c-43a0-820a-155d282ca45b",
+            "target": "7e67acc4-86a1-4905-94b3-5db027fc8f3e",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__02a2ed05-df7c-43a0-820a-155d282ca45b-7e67acc4-86a1-4905-94b3-5db027fc8f3e"
         }
     ],
     "viewport": {
-        "x": -355.00324237159987,
-        "y": 485.4724541758389,
-        "zoom": 1.396835935993577
+        "x": -0.5514278723048847,
+        "y": 389.2958918604538,
+        "zoom": 1.1495717672974266
     }
 }

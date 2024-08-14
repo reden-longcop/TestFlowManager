@@ -39,7 +39,7 @@ export default function App() {
   useEffect(() => {
     const restoreFlow = async () => {
       try {
-        const response = await fetch('https://code-me-n0t.github.io/TestCaseManager/flow.json');
+        const response = await fetch(import.meta.env.VITE_API_URL);
   
         if (response.ok) {
           const flow = await response.json();
