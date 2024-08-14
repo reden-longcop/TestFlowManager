@@ -57,7 +57,6 @@ export default function App() {
     const restoreFlow = async () => {
       try {
         const response = await fetch(import.meta.env.VITE_API_URL);
-        console.log(import.meta.env.VITE_API_URL);
   
         if (response.ok) {
           const flow = await response.json();
