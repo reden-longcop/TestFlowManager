@@ -44,4 +44,4 @@
 <p>Feel free to fork this repository and submit pull requests. Contributions are welcome!</p>
 
 <h2>License</h2>
-<p>This project is licensed under the GNU Lesser General Public License v3.0. See the [LICENSE](./LICENSE) file for more details.</p>
+<p>This project is licensed under the GNU Lesser General Public License v3.0. See the <a href='https://github.com/Code-Me-N0t/Test_Flow_Manager-VITE/blob/main/LICENSE'>LICENSE</a> file for more details.</p>
