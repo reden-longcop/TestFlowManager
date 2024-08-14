@@ -1,15 +1,31 @@
-<h1>Dynamic Test Case Management Website</h1>
+<h1>Vite Project - Test Flow Manager</h1>
 
 <h2>Overview</h2>
-<p>This project is a personal web application for managing and visualizing test cases and user journeys. It allows you to create, organize, and edit test scenarios through a dynamic flowchart interface. Currently under development</p>
+<p>This project is a web application built using Vite, React Flow, and TypeScript. It allows you to visualize and manage test scenarios and test cases using nodes and edges. The application is designed to help with the organization and documentation of test scenarios in a clear, visual format. This test flow focuses on the user's journey in navigating through the features and pages of a project</p>
+
+<i>Note: This website still being developed and there's still a lot of issues with the project and functions. Feel free to message me If you have suggestions or comments! redenlongcop5@gmail.com</i>
+
+<b>URL Link:</b>
+<pre><code id='code-block'>https://code-me-n0t.github.io/TestCaseManager/</code></pre>
 
 <h2>Features</h2>
 <ul>
-    <li><strong>Dynamic Node Management:</strong> Add, edit, and delete nodes representing test scenarios.</li>
-    <li><strong>Edge Customization:</strong> Connect nodes with customizable edges.</li>
+    <li><strong>Dynamic Node Management:</strong> Easily add, connect, and manage nodes representing test scenarios.</li>
+    <li><strong>Connector Nodes::</strong> Create circular connector nodes that link different scenarios.</li>
     <li><strong>Test Case Management:</strong> Add, edit, and delete test cases associated with each node.</li>
-    <li><strong>Automatic Save:</strong> Save and restore your flowchart layout and node data using localStorage.</li>
+    <li><strong>Custom Node Types:</strong>  Utilize predefined node types and edges to represent specific test elements.</li>
+    <li><strong>Local Save Functionality:</strong>  Utilize predefined node types and edges to represent specific test elements.</li>
     <li><strong>Interactive UI:</strong> Use a responsive and intuitive interface with real-time updates.</li>
+</ul>
+
+<h2>Usage</h2>
+<ul>
+    <li><strong>Adding Nodes:</strong> Use the "+" button to add new nodes to the flow.</li>
+    <li><strong>Connecting Nodes:</strong> Drag from the edge of one node to another to create a connection.</li>
+    <li><strong>Saving Changes:</strong> Click the floppy disk icon to save your changes locally. Note that this will only temporarily save the changes in local storage.</li>
+    <li><strong>Connecting Nodes:</strong> Drag from the edge of one node to another to create a connection.</li>
+    <li><strong>Deleting Nodes:</strong> Select a node and click the trash can icon to delete it.</li>
+    <li><strong>Create Test Cases:</strong> Double-click a node to open its test case modal where you can create or delete test cases</li>
 </ul>
 
 <h2>Tools and Technologies</h2>
@@ -21,5 +37,11 @@
     <li><strong>React-Toastify:</strong> For displaying notifications.</li>
 </ul>
 
-<b>URL Link:</b>
-<pre><code id='code-block'>https://code-me-n0t.github.io/TestCaseManager/</code></pre>
+<h2>Note</h2>
+<p>The save function in this project only works locally and will temporarily save the changes in local storage. If the page is refreshed or closed, the changes will be lost unless saved again after reloading the flow.</p>
+
+<h2>Contributing</h2>
+<p>Feel free to fork this repository and submit pull requests. Contributions are welcome!</p>
+
+<h2>License</h2>
+<p>This project is licensed under the GNU Lesser General Public License v3.0. See the [LICENSE](./LICENSE) file for more details.</p>
