@@ -5,6 +5,7 @@
   "type": "module",
   "author": "Reden Longcop",
   "license": "GPL-3.0-only",
+  "homepage": "https://code-me-n0t.github.io/TestFlowManager/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
