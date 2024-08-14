@@ -1,0 +1,550 @@
+{
+    "nodes": [
+        {
+            "id": "a",
+            "position": {
+                "x": 21.86992482787545,
+                "y": 0
+            },
+            "type": "input",
+            "sourcePosition": "right",
+            "data": {
+                "label": "C: CLIENT (C)",
+                "testCases": [
+                    {
+                        "id": 1723607019410,
+                        "content": "SAMPLE TEST CASE"
+                    }
+                ]
+            },
+            "measured": {
+                "width": 150,
+                "height": 40
+            },
+            "selected": true,
+            "dragging": false
+        },
+        {
+            "id": "b",
+            "position": {
+                "x": 200,
+                "y": 0
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "data": {
+                "label": "L: LOADING (CL)",
+                "testCases": []
+            },
+            "measured": {
+                "width": 150,
+                "height": 40
+            }
+        },
+        {
+            "id": "c",
+            "position": {
+                "x": 379.5365789307308,
+                "y": -18
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "data": {
+                "label": "OGL: OG LAUNCHING URL (CLS-OGL)",
+                "testCases": []
+            },
+            "measured": {
+                "width": 150,
+                "height": 76
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "d",
+            "position": {
+                "x": 561.7276315512179,
+                "y": -8.5
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "data": {
+                "label": "S: SUCCESS (CLS-OGLS) LOBBY",
+                "testCases": []
+            },
+            "measured": {
+                "width": 150,
+                "height": 58
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "fdd88f4a-290e-4c4d-861a-6358bfd68801",
+            "position": {
+                "x": 120.94328475371981,
+                "y": 130.86586469017584
+            },
+            "data": {
+                "label": "GC:GAME CHOOSE (CLS-OGLS-GC)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 58
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "d2e8ed3e-8f30-4e20-9372-18c811e835a0",
+            "position": {
+                "x": 738.7642104819488,
+                "y": -27.199248278754556
+            },
+            "data": {
+                "label": "NBF: NONE BETTING FUNSTIONS ALL SENAIRO (CLSO-GLS-NBF)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 94
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "6cdf9d58-d79c-4f09-a682-a871007a169a",
+            "position": {
+                "x": 738.1625562737217,
+                "y": 90.29669158354582
+            },
+            "data": {
+                "label": "CATEGORY CHOOSE (CLS-OGLS-CC)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 58
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "bfb0c4e6-24ff-4694-b817-e06f6e15727a",
+            "position": {
+                "x": 42.121831787330905,
+                "y": 135.17466531798934
+            },
+            "type": "connectorNode",
+            "data": {
+                "label": "A",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "style": {
+                "borderRadius": "50%",
+                "width": "50px",
+                "height": "50px",
+                "display": "flex",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "backgroundColor": "#059669",
+                "textAlign": "center"
+            },
+            "measured": {
+                "width": 50,
+                "height": 50
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "7bc86ead-8295-4e96-be33-4c2ab73ec732",
+            "position": {
+                "x": 740.2397365814488,
+                "y": -105.54894780099995
+            },
+            "type": "connectorNode",
+            "data": {
+                "label": "A",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "style": {
+                "borderRadius": "50%",
+                "width": "50px",
+                "height": "50px",
+                "display": "flex",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "backgroundColor": "#059669",
+                "textAlign": "center"
+            },
+            "measured": {
+                "width": 50,
+                "height": 50
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "282d0ba8-9a01-47fb-881c-31df84014b0d",
+            "position": {
+                "x": 309.7551027701612,
+                "y": 130.47275317625332
+            },
+            "data": {
+                "label": "L: LOADING (CLS-OGLS-GCL)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 58
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "c13d1054-4216-463e-87c4-1a8f8fb80621",
+            "position": {
+                "x": 487.7886049097433,
+                "y": 131.67804404540624
+            },
+            "data": {
+                "label": "S: SUCCESS (CLS-OGLS-GCLS)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 58
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "8ff8ac04-23f4-44d3-851d-db8e76dce285",
+            "position": {
+                "x": 921.3997241486908,
+                "y": -7.540212154914052
+            },
+            "data": {
+                "label": "S: SUCCESS (CLSO-GLS-NBFS)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 58
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "1f76f5bb-e8a5-4b79-b37c-24ce48782b30",
+            "position": {
+                "x": 41.9045486128844,
+                "y": 235.12160737250355
+            },
+            "type": "connectorNode",
+            "data": {
+                "label": "B",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "style": {
+                "borderRadius": "50%",
+                "width": "50px",
+                "height": "50px",
+                "display": "flex",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "backgroundColor": "#059669",
+                "textAlign": "center"
+            },
+            "measured": {
+                "width": 50,
+                "height": 50
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "b5381574-b920-479e-a658-03d9e0ca12e3",
+            "position": {
+                "x": 121.89709831330754,
+                "y": 222.9059078661811
+            },
+            "data": {
+                "label": "BP:BETTING PLAY ALL SENAIRO (CLS-OGLS-GCLS-BP)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 76
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "a5591ab5-4766-417c-9ce3-3ee14faed247",
+            "position": {
+                "x": 301.0570103681551,
+                "y": 232.2199646604903
+            },
+            "data": {
+                "label": "S: SUCCESS (CLS-OGLS-GCLS-BPS)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 58
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "190132bd-143a-4b10-bc3c-4704d53d5a67",
+            "position": {
+                "x": 829.912358093868,
+                "y": -163.6168471116319
+            },
+            "type": "connectorNode",
+            "data": {
+                "label": "B",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "style": {
+                "borderRadius": "50%",
+                "width": "50px",
+                "height": "50px",
+                "display": "flex",
+                "justifyContent": "center",
+                "alignItems": "center",
+                "backgroundColor": "#059669",
+                "textAlign": "center"
+            },
+            "measured": {
+                "width": 50,
+                "height": 50
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "02a2ed05-df7c-43a0-820a-155d282ca45b",
+            "position": {
+                "x": 922.9532449461889,
+                "y": -177.572324904874
+            },
+            "data": {
+                "label": "BL:BACK TO LOBBY (CLS-OGLS-GCLS-BPS-BL)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 76
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "7e67acc4-86a1-4905-94b3-5db027fc8f3e",
+            "position": {
+                "x": 1112.5518267225548,
+                "y": -176.73968725929848
+            },
+            "data": {
+                "label": "S: SUCCESS (CLS-OGLS-GCLS-BPS-BLS)",
+                "testCases": []
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 76
+            },
+            "selected": false,
+            "dragging": false
+        }
+    ],
+    "edges": [
+        {
+            "id": "a->b",
+            "source": "a",
+            "target": "b",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            }
+        },
+        {
+            "id": "b->c",
+            "source": "b",
+            "target": "c",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            }
+        },
+        {
+            "id": "c->d",
+            "source": "c",
+            "target": "d",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            }
+        },
+        {
+            "source": "d",
+            "target": "6cdf9d58-d79c-4f09-a682-a871007a169a",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__d-6cdf9d58-d79c-4f09-a682-a871007a169a"
+        },
+        {
+            "source": "d",
+            "target": "d2e8ed3e-8f30-4e20-9372-18c811e835a0",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__d-d2e8ed3e-8f30-4e20-9372-18c811e835a0"
+        },
+        {
+            "source": "bfb0c4e6-24ff-4694-b817-e06f6e15727a",
+            "target": "fdd88f4a-290e-4c4d-861a-6358bfd68801",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__bfb0c4e6-24ff-4694-b817-e06f6e15727a-fdd88f4a-290e-4c4d-861a-6358bfd68801"
+        },
+        {
+            "source": "d",
+            "target": "7bc86ead-8295-4e96-be33-4c2ab73ec732",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__d-7bc86ead-8295-4e96-be33-4c2ab73ec732"
+        },
+        {
+            "source": "fdd88f4a-290e-4c4d-861a-6358bfd68801",
+            "target": "282d0ba8-9a01-47fb-881c-31df84014b0d",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__fdd88f4a-290e-4c4d-861a-6358bfd68801-282d0ba8-9a01-47fb-881c-31df84014b0d"
+        },
+        {
+            "source": "282d0ba8-9a01-47fb-881c-31df84014b0d",
+            "target": "c13d1054-4216-463e-87c4-1a8f8fb80621",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__282d0ba8-9a01-47fb-881c-31df84014b0d-c13d1054-4216-463e-87c4-1a8f8fb80621"
+        },
+        {
+            "source": "d2e8ed3e-8f30-4e20-9372-18c811e835a0",
+            "target": "8ff8ac04-23f4-44d3-851d-db8e76dce285",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__d2e8ed3e-8f30-4e20-9372-18c811e835a0-8ff8ac04-23f4-44d3-851d-db8e76dce285"
+        },
+        {
+            "source": "1f76f5bb-e8a5-4b79-b37c-24ce48782b30",
+            "target": "b5381574-b920-479e-a658-03d9e0ca12e3",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__1f76f5bb-e8a5-4b79-b37c-24ce48782b30-b5381574-b920-479e-a658-03d9e0ca12e3"
+        },
+        {
+            "source": "b5381574-b920-479e-a658-03d9e0ca12e3",
+            "target": "a5591ab5-4766-417c-9ce3-3ee14faed247",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__b5381574-b920-479e-a658-03d9e0ca12e3-a5591ab5-4766-417c-9ce3-3ee14faed247"
+        },
+        {
+            "source": "7bc86ead-8295-4e96-be33-4c2ab73ec732",
+            "target": "190132bd-143a-4b10-bc3c-4704d53d5a67",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__7bc86ead-8295-4e96-be33-4c2ab73ec732-190132bd-143a-4b10-bc3c-4704d53d5a67"
+        },
+        {
+            "source": "190132bd-143a-4b10-bc3c-4704d53d5a67",
+            "target": "02a2ed05-df7c-43a0-820a-155d282ca45b",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__190132bd-143a-4b10-bc3c-4704d53d5a67-02a2ed05-df7c-43a0-820a-155d282ca45b"
+        },
+        {
+            "source": "02a2ed05-df7c-43a0-820a-155d282ca45b",
+            "target": "7e67acc4-86a1-4905-94b3-5db027fc8f3e",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__02a2ed05-df7c-43a0-820a-155d282ca45b-7e67acc4-86a1-4905-94b3-5db027fc8f3e"
+        }
+    ],
+    "viewport": {
+        "x": -0.5514278723048847,
+        "y": 389.2958918604538,
+        "zoom": 1.1495717672974266
+    }
+}
