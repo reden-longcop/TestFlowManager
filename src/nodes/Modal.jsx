@@ -1,5 +1,23 @@
+/*
+ * This file is part of Flow Test Manager.
+ *
+ * Flow Test Manager is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Flow Test Manager is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Flow Test Manager. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
 import React, { useState, useEffect, useRef } from 'react';
-import './Modal.css'; // Import your CSS for styling
+import './Modal.css'; 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -15,7 +33,7 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
   useEffect(() => {
     setLabel(nodeLabel);
     setTestCases(initialTestCases);
-    setSelectedTestCases([]); // Reset selected test cases when modal opens
+    setSelectedTestCases([]);
   }, [nodeLabel, initialTestCases]);
 
   useEffect(() => {
