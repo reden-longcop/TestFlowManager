@@ -34,12 +34,13 @@ export default function App() {
   const [rfInstance, setRfInstance] = useState(null);
   const { setViewport } = useReactFlow();
 
-  const clickTimeoutRef = useRef(null); // Ref to store timeout ID
+  const clickTimeoutRef = useRef(null);
 
   useEffect(() => {
     const restoreFlow = async () => {
       try {
         const response = await fetch(import.meta.env.VITE_API_URL);
+        console.log(import.meta.env.VITE_API_URL);
   
         if (response.ok) {
           const flow = await response.json();
