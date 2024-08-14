@@ -1,18 +1,18 @@
 /*
- * This file is part of Flow Test Manager.
+ * This file is part of Test Flow Manager.
  *
- * Flow Test Manager is free software: you can redistribute it and/or modify
+ * Test Flow Manager is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Flow Test Manager is distributed in the hope that it will be useful,
+ * Test Flow Manager is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Flow Test Manager. If not, see <http://www.gnu.org/licenses/>.
+ * along with Test Flow Manager. If not, see <http://www.gnu.org/licenses/>.
  */
 
 import { useCallback, useState, useEffect, useRef } from "react";
