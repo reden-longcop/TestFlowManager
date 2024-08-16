@@ -37,7 +37,7 @@ import { faFloppyDisk, faPlus, faTrashAlt, faPlusCircle, faPlusSquare } from '@f
 
 import { initialNodes, nodeTypes } from "./nodes";
 import { initialEdges, edgeTypes } from "./edges";
-import Modal from "./nodes/Modal";
+import Modal from "./Modal";
 
 import { v4 as uuidv4 } from 'uuid';
 

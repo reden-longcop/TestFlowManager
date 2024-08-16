@@ -79,7 +79,6 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
     setTestCases(prevTestCases => {
       const updatedTestCases = [...prevTestCases, newTestCase];
   
-      // Focus the newly added textarea after updating the state
       setTimeout(() => {
         textareasRef.current[textareasRef.current.length - 1]?.focus();
       }, 0);
