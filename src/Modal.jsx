@@ -1,21 +1,3 @@
-/*
- * This file is part of Test Flow Manager.
- *
- * Test Flow Manager is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Test Flow Manager is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with Test Flow Manager. If not, see <http://www.gnu.org/licenses/>.
- */
-
-
 import React, { useState, useEffect, useRef } from 'react';
 import './Modal.css'; 
 import { toast, ToastContainer } from "react-toastify";
@@ -28,7 +10,7 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
   const [label, setLabel] = useState(nodeLabel);
   const [testCases, setTestCases] = useState(initialTestCases);
   const [selectedTestCases, setSelectedTestCases] = useState([]); // Store selected test cases
-  const textareasRef = useRef([]); // Ref to store textarea elements
+  const textareasRef = useRef([]);
 
   useEffect(() => {
     setLabel(nodeLabel);
@@ -74,8 +56,14 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
     ));
   };
 
+  const handleStatusChange = (id, newStatus) => {
+    setTestCases(testCases.map(tc => 
+      tc.id === id ? { ...tc, status: newStatus } : tc
+    ));
+  };
+
   const addTestCase = () => {
-    const newTestCase = { id: Date.now(), content: "" };
+    const newTestCase = { id: Date.now(), content: "", status: "notstarted" }; // Default status
     setTestCases(prevTestCases => {
       const updatedTestCases = [...prevTestCases, newTestCase];
   
@@ -144,12 +132,41 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
     });
   };
 
+  useEffect(() => {
+    const adjustTextareaHeight = () => {
+      textareasRef.current.forEach((textarea) => {
+        if (textarea) {
+          textarea.style.height = 'auto';
+          textarea.style.height = `${textarea.scrollHeight}px`;
+        }
+      });
+    };
+
+    adjustTextareaHeight(); // Adjust on load
+
+    // Attach the listener to adjust height when content changes
+    textareasRef.current.forEach((textarea, index) => {
+      if (textarea) {
+        textarea.addEventListener('input', adjustTextareaHeight);
+      }
+    });
+
+    return () => {
+      // Cleanup event listeners when the component is unmounted
+      textareasRef.current.forEach((textarea) => {
+        if (textarea) {
+          textarea.removeEventListener('input', adjustTextareaHeight);
+        }
+      });
+    };
+  }, [testCases]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay z-0">
+    <div className="modal-overlay z-0 select-none">
       <div className="modal-content bg-[#1E1E1E]">
-        <span className="close bg-inherit text-white text-5xl hover:text-rose-500" onClick={onClose}>&times;</span>
+        <span className="close bg-inherit text-white text-5xl hover:bg-rose-500" onClick={onClose}>&times;</span>
         <input
           type="text"
           className='bg-inherit text-white p-1 rounded'
@@ -160,17 +177,17 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
         />
         <hr className='mb-4 border-gray-600 border-1'/>
         {testCases.map((testCase, index) => (
-          <div className='flex items-center border-b-2 border-gray-600' key={testCase.id} data-replicated-value={testCase.content} style={{ marginBottom: '10px' }}>
-            <input
-              type="checkbox"
-              checked={selectedTestCases.includes(testCase.id)}
-              onChange={() => handleCheckboxChange(testCase.id)}
-              className="mr-2"
-            />
-            <div className='grow-wrap w-full'>
+          <div className='py-2 flex items-center justify-center border-b-2 border-gray-600' key={testCase.id} data-replicated-value={testCase.content} style={{ marginBottom: '10px' }}>
+              <input
+                type="checkbox"
+                checked={selectedTestCases.includes(testCase.id)}
+                onChange={() => handleCheckboxChange(testCase.id)}
+                className="mr-2 border-2 mb-2"
+              />
+            <div className='w-full'>
               <textarea
                 ref={el => textareasRef.current[index] = el}
-                className='bg-inherit text-white rounded w-full resize-none focus:outline-none'
+                className='bg-inherit text-white rounded resize-none w-full pr-2 focus:outline-none'
                 value={testCase.content}
                 onChange={(e) => {
                   handleTestCaseChange(testCase.id, e.target.value);
@@ -178,9 +195,28 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
                 }}
                 rows="1"
                 placeholder={`Test case ${testCase.id}`}
-                style={{ overflow: 'hidden', fontSize: '13px'}}
+                style={{ overflow: 'hidden' ,fontSize: '13px'}}
               />
             </div>
+            <select 
+              className={` mb-2 cursor-pointer appearance-none rounded font-mono px-1 space-x-2 focus:outline-none ${
+                testCase.status === 'notstarted' ? 'bg-amber-300' : 
+                testCase.status === 'passed' ? 'bg-green-200' : 
+                testCase.status === 'failed' ? 'bg-rose-300' : 
+                testCase.status === 'blocked' ? 'bg-indigo-200' : 
+                testCase.status === 'notapplicable' ? 'bg-gray-300' : 
+                'bg-amber-300'}`
+              }
+              value={testCase.status}
+              id='status'
+              onChange={(e) => handleStatusChange(testCase.id, e.target.value)}
+            >
+              <option className='bg-slate-200' value="notstarted">NOT STARTED</option>
+              <option className='bg-slate-200' value="passed">PASSED</option>
+              <option className='bg-slate-200' value="failed">FAILED</option>
+              <option className='bg-slate-200' value="blocked">BLOCKED</option>
+              <option className='bg-slate-200' value="notapplicable">NOT APPLICABLE</option>
+            </select>
           </div>
         ))}
         <div className="button-container" style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
@@ -191,14 +227,14 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
             <FontAwesomeIcon icon={faSave} size="lg" color="white"/>
           </button>
           <button 
-            className={`p-2 rounded w-12 ${selectedTestCases.length > 0 ? 'bg-[#3e3e3e] hover:bg-rose-700' : 'bg-gray-500 cursor-not-allowed'}`}
+            className={`p-2 rounded w-12 ${selectedTestCases.length > 0 ? 'bg-rose-500 hover:bg-rose-700' : 'bg-[#3e3e3e]'}`}
             onClick={deleteSelectedTestCases}
-            disabled={selectedTestCases.length === 0}
-          >
+            disabled={selectedTestCases.length === 0}>
             <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white"/>
           </button>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   );
 };
