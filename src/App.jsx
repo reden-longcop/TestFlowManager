@@ -206,11 +206,10 @@ export default function App() {
   const onSave = useCallback(() => {
     if (rfInstance) {
       const flow = rfInstance.toObject();
-  
-      // Format the JSON data with 4 spaces of indentation
-      const formattedFlow = JSON.stringify(flow, null, 4); // Indent with 4 spaces
+      const formattedFlow = JSON.stringify(flow, null, 4);
+
+      console.log('line 1')
       
-      // Attempt to save to server
       fetch('http://localhost:3000/flow', {
         method: 'POST',
         headers: {
@@ -218,35 +217,37 @@ export default function App() {
         },
         body: formattedFlow,
       })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.message === 'Data saved successfully.') {
-            toast.success("Changes saved successfully!", {
-              position: 'top-left',
-              autoClose: 3000,
-            });
-          } else {
-            throw new Error('Server responded with an error.');
-          }
-        })
-        .catch((error) => {
-          console.error('Failed to save flow data to server:', error);
-      
-          // Save to localStorage as fallback
-          try {
-            localStorage.setItem('flowData', formattedFlow);
-            toast.success("Changes saved locally!", {
-              position: 'top-left',
-              autoClose: 3000,
-            });
-          } catch (localError) {
-            console.error('Failed to save flow data to localStorage:', localError);
-            toast.error("Failed to save changes. Please try again.", {
-              position: 'top-left',
-              autoClose: 5000,
-            });
-          }
-        });
+      .then((response) => response.json())
+      .then((data) => {
+        if (data){
+          console.log('line 2')
+          toast.success("Changes saved successfully!", {
+            position: 'top-left',
+            autoClose: 3000,
+            style: {
+              zIndex: 9999,
+            }
+          });
+          
+        }
+        console.log('line 3')
+      })
+      .catch((error) => {
+        console.error('Failed to save flow data to server:', error);
+        try {
+          localStorage.setItem('flowData', formattedFlow);
+          toast.success("Changes saved locally!", {
+            position: 'top-left',
+            autoClose: 3000,
+          });
+        } catch (localError) {
+          console.error('Failed to save flow data to localStorage:', localError);
+          toast.error("Failed to save changes. Please try again.", {
+            position: 'top-left',
+            autoClose: 5000,
+          });
+        }
+      });
       
     } else {
       toast.error("Failed to save changes. React Flow instance is not initialized.", {
@@ -301,7 +302,7 @@ export default function App() {
         testCases={selectedNode?.data?.testCases || []}
         onSave={handleSaveTestCases}
       />
-      <ToastContainer />
+      <ToastContainer/>
     </div>
   );
 }

@@ -21,15 +21,16 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
   useEffect(() => {
     const storedTestCases = JSON.parse(localStorage.getItem(`testCases-${nodeId}`));
     const storedLabel = localStorage.getItem(`label-${nodeId}`);
-    if (storedTestCases) {
-      setTestCases(storedTestCases);
-    }
+    
     if (storedLabel) {
       setLabel(storedLabel);
     }
+    if (storedTestCases) {
+      setTestCases(storedTestCases);
+    }
 
     setTimeout(() => {
-      const textareas = document.querySelectorAll(`.modal-content .grow-wrap textarea`);
+      const textareas = document.querySelectorAll(`.modal-content textarea`);
       textareas.forEach(textarea => {
         textarea.parentNode.dataset.replicatedValue = textarea.value;
       });
@@ -42,7 +43,6 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
         addTestCase();
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
 
     return () => {
@@ -63,17 +63,17 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
   };
 
   const addTestCase = () => {
-    const newTestCase = { id: Date.now(), content: "", status: "notstarted" }; // Default status
-    setTestCases(prevTestCases => {
-      const updatedTestCases = [...prevTestCases, newTestCase];
-  
-      setTimeout(() => {
-        textareasRef.current[textareasRef.current.length - 1]?.focus();
-      }, 0);
-  
-      return updatedTestCases;
-    });
+    const newTestCase = { id: Date.now(), content: "", status: "notstarted" };
+    
+    setTestCases(prevTestCases => [...prevTestCases, newTestCase]);
   };
+  
+  useEffect(() => {
+    if (textareasRef.current.length > 0) {
+      textareasRef.current[textareasRef.current.length - 1]?.focus();
+    }
+  }, [testCases.length]);
+  
   
   const deleteSelectedTestCases = () => {
     setTestCases(testCases.filter(tc => !selectedTestCases.includes(tc.id)));
@@ -82,45 +82,27 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
 
   const handleSave = async () => {
     try {
-      // Update the local storage
       localStorage.setItem(`testCases-${nodeId}`, JSON.stringify(testCases));
       localStorage.setItem(`label-${nodeId}`, label);
-
-      // Call the onSave callback if provided
+  
       if (onSave) {
         onSave(testCases, label);
       }
-
-      // Save to server or GitHub Pages
-      const response = await fetch('https://code-me-n0t.github.io/TestFlowManager', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          nodes: [], // Update with actual nodes data if needed
-          edges: [], // Update with actual edges data if needed
-          viewport: { x: 0, y: 0, zoom: 1 }, // Update with actual viewport data if needed
-          testCases: testCases, // Add test cases
-          label: label // Add label
-        }),
+  
+      toast.success('Test case/s saved!', {
+        position: 'top-left',
+        autoClose: 3000,
+        onClose: () => {
+        }
       });
-
-      if (response.ok) {
-        toast.success('Test case/s saved!', {
-          position: 'top-left'
-        });
-        onClose();
-      } else {
-        throw new Error('Failed to save data.');
-      }
+      
     } catch (error) {
       console.error('Failed to save data:', error);
       toast.error('Failed to save data. Please try again.', {
         position: 'top-left'
       });
     }
-  };
+  };  
 
   const handleCheckboxChange = (id) => {
     setSelectedTestCases((prevSelected) => {
@@ -142,9 +124,8 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
       });
     };
 
-    adjustTextareaHeight(); // Adjust on load
+    adjustTextareaHeight();
 
-    // Attach the listener to adjust height when content changes
     textareasRef.current.forEach((textarea, index) => {
       if (textarea) {
         textarea.addEventListener('input', adjustTextareaHeight);
@@ -152,7 +133,6 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
     });
 
     return () => {
-      // Cleanup event listeners when the component is unmounted
       textareasRef.current.forEach((textarea) => {
         if (textarea) {
           textarea.removeEventListener('input', adjustTextareaHeight);
@@ -186,12 +166,12 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
             type="checkbox"
             checked={selectedTestCases.includes(testCase.id)}
             onChange={() => handleCheckboxChange(testCase.id)}
-            className="ml-1 mr-5  "
+            className="ml-4 mr-5"
           />
           <div className='w-full'>
             <textarea
               ref={el => textareasRef.current[index] = el}
-              className='pr-2 bg-inherit overflow-hidden text-sm text-white rounded resize-none w-full focus:outline-none'
+              className='pr-2 bg-inherit overflow-hidden text-sm text-white rounded resize-none w-full focus:outline-none mr-5'
               value={testCase.content}
               onChange={(e) => {
                 handleTestCaseChange(testCase.id, e.target.value);
@@ -224,7 +204,7 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
       ))}
     </div>
 
-    <div className="button-container sticky bottom-0 left-0 right-0 bg-inherit space-x-3 z-10">
+    <div className="button-container sticky bottom-0 left-0 right-0 bg-inherit pt-5 space-x-3 z-10">
       <button className='p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700' onClick={addTestCase}>
         <FontAwesomeIcon icon={faFileCirclePlus} size="lg" color="white"/>
       </button>
