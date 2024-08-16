@@ -12,8 +12,13 @@
                 "label": "C: CLIENT (C)",
                 "testCases": [
                     {
-                        "id": 1723607019410,
-                        "content": "SAMPLE TEST CASE"
+                        "id": 1722941059548,
+                        "content": "Verify that when the registered player clicks the OG link/button, the request OG game launching URL should start",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1722941063470,
+                        "content": "Verify that when the player does not have an account and clicks the OG link/button, the OG site should not launch"
                     }
                 ]
             },

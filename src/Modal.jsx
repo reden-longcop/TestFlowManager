@@ -165,77 +165,83 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
 
   return (
     <div className="modal-overlay z-0 select-none">
-      <div className="modal-content bg-[#1E1E1E]">
-        <span className="close bg-inherit text-white text-5xl hover:bg-rose-500" onClick={onClose}>&times;</span>
-        <input
-          type="text"
-          className='bg-inherit text-white p-1 rounded'
-          value={label}
-          onChange={(e) => setLabel(e.target.value)}
-          placeholder="Node Label"
-          style={{ width: '90%', marginBottom: '10px', fontSize: '18px' }}
-        />
-        <hr className='mb-4 border-gray-600 border-1'/>
-        {testCases.map((testCase, index) => (
-          <div className='py-2 flex items-center justify-center border-b-2 border-gray-600' key={testCase.id} data-replicated-value={testCase.content} style={{ marginBottom: '10px' }}>
-              <input
-                type="checkbox"
-                checked={selectedTestCases.includes(testCase.id)}
-                onChange={() => handleCheckboxChange(testCase.id)}
-                className="mr-2 border-2 mb-2"
-              />
-            <div className='w-full'>
-              <textarea
-                ref={el => textareasRef.current[index] = el}
-                className='bg-inherit text-white rounded resize-none w-full pr-2 focus:outline-none'
-                value={testCase.content}
-                onChange={(e) => {
-                  handleTestCaseChange(testCase.id, e.target.value);
-                  e.target.parentNode.dataset.replicatedValue = e.target.value;
-                }}
-                rows="1"
-                placeholder={`Test case ${testCase.id}`}
-                style={{ overflow: 'hidden' ,fontSize: '13px'}}
-              />
-            </div>
-            <select 
-              className={` mb-2 cursor-pointer appearance-none rounded font-mono px-1 space-x-2 focus:outline-none ${
-                testCase.status === 'notstarted' ? 'bg-amber-300' : 
-                testCase.status === 'passed' ? 'bg-green-200' : 
-                testCase.status === 'failed' ? 'bg-rose-300' : 
-                testCase.status === 'blocked' ? 'bg-indigo-200' : 
-                testCase.status === 'notapplicable' ? 'bg-gray-300' : 
-                'bg-amber-300'}`
-              }
-              value={testCase.status}
-              id='status'
-              onChange={(e) => handleStatusChange(testCase.id, e.target.value)}
-            >
-              <option className='bg-slate-200' value="notstarted">NOT STARTED</option>
-              <option className='bg-slate-200' value="passed">PASSED</option>
-              <option className='bg-slate-200' value="failed">FAILED</option>
-              <option className='bg-slate-200' value="blocked">BLOCKED</option>
-              <option className='bg-slate-200' value="notapplicable">NOT APPLICABLE</option>
-            </select>
+  <div className="modal-content bg-[#1E1E1E] flex flex-col max-h-[90vh] w-[800px]">
+    <span className="close bg-inherit text-white text-5xl hover:bg-rose-500" onClick={onClose}>&times;</span>
+    <input
+      type="text"
+      className='bg-inherit text-slate-200 font-bold p-1 rounded mb-[10px] w-4/5 text-xl focus:outline-none'
+      value={label}
+      onChange={(e) => setLabel(e.target.value)}
+      placeholder="Node Label"
+    />
+    <hr className='mb-4 border-gray-600 border-1'/>
+
+    <div className="modal-body overflow-y-auto pb-[10px] divide-y divide-dashed">
+      {testCases.map((testCase, index) => (
+        <div className='py-2 flex items-center border-gray-600 space-x-5' 
+          key={testCase.id} 
+          data-replicated-value={testCase.content} 
+        >
+          <input
+            type="checkbox"
+            checked={selectedTestCases.includes(testCase.id)}
+            onChange={() => handleCheckboxChange(testCase.id)}
+            className="ml-1 mr-5  "
+          />
+          <div className='w-full'>
+            <textarea
+              ref={el => textareasRef.current[index] = el}
+              className='pr-2 bg-inherit overflow-hidden text-sm text-white rounded resize-none w-full focus:outline-none'
+              value={testCase.content}
+              onChange={(e) => {
+                handleTestCaseChange(testCase.id, e.target.value);
+                e.target.parentNode.dataset.replicatedValue = e.target.value;
+              }}
+              rows="1"
+              placeholder={`Test case ${testCase.id}`}
+            />
           </div>
-        ))}
-        <div className="button-container" style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
-          <button className='p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700' onClick={addTestCase}>
-            <FontAwesomeIcon icon={faFileCirclePlus} size="lg" color="white"/>
-          </button>
-          <button className='p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700' onClick={handleSave}>
-            <FontAwesomeIcon icon={faSave} size="lg" color="white"/>
-          </button>
-          <button 
-            className={`p-2 rounded w-12 ${selectedTestCases.length > 0 ? 'bg-rose-500 hover:bg-rose-700' : 'bg-[#3e3e3e]'}`}
-            onClick={deleteSelectedTestCases}
-            disabled={selectedTestCases.length === 0}>
-            <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white"/>
-          </button>
+          <select 
+            className={`  mr-2 p-1 cursor-pointer text-lg rounded font-mono space-x-2 focus:outline-none ${
+              testCase.status === 'notstarted' ? 'bg-yellow-200' : 
+              testCase.status === 'passed' ? 'bg-green-200' : 
+              testCase.status === 'failed' ? 'bg-rose-300' : 
+              testCase.status === 'blocked' ? 'bg-indigo-200' : 
+              testCase.status === 'notapplicable' ? 'bg-gray-300' : 
+              'bg-yellow-200'}`
+            }
+            value={testCase.status}
+            id='status'
+            onChange={(e) => handleStatusChange(testCase.id, e.target.value)}
+          >
+            <option className='bg-slate-200' value="notstarted">NOT STARTED</option>
+            <option className='bg-slate-200' value="passed">PASSED</option>
+            <option className='bg-slate-200' value="failed">FAILED</option>
+            <option className='bg-slate-200' value="blocked">BLOCKED</option>
+            <option className='bg-slate-200' value="notapplicable">NOT APPLICABLE</option>
+          </select>
         </div>
-      </div>
-      <ToastContainer/>
+      ))}
     </div>
+
+    <div className="button-container sticky bottom-0 left-0 right-0 bg-inherit space-x-3 z-10">
+      <button className='p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700' onClick={addTestCase}>
+        <FontAwesomeIcon icon={faFileCirclePlus} size="lg" color="white"/>
+      </button>
+      <button className='p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700' onClick={handleSave}>
+        <FontAwesomeIcon icon={faSave} size="lg" color="white"/>
+      </button>
+      <button 
+        className={`p-2 rounded w-12 ${selectedTestCases.length > 0 ? 'bg-rose-500 hover:bg-rose-700' : 'bg-[#3e3e3e]'}`}
+        onClick={deleteSelectedTestCases}
+        disabled={selectedTestCases.length === 0}>
+        <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white"/>
+      </button>
+    </div>
+  </div>
+  <ToastContainer/>
+</div>
+
   );
 };
 
