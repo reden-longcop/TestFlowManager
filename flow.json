@@ -3,8 +3,8 @@
         {
             "id": "a",
             "position": {
-                "x": 21.86992482787545,
-                "y": 0
+                "x": -151.82847289119962,
+                "y": -0.9703821101624293
             },
             "type": "input",
             "sourcePosition": "right",
@@ -27,8 +27,8 @@
         {
             "id": "b",
             "position": {
-                "x": 200,
-                "y": 0
+                "x": 27.27198439108733,
+                "y": -7.105427357601002e-15
             },
             "sourcePosition": "right",
             "targetPosition": "left",
@@ -39,23 +39,6 @@
             "measured": {
                 "width": 150,
                 "height": 40
-            }
-        },
-        {
-            "id": "c",
-            "position": {
-                "x": 379.5365789307308,
-                "y": -18
-            },
-            "sourcePosition": "right",
-            "targetPosition": "left",
-            "data": {
-                "label": "OGL: OG LAUNCHING URL (CLS-OGL)",
-                "testCases": []
-            },
-            "measured": {
-                "width": 150,
-                "height": 76
             },
             "selected": false,
             "dragging": false
@@ -769,6 +752,90 @@
             },
             "selected": false,
             "dragging": false
+        },
+        {
+            "id": "97d03da9-debb-4e60-93fa-600941456646",
+            "position": {
+                "x": 206.81126428967283,
+                "y": 0.18146957710108325
+            },
+            "data": {
+                "label": "S: SUCCESS (CLS)",
+                "testCases": [
+                    {
+                        "id": 1723769589867,
+                        "content": "Verify that loading should start in 0 to 100%"
+                    },
+                    {
+                        "id": 1723769595651,
+                        "content": "A progress bar should be displayed along with the loading percentage"
+                    },
+                    {
+                        "id": 1723769598920,
+                        "content": "Loading icon should remain centered"
+                    },
+                    {
+                        "id": 1723769611980,
+                        "content": "Animation and highlited UI loading icon should be removed"
+                    },
+                    {
+                        "id": 1723769619618,
+                        "content": "Loading should not revert to zero"
+                    }
+                ]
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 40
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "d10306ac-a2b7-4d17-b021-7e439155e211",
+            "position": {
+                "x": 387.3529794331546,
+                "y": -17.234765752553024
+            },
+            "data": {
+                "label": "OGL: OG LAUNCHING URL (CLS-OGL)",
+                "testCases": [
+                    {
+                        "id": 1723770009779,
+                        "content": "The loading page should start within 2 seconds"
+                    },
+                    {
+                        "id": 1723770019848,
+                        "content": "The 3G network, the loading page should display"
+                    },
+                    {
+                        "id": 1723770027429,
+                        "content": "The 4G network, the loading page should display"
+                    },
+                    {
+                        "id": 1723770034525,
+                        "content": "Using WIFI connection, loading page should display"
+                    },
+                    {
+                        "id": 1723770052887,
+                        "content": "Using Chrome, the loading page should display"
+                    },
+                    {
+                        "id": 1723770066597,
+                        "content": "Using Safari, loading page should display"
+                    }
+                ]
+            },
+            "sourcePosition": "right",
+            "targetPosition": "left",
+            "measured": {
+                "width": 150,
+                "height": 76
+            },
+            "selected": false,
+            "dragging": false
         }
     ],
     "edges": [
@@ -776,26 +843,6 @@
             "id": "a->b",
             "source": "a",
             "target": "b",
-            "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            }
-        },
-        {
-            "id": "b->c",
-            "source": "b",
-            "target": "c",
-            "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            }
-        },
-        {
-            "id": "c->d",
-            "source": "c",
-            "target": "d",
             "animated": true,
             "style": {
                 "stroke": "white",
@@ -1071,11 +1118,41 @@
                 "strokeWidth": 2
             },
             "id": "xy-edge__b140d5b3-58d9-408e-ba85-0428a94f9885-7b6cb84e-5f1c-4179-bf40-20de37c76ab7"
+        },
+        {
+            "source": "b",
+            "target": "97d03da9-debb-4e60-93fa-600941456646",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__b-97d03da9-debb-4e60-93fa-600941456646"
+        },
+        {
+            "source": "97d03da9-debb-4e60-93fa-600941456646",
+            "target": "d10306ac-a2b7-4d17-b021-7e439155e211",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__97d03da9-debb-4e60-93fa-600941456646-d10306ac-a2b7-4d17-b021-7e439155e211"
+        },
+        {
+            "source": "d10306ac-a2b7-4d17-b021-7e439155e211",
+            "target": "d",
+            "animated": true,
+            "style": {
+                "stroke": "white",
+                "strokeWidth": 2
+            },
+            "id": "xy-edge__d10306ac-a2b7-4d17-b021-7e439155e211-d"
         }
     ],
     "viewport": {
-        "x": 28.98412835165118,
-        "y": 447.3606332823081,
-        "zoom": 0.7377548762139762
+        "x": 229.18218101809805,
+        "y": 375.8303600835759,
+        "zoom": 0.9346695718072805
     }
 }
