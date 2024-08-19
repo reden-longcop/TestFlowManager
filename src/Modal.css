@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat&family=New+Amsterdam&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat&family=New+Amsterdam&display=swap'); */
 
 .modal-overlay {
   position: fixed;
@@ -22,7 +22,6 @@
 }
 
 .close {
-  /* border: 1px solid red; */
   position: absolute;
   top: 0;
   right: 0;
@@ -32,18 +31,12 @@
   text-align: center;
 }
 
+select#status {
+  margin-right: 1rem;
+}
+
 input[type="checkbox"] {
   cursor: pointer;
-}
-
-select#status{
-  cursor: pointer;
-  font-family: "New Amsterdam", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-input[type='checkbox']{
   transform: scale(1.5);
   -webkit-transform: scale(1.5);
   -moz-transform: scale(1.5);
@@ -52,9 +45,9 @@ input[type='checkbox']{
 }
 
 .modal-body {
-  overflow-y: auto; /* Enable scrolling */
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: #555 #1E1E1E; /* For Firefox */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #1e1e1e;
 }
 
 .modal-body::-webkit-scrollbar {
@@ -62,15 +55,11 @@ input[type='checkbox']{
 }
 
 .modal-body::-webkit-scrollbar-track {
-  background: #2D2D2D;
+  background: #2d2d2d;
   border-radius: 10px;
 }
 
 .modal-body::-webkit-scrollbar-thumb {
   background: #555;
   border-radius: 10px;
-}
-
-.modal-body::-webkit-scrollbar-thumb:hover {
-  background: inherit;
 }

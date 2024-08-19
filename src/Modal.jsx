@@ -1,12 +1,23 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './Modal.css'; 
+import React, { useState, useEffect, useRef } from "react";
+import "./Modal.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileCirclePlus, faSave, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFileCirclePlus,
+  faSave,
+  faTrashAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
-const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases, onSave }) => {
+const Modal = ({
+  isOpen,
+  onClose,
+  nodeId,
+  nodeLabel,
+  testCases: initialTestCases,
+  onSave,
+}) => {
   const [label, setLabel] = useState(nodeLabel);
   const [testCases, setTestCases] = useState(initialTestCases);
   const [selectedTestCases, setSelectedTestCases] = useState([]); // Store selected test cases
@@ -19,9 +30,11 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
   }, [nodeLabel, initialTestCases]);
 
   useEffect(() => {
-    const storedTestCases = JSON.parse(localStorage.getItem(`testCases-${nodeId}`));
+    const storedTestCases = JSON.parse(
+      localStorage.getItem(`testCases-${nodeId}`),
+    );
     const storedLabel = localStorage.getItem(`label-${nodeId}`);
-    
+
     if (storedLabel) {
       setLabel(storedLabel);
     }
@@ -31,7 +44,7 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
 
     setTimeout(() => {
       const textareas = document.querySelectorAll(`.modal-content textarea`);
-      textareas.forEach(textarea => {
+      textareas.forEach((textarea) => {
         textarea.parentNode.dataset.replicatedValue = textarea.value;
       });
     }, 0);
@@ -39,44 +52,45 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.ctrlKey && event.key === 'Enter') {
+      if (event.ctrlKey && event.key === "Enter") {
         addTestCase();
       }
     };
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
   const handleTestCaseChange = (id, newContent) => {
-    setTestCases(testCases.map(tc => 
-      tc.id === id ? { ...tc, content: newContent } : tc
-    ));
+    setTestCases(
+      testCases.map((tc) =>
+        tc.id === id ? { ...tc, content: newContent } : tc,
+      ),
+    );
   };
 
   const handleStatusChange = (id, newStatus) => {
-    setTestCases(testCases.map(tc => 
-      tc.id === id ? { ...tc, status: newStatus } : tc
-    ));
+    setTestCases(
+      testCases.map((tc) => (tc.id === id ? { ...tc, status: newStatus } : tc)),
+    );
   };
 
   const addTestCase = () => {
     const newTestCase = { id: Date.now(), content: "", status: "notstarted" };
-    
-    setTestCases(prevTestCases => [...prevTestCases, newTestCase]);
+
+    setTestCases((prevTestCases) => [...prevTestCases, newTestCase]);
   };
-  
+
   useEffect(() => {
     if (textareasRef.current.length > 0) {
       textareasRef.current[textareasRef.current.length - 1]?.focus();
     }
   }, [testCases.length]);
-  
-  
+
   const deleteSelectedTestCases = () => {
-    setTestCases(testCases.filter(tc => !selectedTestCases.includes(tc.id)));
+    setTestCases(testCases.filter((tc) => !selectedTestCases.includes(tc.id)));
     setSelectedTestCases([]);
   };
 
@@ -84,30 +98,28 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
     try {
       localStorage.setItem(`testCases-${nodeId}`, JSON.stringify(testCases));
       localStorage.setItem(`label-${nodeId}`, label);
-  
+
       if (onSave) {
         onSave(testCases, label);
       }
-  
-      toast.success('Test case/s saved!', {
-        position: 'top-left',
+
+      toast.success("Test case/s saved!", {
+        position: "top-left",
         autoClose: 3000,
-        onClose: () => {
-        }
+        onClose: () => {},
       });
-      
     } catch (error) {
-      console.error('Failed to save data:', error);
-      toast.error('Failed to save data. Please try again.', {
-        position: 'top-left'
+      console.error("Failed to save data:", error);
+      toast.error("Failed to save data. Please try again.", {
+        position: "top-left",
       });
     }
-  };  
+  };
 
   const handleCheckboxChange = (id) => {
     setSelectedTestCases((prevSelected) => {
       if (prevSelected.includes(id)) {
-        return prevSelected.filter(tcId => tcId !== id);
+        return prevSelected.filter((tcId) => tcId !== id);
       } else {
         return [...prevSelected, id];
       }
@@ -118,7 +130,7 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
     const adjustTextareaHeight = () => {
       textareasRef.current.forEach((textarea) => {
         if (textarea) {
-          textarea.style.height = 'auto';
+          textarea.style.height = "auto";
           textarea.style.height = `${textarea.scrollHeight}px`;
         }
       });
@@ -128,14 +140,14 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
 
     textareasRef.current.forEach((textarea, index) => {
       if (textarea) {
-        textarea.addEventListener('input', adjustTextareaHeight);
+        textarea.addEventListener("input", adjustTextareaHeight);
       }
     });
 
     return () => {
       textareasRef.current.forEach((textarea) => {
         if (textarea) {
-          textarea.removeEventListener('input', adjustTextareaHeight);
+          textarea.removeEventListener("input", adjustTextareaHeight);
         }
       });
     };
@@ -145,83 +157,113 @@ const Modal = ({ isOpen, onClose, nodeId, nodeLabel, testCases: initialTestCases
 
   return (
     <div className="modal-overlay z-0 select-none">
-  <div className="modal-content bg-[#1E1E1E] flex flex-col max-h-[90vh] w-[800px]">
-    <span className="close bg-inherit text-white text-5xl hover:bg-rose-500" onClick={onClose}>&times;</span>
-    <input
-      type="text"
-      className='bg-inherit text-slate-200 font-bold p-1 rounded mb-[10px] w-4/5 text-xl focus:outline-none'
-      value={label}
-      onChange={(e) => setLabel(e.target.value)}
-      placeholder="Node Label"
-    />
-    <hr className='mb-4 border-gray-600 border-1'/>
-
-    <div className="modal-body overflow-y-auto pb-[10px] divide-y divide-dashed">
-      {testCases.map((testCase, index) => (
-        <div className='py-2 flex items-center border-gray-600 space-x-5' 
-          key={testCase.id} 
-          data-replicated-value={testCase.content} 
+      <div className="modal-content bg-[#1E1E1E] flex flex-col max-h-[90vh] w-[800px]">
+        <span
+          className="close bg-inherit text-white text-5xl hover:bg-rose-500"
+          onClick={onClose}
         >
-          <input
-            type="checkbox"
-            checked={selectedTestCases.includes(testCase.id)}
-            onChange={() => handleCheckboxChange(testCase.id)}
-            className="ml-4 mr-5"
-          />
-          <div className='w-full'>
-            <textarea
-              ref={el => textareasRef.current[index] = el}
-              className='pr-2 bg-inherit overflow-hidden text-sm text-white rounded resize-none w-full focus:outline-none mr-5'
-              value={testCase.content}
-              onChange={(e) => {
-                handleTestCaseChange(testCase.id, e.target.value);
-                e.target.parentNode.dataset.replicatedValue = e.target.value;
-              }}
-              rows="1"
-              placeholder={`Test case ${testCase.id}`}
-            />
-          </div>
-          <select 
-            className={`  mr-2 p-1 cursor-pointer text-lg rounded font-mono space-x-2 focus:outline-none ${
-              testCase.status === 'notstarted' ? 'bg-yellow-200' : 
-              testCase.status === 'passed' ? 'bg-green-200' : 
-              testCase.status === 'failed' ? 'bg-rose-300' : 
-              testCase.status === 'blocked' ? 'bg-indigo-200' : 
-              testCase.status === 'notapplicable' ? 'bg-gray-300' : 
-              'bg-yellow-200'}`
-            }
-            value={testCase.status}
-            id='status'
-            onChange={(e) => handleStatusChange(testCase.id, e.target.value)}
-          >
-            <option className='bg-slate-200' value="notstarted">NOT STARTED</option>
-            <option className='bg-slate-200' value="passed">PASSED</option>
-            <option className='bg-slate-200' value="failed">FAILED</option>
-            <option className='bg-slate-200' value="blocked">BLOCKED</option>
-            <option className='bg-slate-200' value="notapplicable">NOT APPLICABLE</option>
-          </select>
+          &times;
+        </span>
+        <input
+          type="text"
+          className="bg-inherit text-slate-200 font-bold p-1 rounded mb-[10px] w-4/5 text-xl focus:outline-none"
+          value={label}
+          onChange={(e) => setLabel(e.target.value)}
+          placeholder="Node Label"
+        />
+        <hr className="mb-4 border-gray-600 border-1" />
+
+        <div className="modal-body overflow-y-auto pb-[10px] divide-y divide-dashed">
+          {testCases.map((testCase, index) => (
+            <div
+              className="py-2 flex items-center border-gray-600 space-x-5"
+              key={testCase.id}
+              data-replicated-value={testCase.content}
+            >
+              <input
+                type="checkbox"
+                checked={selectedTestCases.includes(testCase.id)}
+                onChange={() => handleCheckboxChange(testCase.id)}
+                className="ml-4 mr-5"
+              />
+              <div className="w-full">
+                <textarea
+                  ref={(el) => (textareasRef.current[index] = el)}
+                  className="pr-2 bg-inherit overflow-hidden text-white rounded resize-none w-full focus:outline-none mr-5"
+                  value={testCase.content}
+                  onChange={(e) => {
+                    handleTestCaseChange(testCase.id, e.target.value);
+                    e.target.parentNode.dataset.replicatedValue =
+                      e.target.value;
+                  }}
+                  rows="1"
+                  placeholder={`Test case ${testCase.id}`}
+                />
+              </div>
+              <select
+                className={`p-1 cursor-pointer text-sm rounded focus:outline-none ${
+                  testCase.status === "notstarted"
+                    ? "bg-yellow-200"
+                    : testCase.status === "passed"
+                      ? "bg-green-200"
+                      : testCase.status === "failed"
+                        ? "bg-rose-300"
+                        : testCase.status === "blocked"
+                          ? "bg-indigo-200"
+                          : testCase.status === "notapplicable"
+                            ? "bg-gray-300"
+                            : "bg-yellow-200"
+                }`}
+                value={testCase.status}
+                id="status"
+                onChange={(e) =>
+                  handleStatusChange(testCase.id, e.target.value)
+                }
+              >
+                <option className="bg-slate-200" value="notstarted">
+                  NOT STARTED
+                </option>
+                <option className="bg-slate-200" value="passed">
+                  PASSED
+                </option>
+                <option className="bg-slate-200" value="failed">
+                  FAILED
+                </option>
+                <option className="bg-slate-200" value="blocked">
+                  BLOCKED
+                </option>
+                <option className="bg-slate-200" value="notapplicable">
+                  NOT APPLICABLE
+                </option>
+              </select>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
 
-    <div className="button-container sticky bottom-0 left-0 right-0 bg-inherit pt-5 space-x-3 z-10">
-      <button className='p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700' onClick={addTestCase}>
-        <FontAwesomeIcon icon={faFileCirclePlus} size="lg" color="white"/>
-      </button>
-      <button className='p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700' onClick={handleSave}>
-        <FontAwesomeIcon icon={faSave} size="lg" color="white"/>
-      </button>
-      <button 
-        className={`p-2 rounded w-12 ${selectedTestCases.length > 0 ? 'bg-rose-500 hover:bg-rose-700' : 'bg-[#3e3e3e]'}`}
-        onClick={deleteSelectedTestCases}
-        disabled={selectedTestCases.length === 0}>
-        <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white"/>
-      </button>
+        <div className="button-container sticky bottom-0 left-0 right-0 bg-inherit pt-5 space-x-3 z-10">
+          <button
+            className="p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700"
+            onClick={addTestCase}
+          >
+            <FontAwesomeIcon icon={faFileCirclePlus} size="lg" color="white" />
+          </button>
+          <button
+            className="p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700"
+            onClick={handleSave}
+          >
+            <FontAwesomeIcon icon={faSave} size="lg" color="white" />
+          </button>
+          <button
+            className={`p-2 rounded w-12 ${selectedTestCases.length > 0 ? "bg-rose-500 hover:bg-rose-700" : "bg-[#3e3e3e]"}`}
+            onClick={deleteSelectedTestCases}
+            disabled={selectedTestCases.length === 0}
+          >
+            <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
+          </button>
+        </div>
+      </div>
+      <ToastContainer />
     </div>
-  </div>
-  <ToastContainer/>
-</div>
-
   );
 };
 
