@@ -90,31 +90,59 @@ const Modal = ({
   }, [testCases.length]);
 
   const deleteSelectedTestCases = () => {
-    setTestCases(testCases.filter((tc) => !selectedTestCases.includes(tc.id)));
+    setTestCases((prevTestCases) =>
+      prevTestCases.filter((tc) => !selectedTestCases.includes(tc.id))
+    );
     setSelectedTestCases([]);
-  };
+  };  
+
+  const handleSelectAll = (e) => {
+    if (e.target.checked) {
+      const allTestCaseIds = testCases.map((tc) => tc.id);
+      setSelectedTestCases(allTestCaseIds);
+    } else {
+      setSelectedTestCases([]);
+    }
+  }; 
 
   const handleSave = async () => {
-    try {
-      localStorage.setItem(`testCases-${nodeId}`, JSON.stringify(testCases));
-      localStorage.setItem(`label-${nodeId}`, label);
+  try {
+    const totalTestCases = testCases.length;
+    const passed = testCases.filter((tc) => tc.status === "passed").length;
+    const failed = testCases.filter((tc) => tc.status === "failed").length;
+    const pending = testCases.filter((tc) => tc.status === "notstarted").length;
+    const notApplicable = testCases.filter((tc) => tc.status === "notapplicable").length;
 
-      if (onSave) {
-        onSave(testCases, label);
-      }
+    console.log(testCases.length)
+    const updatedStats = {
+      total: totalTestCases,
+      passed,
+      failed,
+      pending,
+      notApplicable,
+    };
 
-      toast.success("Test case/s saved!", {
-        position: "top-left",
-        autoClose: 3000,
-        onClose: () => {},
-      });
-    } catch (error) {
-      console.error("Failed to save data:", error);
-      toast.error("Failed to save data. Please try again.", {
-        position: "top-left",
-      });
+    localStorage.setItem(`testCases-${nodeId}`, JSON.stringify(testCases));
+    localStorage.setItem(`label-${nodeId}`, label);
+    localStorage.setItem(`testCaseStats-${nodeId}`, JSON.stringify(updatedStats));
+
+    if (onSave) {
+      onSave(testCases, label, updatedStats);
     }
-  };
+
+    toast.success("Test case/s saved!", {
+      position: "top-left",
+      autoClose: 3000,
+      onClose: () => {},
+    });
+  } catch (error) {
+    console.error("Failed to save data:", error);
+    toast.error("Failed to save data. Please try again.", {
+      position: "top-left",
+    });
+  }
+};
+
 
   const handleCheckboxChange = (id) => {
     setSelectedTestCases((prevSelected) => {
@@ -142,7 +170,7 @@ const Modal = ({
       if (textarea) {
         textarea.addEventListener("input", adjustTextareaHeight);
       }
-    });
+    });   
 
     return () => {
       textareasRef.current.forEach((textarea) => {
@@ -171,7 +199,18 @@ const Modal = ({
           onChange={(e) => setLabel(e.target.value)}
           placeholder="Node Label"
         />
+
+        <div className="py-2 flex items-center border-gray-600 space-x-5">
+          <input
+            type="checkbox"
+            onChange={handleSelectAll}
+            checked={selectedTestCases.length === testCases.length && testCases.length > 0}
+            className="ml-4 mr-5"
+          />
+          <span className="text-white">Select All</span>
+        </div>
         <hr className="mb-4 border-gray-600 border-1" />
+        
 
         <div className="modal-body overflow-y-auto pb-[10px] divide-y divide-dashed">
           {testCases.map((testCase, index) => (

@@ -26,6 +26,7 @@ import {
   useEdgesState,
   useReactFlow,
   Panel,
+  MarkerType,
 } from "@xyflow/react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -38,6 +39,8 @@ import {
   faTrashAlt,
   faPlusCircle,
   faPlusSquare,
+  faChevronDown,
+  faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
 
 // import { initialNodes, nodeTypes } from "./nodes";
@@ -58,19 +61,33 @@ export default function App() {
   const nodeTypes = {
     custom: CustomNode,
   };
+  const [testCaseStats, setTestCaseStats] = useState({
+    total: 0,
+    notstarted: 0,
+    passed: 0,
+    failed: 0,
+    blocked: 0,
+    notapplicable: 0,
+  });
+  const [showDetails, setShowDetails] = useState(false);
+  
 
   const clickTimeoutRef = useRef(null);
+
+  const toggleDetails = () => {
+    setShowDetails(!showDetails);
+  };
 
   useEffect(() => {
     const restoreFlow = async () => {
       try {
         const response = await fetch(import.meta.env.VITE_API_URL);
         console.log(import.meta.env.VITE_API_URL);
-
+  
         if (response.ok) {
           const flow = await response.json();
           const { x = 0, y = 0, zoom = 1 } = flow.viewport || {};
-
+  
           const validatedNodes = (flow.nodes || []).map((node) => ({
             ...node,
             position: {
@@ -78,16 +95,21 @@ export default function App() {
               y: typeof node.position?.y === "number" ? node.position.y : 0,
             },
           }));
-
+  
           const edgesWithDefaultStyle = (flow.edges || []).map((edge) => ({
             ...edge,
             style: edge.style || { stroke: "white", strokeWidth: 2 },
           }));
-
+  
           setNodes(validatedNodes);
           setEdges(edgesWithDefaultStyle);
           setViewport({ x, y, zoom });
-
+  
+          // Calculate and set the test case stats
+          if (flow.nodes) {
+            setTestCaseStats(calculateTestCaseStats(flow.nodes));
+          }
+  
           if (rfInstance) {
             rfInstance.fitView();
           }
@@ -102,9 +124,9 @@ export default function App() {
         // setEdges(initialEdges);
       }
     };
-
+  
     restoreFlow();
-  }, [setNodes, setEdges, setViewport, rfInstance]);
+  }, [setNodes, setEdges, setViewport, setTestCaseStats, rfInstance]);  
 
   const onConnect = useCallback(
     (connection) =>
@@ -113,7 +135,7 @@ export default function App() {
           {
             ...connection,
             animated: true,
-            style: { stroke: "white", strokeWidth: 2 },
+            style: { stroke: "white", strokeWidth: 4 },
           },
           eds,
         ),
@@ -196,14 +218,66 @@ export default function App() {
   };
 
   const handleSaveTestCases = (testCases, label) => {
-    setNodes((nds) =>
-      nds.map((node) =>
-        node.id === selectedNode.id
-          ? { ...node, data: { ...node.data, label, testCases } }
-          : node,
-      ),
-    );
+    setNodes((nds) => {
+      const updatedNodes = nds.map((node) => {
+        if (node.id === selectedNode.id) {
+          const updatedNode = { ...node, data: { ...node.data, label, testCases } };
+          return updatedNode;
+        }
+        return node;
+      });
+  
+      const updatedStats = calculateTestCaseStats(updatedNodes);
+      setTestCaseStats(updatedStats);
+  
+      return updatedNodes;
+    });
   };
+  
+  
+  const calculateTestCaseStats = (nodes) => {
+    const stats = {
+      total: 0,
+      notstarted: 0,
+      passed: 0,
+      failed: 0,
+      blocked: 0,
+      notapplicable: 0,
+    };
+  
+    nodes.forEach((node) => {
+      if (node.data && node.data.testCases) {
+        stats.total += node.data.testCases.length;
+        node.data.testCases.forEach((testCase) => {
+          if (testCase.status === "notstarted") {
+            stats.notstarted += 1;
+          } else if (testCase.status === "passed") {
+            stats.passed += 1;
+          } else if (testCase.status === "failed") {
+            stats.failed += 1;
+          } else if (testCase.status === "blocked") {
+            stats.blocked += 1;
+          } else if (testCase.status === "notapplicable") {
+            stats.notapplicable += 1;
+          }
+        });
+      }
+    });
+  
+    return stats;
+  };  
+
+  const updateTestCaseStats = (testCases) => {
+    const total = testCases.length;
+    const notstarted = testCases.filter((tc) => tc.status === "notstarted").length;
+    const passed = testCases.filter((tc) => tc.status === "passed").length;
+    const failed = testCases.filter((tc) => tc.status === "failed").length;
+    const blocked = testCases.filter((tc) => tc.status === "blocked").length;
+    const notapplicable = testCases.filter((tc) => tc.status === "notapplicable").length;
+    
+    setTestCaseStats({ total, notstarted, passed, failed, blocked, notapplicable });
+  };
+   
 
   const deleteSelectedNode = () => {
     if (selectedNode) {
@@ -227,8 +301,9 @@ export default function App() {
   const onSave = useCallback(() => {
     if (rfInstance) {
       const flow = rfInstance.toObject();
-      const formattedFlow = JSON.stringify(flow, null, 4);
-
+      const updatedStats = calculateTestCaseStats(flow.nodes); // Calculate updated stats
+      const formattedFlow = JSON.stringify({ ...flow, testCaseStats: updatedStats }, null, 4);
+  
       fetch("http://localhost:3000/flow", {
         method: "POST",
         headers: {
@@ -254,10 +329,7 @@ export default function App() {
               autoClose: 3000,
             });
           } catch (localError) {
-            console.error(
-              "Failed to save flow data to localStorage:",
-              localError,
-            );
+            console.error("Failed to save flow data to localStorage:", localError);
             toast.error("Failed to save changes. Please try again.", {
               position: "top-left",
               autoClose: 5000,
@@ -265,16 +337,13 @@ export default function App() {
           }
         });
     } else {
-      toast.error(
-        "Failed to save changes. React Flow instance is not initialized.",
-        {
-          position: "top-left",
-          autoClose: 5000,
-        },
-      );
+      toast.error("Failed to save changes. React Flow instance is not initialized.", {
+        position: "top-left",
+        autoClose: 5000,
+      });
     }
-  }, [rfInstance]);
-
+  }, [rfInstance]);  
+  
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <ReactFlow
@@ -296,32 +365,56 @@ export default function App() {
         <Background />
         <MiniMap />
         <Controls />
-        <Panel position="top-right panel" className="flex space-x-4">
-          <button
-            className="delete p-2 rounded bg-[#3E3E3E] hover:bg-red-600 size-12"
-            onClick={deleteSelectedNode}
-          >
-            <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
-          </button>
-          <button
-            className="add p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12"
-            onClick={addNode}
-          >
-            <FontAwesomeIcon icon={faPlusSquare} size="lg" color="white" />
-          </button>
-          <button
-            className="connector p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12"
-            onClick={addConnectorNode}
-          >
-            <FontAwesomeIcon icon={faPlusCircle} size="lg" color="white" />
-          </button>
-          <button
-            className="save p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12"
-            onClick={onSave}
-          >
-            <FontAwesomeIcon icon={faFloppyDisk} size="lg" color="white" />
-          </button>
-        </Panel>
+        <Panel position="top-right panel" className="flex flex-col space-y-4">
+  <div className="button-container flex space-x-4">
+    <button
+      className="delete p-2 rounded bg-[#3E3E3E] hover:bg-red-600 size-12"
+      onClick={deleteSelectedNode}
+    >
+      <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
+    </button>
+    <button
+      className="add p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12"
+      onClick={addNode}
+    >
+      <FontAwesomeIcon icon={faPlusSquare} size="lg" color="white" />
+    </button>
+    <button
+      className="connector p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12"
+      onClick={addConnectorNode}
+    >
+      <FontAwesomeIcon icon={faPlusCircle} size="lg" color="white" />
+    </button>
+    <button
+      className="save p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12"
+      onClick={onSave}
+    >
+      <FontAwesomeIcon icon={faFloppyDisk} size="lg" color="white" />
+    </button>
+    </div>
+      <div className="relative">
+          <div className="flex justify-between items-center text-sm p-2 bg-[#2d2d2d] opacity-70 rounded text-white">
+            <p>Total Count: {testCaseStats.total}</p>
+            <button
+              className="dropdown-button p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 flex items-center"
+              onClick={toggleDetails}
+            >
+              <FontAwesomeIcon icon={faChevronDown} size="lg" color="white" />
+            </button>
+          </div>
+
+          {showDetails && (
+            <div className="dropdown-menu mt-2 bg-[#2d2d2d] p-2 opacity-70 rounded text-white">
+              <p>Not Started: {testCaseStats.notstarted}</p>
+              <p>Passed: {testCaseStats.passed}</p>
+              <p>Failed: {testCaseStats.failed}</p>
+              <p>Blocked: {testCaseStats.blocked}</p>
+              <p>Not Applicable: {testCaseStats.notapplicable}</p>
+            </div>
+          )}
+      </div>
+      </Panel>
+
       </ReactFlow>
       <Modal
         isOpen={modalOpen}
