@@ -904,6 +904,7 @@
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-BPS-BLS)",
                 "testCases": []
             },
+            "type": "custom",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -1053,6 +1054,7 @@
                 "label": "MULTI GAMECHOOSE (CLS-OGLS-CCS-MGC)",
                 "testCases": []
             },
+            "type": "custom",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -1072,6 +1074,7 @@
                 "label": "S: SUCCESS (CLS-OGLS-CCS-MGCS)",
                 "testCases": []
             },
+            "type": "custom",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -1121,6 +1124,7 @@
                 "label": "BOC : BACK TO LOBBY OTHER CATEGORY (CLS-OGLS-CCS-MGCS-BPS-BOC)",
                 "testCases": []
             },
+            "type": "custom",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -1170,6 +1174,7 @@
                 "label": "CT: CHANGE TO OTHER TARGETED TABLE  (CLS-OGLS-GCLS-NBFS-CT)",
                 "testCases": []
             },
+            "type": "custom",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -1189,6 +1194,7 @@
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-NBFS-CTS)",
                 "testCases": []
             },
+            "type": "custom",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {

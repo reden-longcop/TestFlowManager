@@ -173,15 +173,22 @@ export default function App() {
     if (clickTimeoutRef.current) {
       clearTimeout(clickTimeoutRef.current);
       clickTimeoutRef.current = null;
-      setSelectedNode(node);
       setModalOpen(true);
     } else {
       clickTimeoutRef.current = setTimeout(() => {
-        setSelectedNode(node);
         clickTimeoutRef.current = null;
       }, 200);
     }
+  
+    // Update the selected node state
+    setNodes((nds) =>
+      nds.map((n) =>
+        n.id === node.id ? { ...n, selected: true } : { ...n, selected: false }
+      )
+    );
+    setSelectedNode(node);
   };
+  
 
   const handleCloseModal = () => {
     setModalOpen(false);

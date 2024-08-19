@@ -1,12 +1,16 @@
 import React from "react";
 import { Handle } from "@xyflow/react";
 
-const CustomNode = ({ data }) => {
+const CustomNode = ({ data, selected }) => {
   const { label, testCases } = data;
   const testCaseCount = testCases.length;
 
   return (
-    <div className="text-xs rounded relative p-2 bg-[#1E1E1E] border border-[#373737] text-white max-w-[150px] text-center focus:border focus:border-slate-700">
+    <div
+      className={`text-xs rounded relative p-2 bg-[#1E1E1E] border-2 ${
+        selected ? "border-emerald-600" : "border-[#373737]"
+      } text-white max-w-[150px] text-center`}
+    >
       <div>{label}</div>
       <Handle type="source" position="right" />
       <Handle type="target" position="left" />
