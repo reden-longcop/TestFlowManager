@@ -3,22 +3,23 @@ import { Handle } from "@xyflow/react";
 const ConnectorNode = ({ data }) => {
   return (
     <div
-      style={{
-        padding: "2px",
+      style= {{
+        color: 'white',
         borderRadius: "50%",
-        background: "#ccc",
+        width: "50px",
+        height: "50px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#059669",
         textAlign: "center",
       }}
     >
       <div>{data.label}</div>
-      <Handle type="source" position="right" style={{ borderRadius: "50%" }} />
-      <Handle type="target" position="left" style={{ borderRadius: "50%" }} />
+      <Handle type="source" position="right" />
+      <Handle type="target" position="left" />
     </div>
   );
 };
 
-const nodeTypes = {
-  default: DefaultNode,
-  connectorNode: ConnectorNode,
-  // other node types...
-};
+export default ConnectorNode;

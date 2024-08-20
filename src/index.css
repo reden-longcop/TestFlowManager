@@ -60,6 +60,9 @@ body,
   visibility: visible;
 }
 
-.dark --connectionline-stroke-width-default{
-  border: 1px solid red;
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
 }
+

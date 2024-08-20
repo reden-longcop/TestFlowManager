@@ -6,7 +6,7 @@
                 "x": -151.82847289119962,
                 "y": -5.249969378918367
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "data": {
                 "label": "C: CLIENT (C)",
@@ -14,7 +14,7 @@
                     {
                         "id": 1724062220621,
                         "content": "Verify that when the registered player clicks the OG link/button, the request OG game launching URL should start",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1724062222127,
@@ -36,7 +36,7 @@
                 "x": -10.174404210527108,
                 "y": -5.349484085944928
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "data": {
@@ -92,7 +92,7 @@
                 "x": 512.5123779605245,
                 "y": -10.639793634377968
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "data": {
@@ -280,9 +280,200 @@
             },
             "data": {
                 "label": "GC:GAME CHOOSE (CLS-OGLS-GC)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724064665465,
+                        "content": "OG loading logo should display when the player clicks the Baccarat M5 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064666745,
+                        "content": "OG loading logo should display when the player clicks the Baccarat M6 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064669203,
+                        "content": "OG loading logo should display when the player clicks the Baccarat M7 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064671357,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG001 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064674019,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG002 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064676224,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG003 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064678296,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG005 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064680022,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG012 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064687840,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG013 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064690556,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG015 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064692814,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat C2 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064695165,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M1 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064697485,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M2 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064699830,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M3 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064702551,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG006 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064706198,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG007 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064708627,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG016 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064711136,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG017 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064714408,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG018 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064717712,
+                        "content": "OG loading logo should display when the player clicks the Classic DT P7 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064720085,
+                        "content": "OG loading logo should display when the player clicks the Classic DT C9 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064722373,
+                        "content": "OG loading logo should display when the player clicks the Classic DT C10 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064724487,
+                        "content": "OG loading logo should display when the player clicks the Classic DT C11 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064729208,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG008 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064731436,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG009 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064733304,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG019 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064741469,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG020 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064744691,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG010 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064746822,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG011 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064749093,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG021 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064751089,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG022 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064753163,
+                        "content": "OG loading logo should display when the player clicks the Bull Bull P3 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064755483,
+                        "content": "OG loading logo should display when the player clicks the Three Cards P5 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064763579,
+                        "content": "OG loading logo should display when the player clicks the Sedie B01 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064764922,
+                        "content": "OG loading logo should display when the player clicks the Roulette P8 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064766999,
+                        "content": "OG loading logo should display when the player clicks the Roulette G11 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064769083,
+                        "content": "OG loading logo should display when the player clicks the Sicbo C12 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724064770801,
+                        "content": "OG loading logo should display when the player clicks the Moneywheel MW1 table",
+                        "status": "notstarted"
+                    }
+                ]
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -362,7 +553,7 @@
                 "label": "L: LOADING (CLS-OGLS-GCL)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -382,7 +573,7 @@
                 "label": "S: SUCCESS (CLS-OGLS-GCLS)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -432,7 +623,7 @@
                 "label": "BP:BETTING PLAY ALL SENAIRO (CLS-OGLS-GCLS-BP)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -452,7 +643,7 @@
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-BPS)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -502,7 +693,7 @@
                 "label": "BL:BACK TO LOBBY (CLS-OGLS-GCLS-BPS-BL)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -522,7 +713,7 @@
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-BPS-BLS)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -572,7 +763,7 @@
                 "label": "NBF: NONE BETTING FUNCTIONS ALL SCENAIRO",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -592,7 +783,7 @@
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-NBFS)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -672,7 +863,7 @@
                 "label": "MULTI GAMECHOOSE (CLS-OGLS-CCS-MGC)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -692,7 +883,7 @@
                 "label": "S: SUCCESS (CLS-OGLS-CCS-MGCS)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -742,7 +933,7 @@
                 "label": "BOC : BACK TO LOBBY OTHER CATEGORY (CLS-OGLS-CCS-MGCS-BPS-BOC)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -792,7 +983,7 @@
                 "label": "CT: CHANGE TO OTHER TARGETED TABLE  (CLS-OGLS-GCLS-NBFS-CT)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -812,7 +1003,7 @@
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-NBFS-CTS)",
                 "testCases": []
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -918,7 +1109,7 @@
                     }
                 ]
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -969,7 +1160,7 @@
                     }
                 ]
             },
-            "type": "custom",
+            "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
@@ -991,7 +1182,7 @@
             },
             "sourcePosition": "right",
             "targetPosition": "left",
-            "type": "custom",
+            "type": "customNode",
             "measured": {
                 "width": 150,
                 "height": 50
@@ -1041,7 +1232,7 @@
             },
             "sourcePosition": "right",
             "targetPosition": "left",
-            "type": "custom",
+            "type": "customNode",
             "measured": {
                 "width": 150,
                 "height": 66
@@ -1143,7 +1334,7 @@
             "id": "36015b23-47d7-4aad-9174-4ec853310353",
             "position": {
                 "x": 920.4490759516734,
-                "y": -145.33490225682655
+                "y": -138.55883827518807
             },
             "data": {
                 "label": "SB: SIDEBAR (CLS-OGLS-GCLS-BPS-SB)",
@@ -1151,12 +1342,12 @@
             },
             "sourcePosition": "right",
             "targetPosition": "left",
-            "type": "custom",
+            "type": "customNode",
             "measured": {
                 "width": 150,
                 "height": 50
             },
-            "selected": false,
+            "selected": true,
             "dragging": false
         },
         {
@@ -1192,8 +1383,8 @@
         {
             "id": "4fe02e4c-4cef-4576-832b-642af955fb40",
             "position": {
-                "x": 1119.379179134484,
-                "y": -89.77097257733939
+                "x": 1118.4135849228999,
+                "y": -101.35810311635018
             },
             "type": "connectorNode",
             "data": {
@@ -1226,20 +1417,14 @@
             "source": "a",
             "target": "b",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "selected": false
         },
         {
             "source": "bfb0c4e6-24ff-4694-b817-e06f6e15727a",
             "target": "fdd88f4a-290e-4c4d-861a-6358bfd68801",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__bfb0c4e6-24ff-4694-b817-e06f6e15727a-fdd88f4a-290e-4c4d-861a-6358bfd68801",
             "selected": false
         },
@@ -1247,332 +1432,236 @@
             "source": "d",
             "target": "7bc86ead-8295-4e96-be33-4c2ab73ec732",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__d-7bc86ead-8295-4e96-be33-4c2ab73ec732"
         },
         {
             "source": "fdd88f4a-290e-4c4d-861a-6358bfd68801",
             "target": "282d0ba8-9a01-47fb-881c-31df84014b0d",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__fdd88f4a-290e-4c4d-861a-6358bfd68801-282d0ba8-9a01-47fb-881c-31df84014b0d"
         },
         {
             "source": "282d0ba8-9a01-47fb-881c-31df84014b0d",
             "target": "c13d1054-4216-463e-87c4-1a8f8fb80621",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__282d0ba8-9a01-47fb-881c-31df84014b0d-c13d1054-4216-463e-87c4-1a8f8fb80621"
         },
         {
             "source": "1f76f5bb-e8a5-4b79-b37c-24ce48782b30",
             "target": "b5381574-b920-479e-a658-03d9e0ca12e3",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__1f76f5bb-e8a5-4b79-b37c-24ce48782b30-b5381574-b920-479e-a658-03d9e0ca12e3"
         },
         {
             "source": "b5381574-b920-479e-a658-03d9e0ca12e3",
             "target": "a5591ab5-4766-417c-9ce3-3ee14faed247",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__b5381574-b920-479e-a658-03d9e0ca12e3-a5591ab5-4766-417c-9ce3-3ee14faed247"
         },
         {
             "source": "7bc86ead-8295-4e96-be33-4c2ab73ec732",
             "target": "190132bd-143a-4b10-bc3c-4704d53d5a67",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__7bc86ead-8295-4e96-be33-4c2ab73ec732-190132bd-143a-4b10-bc3c-4704d53d5a67"
         },
         {
             "source": "190132bd-143a-4b10-bc3c-4704d53d5a67",
             "target": "02a2ed05-df7c-43a0-820a-155d282ca45b",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__190132bd-143a-4b10-bc3c-4704d53d5a67-02a2ed05-df7c-43a0-820a-155d282ca45b"
         },
         {
             "source": "02a2ed05-df7c-43a0-820a-155d282ca45b",
             "target": "7e67acc4-86a1-4905-94b3-5db027fc8f3e",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__02a2ed05-df7c-43a0-820a-155d282ca45b-7e67acc4-86a1-4905-94b3-5db027fc8f3e"
         },
         {
             "source": "98ade99e-e158-4f80-a893-37d8f3c14f41",
             "target": "ae148564-f8be-4c47-95e5-183c0dee1353",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__98ade99e-e158-4f80-a893-37d8f3c14f41-ae148564-f8be-4c47-95e5-183c0dee1353"
         },
         {
             "source": "ae148564-f8be-4c47-95e5-183c0dee1353",
             "target": "c904c59e-a413-4083-914e-30e7f7b61f34",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__ae148564-f8be-4c47-95e5-183c0dee1353-c904c59e-a413-4083-914e-30e7f7b61f34"
         },
         {
             "source": "d",
             "target": "c8659350-b14e-4831-91ee-5436f65dd896",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__d-c8659350-b14e-4831-91ee-5436f65dd896"
         },
         {
             "source": "93422266-6fef-488a-a7ea-fa83f6097b79",
             "target": "aa792d92-9401-4b24-ab87-65ec28e1495f",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__93422266-6fef-488a-a7ea-fa83f6097b79-aa792d92-9401-4b24-ab87-65ec28e1495f"
         },
         {
             "source": "aa792d92-9401-4b24-ab87-65ec28e1495f",
             "target": "22102c9d-9e03-4f34-bc9b-493a90074cae",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__aa792d92-9401-4b24-ab87-65ec28e1495f-22102c9d-9e03-4f34-bc9b-493a90074cae"
         },
         {
             "source": "22102c9d-9e03-4f34-bc9b-493a90074cae",
             "target": "ea98333b-e199-425d-a9c3-0363b6b24d8a",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__22102c9d-9e03-4f34-bc9b-493a90074cae-ea98333b-e199-425d-a9c3-0363b6b24d8a"
         },
         {
             "source": "7bc86ead-8295-4e96-be33-4c2ab73ec732",
             "target": "e1ea8270-6477-4b7c-864b-f48f35e53c48",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__7bc86ead-8295-4e96-be33-4c2ab73ec732-e1ea8270-6477-4b7c-864b-f48f35e53c48"
         },
         {
             "source": "e1ea8270-6477-4b7c-864b-f48f35e53c48",
             "target": "e641ffa7-7e57-4398-96a7-cdcad1727cee",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__e1ea8270-6477-4b7c-864b-f48f35e53c48-e641ffa7-7e57-4398-96a7-cdcad1727cee"
         },
         {
             "source": "e641ffa7-7e57-4398-96a7-cdcad1727cee",
             "target": "8f122ec2-a5f3-4fa8-b439-4352857ea8ee",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__e641ffa7-7e57-4398-96a7-cdcad1727cee-8f122ec2-a5f3-4fa8-b439-4352857ea8ee"
         },
         {
             "source": "b",
             "target": "97d03da9-debb-4e60-93fa-600941456646",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__b-97d03da9-debb-4e60-93fa-600941456646"
         },
         {
             "source": "97d03da9-debb-4e60-93fa-600941456646",
             "target": "d10306ac-a2b7-4d17-b021-7e439155e211",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__97d03da9-debb-4e60-93fa-600941456646-d10306ac-a2b7-4d17-b021-7e439155e211"
         },
         {
             "source": "d10306ac-a2b7-4d17-b021-7e439155e211",
             "target": "d",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__d10306ac-a2b7-4d17-b021-7e439155e211-d"
         },
         {
             "source": "19770544-598b-4612-8889-3159bdc34992",
             "target": "ab9a087b-62cb-4c9f-92de-6f8536f14776",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__19770544-598b-4612-8889-3159bdc34992-ab9a087b-62cb-4c9f-92de-6f8536f14776"
         },
         {
             "source": "ab9a087b-62cb-4c9f-92de-6f8536f14776",
             "target": "27459b8f-f962-4a6d-babd-375b81f00dc2",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__ab9a087b-62cb-4c9f-92de-6f8536f14776-27459b8f-f962-4a6d-babd-375b81f00dc2"
         },
         {
             "source": "d",
             "target": "38d0ae0b-511e-42b6-8dd8-79913cae6e7f",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__d-38d0ae0b-511e-42b6-8dd8-79913cae6e7f"
         },
         {
             "source": "7e67acc4-86a1-4905-94b3-5db027fc8f3e",
             "target": "c589ef53-6256-42d5-889a-6d3374a813b5",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__7e67acc4-86a1-4905-94b3-5db027fc8f3e-c589ef53-6256-42d5-889a-6d3374a813b5"
         },
         {
             "source": "7e67acc4-86a1-4905-94b3-5db027fc8f3e",
             "target": "4339c467-0049-4480-819e-278c23377f00",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__7e67acc4-86a1-4905-94b3-5db027fc8f3e-4339c467-0049-4480-819e-278c23377f00"
         },
         {
             "source": "7e67acc4-86a1-4905-94b3-5db027fc8f3e",
             "target": "d830bbfd-6a79-4840-8e89-9e21c7d37fa9",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__7e67acc4-86a1-4905-94b3-5db027fc8f3e-d830bbfd-6a79-4840-8e89-9e21c7d37fa9"
         },
         {
             "source": "d830bbfd-6a79-4840-8e89-9e21c7d37fa9",
             "target": "07f3966d-36e6-4338-9b85-cf2237f6bbec",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__d830bbfd-6a79-4840-8e89-9e21c7d37fa9-07f3966d-36e6-4338-9b85-cf2237f6bbec"
         },
         {
             "source": "190132bd-143a-4b10-bc3c-4704d53d5a67",
             "target": "36015b23-47d7-4aad-9174-4ec853310353",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__190132bd-143a-4b10-bc3c-4704d53d5a67-36015b23-47d7-4aad-9174-4ec853310353"
         },
         {
             "source": "36015b23-47d7-4aad-9174-4ec853310353",
             "target": "a5369562-f91f-464c-81a3-68f52932c074",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__36015b23-47d7-4aad-9174-4ec853310353-a5369562-f91f-464c-81a3-68f52932c074"
         },
         {
             "source": "36015b23-47d7-4aad-9174-4ec853310353",
             "target": "4fe02e4c-4cef-4576-832b-642af955fb40",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__36015b23-47d7-4aad-9174-4ec853310353-4fe02e4c-4cef-4576-832b-642af955fb40"
         },
         {
             "source": "38d0ae0b-511e-42b6-8dd8-79913cae6e7f",
             "target": "93422266-6fef-488a-a7ea-fa83f6097b79",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__38d0ae0b-511e-42b6-8dd8-79913cae6e7f-93422266-6fef-488a-a7ea-fa83f6097b79"
         },
         {
             "source": "38d0ae0b-511e-42b6-8dd8-79913cae6e7f",
             "target": "da140b26-feee-49c9-98ee-893f7229b148",
             "animated": true,
-            "style": {
-                "stroke": "white",
-                "strokeWidth": 2
-            },
+            "type": "customEdge",
             "id": "xy-edge__38d0ae0b-511e-42b6-8dd8-79913cae6e7f-da140b26-feee-49c9-98ee-893f7229b148"
         }
     ],
     "viewport": {
-        "x": 282.09417851181774,
-        "y": 377.6523152416336,
-        "zoom": 1.0356317260428876
+        "x": 283.78537554928187,
+        "y": 376.8134766790583,
+        "zoom": 1.0330480967960658
     },
     "testCaseStats": {
-        "total": 53,
-        "notstarted": 53,
-        "passed": 0,
+        "total": 91,
+        "notstarted": 90,
+        "passed": 1,
         "failed": 0,
         "blocked": 0,
         "notapplicable": 0

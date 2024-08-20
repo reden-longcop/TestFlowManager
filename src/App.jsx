@@ -44,10 +44,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // import { initialNodes, nodeTypes } from "./nodes";
-import { initialEdges, edgeTypes } from "./edges";
+// import { initialEdges, edgeTypes } from "./edges";
 
 import Modal from "./Modal";
 import CustomNode from "./nodes/CustomNode";
+import ConnectorNode from "./nodes/ConnectorNode";
+
+import CustomEdge from "./edges/CustomEdge";
 
 import { v4 as uuidv4 } from "uuid";
 
@@ -58,9 +61,16 @@ export default function App() {
   const [selectedNode, setSelectedNode] = useState(null);
   const [rfInstance, setRfInstance] = useState(null);
   const { setViewport } = useReactFlow();
+  
   const nodeTypes = {
-    custom: CustomNode,
+    customNode: CustomNode,
+    connector: ConnectorNode,
   };
+
+  const edgeTypes = {
+    customEdge: CustomEdge,
+  }
+
   const [testCaseStats, setTestCaseStats] = useState({
     total: 0,
     notstarted: 0,
@@ -98,7 +108,6 @@ export default function App() {
   
           const edgesWithDefaultStyle = (flow.edges || []).map((edge) => ({
             ...edge,
-            style: edge.style || { stroke: "white", strokeWidth: 2 },
           }));
   
           setNodes(validatedNodes);
@@ -115,13 +124,9 @@ export default function App() {
           }
         } else {
           console.warn("Failed to load flow data: Check the flow.json");
-          // setNodes(initialNodes);
-          // setEdges(initialEdges);
         }
       } catch (error) {
         console.error("Failed to load flow data:", error);
-        // setNodes(initialNodes);
-        // setEdges(initialEdges);
       }
     };
   
@@ -135,7 +140,8 @@ export default function App() {
           {
             ...connection,
             animated: true,
-            style: { stroke: "white", strokeWidth: 4 },
+            type: "customEdge",
+            // style: { stroke: "red", strokeWidth: 4 },
           },
           eds,
         ),
@@ -156,7 +162,7 @@ export default function App() {
       data: { label: `Test Scenario ${nodes.length + 1}`, testCases: [] },
       sourcePosition: "right",
       targetPosition: "left",
-      type: "custom",
+      type: "customNode",
     };
 
     setNodes((nds) => [...nds, newNode]);
@@ -172,20 +178,10 @@ export default function App() {
         x: lastNodePosition.x + 100,
         y: lastNodePosition.y + 100,
       },
-      type: "connectorNode",
+      type: "connector",
       data: { label: `${nodes.length + 1}` },
       sourcePosition: "right",
       targetPosition: "left",
-      style: {
-        borderRadius: "50%",
-        width: "50px",
-        height: "50px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#059669",
-        textAlign: "center",
-      },
     };
 
     setNodes((nds) => [...nds, newConnectorNode]);
@@ -301,7 +297,7 @@ export default function App() {
   const onSave = useCallback(() => {
     if (rfInstance) {
       const flow = rfInstance.toObject();
-      const updatedStats = calculateTestCaseStats(flow.nodes); // Calculate updated stats
+      const updatedStats = calculateTestCaseStats(flow.nodes);
       const formattedFlow = JSON.stringify({ ...flow, testCaseStats: updatedStats }, null, 4);
   
       fetch("http://localhost:3000/flow", {
@@ -359,8 +355,8 @@ export default function App() {
         fitView
         zoomOnScroll={false}
         zoomOnDoubleClick={false}
-        // panOnScroll={false}
         onNodeClick={handleNodeClick}
+        
       >
         <Background />
         <MiniMap />
