@@ -14,9 +14,11 @@ const CustomNode = ({ data, selected }) => {
       <div>{label}</div>
       <Handle type="source" position="right" />
       <Handle type="target" position="left" />
-      <div className="absolute top-[-10px] right-[-10px] w-[20px] h-[20px] rounded-full bg-[#E0E0E0] text-slate-700 flex items-center justify-center text-xs">
-        {testCaseCount}
-      </div>
+      {testCaseCount > 0 && (
+        <div className="absolute top-[-10px] right-[-10px] w-[20px] h-[20px] rounded-full bg-[#E0E0E0] text-slate-700 flex items-center justify-center text-xs">
+          {testCaseCount}
+        </div>
+      )}
     </div>
   );
 };

@@ -3,8 +3,8 @@
         {
             "id": "a",
             "position": {
-                "x": -151.82847289119962,
-                "y": -5.249969378918367
+                "x": -88.9078787759852,
+                "y": -1.3779328179820922
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -33,8 +33,8 @@
         {
             "id": "b",
             "position": {
-                "x": -10.174404210527108,
-                "y": -5.349484085944928
+                "x": 40.16207108164444,
+                "y": -1.4774475250086567
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -49,7 +49,7 @@
                     },
                     {
                         "id": 1724062324950,
-                        "content": "A progress bar should be displayed along with the loading percentage",
+                        "content": "A progress bar should be displayed along with the loading percentag",
                         "status": "notstarted"
                     },
                     {
@@ -89,8 +89,8 @@
         {
             "id": "d",
             "position": {
-                "x": 512.5123779605245,
-                "y": -10.639793634377968
+                "x": 535.7445973261422,
+                "y": -8.703775353909833
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -267,7 +267,7 @@
             },
             "measured": {
                 "width": 150,
-                "height": 58
+                "height": 52
             },
             "selected": false,
             "dragging": false
@@ -478,7 +478,7 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 58
+                "height": 52
             },
             "selected": false,
             "dragging": false
@@ -531,14 +531,210 @@
             },
             "data": {
                 "label": "L: LOADING (CLS-OGLS-GCL)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724130666948,
+                        "content": "The loading should not exceed 5 seconds",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130668880,
+                        "content": "OG loading logo should not retain when the Baccarat M5 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130671549,
+                        "content": "OG loading logo should not retain when the Baccarat M6 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130673838,
+                        "content": "OG loading logo should not retain when the Baccarat M7 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130675887,
+                        "content": "OG loading logo should not retain when the Baccarat RNG001 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130678190,
+                        "content": "OG loading logo should not retain when the Baccarat RNG002 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130680351,
+                        "content": "OG loading logo should not retain when the Baccarat RNG003 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130682543,
+                        "content": "OG loading logo should not retain when the Baccarat RNG005 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130686557,
+                        "content": "OG loading logo should not retain when the Baccarat RNG012 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130689528,
+                        "content": "OG loading logo should not retain when the Baccarat RNG013 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130692029,
+                        "content": "OG loading logo should not retain when the Baccarat RNG015 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130695700,
+                        "content": "OG loading logo should not retain when the Speed Baccarat C2 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130697739,
+                        "content": "OG loading logo should not retain when the Speed Baccarat M1 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130700078,
+                        "content": "OG loading logo should not retain when the Speed Baccarat M2 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130702146,
+                        "content": "OG loading logo should not retain when the Speed Baccarat M3 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130704159,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG006 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130708855,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG007 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130710981,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG016 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130713447,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG017 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130715832,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG018 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130718174,
+                        "content": "OG loading logo should not retain when the Classic DT P7 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130720694,
+                        "content": "OG loading logo should not retain when the Classic DT C9 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130722803,
+                        "content": "OG loading logo should not retain when the Classic DT C10 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130725000,
+                        "content": "OG loading logo should not retain when the Classic DT C11 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130727129,
+                        "content": "OG loading logo should not retain when the Classic DT RNG008 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130729397,
+                        "content": "OG loading logo should not retain when the Classic DT RNG009 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130731506,
+                        "content": "OG loading logo should not retain when the Classic DT RNG019 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130733568,
+                        "content": "OG loading logo should not retain when the Classic DT RNG020 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130735758,
+                        "content": "OG loading logo should not retain when the New DT RNG010 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130737797,
+                        "content": "OG loading logo should not retain when the New DT RNG011 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130739888,
+                        "content": "OG loading logo should not retain when the New DT RNG021 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130742352,
+                        "content": "OG loading logo should not retain when the New DT RNG022 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130744270,
+                        "content": "OG loading logo should not retain when the Bull Bull P3 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130746197,
+                        "content": "OG loading logo should not retain when the Three Cards P5 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130748159,
+                        "content": "OG loading logo should not retain when the Sedie B01 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130750075,
+                        "content": "OG loading logo should not retain when the Roulette P8 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130752147,
+                        "content": "OG loading logo should not retain when the Roulette G11 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130754064,
+                        "content": "OG loading logo should not retain when the Sicbo C12 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130757125,
+                        "content": "OG loading logo should not retain when the Moneywheel MW1 ingame table is fully loaded",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 58
+                "height": 52
             },
             "selected": false,
             "dragging": false
@@ -551,14 +747,95 @@
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-GCLS)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724130810334,
+                        "content": "All icons should be loaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130819261,
+                        "content": "All function buttons should be loaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130821994,
+                        "content": "The video stream FLV should be downloaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130824363,
+                        "content": "The video stream should not load more than 5 seconds upon landing to the ingame page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130826627,
+                        "content": "The roadmap should be loaded less than 5 seconds upon entering the table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130828750,
+                        "content": "The dealers image PNG should be downloaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130831106,
+                        "content": "The betting table should be downloaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130833150,
+                        "content": "The video URL should play successfully with a valid token key",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130835571,
+                        "content": "The video URL with valid  token key should expire in every 30 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130837803,
+                        "content": "The video should not play after the token has expired.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130840042,
+                        "content": "The video URL should not play without a valid token key",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130842271,
+                        "content": "The video URL should display a blank page without a valid token key",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130844677,
+                        "content": "The video URL redirection should not be allowed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130846820,
+                        "content": "Fetching video URL should be blocked without permission",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130849089,
+                        "content": "Accessing video URL should be blocked without permission",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724130851248,
+                        "content": "The video anti-leeching mechanism should detect the tampered token and deny access",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 58
+                "height": 52
             },
             "selected": false,
             "dragging": false
@@ -598,7 +875,7 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 76
+                "height": 68
             },
             "selected": false,
             "dragging": false
@@ -618,7 +895,7 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 58
+                "height": 52
             },
             "selected": false,
             "dragging": false
@@ -658,7 +935,7 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 76
+                "height": 68
             },
             "selected": false,
             "dragging": false
@@ -667,7 +944,7 @@
             "id": "7e67acc4-86a1-4905-94b3-5db027fc8f3e",
             "position": {
                 "x": 1100.0302325430741,
-                "y": -258.0518453656612
+                "y": -251.27578138402276
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-BPS-BLS)",
@@ -718,7 +995,7 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 76
+                "height": 68
             },
             "selected": false,
             "dragging": false
@@ -738,7 +1015,7 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 58
+                "height": 52
             },
             "selected": false,
             "dragging": false
@@ -766,8 +1043,8 @@
         {
             "id": "da140b26-feee-49c9-98ee-893f7229b148",
             "position": {
-                "x": 840.6860854711953,
-                "y": 96.53189512202675
+                "x": 826.1659483676843,
+                "y": 73.29967575640912
             },
             "type": "connector",
             "data": {
@@ -786,8 +1063,8 @@
         {
             "id": "93422266-6fef-488a-a7ea-fa83f6097b79",
             "position": {
-                "x": 841.4823699617992,
-                "y": 183.48412005699342
+                "x": 821.1541780168839,
+                "y": 149.60380014880104
             },
             "data": {
                 "label": "MULTI GAMECHOOSE (CLS-OGLS-CCS-MGC)",
@@ -806,8 +1083,8 @@
         {
             "id": "aa792d92-9401-4b24-ab87-65ec28e1495f",
             "position": {
-                "x": 1029.687484718601,
-                "y": 193.36575997066205
+                "x": 1002.5832287920471,
+                "y": 158.5174309222356
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-CCS-MGCS)",
@@ -818,7 +1095,7 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 58
+                "height": 52
             },
             "selected": false,
             "dragging": false
@@ -826,8 +1103,8 @@
         {
             "id": "22102c9d-9e03-4f34-bc9b-493a90074cae",
             "position": {
-                "x": 1219.9870834488106,
-                "y": 192.31640926182973
+                "x": 1181.266717839448,
+                "y": 159.40409849387143
             },
             "type": "connector",
             "data": {
@@ -846,8 +1123,8 @@
         {
             "id": "ea98333b-e199-425d-a9c3-0363b6b24d8a",
             "position": {
-                "x": 1310.9923473476852,
-                "y": 168.10619786898397
+                "x": 1260.6395083444716,
+                "y": 135.1611596789409
             },
             "data": {
                 "label": "BOC : BACK TO LOBBY OTHER CATEGORY (CLS-OGLS-CCS-MGCS-BPS-BOC)",
@@ -858,7 +1135,7 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 112
+                "height": 100
             },
             "selected": false,
             "dragging": false
@@ -898,7 +1175,7 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 94
+                "height": 84
             },
             "selected": false,
             "dragging": false
@@ -906,8 +1183,8 @@
         {
             "id": "8f122ec2-a5f3-4fa8-b439-4352857ea8ee",
             "position": {
-                "x": 1142.7851988645652,
-                "y": -24.925385768861982
+                "x": 1098.0578636925557,
+                "y": -23.97374033967029
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-NBFS-CTS)",
@@ -918,7 +1195,7 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 76
+                "height": 68
             },
             "selected": false,
             "dragging": false
@@ -926,8 +1203,8 @@
         {
             "id": "4339c467-0049-4480-819e-278c23377f00",
             "position": {
-                "x": 1301.189046230584,
-                "y": -243.48923213842193
+                "x": 1296.3490005294136,
+                "y": -242.52122299818785
             },
             "type": "connector",
             "data": {
@@ -946,8 +1223,8 @@
         {
             "id": "c589ef53-6256-42d5-889a-6d3374a813b5",
             "position": {
-                "x": 1301.7587824163395,
-                "y": -324.67451109992174
+                "x": 1294.014709294467,
+                "y": -311.1223831366448
             },
             "type": "connector",
             "data": {
@@ -966,8 +1243,8 @@
         {
             "id": "97d03da9-debb-4e60-93fa-600941456646",
             "position": {
-                "x": 145.82714570990075,
-                "y": -5.168014508843839
+                "x": 193.2595935813701,
+                "y": -0.32796880767349634
             },
             "data": {
                 "label": "S: SUCCESS (CLS)",
@@ -1012,8 +1289,8 @@
         {
             "id": "d10306ac-a2b7-4d17-b021-7e439155e211",
             "position": {
-                "x": 315.6698926814927,
-                "y": -17.795224184967424
+                "x": 351.4862308701532,
+                "y": -16.827215044733357
             },
             "data": {
                 "label": "OGL: OG LAUNCHING URL (CLS-OGL)",
@@ -1075,7 +1352,7 @@
             "type": "customNode",
             "measured": {
                 "width": 150,
-                "height": 50
+                "height": 52
             },
             "selected": false,
             "dragging": false
@@ -1115,7 +1392,7 @@
             "type": "customNode",
             "measured": {
                 "width": 150,
-                "height": 66
+                "height": 68
             },
             "selected": false,
             "dragging": false
@@ -1123,8 +1400,8 @@
         {
             "id": "38d0ae0b-511e-42b6-8dd8-79913cae6e7f",
             "position": {
-                "x": 739.2076226596504,
-                "y": 94.96299042361042
+                "x": 737.2552406681399,
+                "y": 115.53918822289535
             },
             "type": "connector",
             "data": {
@@ -1137,14 +1414,14 @@
                 "width": 50,
                 "height": 50
             },
-            "selected": false,
+            "selected": true,
             "dragging": false
         },
         {
             "id": "d830bbfd-6a79-4840-8e89-9e21c7d37fa9",
             "position": {
                 "x": 1301.4030476852915,
-                "y": -164.52234015188824
+                "y": -170.33039499329266
             },
             "type": "connector",
             "data": {
@@ -1163,8 +1440,8 @@
         {
             "id": "07f3966d-36e6-4338-9b85-cf2237f6bbec",
             "position": {
-                "x": 1392.8438731477797,
-                "y": -165.09264096765276
+                "x": 1385.0998000259074,
+                "y": -169.9326866688231
             },
             "type": "connector",
             "data": {
@@ -1195,7 +1472,7 @@
             "type": "customNode",
             "measured": {
                 "width": 150,
-                "height": 50
+                "height": 52
             },
             "selected": false,
             "dragging": false
@@ -1484,13 +1761,13 @@
         }
     ],
     "viewport": {
-        "x": 283.78537554928187,
-        "y": 376.8134766790583,
-        "zoom": 1.0330480967960658
+        "x": 252.70299632850129,
+        "y": 368.3400817939059,
+        "zoom": 1.0508115410687986
     },
     "testCaseStats": {
-        "total": 91,
-        "notstarted": 91,
+        "total": 146,
+        "notstarted": 146,
         "passed": 0,
         "failed": 0,
         "blocked": 0,

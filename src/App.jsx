@@ -46,7 +46,7 @@ import {
 // import { initialNodes, nodeTypes } from "./nodes";
 // import { initialEdges, edgeTypes } from "./edges";
 
-import Modal from "./Modal";
+import Modal from "./components/Modal";
 import CustomNode from "./nodes/CustomNode";
 import ConnectorNode from "./nodes/ConnectorNode";
 

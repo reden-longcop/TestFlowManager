@@ -1,14 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Modal.css";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFileCirclePlus,
-  faSave,
-  faTrashAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import { faFileCirclePlus, faSave, faTrashAlt, } from "@fortawesome/free-solid-svg-icons";
+import "react-toastify/dist/ReactToastify.css";
+import '../components/Modal.css'
 
 const Modal = ({
   isOpen,
@@ -143,7 +138,6 @@ const Modal = ({
   }
 };
 
-
   const handleCheckboxChange = (id) => {
     setSelectedTestCases((prevSelected) => {
       if (prevSelected.includes(id)) {
@@ -225,7 +219,7 @@ const Modal = ({
                 onChange={() => handleCheckboxChange(testCase.id)}
                 className="ml-4 mr-5"
               />
-              <div className="w-full">
+              <div className="w-full border-dashed border-x border-gray-700">
                 <textarea
                   ref={(el) => (textareasRef.current[index] = el)}
                   className="p-3 bg-inherit overflow-hidden text-white text-sm rounded resize-none h-auto w-full mr-5"
