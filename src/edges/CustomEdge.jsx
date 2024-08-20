@@ -9,7 +9,6 @@ const CustomEdge = ({
   targetY,
   sourcePosition,
   targetPosition,
-  style = {},
   markerEnd,
   data,
 }) => {
@@ -26,7 +25,7 @@ const CustomEdge = ({
     <>
       <path
         id={id}
-        className='stroke-emerald-300 stroke-[2]'
+        className='stroke-[#BDC3C7] stroke-[2] fill-none'
         d={edgePath}
         markerEnd={markerEnd}
       />

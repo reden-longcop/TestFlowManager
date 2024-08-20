@@ -19,7 +19,7 @@ body,
 .panel button::after {
   position: absolute;
   top: 100%;
-  color: white;
+  color: #ECF0F1;
   transform: translateX(-50%);
   margin-top: 5px;
   background-color: #1e1e1e;
@@ -35,24 +35,36 @@ body,
     visibility 0.3s;
 }
 
-.panel > .add::after {
+.panel .add::after {
   content: "Add Test Scenario";
   right: -30px;
+  position: absolute;
+  top: 50px;
+  z-index: 9999;
 }
 
 .panel .save::after {
   content: "Save Changes";
   right: -70px;
+  position: absolute;
+  top: 50px;
+  z-index: 9999;
 }
 
 .panel .connector::after {
   content: "Add Connector";
   right: -50px;
+  position: absolute;
+  top: 50px;
+  z-index: 9999;
 }
 
 .panel .delete::after {
   content: "Delete Test Scenario";
   right: -0;
+  position: absolute;
+  top: 50px;
+  z-index: 9999;
 }
 
 .panel button:hover::after {
@@ -63,6 +75,6 @@ body,
 .react-flow__handle {
   width: 10px;
   height: 10px;
-  background-color: #fff;
+  background-color: #3498DB;
 }
 

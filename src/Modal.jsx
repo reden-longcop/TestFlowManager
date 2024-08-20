@@ -185,7 +185,7 @@ const Modal = ({
 
   return (
     <div className="modal-overlay z-0 select-none">
-      <div className="modal-content bg-[#1E1E1E] flex flex-col max-h-[90vh] w-[800px]">
+      <div className="modal-content bg-[#1C1C1E] flex flex-col max-h-[90vh] w-[800px]">
         <span
           className="close bg-inherit text-white text-5xl hover:bg-rose-500"
           onClick={onClose}
@@ -228,7 +228,7 @@ const Modal = ({
               <div className="w-full">
                 <textarea
                   ref={(el) => (textareasRef.current[index] = el)}
-                  className="pr-2 bg-inherit overflow-hidden text-white rounded resize-none w-full focus:outline-none mr-5"
+                  className="p-3 bg-inherit overflow-hidden text-white text-sm rounded resize-none h-auto w-full mr-5"
                   value={testCase.content}
                   onChange={(e) => {
                     handleTestCaseChange(testCase.id, e.target.value);
@@ -281,13 +281,13 @@ const Modal = ({
 
         <div className="button-container sticky bottom-0 left-0 right-0 bg-inherit pt-5 space-x-3 z-10">
           <button
-            className="p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700"
+            className="p-2 rounded w-12 bg-[#3e3e3e] hover:bg-[#2980B9]"
             onClick={addTestCase}
           >
             <FontAwesomeIcon icon={faFileCirclePlus} size="lg" color="white" />
           </button>
           <button
-            className="p-2 rounded w-12 bg-[#3e3e3e] hover:bg-emerald-700"
+            className="p-2 rounded w-12 bg-[#3e3e3e] hover:bg-[#2980B9]"
             onClick={handleSave}
           >
             <FontAwesomeIcon icon={faSave} size="lg" color="white" />
@@ -295,7 +295,7 @@ const Modal = ({
           <button
             className={`p-2 rounded w-12 ${selectedTestCases.length > 0 ? "bg-rose-500 hover:bg-rose-700" : "bg-[#3e3e3e]"}`}
             onClick={deleteSelectedTestCases}
-            disabled={selectedTestCases.length === 0}
+            style={{ cursor: selectedTestCases.length === 0 ? 'not-allowed' : 'pointer' }}
           >
             <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
           </button>

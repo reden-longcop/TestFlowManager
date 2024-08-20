@@ -2,18 +2,7 @@ import { Handle } from "@xyflow/react";
 
 const ConnectorNode = ({ data }) => {
   return (
-    <div
-      style= {{
-        color: 'white',
-        borderRadius: "50%",
-        width: "50px",
-        height: "50px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#059669",
-        textAlign: "center",
-      }}
+    <div className="text-[#ECF0F1] text-xs rounded-full w-[50px] h-[50px] flex justify-center items-center bg-[#34495E]"
     >
       <div>{data.label}</div>
       <Handle type="source" position="right" />

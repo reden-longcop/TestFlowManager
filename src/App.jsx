@@ -198,7 +198,6 @@ export default function App() {
       }, 200);
     }
   
-    // Update the selected node state
     setNodes((nds) =>
       nds.map((n) =>
         n.id === node.id ? { ...n, selected: true } : { ...n, selected: false }
@@ -230,7 +229,6 @@ export default function App() {
     });
   };
   
-  
   const calculateTestCaseStats = (nodes) => {
     const stats = {
       total: 0,
@@ -261,19 +259,7 @@ export default function App() {
     });
   
     return stats;
-  };  
-
-  const updateTestCaseStats = (testCases) => {
-    const total = testCases.length;
-    const notstarted = testCases.filter((tc) => tc.status === "notstarted").length;
-    const passed = testCases.filter((tc) => tc.status === "passed").length;
-    const failed = testCases.filter((tc) => tc.status === "failed").length;
-    const blocked = testCases.filter((tc) => tc.status === "blocked").length;
-    const notapplicable = testCases.filter((tc) => tc.status === "notapplicable").length;
-    
-    setTestCaseStats({ total, notstarted, passed, failed, blocked, notapplicable });
   };
-   
 
   const deleteSelectedNode = () => {
     if (selectedNode) {
@@ -356,7 +342,6 @@ export default function App() {
         zoomOnScroll={false}
         zoomOnDoubleClick={false}
         onNodeClick={handleNodeClick}
-        
       >
         <Background />
         <MiniMap />
@@ -370,19 +355,19 @@ export default function App() {
       <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
     </button>
     <button
-      className="add p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12"
+      className="add p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
       onClick={addNode}
     >
       <FontAwesomeIcon icon={faPlusSquare} size="lg" color="white" />
     </button>
     <button
-      className="connector p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12"
+      className="connector p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
       onClick={addConnectorNode}
     >
       <FontAwesomeIcon icon={faPlusCircle} size="lg" color="white" />
     </button>
     <button
-      className="save p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 size-12"
+      className="save p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
       onClick={onSave}
     >
       <FontAwesomeIcon icon={faFloppyDisk} size="lg" color="white" />
@@ -390,9 +375,9 @@ export default function App() {
     </div>
       <div className="relative">
           <div className="flex justify-between items-center text-sm p-2 bg-[#2d2d2d] opacity-70 rounded text-white">
-            <p>Total Count: {testCaseStats.total}</p>
+            <p>Total Test Count: {testCaseStats.total}</p>
             <button
-              className="dropdown-button p-2 rounded bg-[#3E3E3E] hover:bg-emerald-600 flex items-center"
+              className="dropdown-button p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] flex items-center"
               onClick={toggleDetails}
             >
               <FontAwesomeIcon icon={faChevronDown} size="lg" color="white" />
