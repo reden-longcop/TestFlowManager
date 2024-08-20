@@ -140,8 +140,7 @@ export default function App() {
           {
             ...connection,
             animated: true,
-            type: "customEdge",
-            // style: { stroke: "red", strokeWidth: 4 },
+            type: "customEdge"
           },
           eds,
         ),
