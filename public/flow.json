@@ -141,17 +141,17 @@
                     },
                     {
                         "id": 1724224625653,
-                        "content": "Idling pop-up notification should not be displayed after the page\nis reloaded",
+                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
                         "id": 1724224633534,
-                        "content": "Idling pop-up notification should not be displayed when the player is\nactive",
+                        "content": "Idling pop-up notification should not be displayed when the player is active",
                         "status": "notstarted"
                     },
                     {
                         "id": 1724224640316,
-                        "content": "OG Live should be fully functional after being reloaded and redirected to\nthe lobby due to idling.",
+                        "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
                         "status": "notstarted"
                     },
                     {
@@ -186,17 +186,17 @@
                     },
                     {
                         "id": 1724224727063,
-                        "content": "Idling pop-up notification should not be displayed after the page\nis reloaded",
+                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
                         "id": 1724224733367,
-                        "content": "Idling pop-up notification should not be displayed when the player is\nactive",
+                        "content": "Idling pop-up notification should not be displayed when the player is active",
                         "status": "notstarted"
                     },
                     {
                         "id": 1724224740412,
-                        "content": "OG Live should be fully functional after being reloaded and redirected to\nthe lobby due to idling.",
+                        "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
                         "status": "notstarted"
                     },
                     {
@@ -231,12 +231,12 @@
                     },
                     {
                         "id": 1724224807695,
-                        "content": "Idling pop-up notification should not be displayed after the page\nis reloaded",
+                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
                         "id": 1724224821491,
-                        "content": "OG Live should be fully functional after being reloaded and redirected to\nthe lobby due to idling.",
+                        "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
                         "status": "notstarted"
                     },
                     {
@@ -271,17 +271,17 @@
                     },
                     {
                         "id": 1724224932151,
-                        "content": "Idling pop-up notification should not be displayed after the page\nis reloaded",
+                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
                         "id": 1724224939692,
-                        "content": "Idling pop-up notification should not be displayed when the player is\nactive",
+                        "content": "Idling pop-up notification should not be displayed when the player is active",
                         "status": "notstarted"
                     },
                     {
                         "id": 1724224946595,
-                        "content": "OG Live should be fully functional after being reloaded and redirected to\nthe lobby due to idling.",
+                        "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
                         "status": "notstarted"
                     },
                     {
@@ -590,7 +590,7 @@
                 "width": 150,
                 "height": 48
             },
-            "selected": false,
+            "selected": true,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -1165,7 +1165,7 @@
                 "width": 50,
                 "height": 50
             },
-            "selected": true,
+            "selected": false,
             "dragging": false,
             "style": {
                 "backgroundColor": "inherit"
@@ -1725,9 +1725,9 @@
         }
     ],
     "viewport": {
-        "x": 249.59496146127628,
-        "y": 370.00780894129343,
-        "zoom": 1.0561718984001291
+        "x": 251.30640592556153,
+        "y": 371.2113599929022,
+        "zoom": 1.0536274632528664
     },
     "testCaseStats": {
         "total": 116,

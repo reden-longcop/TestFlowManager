@@ -1,9 +1,27 @@
+/*
+ * This file is part of Test Flow Manager.
+ *
+ * Test Flow Manager is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Test Flow Manager is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Test Flow Manager. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCirclePlus, faSave, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import "react-toastify/dist/ReactToastify.css";
 import '../components/Modal.css';
+import { debounce } from "../utils";
 
 const COLOR_OPTIONS = {
   DEFAULT: '#1C1C1E',
@@ -11,7 +29,7 @@ const COLOR_OPTIONS = {
   THIRD: '#9D3233'
 }
 
-const TestCase = React.forwardRef(({ testCase, onChange, onStatusChange, onCheckboxChange, isChecked }, ref) => {
+const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChange, onCheckboxChange, isChecked }, ref) => {
   return (
     <div
       className="py-2 flex items-center border-gray-600 space-x-5"
@@ -27,10 +45,9 @@ const TestCase = React.forwardRef(({ testCase, onChange, onStatusChange, onCheck
       <div className="w-full border-dashed border-x border-gray-700">
         <textarea
           ref={ref}
-          className="p-3 bg-inherit overflow-hidden text-white text-sm rounded resize-none h-auto w-full mr-5"
+          className="p-3 bg-inherit text-white text-sm rounded overflow-hidden h-200 resize-none w-full mr-5"
           value={testCase.content}
           onChange={(e) => onChange(e.target.value)}
-          rows="1"
           placeholder={`Test case ${testCase.id}`}
         />
       </div>
@@ -64,7 +81,7 @@ const TestCase = React.forwardRef(({ testCase, onChange, onStatusChange, onCheck
       </select>
     </div>
   );
-});
+}));
 
 
 const Modal = ({
@@ -169,7 +186,7 @@ const Modal = ({
   const addTestCase = useCallback(() => {
     const newTestCase = { id: Date.now(), content: "", status: "notstarted" };
     setTestCases((prevTestCases) => [...prevTestCases, newTestCase]);
-  }, []);
+  }, []); 
 
   useEffect(() => {
     if (textareasRef.current.length > 0) {
@@ -196,10 +213,8 @@ const Modal = ({
     }
   }, [testCases]);
 
-  const handleSave = async () => {
+  const debouncedSave = useCallback(debounce(async () => {
     try {
-      adjustTextareaHeight();
-      
       const totalTestCases = testCases.length;
       const passed = testCases.filter((tc) => tc.status === "passed").length;
       const failed = testCases.filter((tc) => tc.status === "failed").length;
@@ -224,13 +239,17 @@ const Modal = ({
       if (onSave) {
         onSave(testCases, label, color, updatedStats);
       }
-      
+
     } catch (error) {
       console.error("Failed to save data:", error);
       toast.error("Failed to save data. Please try again.", {
         position: "top-right",
       });
     }
+  }, 1000), [testCases, label, color, nodeId, onSave]);
+
+  const handleSave = () => {
+    debouncedSave();
   };
 
   const handleCheckboxChange = (id) => {

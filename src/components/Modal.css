@@ -66,8 +66,18 @@ input[type="checkbox"] {
   border-radius: 10px;
 }
 
-textarea{
+textarea {
   font-family: "Fira Code" !important;
   font-optical-sizing: auto;
   font-weight: 300;
+  overflow-y: hidden;
+  resize: none;
+}
+
+/* Add this style to allow the textarea to grow based on content */
+textarea:focus, 
+textarea:not(:placeholder-shown) {
+  height: auto !important;
+  min-height: 40px !important;
+  height: fit-content !important;
 }
