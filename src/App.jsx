@@ -30,7 +30,7 @@ import {
 } from "@xyflow/react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import * as XLSX from 'xlsx';
 import "@xyflow/react/dist/style.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,6 +41,7 @@ import {
   faPlusSquare,
   faChevronDown,
   faChevronUp,
+  faArrowAltCircleDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 // import { initialNodes, nodeTypes } from "./nodes";
@@ -71,6 +72,27 @@ export default function App() {
     customEdge: CustomEdge,
   }
 
+  const toastTypes = {
+    toastDelete: () => {
+      toast.error('No node selected to delete.')
+    },
+    toastDeleteSuccess: () => {
+      toast.success('Node Deleted.')
+    },
+    toastSaveError: () => {
+      toast.error('Server Save Failed: Unable to save changes.')
+    },
+    toastSaveSuccess: () => {
+      toast.success('Changes saved successfully!')
+    },
+    toastSaveErrorLocal: () => {
+      toast.error('Local Save Failed: Unable to save changes locally.')
+    },
+    toastSaveLocalSuccess: () => {
+      toast.success('Changes saved locally!')
+    }
+  }
+
   const [testCaseStats, setTestCaseStats] = useState({
     total: 0,
     notstarted: 0,
@@ -80,19 +102,13 @@ export default function App() {
     notapplicable: 0,
   });
   const [showDetails, setShowDetails] = useState(false);
-  
-
   const clickTimeoutRef = useRef(null);
-
-  const toggleDetails = () => {
-    setShowDetails(!showDetails);
-  };
+  const toggleDetails = () => { setShowDetails(!showDetails); };
 
   useEffect(() => {
     const restoreFlow = async () => {
       try {
         const response = await fetch(import.meta.env.VITE_API_URL);
-        console.log(import.meta.env.VITE_API_URL);
   
         if (response.ok) {
           const flow = await response.json();
@@ -104,6 +120,9 @@ export default function App() {
               x: typeof node.position?.x === "number" ? node.position.x : 0,
               y: typeof node.position?.y === "number" ? node.position.y : 0,
             },
+            style: {
+              backgroundColor: node.style?.backgroundColor || 'inherit'
+            },
           }));
   
           const edgesWithDefaultStyle = (flow.edges || []).map((edge) => ({
@@ -114,7 +133,6 @@ export default function App() {
           setEdges(edgesWithDefaultStyle);
           setViewport({ x, y, zoom });
   
-          // Calculate and set the test case stats
           if (flow.nodes) {
             setTestCaseStats(calculateTestCaseStats(flow.nodes));
           }
@@ -211,11 +229,22 @@ export default function App() {
     setSelectedNode(null);
   };
 
-  const handleSaveTestCases = (testCases, label) => {
+  const handleSaveTestCases = (testCases, label, color) => {
     setNodes((nds) => {
       const updatedNodes = nds.map((node) => {
         if (node.id === selectedNode.id) {
-          const updatedNode = { ...node, data: { ...node.data, label, testCases } };
+          const updatedNode = { 
+            ...node, 
+            data: { 
+              ...node.data, 
+              label, 
+              testCases 
+            }, style: { 
+              ...node.style, 
+              backgroundColor: color || '#1C1C1E',
+            },
+            type: 'customNode',
+          };
           return updatedNode;
         }
         return node;
@@ -226,8 +255,57 @@ export default function App() {
   
       return updatedNodes;
     });
+  };  
+
+  const exportToExcel = (nodes) => {
+      console.time('Export to Excel'); // Start timing
+
+      // Create a new workbook
+      const workbook = XLSX.utils.book_new();
+      const sheetNames = new Set();
+
+      nodes
+          .filter((node) => (node.data.testCases && node.data.testCases.length > 0)) // Filter out nodes with no test cases
+          .forEach((node) => {
+              const nodeLabel = node.data.label || `Sheet${nodes.indexOf(node) + 1}`;
+              const sanitizedLabel = nodeLabel
+                  .replace(/[^a-zA-Z0-9_]/g, '_')
+                  .slice(0, 31);
+
+              let sheetName = sanitizedLabel;
+              let counter = 1;
+              while (sheetNames.has(sheetName)) {
+                  sheetName = `${sanitizedLabel}_${counter}`;
+                  counter++;
+                  if (sheetName.length > 31) {
+                      sheetName = sheetName.slice(0, 31); // Ensure it doesn't exceed 31 characters
+                  }
+              }
+              sheetNames.add(sheetName);
+
+              const nodeTestCases = node.data.testCases || [];
+              console.log(`Processing node: ${nodeLabel}`);
+              console.log('Test Cases:', nodeTestCases);
+
+              const worksheetData = nodeTestCases.map((testCase, index) => ({
+                  'Test Case ID': index + 1,
+                  'Test Case Name': testCase.content,
+                  'Test Case Status': testCase.status,
+                  'Test Case Description': testCase.description || '',
+              }));
+
+              console.time(`Creating sheet for ${sheetName}`);
+              const worksheet = XLSX.utils.json_to_sheet(worksheetData);
+              XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+              console.timeEnd(`Creating sheet for ${sheetName}`);
+          });
+
+      console.timeEnd('Export to Excel');
+      
+      // Write the workbook to a file
+      XLSX.writeFile(workbook, 'test_cases.xlsx');
   };
-  
+
   const calculateTestCaseStats = (nodes) => {
     const stats = {
       total: 0,
@@ -269,13 +347,11 @@ export default function App() {
             edge.source !== selectedNode.id && edge.target !== selectedNode.id,
         ),
       );
-
+      toastTypes.toastDeleteSuccess();
       setModalOpen(false);
       setSelectedNode(null);
     } else {
-      toast.error("No node selected to delete.", {
-        position: "top-left",
-      });
+      toastTypes.toastDelete();
     }
   };
 
@@ -295,33 +371,22 @@ export default function App() {
         .then((response) => response.json())
         .then((data) => {
           if (data) {
-            toast.success("Changes saved successfully!", {
-              position: "top-left",
-              autoClose: 3000,
-            });
+            toastTypes.toastSaveSuccess()
           }
         })
         .catch((error) => {
           console.error("Failed to save flow data to server:", error);
           try {
             localStorage.setItem("flowData", formattedFlow);
-            toast.success("Changes saved locally!", {
-              position: "top-left",
-              autoClose: 3000,
-            });
+            toastTypes.toastSaveLocalSuccess()
           } catch (localError) {
             console.error("Failed to save flow data to localStorage:", localError);
-            toast.error("Failed to save changes. Please try again.", {
-              position: "top-left",
-              autoClose: 5000,
-            });
+
+            toastTypes.toastSaveErrorLocal()
           }
         });
     } else {
-      toast.error("Failed to save changes. React Flow instance is not initialized.", {
-        position: "top-left",
-        autoClose: 5000,
-      });
+      toastTypes.toastSaveError()
     }
   }, [rfInstance]);  
   
@@ -345,13 +410,19 @@ export default function App() {
         <Background />
         <MiniMap />
         <Controls />
-        <Panel position="top-right panel" className="flex flex-col space-y-4">
-  <div className="button-container flex space-x-4">
+        <Panel position="top-left panel" className="flex flex-col space-y-4">
+  <div className="button-container flex space-x-2">
     <button
       className="delete p-2 rounded bg-[#3E3E3E] hover:bg-red-600 size-12"
       onClick={deleteSelectedNode}
     >
       <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
+    </button>
+    <button
+      className="download rounded rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
+      onClick={() => exportToExcel(nodes)}
+    >
+      <FontAwesomeIcon icon={faArrowAltCircleDown} size="lg" color="white" />
     </button>
     <button
       className="add p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
@@ -396,6 +467,7 @@ export default function App() {
       </Panel>
 
       </ReactFlow>
+      <ToastContainer />
       <Modal
         isOpen={modalOpen}
         onClose={handleCloseModal}
@@ -403,8 +475,9 @@ export default function App() {
         nodeLabel={selectedNode?.data?.label || ""}
         testCases={selectedNode?.data?.testCases || []}
         onSave={handleSaveTestCases}
+        borderColor={selectedNode?.data?.color || '#1C1C1E'}
       />
-      <ToastContainer />
+      
     </div>
   );
 }

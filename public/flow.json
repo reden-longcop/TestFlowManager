@@ -12,23 +12,26 @@
                 "label": "C: CLIENT (C)",
                 "testCases": [
                     {
-                        "id": 1724062220621,
+                        "id": 1724223706346,
                         "content": "Verify that when the registered player clicks the OG link/button, the request OG game launching URL should start",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062222127,
+                        "id": 1724223707627,
                         "content": "Verify that when the player does not have an account and clicks the OG link/button, the OG site should not launch",
                         "status": "notstarted"
                     }
                 ]
             },
             "measured": {
-                "width": 98,
-                "height": 36
+                "width": 94,
+                "height": 32
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "b",
@@ -43,48 +46,51 @@
                 "label": "L: LOADING (CL)",
                 "testCases": [
                     {
-                        "id": 1724062323500,
+                        "id": 1724223757574,
                         "content": "Verify that loading should start in 0 to 100%",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062324950,
-                        "content": "A progress bar should be displayed along with the loading percentag",
+                        "id": 1724223762290,
+                        "content": "A progress bar should be displayed along with the loading percentage",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062327518,
+                        "id": 1724223766818,
                         "content": "OG logo should display",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062329852,
+                        "id": 1724223769462,
                         "content": "Loading icon should remain centered",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062332299,
+                        "id": 1724223771689,
                         "content": "Animation and highlited UI loading icon should be removed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062334482,
+                        "id": 1724223774125,
                         "content": "Loading should not revert to zero",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062336697,
+                        "id": 1724223776325,
                         "content": "After client loading OG game launching URL should display within 5 seconds",
                         "status": "notstarted"
                     }
                 ]
             },
             "measured": {
-                "width": 118,
-                "height": 36
+                "width": 114,
+                "height": 32
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "d",
@@ -99,178 +105,496 @@
                 "label": "S: SUCCESS (CLS-OGLS) LOBBY",
                 "testCases": [
                     {
-                        "id": 1724062595087,
+                        "id": 1724224522682,
                         "content": "Goodtips labels should be correct",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062599245,
+                        "id": 1724224530181,
                         "content": "PRD-2225 - The promotion banner should not overlap with the other game tables",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062602715,
-                        "content": "player should receive a pop-up notification after idling for 10 minutes",
+                        "id": 1724224534075,
+                        "content": "IDLING IN A DIFFERENT TAB AND THEN RETURNING TO THE OG LIVE TAB (PORTRAIT MODE)",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062605758,
-                        "content": "\"player should not receive a pop-up notification\nfor idling less than 10 minutes\"",
+                        "id": 1724224568868,
+                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062608297,
-                        "content": "page should reload after clicking anywhere in the page",
+                        "id": 1724224585132,
+                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062610958,
-                        "content": "player should be redirected in the lobby after the page is reloaded",
+                        "id": 1724224588577,
+                        "content": "Page should reload after clicking anywhere in the page",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062614842,
-                        "content": "\"idling pop-up notification should not be displayed after the page\nis reloaded\"",
+                        "id": 1724224620195,
+                        "content": "Player should be redirected in the lobby after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062617799,
-                        "content": "\"idling pop-up notification should not be displayed when the player is\nactive\"",
+                        "id": 1724224625653,
+                        "content": "Idling pop-up notification should not be displayed after the page\nis reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062620331,
-                        "content": "\"OG Live should be fully functional after being reloaded and redirected to\nthe lobby due to idling.\"",
+                        "id": 1724224633534,
+                        "content": "Idling pop-up notification should not be displayed when the player is\nactive",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062623298,
+                        "id": 1724224640316,
+                        "content": "OG Live should be fully functional after being reloaded and redirected to\nthe lobby due to idling.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224647629,
                         "content": "OG Live lobby should not display a white page after getting redirected",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064119206,
+                        "id": 1724224652985,
+                        "content": "IDLING IN THE LOBBY (PORTRAIT MODE)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224691594,
+                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224711792,
+                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224716374,
+                        "content": "Page should reload after clicking anywhere in the page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224722279,
+                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224727063,
+                        "content": "Idling pop-up notification should not be displayed after the page\nis reloaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224733367,
+                        "content": "Idling pop-up notification should not be displayed when the player is\nactive",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224740412,
+                        "content": "OG Live should be fully functional after being reloaded and redirected to\nthe lobby due to idling.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224747772,
+                        "content": "OG Live lobby should not display a white page after getting redirected",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224750970,
+                        "content": "IDLING WITH MINIMIZED BROWSER (PORTRAIT MODE)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224776612,
+                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224788911,
+                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224797021,
+                        "content": "Page should reload after clicking anywhere in the page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224803756,
+                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224807695,
+                        "content": "Idling pop-up notification should not be displayed after the page\nis reloaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224821491,
+                        "content": "OG Live should be fully functional after being reloaded and redirected to\nthe lobby due to idling.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224852791,
+                        "content": "OG Live lobby should not display a white page after getting redirected",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224856102,
+                        "content": "IDLING IN A DIFFERENT TAB AND THEN RETURNING TO THE OG LIVE TAB. (LANDSCAPE MODE)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224908086,
+                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224915714,
+                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224921919,
+                        "content": "Page should reload after clicking anywhere in the page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224926886,
+                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224932151,
+                        "content": "Idling pop-up notification should not be displayed after the page\nis reloaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224939692,
+                        "content": "Idling pop-up notification should not be displayed when the player is\nactive",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224946595,
+                        "content": "OG Live should be fully functional after being reloaded and redirected to\nthe lobby due to idling.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224953147,
+                        "content": "OG Live lobby should not display a white page after getting redirected",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224957019,
+                        "content": "IDLING IN THE LOBBY (LANDSCAPE MODE)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724224996551,
+                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225005445,
+                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225025904,
+                        "content": "Page should reload after clicking anywhere in the page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225033729,
+                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225041021,
+                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225054811,
+                        "content": "Idling pop-up notification should not be displayed when the player is active",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225066095,
+                        "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225072896,
+                        "content": "OG Live lobby should not display a white page after getting redirected",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225087472,
+                        "content": "IDLING WITH MINIMIZED BROWSER (LANDSCAPE MODE)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225141187,
+                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225149951,
+                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225156038,
+                        "content": "Page should reload after clicking anywhere in the page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225160454,
+                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225166123,
+                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225174823,
+                        "content": "Idling pop-up notification should not be displayed when the player is active",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225187921,
+                        "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225199366,
+                        "content": "OG Live lobby should not display a white page after getting redirected",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225207339,
+                        "content": "**** IDLE WHILE LOGGED-OUT ****",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225253923,
+                        "content": "Should not receive idle notification pop up after 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225277921,
+                        "content": "Should not receive idle notification less than 10 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225284508,
+                        "content": "Should not receive idle notification when minimized",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225294348,
+                        "content": "Should not receive idle notification when switched to another tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225332665,
                         "content": "All media contents should not be truncated when the loading page displayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064122507,
+                        "id": 1724225339440,
                         "content": "Betting timer shown in the lobby should not have any less than 0",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064124867,
+                        "id": 1724225342182,
                         "content": "Player avatar should be displayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064127990,
+                        "id": 1724225344528,
                         "content": "Player avatar should be clickable",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064130159,
+                        "id": 1724225346726,
                         "content": "Player name should be displayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064134179,
+                        "id": 1724225349067,
                         "content": "Player balance should be displayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064139783,
+                        "id": 1724225351634,
                         "content": "Player's information indicated in the player modal in Desktop and Mobile should be the same",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064144562,
+                        "id": 1724225354364,
+                        "content": "**** CLICKING AVATAR SHOULD DISPLAY A MODAL THAT CONSIST OF THE FOLLOWING: ****",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225409659,
                         "content": "Avatar image",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064147440,
+                        "id": 1724225423887,
                         "content": "UserName",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064149897,
+                        "id": 1724225426577,
                         "content": "Nickname",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064152103,
+                        "id": 1724225428901,
                         "content": "Number of Following",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064154200,
+                        "id": 1724225431328,
                         "content": "Number of Fans",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064156275,
+                        "id": 1724225434277,
                         "content": "CNY",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064158261,
+                        "id": 1724225437547,
                         "content": "OG Beans",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064160178,
+                        "id": 1724225440309,
                         "content": "Total Valid Bets",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064162152,
+                        "id": 1724225443337,
                         "content": "Total Win/Lose",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064166162,
+                        "id": 1724225446807,
                         "content": "Avatar Image Selection",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064168138,
+                        "id": 1724225449979,
                         "content": "Clicking any image in the Avatar Image Selection should change the Player's Image Avatar simultaneously",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064170258,
+                        "id": 1724225453378,
                         "content": "Player's Bet Limit",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064172482,
+                        "id": 1724225456729,
                         "content": "Membership Type",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064174817,
+                        "id": 1724225461647,
                         "content": "The total number of players should be diaplayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064176927,
+                        "id": 1724225465052,
                         "content": "The Settings should be displayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724064181597,
+                        "id": 1724225471331,
+                        "content": "**** CLICKING THE SETTINGS ICON SHOULD DISPLAY THE FOLLOWING DETAILS/ICONS: ****",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225530388,
                         "content": "Language",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225567618,
+                        "content": "**** UNDER THE LANGUAGE TEXT SHOULD DISPLAY THE FOLLOWING: ****",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225807957,
+                        "content": "EN",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225834995,
+                        "content": "CN",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225842931,
+                        "content": "JP",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225860723,
+                        "content": "KR",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225872012,
+                        "content": "ID",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225876263,
+                        "content": "TH",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225880070,
+                        "content": "VN",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225883877,
+                        "content": "TR",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225888961,
+                        "content": "BR",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724225893545,
+                        "content": "**** UNDER SOUNDS TEXT SHOULD DISPLAY THE FOLLOWING: ****",
                         "status": "notstarted"
                     }
                 ]
             },
             "measured": {
                 "width": 150,
-                "height": 52
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "fdd88f4a-290e-4c4d-861a-6358bfd68801",
@@ -280,214 +604,26 @@
             },
             "data": {
                 "label": "GC:GAME CHOOSE (CLS-OGLS-GC)",
-                "testCases": [
-                    {
-                        "id": 1724064665465,
-                        "content": "OG loading logo should display when the player clicks the Baccarat M5 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064666745,
-                        "content": "OG loading logo should display when the player clicks the Baccarat M6 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064669203,
-                        "content": "OG loading logo should display when the player clicks the Baccarat M7 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064671357,
-                        "content": "OG loading logo should display when the player clicks the Baccarat RNG001 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064674019,
-                        "content": "OG loading logo should display when the player clicks the Baccarat RNG002 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064676224,
-                        "content": "OG loading logo should display when the player clicks the Baccarat RNG003 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064678296,
-                        "content": "OG loading logo should display when the player clicks the Baccarat RNG005 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064680022,
-                        "content": "OG loading logo should display when the player clicks the Baccarat RNG012 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064687840,
-                        "content": "OG loading logo should display when the player clicks the Baccarat RNG013 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064690556,
-                        "content": "OG loading logo should display when the player clicks the Baccarat RNG015 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064692814,
-                        "content": "OG loading logo should display when the player clicks the Speed Baccarat C2 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064695165,
-                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M1 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064697485,
-                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M2 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064699830,
-                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M3 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064702551,
-                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG006 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064706198,
-                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG007 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064708627,
-                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG016 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064711136,
-                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG017 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064714408,
-                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG018 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064717712,
-                        "content": "OG loading logo should display when the player clicks the Classic DT P7 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064720085,
-                        "content": "OG loading logo should display when the player clicks the Classic DT C9 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064722373,
-                        "content": "OG loading logo should display when the player clicks the Classic DT C10 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064724487,
-                        "content": "OG loading logo should display when the player clicks the Classic DT C11 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064729208,
-                        "content": "OG loading logo should display when the player clicks the Classic DT RNG008 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064731436,
-                        "content": "OG loading logo should display when the player clicks the Classic DT RNG009 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064733304,
-                        "content": "OG loading logo should display when the player clicks the Classic DT RNG019 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064741469,
-                        "content": "OG loading logo should display when the player clicks the Classic DT RNG020 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064744691,
-                        "content": "OG loading logo should display when the player clicks the New DT RNG010 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064746822,
-                        "content": "OG loading logo should display when the player clicks the New DT RNG011 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064749093,
-                        "content": "OG loading logo should display when the player clicks the New DT RNG021 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064751089,
-                        "content": "OG loading logo should display when the player clicks the New DT RNG022 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064753163,
-                        "content": "OG loading logo should display when the player clicks the Bull Bull P3 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064755483,
-                        "content": "OG loading logo should display when the player clicks the Three Cards P5 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064763579,
-                        "content": "OG loading logo should display when the player clicks the Sedie B01 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064764922,
-                        "content": "OG loading logo should display when the player clicks the Roulette P8 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064766999,
-                        "content": "OG loading logo should display when the player clicks the Roulette G11 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064769083,
-                        "content": "OG loading logo should display when the player clicks the Sicbo C12 table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724064770801,
-                        "content": "OG loading logo should display when the player clicks the Moneywheel MW1 table",
-                        "status": "notstarted"
-                    }
-                ]
+                "testCases": []
             },
             "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 52
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "bfb0c4e6-24ff-4694-b817-e06f6e15727a",
             "position": {
-                "x": 43.08742599891514,
-                "y": 132.27788268323664
+                "x": 44.034241570807154,
+                "y": 128.49062039566857
             },
             "type": "connector",
             "data": {
@@ -501,7 +637,10 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "7bc86ead-8295-4e96-be33-4c2ab73ec732",
@@ -521,7 +660,10 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "282d0ba8-9a01-47fb-881c-31df84014b0d",
@@ -531,213 +673,20 @@
             },
             "data": {
                 "label": "L: LOADING (CLS-OGLS-GCL)",
-                "testCases": [
-                    {
-                        "id": 1724130666948,
-                        "content": "The loading should not exceed 5 seconds",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130668880,
-                        "content": "OG loading logo should not retain when the Baccarat M5 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130671549,
-                        "content": "OG loading logo should not retain when the Baccarat M6 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130673838,
-                        "content": "OG loading logo should not retain when the Baccarat M7 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130675887,
-                        "content": "OG loading logo should not retain when the Baccarat RNG001 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130678190,
-                        "content": "OG loading logo should not retain when the Baccarat RNG002 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130680351,
-                        "content": "OG loading logo should not retain when the Baccarat RNG003 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130682543,
-                        "content": "OG loading logo should not retain when the Baccarat RNG005 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130686557,
-                        "content": "OG loading logo should not retain when the Baccarat RNG012 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130689528,
-                        "content": "OG loading logo should not retain when the Baccarat RNG013 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130692029,
-                        "content": "OG loading logo should not retain when the Baccarat RNG015 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130695700,
-                        "content": "OG loading logo should not retain when the Speed Baccarat C2 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130697739,
-                        "content": "OG loading logo should not retain when the Speed Baccarat M1 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130700078,
-                        "content": "OG loading logo should not retain when the Speed Baccarat M2 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130702146,
-                        "content": "OG loading logo should not retain when the Speed Baccarat M3 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130704159,
-                        "content": "OG loading logo should not retain when the Speed Baccarat RNG006 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130708855,
-                        "content": "OG loading logo should not retain when the Speed Baccarat RNG007 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130710981,
-                        "content": "OG loading logo should not retain when the Speed Baccarat RNG016 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130713447,
-                        "content": "OG loading logo should not retain when the Speed Baccarat RNG017 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130715832,
-                        "content": "OG loading logo should not retain when the Speed Baccarat RNG018 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130718174,
-                        "content": "OG loading logo should not retain when the Classic DT P7 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130720694,
-                        "content": "OG loading logo should not retain when the Classic DT C9 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130722803,
-                        "content": "OG loading logo should not retain when the Classic DT C10 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130725000,
-                        "content": "OG loading logo should not retain when the Classic DT C11 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130727129,
-                        "content": "OG loading logo should not retain when the Classic DT RNG008 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130729397,
-                        "content": "OG loading logo should not retain when the Classic DT RNG009 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130731506,
-                        "content": "OG loading logo should not retain when the Classic DT RNG019 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130733568,
-                        "content": "OG loading logo should not retain when the Classic DT RNG020 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130735758,
-                        "content": "OG loading logo should not retain when the New DT RNG010 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130737797,
-                        "content": "OG loading logo should not retain when the New DT RNG011 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130739888,
-                        "content": "OG loading logo should not retain when the New DT RNG021 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130742352,
-                        "content": "OG loading logo should not retain when the New DT RNG022 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130744270,
-                        "content": "OG loading logo should not retain when the Bull Bull P3 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130746197,
-                        "content": "OG loading logo should not retain when the Three Cards P5 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130748159,
-                        "content": "OG loading logo should not retain when the Sedie B01 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130750075,
-                        "content": "OG loading logo should not retain when the Roulette P8 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130752147,
-                        "content": "OG loading logo should not retain when the Roulette G11 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130754064,
-                        "content": "OG loading logo should not retain when the Sicbo C12 ingame table is fully loaded",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130757125,
-                        "content": "OG loading logo should not retain when the Moneywheel MW1 ingame table is fully loaded",
-                        "status": "notstarted"
-                    }
-                ]
+                "testCases": []
             },
             "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 52
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "c13d1054-4216-463e-87c4-1a8f8fb80621",
@@ -747,98 +696,20 @@
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-GCLS)",
-                "testCases": [
-                    {
-                        "id": 1724130810334,
-                        "content": "All icons should be loaded successfully",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130819261,
-                        "content": "All function buttons should be loaded successfully",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130821994,
-                        "content": "The video stream FLV should be downloaded successfully",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130824363,
-                        "content": "The video stream should not load more than 5 seconds upon landing to the ingame page",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130826627,
-                        "content": "The roadmap should be loaded less than 5 seconds upon entering the table",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130828750,
-                        "content": "The dealers image PNG should be downloaded successfully",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130831106,
-                        "content": "The betting table should be downloaded successfully",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130833150,
-                        "content": "The video URL should play successfully with a valid token key",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130835571,
-                        "content": "The video URL with valid  token key should expire in every 30 minutes",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130837803,
-                        "content": "The video should not play after the token has expired.",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130840042,
-                        "content": "The video URL should not play without a valid token key",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130842271,
-                        "content": "The video URL should display a blank page without a valid token key",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130844677,
-                        "content": "The video URL redirection should not be allowed",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130846820,
-                        "content": "Fetching video URL should be blocked without permission",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130849089,
-                        "content": "Accessing video URL should be blocked without permission",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724130851248,
-                        "content": "The video anti-leeching mechanism should detect the tampered token and deny access",
-                        "status": "notstarted"
-                    }
-                ]
+                "testCases": []
             },
             "type": "customNode",
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 52
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "1f76f5bb-e8a5-4b79-b37c-24ce48782b30",
@@ -858,7 +729,10 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "b5381574-b920-479e-a658-03d9e0ca12e3",
@@ -875,10 +749,13 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 68
+                "height": 64
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "a5591ab5-4766-417c-9ce3-3ee14faed247",
@@ -895,16 +772,19 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 52
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "190132bd-143a-4b10-bc3c-4704d53d5a67",
             "position": {
-                "x": 824.7894223127713,
-                "y": -168.9663311975768
+                "x": 821.9489755970952,
+                "y": -196.42398278244542
             },
             "type": "connector",
             "data": {
@@ -918,7 +798,10 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "02a2ed05-df7c-43a0-820a-155d282ca45b",
@@ -935,10 +818,13 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 68
+                "height": 64
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "7e67acc4-86a1-4905-94b3-5db027fc8f3e",
@@ -955,10 +841,13 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 68
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "98ade99e-e158-4f80-a893-37d8f3c14f41",
@@ -978,13 +867,16 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "ae148564-f8be-4c47-95e5-183c0dee1353",
             "position": {
                 "x": 120.95696403947417,
-                "y": 321.41517520052656
+                "y": 324.25562191620264
             },
             "data": {
                 "label": "NBF: NONE BETTING FUNCTIONS ALL SCENAIRO",
@@ -995,16 +887,19 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 68
+                "height": 64
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "c904c59e-a413-4083-914e-30e7f7b61f34",
             "position": {
                 "x": 301.89934938080125,
-                "y": 331.2515054532256
+                "y": 332.19832102511765
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-NBFS)",
@@ -1015,16 +910,19 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 52
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "c8659350-b14e-4831-91ee-5436f65dd896",
             "position": {
                 "x": 734.0353220438197,
-                "y": -8.070072500925878
+                "y": -9.016888072817899
             },
             "type": "connector",
             "data": {
@@ -1038,13 +936,16 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "da140b26-feee-49c9-98ee-893f7229b148",
             "position": {
-                "x": 826.1659483676843,
-                "y": 73.29967575640912
+                "x": 823.3255016520083,
+                "y": 196.3857001023719
             },
             "type": "connector",
             "data": {
@@ -1058,13 +959,16 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "93422266-6fef-488a-a7ea-fa83f6097b79",
             "position": {
-                "x": 821.1541780168839,
-                "y": 149.60380014880104
+                "x": 823.9946247325598,
+                "y": 118.35888627636436
             },
             "data": {
                 "label": "MULTI GAMECHOOSE (CLS-OGLS-CCS-MGC)",
@@ -1075,16 +979,19 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 68
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "aa792d92-9401-4b24-ab87-65ec28e1495f",
             "position": {
-                "x": 1002.5832287920471,
-                "y": 158.5174309222356
+                "x": 1007.3173066515071,
+                "y": 118.75117690277074
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-CCS-MGCS)",
@@ -1095,16 +1002,19 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 52
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "22102c9d-9e03-4f34-bc9b-493a90074cae",
             "position": {
-                "x": 1181.266717839448,
-                "y": 159.40409849387143
+                "x": 1190.734873558368,
+                "y": 117.7442133306225
             },
             "type": "connector",
             "data": {
@@ -1118,13 +1028,16 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "ea98333b-e199-425d-a9c3-0363b6b24d8a",
             "position": {
-                "x": 1260.6395083444716,
-                "y": 135.1611596789409
+                "x": 1272.0012952071759,
+                "y": 94.44809008758398
             },
             "data": {
                 "label": "BOC : BACK TO LOBBY OTHER CATEGORY (CLS-OGLS-CCS-MGCS-BPS-BOC)",
@@ -1135,10 +1048,13 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 100
+                "height": 96
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "e1ea8270-6477-4b7c-864b-f48f35e53c48",
@@ -1158,7 +1074,10 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "e641ffa7-7e57-4398-96a7-cdcad1727cee",
@@ -1175,10 +1094,13 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 84
+                "height": 80
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "8f122ec2-a5f3-4fa8-b439-4352857ea8ee",
@@ -1195,16 +1117,19 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 68
+                "height": 64
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "4339c467-0049-4480-819e-278c23377f00",
             "position": {
                 "x": 1296.3490005294136,
-                "y": -242.52122299818785
+                "y": -251.98937871710808
             },
             "type": "connector",
             "data": {
@@ -1218,13 +1143,16 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "c589ef53-6256-42d5-889a-6d3374a813b5",
             "position": {
-                "x": 1294.014709294467,
-                "y": -311.1223831366448
+                "x": 1296.855156010143,
+                "y": -313.01601428042886
             },
             "type": "connector",
             "data": {
@@ -1237,40 +1165,43 @@
                 "width": 50,
                 "height": 50
             },
-            "selected": false,
-            "dragging": false
+            "selected": true,
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "97d03da9-debb-4e60-93fa-600941456646",
             "position": {
                 "x": 193.2595935813701,
-                "y": -0.32796880767349634
+                "y": -1.2747843795655154
             },
             "data": {
                 "label": "S: SUCCESS (CLS)",
                 "testCases": [
                     {
-                        "id": 1724062359705,
+                        "id": 1724223814201,
                         "content": "Verify that loading should start in 0 to 100%",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062363640,
+                        "id": 1724223816234,
                         "content": "A progress bar should be displayed along with the loading percentage",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062370149,
+                        "id": 1724223820221,
                         "content": "Loading icon should remain centered",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062374145,
+                        "id": 1724223822376,
                         "content": "Animation and highlited UI loading icon should be removed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062378341,
+                        "id": 1724223824624,
                         "content": "Loading should not revert to zero",
                         "status": "notstarted"
                     }
@@ -1280,48 +1211,51 @@
             "sourcePosition": "right",
             "targetPosition": "left",
             "measured": {
-                "width": 124,
-                "height": 36
+                "width": 120,
+                "height": 32
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "d10306ac-a2b7-4d17-b021-7e439155e211",
             "position": {
                 "x": 351.4862308701532,
-                "y": -16.827215044733357
+                "y": -9.728046435732278
             },
             "data": {
                 "label": "OGL: OG LAUNCHING URL (CLS-OGL)",
                 "testCases": [
                     {
-                        "id": 1724062410287,
+                        "id": 1724223860335,
                         "content": "The loading page should start within 2 seconds",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062442804,
+                        "id": 1724223873190,
                         "content": "The 3G network, the loading page should display",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062448830,
+                        "id": 1724223881785,
                         "content": "The 4G network, the loading page should display",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062454613,
+                        "id": 1724223889681,
                         "content": "Using WIFI connection, the loading page should display",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062461035,
+                        "id": 1724223899603,
                         "content": "Using Chrome browser, the loading page should display",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724062465866,
+                        "id": 1724223904890,
                         "content": "Using Safari browser, the loading page should display",
                         "status": "notstarted"
                     }
@@ -1332,10 +1266,13 @@
             "targetPosition": "left",
             "measured": {
                 "width": 150,
-                "height": 68
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "ab9a087b-62cb-4c9f-92de-6f8536f14776",
@@ -1352,10 +1289,13 @@
             "type": "customNode",
             "measured": {
                 "width": 150,
-                "height": 52
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "19770544-598b-4612-8889-3159bdc34992",
@@ -1375,7 +1315,10 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "27459b8f-f962-4a6d-babd-375b81f00dc2",
@@ -1392,10 +1335,13 @@
             "type": "customNode",
             "measured": {
                 "width": 150,
-                "height": 68
+                "height": 64
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "38d0ae0b-511e-42b6-8dd8-79913cae6e7f",
@@ -1414,14 +1360,17 @@
                 "width": 50,
                 "height": 50
             },
-            "selected": true,
-            "dragging": false
+            "selected": false,
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "d830bbfd-6a79-4840-8e89-9e21c7d37fa9",
             "position": {
                 "x": 1301.4030476852915,
-                "y": -170.33039499329266
+                "y": -181.69218185599692
             },
             "type": "connector",
             "data": {
@@ -1435,13 +1384,16 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "07f3966d-36e6-4338-9b85-cf2237f6bbec",
             "position": {
-                "x": 1385.0998000259074,
-                "y": -169.9326866688231
+                "x": 1384.1529844540153,
+                "y": -182.24128910341935
             },
             "type": "connector",
             "data": {
@@ -1455,7 +1407,10 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "36015b23-47d7-4aad-9174-4ec853310353",
@@ -1472,10 +1427,13 @@
             "type": "customNode",
             "measured": {
                 "width": 150,
-                "height": 52
+                "height": 48
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "#1C1C1E"
+            }
         },
         {
             "id": "a5369562-f91f-464c-81a3-68f52932c074",
@@ -1495,7 +1453,10 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         },
         {
             "id": "4fe02e4c-4cef-4576-832b-642af955fb40",
@@ -1515,7 +1476,10 @@
                 "height": 50
             },
             "selected": false,
-            "dragging": false
+            "dragging": false,
+            "style": {
+                "backgroundColor": "inherit"
+            }
         }
     ],
     "edges": [
@@ -1761,13 +1725,13 @@
         }
     ],
     "viewport": {
-        "x": 252.70299632850129,
-        "y": 368.3400817939059,
-        "zoom": 1.0508115410687986
+        "x": 249.59496146127628,
+        "y": 370.00780894129343,
+        "zoom": 1.0561718984001291
     },
     "testCaseStats": {
-        "total": 146,
-        "notstarted": 146,
+        "total": 116,
+        "notstarted": 116,
         "passed": 0,
         "failed": 0,
         "blocked": 0,

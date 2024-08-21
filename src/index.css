@@ -18,7 +18,7 @@ body,
 
 .panel button::after {
   position: absolute;
-  top: 100%;
+  top: 70px;
   color: #ECF0F1;
   transform: translateX(-50%);
   margin-top: 5px;
@@ -33,38 +33,28 @@ body,
   transition:
     opacity 0.3s,
     visibility 0.3s;
+  transform: translateY(-50%);
+  z-index: 9999;
 }
 
-.panel .add::after {
-  content: "Add Test Scenario";
-  right: -30px;
-  position: absolute;
-  top: 50px;
-  z-index: 9999;
+.panel .download::after {
+  content: "Export File as XLSX";
 }
 
 .panel .save::after {
   content: "Save Changes";
-  right: -70px;
-  position: absolute;
-  top: 50px;
-  z-index: 9999;
 }
 
 .panel .connector::after {
   content: "Add Connector";
-  right: -50px;
-  position: absolute;
-  top: 50px;
-  z-index: 9999;
+}
+
+.panel .add::after {
+  content: "Add Test Scenario";
 }
 
 .panel .delete::after {
   content: "Delete Test Scenario";
-  right: -0;
-  position: absolute;
-  top: 50px;
-  z-index: 9999;
 }
 
 .panel button:hover::after {
