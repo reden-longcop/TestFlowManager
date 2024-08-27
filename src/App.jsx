@@ -44,9 +44,6 @@ import {
   faArrowAltCircleDown,
 } from "@fortawesome/free-solid-svg-icons";
 
-// import { initialNodes, nodeTypes } from "./nodes";
-// import { initialEdges, edgeTypes } from "./edges";
-
 import Modal from "./components/Modal";
 import CustomNode from "./nodes/CustomNode";
 import ConnectorNode from "./nodes/ConnectorNode";
@@ -73,24 +70,12 @@ export default function App() {
   }
 
   const toastTypes = {
-    toastDelete: () => {
-      toast.error('No node selected to delete.')
-    },
-    toastDeleteSuccess: () => {
-      toast.success('Node Deleted.')
-    },
-    toastSaveError: () => {
-      toast.error('Server Save Failed: Unable to save changes.')
-    },
-    toastSaveSuccess: () => {
-      toast.success('Changes saved successfully!')
-    },
-    toastSaveErrorLocal: () => {
-      toast.error('Local Save Failed: Unable to save changes locally.')
-    },
-    toastSaveLocalSuccess: () => {
-      toast.success('Changes saved locally!')
-    }
+    toastDelete: useCallback(() => { toast.error('No node selected to delete.', { autoClose: 1000 }); }, []),
+    toastDeleteSuccess: useCallback(() => { toast.success('Node Deleted.', { autoClose: 1000 }); }, []),
+    toastSaveError: useCallback(() => { toast.error('Server Save Failed: Unable to save changes.', { autoClose: 1000 }); }, []),
+    toastSaveSuccess: useCallback(() => { toast.success('Changes saved successfully!', { autoClose: 1000 }); }, []),
+    toastSaveErrorLocal: useCallback(() => { toast.error('Local Save Failed: Unable to save changes locally.', { autoClose: 1000 }); }, []),
+    toastSaveLocalSuccess: useCallback(() => { toast.success('Changes saved locally!', { autoClose: 1000 }); }, []),
   }
 
   const [testCaseStats, setTestCaseStats] = useState({
@@ -101,9 +86,11 @@ export default function App() {
     blocked: 0,
     notapplicable: 0,
   });
+
   const [showDetails, setShowDetails] = useState(false);
   const clickTimeoutRef = useRef(null);
-  const toggleDetails = () => { setShowDetails(!showDetails); };
+
+  const toggleDetails = useCallback(() => { setShowDetails(prev => !prev); }, []);
 
   useEffect(() => {
     const restoreFlow = async () => {
@@ -166,7 +153,7 @@ export default function App() {
     [setEdges],
   );
 
-  const addNode = () => {
+  const addNode = useCallback(() => {
     const lastNode = nodes[nodes.length - 1];
     const lastNodePosition = lastNode ? lastNode.position : { x: 0, y: 0 };
 
@@ -183,9 +170,9 @@ export default function App() {
     };
 
     setNodes((nds) => [...nds, newNode]);
-  };
+  }, [nodes, setNodes]);
 
-  const addConnectorNode = () => {
+  const addConnectorNode = useCallback(() => {
     const lastNode = nodes[nodes.length - 1];
     const lastNodePosition = lastNode ? lastNode.position : { x: 0, y: 0 };
 
@@ -202,9 +189,9 @@ export default function App() {
     };
 
     setNodes((nds) => [...nds, newConnectorNode]);
-  };
+  }, [nodes, setNodes]);
 
-  const handleNodeClick = (event, node) => {
+  const handleNodeClick = useCallback((event, node) => {
     if (clickTimeoutRef.current) {
       clearTimeout(clickTimeoutRef.current);
       clickTimeoutRef.current = null;
@@ -221,15 +208,14 @@ export default function App() {
       )
     );
     setSelectedNode(node);
-  };
-  
+  }, [setNodes]);
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setModalOpen(false);
     setSelectedNode(null);
-  };
+  }, []);
 
-  const handleSaveTestCases = (testCases, label, color) => {
+  const handleSaveTestCases = useCallback((testCases, label, color) => {
     setNodes((nds) => {
       const updatedNodes = nds.map((node) => {
         if (node.id === selectedNode.id) {
@@ -239,7 +225,8 @@ export default function App() {
               ...node.data, 
               label, 
               testCases 
-            }, style: { 
+            }, 
+            style: { 
               ...node.style, 
               backgroundColor: color || '#1C1C1E',
             },
@@ -255,17 +242,17 @@ export default function App() {
   
       return updatedNodes;
     });
-  };  
+  }, [selectedNode, setNodes, setTestCaseStats]);
+  
 
-  const exportToExcel = (nodes) => {
-      console.time('Export to Excel'); // Start timing
+  const exportToExcel = useCallback((nodes) => {
+      console.time('Export to Excel');
 
-      // Create a new workbook
       const workbook = XLSX.utils.book_new();
       const sheetNames = new Set();
 
       nodes
-          .filter((node) => (node.data.testCases && node.data.testCases.length > 0)) // Filter out nodes with no test cases
+          .filter((node) => (node.data.testCases && node.data.testCases.length > 0))
           .forEach((node) => {
               const nodeLabel = node.data.label || `Sheet${nodes.indexOf(node) + 1}`;
               const sanitizedLabel = nodeLabel
@@ -278,7 +265,7 @@ export default function App() {
                   sheetName = `${sanitizedLabel}_${counter}`;
                   counter++;
                   if (sheetName.length > 31) {
-                      sheetName = sheetName.slice(0, 31); // Ensure it doesn't exceed 31 characters
+                      sheetName = sheetName.slice(0, 31);
                   }
               }
               sheetNames.add(sheetName);
@@ -302,11 +289,10 @@ export default function App() {
 
       console.timeEnd('Export to Excel');
       
-      // Write the workbook to a file
       XLSX.writeFile(workbook, 'test_cases.xlsx');
-  };
+  }, []);
 
-  const calculateTestCaseStats = (nodes) => {
+  const calculateTestCaseStats = useCallback((nodes) => {
     const stats = {
       total: 0,
       notstarted: 0,
@@ -336,9 +322,9 @@ export default function App() {
     });
   
     return stats;
-  };
+  }, []);
 
-  const deleteSelectedNode = () => {
+  const deleteSelectedNode = useCallback(() => {
     if (selectedNode) {
       setNodes((nds) => nds.filter((node) => node.id !== selectedNode.id));
       setEdges((eds) =>
@@ -353,7 +339,7 @@ export default function App() {
     } else {
       toastTypes.toastDelete();
     }
-  };
+  }, [selectedNode, setNodes, setEdges, toastTypes]);
 
   const onSave = useCallback(() => {
     if (rfInstance) {
@@ -381,15 +367,16 @@ export default function App() {
             toastTypes.toastSaveLocalSuccess()
           } catch (localError) {
             console.error("Failed to save flow data to localStorage:", localError);
-
+  
             toastTypes.toastSaveErrorLocal()
           }
         });
     } else {
       toastTypes.toastSaveError()
     }
-  }, [rfInstance]);  
+  }, [rfInstance]);
   
+
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <ReactFlow
@@ -411,61 +398,60 @@ export default function App() {
         <MiniMap />
         <Controls />
         <Panel position="top-left panel" className="flex flex-col space-y-4">
-  <div className="button-container flex space-x-2">
-    <button
-      className="delete p-2 rounded bg-[#3E3E3E] hover:bg-red-600 size-12"
-      onClick={deleteSelectedNode}
-    >
-      <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
-    </button>
-    <button
-      className="download rounded rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
-      onClick={() => exportToExcel(nodes)}
-    >
-      <FontAwesomeIcon icon={faArrowAltCircleDown} size="lg" color="white" />
-    </button>
-    <button
-      className="add p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
-      onClick={addNode}
-    >
-      <FontAwesomeIcon icon={faPlusSquare} size="lg" color="white" />
-    </button>
-    <button
-      className="connector p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
-      onClick={addConnectorNode}
-    >
-      <FontAwesomeIcon icon={faPlusCircle} size="lg" color="white" />
-    </button>
-    <button
-      className="save p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
-      onClick={onSave}
-    >
-      <FontAwesomeIcon icon={faFloppyDisk} size="lg" color="white" />
-    </button>
-    </div>
-      <div className="relative">
-          <div className="flex justify-between items-center text-sm p-2 bg-[#2d2d2d] opacity-70 rounded text-white">
-            <p>Total Test Count: {testCaseStats.total}</p>
+          <div className="button-container flex space-x-2">
             <button
-              className="dropdown-button p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] flex items-center"
-              onClick={toggleDetails}
+              className="delete p-2 rounded bg-[#3E3E3E] hover:bg-red-600 size-12"
+              onClick={deleteSelectedNode}
             >
-              <FontAwesomeIcon icon={faChevronDown} size="lg" color="white" />
+              <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
+            </button>
+            <button
+              className="download rounded rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
+              onClick={() => exportToExcel(nodes)}
+            >
+              <FontAwesomeIcon icon={faArrowAltCircleDown} size="lg" color="white" />
+            </button>
+            <button
+              className="add p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
+              onClick={addNode}
+            >
+              <FontAwesomeIcon icon={faPlusSquare} size="lg" color="white" />
+            </button>
+            <button
+              className="connector p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
+              onClick={addConnectorNode}
+            >
+              <FontAwesomeIcon icon={faPlusCircle} size="lg" color="white" />
+            </button>
+            <button
+              className="save p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
+              onClick={onSave}
+            >
+              <FontAwesomeIcon icon={faFloppyDisk} size="lg" color="white" />
             </button>
           </div>
-
-          {showDetails && (
-            <div className="dropdown-menu mt-2 bg-[#2d2d2d] p-2 opacity-70 rounded text-white">
-              <p>Not Started: {testCaseStats.notstarted}</p>
-              <p>Passed: {testCaseStats.passed}</p>
-              <p>Failed: {testCaseStats.failed}</p>
-              <p>Blocked: {testCaseStats.blocked}</p>
-              <p>Not Applicable: {testCaseStats.notapplicable}</p>
+          <div className="relative">
+            <div className="flex justify-between items-center text-sm p-2 bg-[#2d2d2d] opacity-70 rounded text-white">
+              <p>Total Test Count: {testCaseStats.total}</p>
+              <button
+                className="dropdown-button p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] flex items-center"
+                onClick={toggleDetails}
+              >
+                <FontAwesomeIcon icon={faChevronDown} size="lg" color="white" />
+              </button>
             </div>
-          )}
-      </div>
-      </Panel>
 
+            {showDetails && (
+              <div className="dropdown-menu mt-2 bg-[#2d2d2d] p-2 opacity-70 rounded text-white">
+                <p>Not Started: {testCaseStats.notstarted}</p>
+                <p>Passed: {testCaseStats.passed}</p>
+                <p>Failed: {testCaseStats.failed}</p>
+                <p>Blocked: {testCaseStats.blocked}</p>
+                <p>Not Applicable: {testCaseStats.notapplicable}</p>
+              </div>
+            )}
+          </div>
+        </Panel>
       </ReactFlow>
       <ToastContainer />
       <Modal
@@ -477,7 +463,6 @@ export default function App() {
         onSave={handleSaveTestCases}
         borderColor={selectedNode?.data?.color || '#1C1C1E'}
       />
-      
     </div>
   );
 }

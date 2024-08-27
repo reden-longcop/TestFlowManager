@@ -105,483 +105,1160 @@
                 "label": "S: SUCCESS (CLS-OGLS) LOBBY",
                 "testCases": [
                     {
-                        "id": 1724224522682,
+                        "id": 1724729094061,
                         "content": "Goodtips labels should be correct",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224530181,
+                        "id": 1724729095509,
                         "content": "PRD-2225 - The promotion banner should not overlap with the other game tables",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224534075,
-                        "content": "IDLING IN A DIFFERENT TAB AND THEN RETURNING TO THE OG LIVE TAB (PORTRAIT MODE)",
+                        "id": 1724729106365,
+                        "content": "Idling in a different tab and then returning to the OG Live tab.\n(Portrait mode)",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724729115919,
+                        "content": "player should receive a pop-up notification after idling for 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224568868,
-                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "id": 1724729127212,
+                        "content": "player should not receive a pop-up notification\nfor idling less than 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224585132,
-                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "id": 1724729129529,
+                        "content": "page should reload after clicking anywhere in the page",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224588577,
-                        "content": "Page should reload after clicking anywhere in the page",
+                        "id": 1724729139297,
+                        "content": "player should be redirected in the lobby after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224620195,
-                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "id": 1724729142114,
+                        "content": "idling pop-up notification should not be displayed after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224625653,
-                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
+                        "id": 1724729149780,
+                        "content": "idling pop-up notification should not be displayed when the player is active",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224633534,
-                        "content": "Idling pop-up notification should not be displayed when the player is active",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724224640316,
+                        "id": 1724729157244,
                         "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224647629,
+                        "id": 1724729166802,
                         "content": "OG Live lobby should not display a white page after getting redirected",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224652985,
-                        "content": "IDLING IN THE LOBBY (PORTRAIT MODE)",
+                        "id": 1724729177177,
+                        "content": "Idling in the lobby (Portrait mode)",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724729182852,
+                        "content": "player should receive a pop-up notification after idling for 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224691594,
-                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "id": 1724729223696,
+                        "content": "player should not receive a pop-up notification\nfor idling less than 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224711792,
-                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "id": 1724729226097,
+                        "content": "page should reload after clicking anywhere in the page",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224716374,
-                        "content": "Page should reload after clicking anywhere in the page",
+                        "id": 1724729228845,
+                        "content": "player should be redirected in the lobby after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224722279,
-                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "id": 1724729245627,
+                        "content": "idling pop-up notification should not be displayed after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224727063,
-                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
+                        "id": 1724729247623,
+                        "content": "idling pop-up notification should not be displayed when the player is active",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224733367,
-                        "content": "Idling pop-up notification should not be displayed when the player is active",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724224740412,
+                        "id": 1724729266132,
                         "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224747772,
+                        "id": 1724729272961,
                         "content": "OG Live lobby should not display a white page after getting redirected",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224750970,
-                        "content": "IDLING WITH MINIMIZED BROWSER (PORTRAIT MODE)",
+                        "id": 1724729281910,
+                        "content": "Idling with minimized browser (Portrait mode)",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724729289400,
+                        "content": "player should receive a pop-up notification after idling for 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224776612,
-                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "id": 1724729292893,
+                        "content": "player should not receive a pop-up notification\nfor idling less than 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224788911,
-                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "id": 1724729296665,
+                        "content": "page should reload after clicking anywhere in the page",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224797021,
-                        "content": "Page should reload after clicking anywhere in the page",
+                        "id": 1724729299414,
+                        "content": "player should be redirected in the lobby after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224803756,
-                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "id": 1724729301890,
+                        "content": "idling pop-up notification should not be displayed after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224807695,
-                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
+                        "id": 1724729309099,
+                        "content": "idling pop-up notification should not be displayed when the player is active",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224821491,
+                        "id": 1724729316987,
                         "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224852791,
+                        "id": 1724729325064,
                         "content": "OG Live lobby should not display a white page after getting redirected",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224856102,
-                        "content": "IDLING IN A DIFFERENT TAB AND THEN RETURNING TO THE OG LIVE TAB. (LANDSCAPE MODE)",
+                        "id": 1724729338743,
+                        "content": "Idling in a different tab and then returning to the OG Live tab.\n(Landscape mode)",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724729346303,
+                        "content": "player should receive a pop-up notification after idling for 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224908086,
-                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "id": 1724729356827,
+                        "content": "player should not receive a pop-up notification\nfor idling less than 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224915714,
-                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "id": 1724729358827,
+                        "content": "page should reload after clicking anywhere in the page",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224921919,
-                        "content": "Page should reload after clicking anywhere in the page",
+                        "id": 1724729368485,
+                        "content": "player should be redirected in the lobby after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224926886,
-                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "id": 1724729370278,
+                        "content": "idling pop-up notification should not be displayed after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224932151,
-                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
+                        "id": 1724729372211,
+                        "content": "idling pop-up notification should not be displayed when the player is active",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224939692,
-                        "content": "Idling pop-up notification should not be displayed when the player is active",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724224946595,
+                        "id": 1724729388377,
                         "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224953147,
+                        "id": 1724729396426,
                         "content": "OG Live lobby should not display a white page after getting redirected",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224957019,
-                        "content": "IDLING IN THE LOBBY (LANDSCAPE MODE)",
+                        "id": 1724729406508,
+                        "content": "Idling in the lobby (Landscape mode)",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724729409248,
+                        "content": "player should receive a pop-up notification after idling for 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724224996551,
-                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "id": 1724729411972,
+                        "content": "player should not receive a pop-up notification\nfor idling less than 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225005445,
-                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "id": 1724729416547,
+                        "content": "page should reload after clicking anywhere in the page",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225025904,
-                        "content": "Page should reload after clicking anywhere in the page",
+                        "id": 1724729419214,
+                        "content": "player should be redirected in the lobby after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225033729,
-                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "id": 1724729421428,
+                        "content": "idling pop-up notification should not be displayed after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225041021,
-                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
+                        "id": 1724729427161,
+                        "content": "idling pop-up notification should not be displayed when the player is active",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225054811,
-                        "content": "Idling pop-up notification should not be displayed when the player is active",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724225066095,
+                        "id": 1724729432909,
                         "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225072896,
+                        "id": 1724729439457,
                         "content": "OG Live lobby should not display a white page after getting redirected",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225087472,
-                        "content": "IDLING WITH MINIMIZED BROWSER (LANDSCAPE MODE)",
+                        "id": 1724729449040,
+                        "content": "Idling with minimized browser (Landscape mode)",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724729455719,
+                        "content": "player should receive a pop-up notification after idling for 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225141187,
-                        "content": "Player should receive a pop-up notification after idling for 10 minutes",
+                        "id": 1724729458194,
+                        "content": "player should not receive a pop-up notification\nfor idling less than 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225149951,
-                        "content": "Player should not receive a pop-up notification\nfor idling less than 10 minutes",
+                        "id": 1724729460067,
+                        "content": "page should reload after clicking anywhere in the page",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225156038,
-                        "content": "Page should reload after clicking anywhere in the page",
+                        "id": 1724729469344,
+                        "content": "player should be redirected in the lobby after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225160454,
-                        "content": "Player should be redirected in the lobby after the page is reloaded",
+                        "id": 1724729488753,
+                        "content": "idling pop-up notification should not be displayed after the page is reloaded",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225166123,
-                        "content": "Idling pop-up notification should not be displayed after the page is reloaded",
+                        "id": 1724729497713,
+                        "content": "idling pop-up notification should not be displayed when the player is active",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225174823,
-                        "content": "Idling pop-up notification should not be displayed when the player is active",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724225187921,
+                        "id": 1724729505741,
                         "content": "OG Live should be fully functional after being reloaded and redirected to the lobby due to idling.",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225199366,
+                        "id": 1724729513471,
                         "content": "OG Live lobby should not display a white page after getting redirected",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225207339,
-                        "content": "**** IDLE WHILE LOGGED-OUT ****",
+                        "id": 1724729520131,
+                        "content": "Idle while logged-out",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724729523591,
+                        "content": "should not receive idle notification pop up after 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225253923,
-                        "content": "Should not receive idle notification pop up after 10 minutes",
+                        "id": 1724729529816,
+                        "content": "should not receive idle notification less than 10 minutes",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225277921,
-                        "content": "Should not receive idle notification less than 10 minutes",
+                        "id": 1724729537557,
+                        "content": "should not receive idle notification when minimized",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225284508,
-                        "content": "Should not receive idle notification when minimized",
+                        "id": 1724729544255,
+                        "content": "should not receive idle notification when switched to another tab",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225294348,
-                        "content": "Should not receive idle notification when switched to another tab",
-                        "status": "notstarted"
-                    },
-                    {
-                        "id": 1724225332665,
+                        "id": 1724729553046,
                         "content": "All media contents should not be truncated when the loading page displayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225339440,
+                        "id": 1724729558484,
                         "content": "Betting timer shown in the lobby should not have any less than 0",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225342182,
+                        "id": 1724729566950,
                         "content": "Player avatar should be displayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225344528,
+                        "id": 1724729571852,
                         "content": "Player avatar should be clickable",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225346726,
+                        "id": 1724729574337,
                         "content": "Player name should be displayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225349067,
+                        "id": 1724729577837,
                         "content": "Player balance should be displayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225351634,
+                        "id": 1724729580675,
                         "content": "Player's information indicated in the player modal in Desktop and Mobile should be the same",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225354364,
-                        "content": "**** CLICKING AVATAR SHOULD DISPLAY A MODAL THAT CONSIST OF THE FOLLOWING: ****",
-                        "status": "notstarted"
+                        "id": 1724729594018,
+                        "content": "Clicking avatar should display a modal that consist of the following:",
+                        "status": "",
+                        "isBold": true
                     },
                     {
-                        "id": 1724225409659,
+                        "id": 1724729596466,
                         "content": "Avatar image",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225423887,
+                        "id": 1724729600521,
                         "content": "UserName",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225426577,
+                        "id": 1724729602941,
                         "content": "Nickname",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225428901,
+                        "id": 1724729605490,
                         "content": "Number of Following",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225431328,
+                        "id": 1724729608303,
                         "content": "Number of Fans",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225434277,
+                        "id": 1724729611259,
                         "content": "CNY",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225437547,
+                        "id": 1724729613929,
                         "content": "OG Beans",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225440309,
+                        "id": 1724729616953,
                         "content": "Total Valid Bets",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225443337,
+                        "id": 1724729619621,
                         "content": "Total Win/Lose",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225446807,
+                        "id": 1724729622295,
                         "content": "Avatar Image Selection",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225449979,
+                        "id": 1724729625739,
                         "content": "Clicking any image in the Avatar Image Selection should change the Player's Image Avatar simultaneously",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225453378,
+                        "id": 1724729629593,
                         "content": "Player's Bet Limit",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225456729,
+                        "id": 1724729632191,
                         "content": "Membership Type",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225461647,
+                        "id": 1724729634773,
                         "content": "The total number of players should be diaplayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225465052,
+                        "id": 1724729637604,
                         "content": "The Settings should be displayed",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225471331,
-                        "content": "**** CLICKING THE SETTINGS ICON SHOULD DISPLAY THE FOLLOWING DETAILS/ICONS: ****",
-                        "status": "notstarted"
+                        "id": 1724729646370,
+                        "content": "Clicking the Settings icon should displlay the following details/icons:",
+                        "status": "",
+                        "isBold": true
                     },
                     {
-                        "id": 1724225530388,
+                        "id": 1724729648099,
                         "content": "Language",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225567618,
-                        "content": "**** UNDER THE LANGUAGE TEXT SHOULD DISPLAY THE FOLLOWING: ****",
-                        "status": "notstarted"
+                        "id": 1724729656644,
+                        "content": "Under language text should display the following:",
+                        "status": "",
+                        "isBold": true
                     },
                     {
-                        "id": 1724225807957,
+                        "id": 1724729660236,
                         "content": "EN",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225834995,
+                        "id": 1724729664924,
                         "content": "CN",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225842931,
+                        "id": 1724729668726,
                         "content": "JP",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225860723,
+                        "id": 1724729672615,
                         "content": "KR",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225872012,
+                        "id": 1724729675844,
                         "content": "ID",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225876263,
+                        "id": 1724729679172,
                         "content": "TH",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225880070,
+                        "id": 1724729682063,
                         "content": "VN",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225883877,
+                        "id": 1724729685936,
                         "content": "TR",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225888961,
+                        "id": 1724729690470,
                         "content": "BR",
                         "status": "notstarted"
                     },
                     {
-                        "id": 1724225893545,
-                        "content": "**** UNDER SOUNDS TEXT SHOULD DISPLAY THE FOLLOWING: ****",
+                        "id": 1724730707008,
+                        "content": "Under SOUNDS text should display the following:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724730709135,
+                        "content": "BGM",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734309365,
+                        "content": "Dragging the BGM to left or right should change the audio volume",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734310363,
+                        "content": "No BGM should be heard when the BGM toggle is off",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734312351,
+                        "content": "Turning the BGM toggle off should automatically put the draggable sound bar to left and vice versa when turning it on",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734314580,
+                        "content": "Sound FX",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734316537,
+                        "content": "Dragging the SOUND FX to left or right should change the audio volume",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734318818,
+                        "content": "No SOUND FX should be heard when the SOUND FX toggle is off",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734320765,
+                        "content": "Turning the SOUND FX toggle off should automatically put the draggable sound bar to left and vice versa when turning it on",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734322836,
+                        "content": "Live Sound",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734324839,
+                        "content": "Dragging the LIVE SOUND to left or right should change the audio volume",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734326837,
+                        "content": "No LIVE SOUND should be heard when the LIVE SOUND toggle is off",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734329046,
+                        "content": "Turning the LIVE SOUND toggle off should automatically put the draggable sound bar to left and vice versa when turning it on",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734331005,
+                        "content": "RECORD HISTORY ICON",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724734341900,
+                        "content": "Clicking the RECORD HISTORY Icon should display the following:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724736383386,
+                        "content": "RECORD",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736401405,
+                        "content": "Clicking the DATE FILTER should display the following options:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724736413470,
+                        "content": "1 Day",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736417287,
+                        "content": "Clicking the 1 Day filter should show all the players transaction in one day",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736420743,
+                        "content": "3 Days",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736423132,
+                        "content": "Clicking the 3 Days filter should show all the players transaction in three days",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736425841,
+                        "content": "7 Days",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736428507,
+                        "content": "Clicking the 7 Days filter should show all the players transaction in seven days",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736431198,
+                        "content": "30 Days",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736433594,
+                        "content": "Clicking the 30 Days filter should show all the players transaction in thirty days",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736436093,
+                        "content": "GAME TYPE FILTER",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736439900,
+                        "content": "Clicking the GAMES FILTER should display the following game options:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724736746417,
+                        "content": "ALL (Default)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736752448,
+                        "content": "All game types transactions should be displayed upon opening the RECORD HISTORY by default",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736755229,
+                        "content": "Baccarat",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724736757448,
+                        "content": "Clicking the Baccarat in the Game Type filter should show all the Baccarat game transactions",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740221598,
+                        "content": "Money Wheel",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740230783,
+                        "content": "Clicking the Moneywheel in the Game Type filter should show all the Moneywheel game transactions",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740234533,
+                        "content": "Roulette",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740237048,
+                        "content": "Clicking the Roulette in the Game Type filter should show all the Roulette game transactions",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740239319,
+                        "content": "Three Cards",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740242394,
+                        "content": "Clicking the Three Cards in the Game Type filter should show all the Three Cards game transactions",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740245406,
+                        "content": "Bull Bull",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740247524,
+                        "content": "Clicking the Bull Bull in the Game Type filter should show all the Bull Bull game transactions",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740249527,
+                        "content": "Sicbo",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740267648,
+                        "content": "Clicking the Sicbo in the Game Type filter should show all the Sicbo game transactions",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740269913,
+                        "content": "Sedie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740272111,
+                        "content": "Clicking the Sedie in the Game Type filter should show all the Sedie game transactions",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740293857,
+                        "content": "Bet Code per transaction",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740295013,
+                        "content": "Date(GMT+8) per transaction",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740297622,
+                        "content": "Game per transaction",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740299977,
+                        "content": "Table number per transaction",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740302142,
+                        "content": "Shoe per transaction",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740304063,
+                        "content": "Bet area",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740305899,
+                        "content": "Bet Amount per transaction",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740307886,
+                        "content": "Win/Lose per transaction",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740309987,
+                        "content": "Result",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740313032,
+                        "content": "Clicking the DETAIL ICON should display the following details:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724740316708,
+                        "content": "Bet Code",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740328986,
+                        "content": "Bet Area",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740331090,
+                        "content": "Game Result",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740333258,
+                        "content": "REPORT",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740342146,
+                        "content": "Clicking the REPORT button should display the following:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724740345853,
+                        "content": "DATE",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740348180,
+                        "content": "1 Day",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740368219,
+                        "content": "Selecting 1 day filter and clicking submit should display the win / lose and rolling total in 24 hours",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740371787,
+                        "content": "3 Days",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740374483,
+                        "content": "Selecting 3 days filter and clicking submit should display the win / lose and rolling total in 3 days span",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740376876,
+                        "content": "7 Days",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740379276,
+                        "content": "Selecting 7 days filter and clicking submit should display the win / lose and rolling total in 7 days span",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740381348,
+                        "content": "30 Days",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740383408,
+                        "content": "Selecting 30 days filter and clicking submit should display the win / lose and rolling total in 30 days span",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740385662,
+                        "content": "WIN / LOSE",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740387866,
+                        "content": "ROLLING",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740389712,
+                        "content": "Submit button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740398424,
+                        "content": "FOLLOW ICON",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740400984,
+                        "content": "Clicking the Follow Icon should display the following details and buttons:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724740406207,
+                        "content": "Follow label",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740413234,
+                        "content": "Ranking",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740414986,
+                        "content": "Player Names",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740416885,
+                        "content": "Player Bets",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740419248,
+                        "content": "Friends",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740421941,
+                        "content": "Dealers",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740430485,
+                        "content": "Clicking Friends button should display the following details:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724740432992,
+                        "content": "Player Names",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740435607,
+                        "content": "Player Tables",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740437633,
+                        "content": "Player Followers",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740439479,
+                        "content": "Unfollow button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740442593,
+                        "content": "Clicking the Dealers button should display the following details:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724740445220,
+                        "content": "Dealer Names",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740447330,
+                        "content": "Dealer Tables",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740449195,
+                        "content": "Dealer Followers",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740451466,
+                        "content": "Unfollow button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740454027,
+                        "content": "Rules",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740458760,
+                        "content": "Clicking the Rules Icon should redirect the player to the Game Rules page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740460570,
+                        "content": "Sound FX",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740464298,
+                        "content": "Game Current Version",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740471507,
+                        "content": "Game BG Color",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740473429,
+                        "content": "Clicking any of the Change Theme colors, should change the background color of the lobby simultaneously",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740476450,
+                        "content": "Upon successful landing in the OG Lobby, the folowing game tabs should be displayed:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724740477912,
+                        "content": "Multi Play Tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740493238,
+                        "content": "Featured Tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740500683,
+                        "content": "Baccarat Tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740503770,
+                        "content": "Card Games Tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740505978,
+                        "content": "Others Tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740508001,
+                        "content": "Maria Tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740510064,
+                        "content": "The promo banner should be displayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740512184,
+                        "content": "Clicking the promo banner should redirect the player to the OG Promotion Page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740515113,
+                        "content": "Promo banner should be located in the right side of the screen",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740517153,
+                        "content": "Promo banner should automatically be hidden when in Multi tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740519473,
+                        "content": "A message should display \"Shuffling\" on the specific game table's roadmap when the game table is shuffling",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740521512,
+                        "content": "Betting timer should retain in 0 when shuffling",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740523916,
+                        "content": "Roadmap should automatically reset when the new round started after shuffling",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740528256,
+                        "content": "Bet pool should automatically reset when the new round started after shuffling",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740530191,
+                        "content": "Game summary should automatically reset when the new round started after shuffling",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740537807,
+                        "content": "Clicking the Game Rule should display the following details:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724740540341,
+                        "content": "Verify that the contents of the new page should be complete or matches the content of the new Game Rule design",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740542458,
+                        "content": "Verify that the contents of the new page should not have any overlapping or truncation",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740544916,
+                        "content": "Verify that the new improved Game Rule page should be responsive in different device screen resolutions",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740549830,
+                        "content": "Verify that all buttons should be functional",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740552257,
+                        "content": "Verify that all hyperlinks or redirections should be correct",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740555268,
+                        "content": "Verify that CN and EN languages should be supported in the new page\nVerify that CN and EN languages should be supported in the new page\nVerify that CN and EN languages should be supported in the new page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740578640,
+                        "content": "Verify that the contents of the new page should be complete or matches the content of the new Game Rule design",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740582041,
+                        "content": "Verify that the contents of the new page should not have any overlapping or truncation",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740584268,
+                        "content": "Verify that when the table has been suspended, and the player has been kicked out, a message \"You been removed due to current tables is close\" should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740586611,
+                        "content": "Verify that when the table has been suspended, the game table should automatically be hidden in the lobby",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740596347,
+                        "content": "PRD-2148 & PRD-1930 [DESKTOP] Sounds Logic",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724740598078,
+                        "content": "Default sound volume should be 10%",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740603157,
+                        "content": "The default volume percentage of Sound FX when landed on the Lobby should be at 10%",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740605148,
+                        "content": "When the player turns the Sound FX off in the lobby and navigates to MULTI PLAY, there should be no Sound FX heard",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740607625,
+                        "content": "When the player turns the Sound FX off in the lobby and navigates to INGAME, there should be no Sound FX heard",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740610152,
+                        "content": "When the player turns the Sound FX off ingame, sound FX in the lobby should automatically turn off as well",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740612463,
+                        "content": "Turning the Sound FX on then refreshing the page, the BGM should still be ON",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740614626,
+                        "content": "Turning the BGM on then refreshing the page, the BGM should still be ON",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740616364,
+                        "content": "Lobby and in game toggled sound should be the same",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724740623707,
+                        "content": "Turning the BGM on then refreshing the page, the BGM should be OFF",
                         "status": "notstarted"
                     }
                 ]
@@ -590,7 +1267,7 @@
                 "width": 150,
                 "height": 48
             },
-            "selected": true,
+            "selected": false,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -604,7 +1281,198 @@
             },
             "data": {
                 "label": "GC:GAME CHOOSE (CLS-OGLS-GC)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724721141123,
+                        "content": "OG loading logo should display when the player clicks the Baccarat M5 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721145704,
+                        "content": "OG loading logo should display when the player clicks the Baccarat M6 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721148509,
+                        "content": "OG loading logo should display when the player clicks the Baccarat M7 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721151140,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG001 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721153741,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG002 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721156260,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG003 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721158771,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG005 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721161088,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG012 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721163486,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG013 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721165572,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG015 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721167758,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat C2 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721169808,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M1 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721171865,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M2 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721173995,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M3 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721176189,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG006 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721178601,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG007 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721180866,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG016 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721183104,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG017 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721185544,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG018 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721206063,
+                        "content": "OG loading logo should display when the player clicks the Classic DT P7 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721214171,
+                        "content": "OG loading logo should display when the player clicks the Classic DT C9 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721217319,
+                        "content": "OG loading logo should display when the player clicks the Classic DT C10 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721220361,
+                        "content": "OG loading logo should display when the player clicks the Classic DT C11 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721223007,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG008 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721225620,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG009 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721228185,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG019 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721230651,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG020 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721233251,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG010 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721235848,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG011 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721240496,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG021 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721242777,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG022 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721245143,
+                        "content": "OG loading logo should display when the player clicks the Bull Bull P3 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721247648,
+                        "content": "OG loading logo should display when the player clicks the Three Cards P5 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721255630,
+                        "content": "OG loading logo should display when the player clicks the Sedie B01 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721258480,
+                        "content": "OG loading logo should display when the player clicks the Roulette P8 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721261081,
+                        "content": "OG loading logo should display when the player clicks the Roulette G11 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721263274,
+                        "content": "OG loading logo should display when the player clicks the Sicbo C12 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721265537,
+                        "content": "OG loading logo should display when the player clicks the Moneywheel MW1 table",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -673,7 +1541,208 @@
             },
             "data": {
                 "label": "L: LOADING (CLS-OGLS-GCL)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724721337086,
+                        "content": "The loading should not exceed 5 seconds",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721340767,
+                        "content": "OG loading logo should not retain when the Baccarat M5 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721345565,
+                        "content": "OG loading logo should not retain when the Baccarat M6 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721355704,
+                        "content": "OG loading logo should not retain when the Baccarat M7 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721377696,
+                        "content": "OG loading logo should not retain when the Baccarat RNG001 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721385690,
+                        "content": "OG loading logo should not retain when the Baccarat RNG002 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721388662,
+                        "content": "OG loading logo should not retain when the Baccarat RNG003 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721391276,
+                        "content": "OG loading logo should not retain when the Baccarat RNG005 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721394088,
+                        "content": "OG loading logo should not retain when the Baccarat RNG012 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721396531,
+                        "content": "OG loading logo should not retain when the Baccarat RNG013 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721398792,
+                        "content": "OG loading logo should not retain when the Baccarat RNG015 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721401003,
+                        "content": "OG loading logo should not retain when the Speed Baccarat C2 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721403204,
+                        "content": "OG loading logo should not retain when the Speed Baccarat M1 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721405474,
+                        "content": "OG loading logo should not retain when the Speed Baccarat M2 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721407772,
+                        "content": "OG loading logo should not retain when the Speed Baccarat M3 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721410393,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG006 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721413207,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG007 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721415807,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG007 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721422716,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG016 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721431407,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG017 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721433790,
+                        "content": "OG loading logo should not retain when the Speed Baccarat RNG018 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721436394,
+                        "content": "OG loading logo should not retain when the Classic DT P7 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721438786,
+                        "content": "OG loading logo should not retain when the Classic DT C9 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721441128,
+                        "content": "OG loading logo should not retain when the Classic DT C10 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721443432,
+                        "content": "OG loading logo should not retain when the Classic DT C11 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721445965,
+                        "content": "OG loading logo should not retain when the Classic DT RNG008 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721448302,
+                        "content": "OG loading logo should not retain when the Classic DT RNG009 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721450746,
+                        "content": "OG loading logo should not retain when the Classic DT RNG019 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721453207,
+                        "content": "OG loading logo should not retain when the Classic DT RNG020 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721455385,
+                        "content": "OG loading logo should not retain when the New DT RNG010 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721457594,
+                        "content": "OG loading logo should not retain when the New DT RNG011 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721462435,
+                        "content": "OG loading logo should not retain when the New DT RNG021 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721464506,
+                        "content": "OG loading logo should not retain when the New DT RNG022 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721466715,
+                        "content": "OG loading logo should not retain when the Bull Bull P3 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721470889,
+                        "content": "OG loading logo should not retain when the Three Cards P5 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721477705,
+                        "content": "OG loading logo should not retain when the Sedie B01 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721499164,
+                        "content": "OG loading logo should not retain when the Roulette P8 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721502749,
+                        "content": "OG loading logo should not retain when the Roulette G11 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721506519,
+                        "content": "OG loading logo should not retain when the Sicbo C12 ingame table is fully loaded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721508649,
+                        "content": "OG loading logo should not retain when the Moneywheel MW1 ingame table is fully loaded",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -696,7 +1765,98 @@
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-GCLS)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724721550127,
+                        "content": "All icons should be loaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721553849,
+                        "content": "All function buttons should be loaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721556074,
+                        "content": "The video stream FLV should be downloaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721560473,
+                        "content": "The video stream should not load more than 5 seconds upon landing to the ingame page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721562775,
+                        "content": "The roadmap should be loaded less than 5 seconds upon entering the table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721565107,
+                        "content": "The dealers image PNG should be downloaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721567136,
+                        "content": "The betting table should be downloaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721569407,
+                        "content": "[SPRINT 22][DESKTOP] VIDEO ANTI-LEECHING",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721597892,
+                        "content": "The video URL should play successfully with a valid token key",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721601074,
+                        "content": "The video URL with valid  token key should expire in every 30 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721603656,
+                        "content": "The video URL with valid  token key should expire in every 30 minutes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721611653,
+                        "content": "The video should not play after the token has expired.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721615574,
+                        "content": "The video URL should not play without a valid token key",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721617948,
+                        "content": "The video URL should display a blank page without a valid token key",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721620110,
+                        "content": "The video URL redirection should not be allowed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721622251,
+                        "content": "Fetching video URL should be blocked without permission",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721624325,
+                        "content": "Accessing video URL should be blocked without permission",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724721626376,
+                        "content": "The video anti-leeching mechanism should detect the tampered token and deny access",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -738,7 +1898,7 @@
             "id": "b5381574-b920-479e-a658-03d9e0ca12e3",
             "position": {
                 "x": 121.89709831330754,
-                "y": 222.9059078661811
+                "y": 223.8550099301238
             },
             "data": {
                 "label": "BP:BETTING PLAY ALL SENAIRO (CLS-OGLS-GCLS-BP)",
@@ -807,7 +1967,7 @@
             "id": "02a2ed05-df7c-43a0-820a-155d282ca45b",
             "position": {
                 "x": 921.7927288070605,
-                "y": -252.46510210810294
+                "y": -257.2106124278164
             },
             "data": {
                 "label": "BL:BACK TO LOBBY (CLS-OGLS-GCLS-BPS-BL)",
@@ -880,7 +2040,156 @@
             },
             "data": {
                 "label": "NBF: NONE BETTING FUNCTIONS ALL SCENAIRO",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724742206976,
+                        "content": "BACCARAT",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724742213796,
+                        "content": "INTERFACE",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724742217472,
+                        "content": "Shoe number should be cleared once shuffling",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742224908,
+                        "content": "Shoe number should be blank during shuffling",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742226976,
+                        "content": "Shoe Number should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742230743,
+                        "content": "Player's total bet should be displayed correctly",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742237779,
+                        "content": "Table Number should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742239741,
+                        "content": "Game Name should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742241637,
+                        "content": "Player Avatar should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742243710,
+                        "content": "Player Nickname should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742245682,
+                        "content": "Player Balance should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742248775,
+                        "content": "Dealer Name should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742250650,
+                        "content": "Live Sound Button should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742256546,
+                        "content": "Baccarat Betting Area should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742258399,
+                        "content": "Supersix button should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742260455,
+                        "content": "The dealer should immediately start dealing when the betting timer closes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742262369,
+                        "content": "Player seat should be random",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742264495,
+                        "content": "Player seat (avatar, player name, and balance) should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742266426,
+                        "content": "Player balance should have a comma separator on the balance of the current player",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742268500,
+                        "content": "Function Buttons should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742270416,
+                        "content": "Game Summary should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742272595,
+                        "content": "Probability Button should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742274461,
+                        "content": "Roadmap should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742276328,
+                        "content": "Betting Timer should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742278425,
+                        "content": "Payrate should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742280437,
+                        "content": "Good Tips sidebar should be displayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742286339,
+                        "content": "Settings Button should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742288453,
+                        "content": "Exit/Home Button should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724742299528,
+                        "content": "EDIT CHIPS",
+                        "status": "",
+                        "isBold": true
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -1278,7 +2587,7 @@
             "id": "ab9a087b-62cb-4c9f-92de-6f8536f14776",
             "position": {
                 "x": 121.44826795452204,
-                "y": 416.57304121041
+                "y": 418.4712453382954
             },
             "data": {
                 "label": "CATEGORY CHOOSE (CLS-OGLS-CC)",
@@ -1324,7 +2633,7 @@
             "id": "27459b8f-f962-4a6d-babd-375b81f00dc2",
             "position": {
                 "x": 302.1901252451204,
-                "y": 409.01305867574723
+                "y": 410.9112628036326
             },
             "data": {
                 "label": "S: CATEGORY CHOOSE SUCCESS (CLS-OGLS-CCS)",
@@ -1337,7 +2646,7 @@
                 "width": 150,
                 "height": 64
             },
-            "selected": false,
+            "selected": true,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -1347,7 +2656,7 @@
             "id": "38d0ae0b-511e-42b6-8dd8-79913cae6e7f",
             "position": {
                 "x": 737.2552406681399,
-                "y": 115.53918822289535
+                "y": 118.38649441472342
             },
             "type": "connector",
             "data": {
@@ -1730,8 +3039,8 @@
         "zoom": 1.0536274632528664
     },
     "testCaseStats": {
-        "total": 116,
-        "notstarted": 116,
+        "total": 372,
+        "notstarted": 347,
         "passed": 0,
         "failed": 0,
         "blocked": 0,
