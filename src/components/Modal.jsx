@@ -29,12 +29,13 @@ const COLOR_OPTIONS = {
   THIRD: '#9D3233'
 }
 
-const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChange, onCheckboxChange, isChecked }, ref) => {
+const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChange, onCheckboxChange, isChecked, onClick }, ref) => {
   return (
     <div
       className={`py-2 flex items-center border-gray-600 space-x-5 overflow-x-hidden`}
       key={testCase.id}
       data-replicated-value={testCase.content}
+      onClick={onClick}
     >
       <label className="container flex w-1">
         <input
@@ -83,6 +84,7 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
   );
 }));
 
+
 const Modal = ({
   isOpen,
   onClose,
@@ -108,7 +110,7 @@ const Modal = ({
   const filteredTestCases = testCases.filter(tc =>
     tc.content.toLowerCase().includes(searchTerm.toLowerCase())
   );  
-
+  
   const debouncedSave = useCallback(debounce(async () => {
     try {
       if (!nodeId) {
@@ -231,6 +233,20 @@ const Modal = ({
       }
     });
   }, []);
+
+  const scrollToClicked = useCallback((index) => {
+    if (textareasRef.current[index]) {
+      textareasRef.current[index].scrollIntoView({ behavior: "smooth" });
+      textareasRef.current[index].focus();
+    }
+  }, []);
+
+  const handleTestCaseClick = useCallback((index) => {
+    if (searchTerm) {
+      setSearchTerm("");
+      setTimeout(() => { scrollToClicked(index); }, 0);
+    }
+  }, [searchTerm, scrollToClicked]);
 
   useEffect(() => {
     setLabel(nodeLabel);
@@ -377,17 +393,18 @@ const Modal = ({
 
             <hr className="mb-4 mt-2 border-gray-600 border-1" />
             <div className="modal-body overflow-y-auto pb-[10px] divide-y divide-dashed">
-              {filteredTestCases.map((testCase, index) => (
-                <TestCase
-                  key={testCase.id}
-                  testCase={testCase}
-                  onChange={(newContent) => handleTestCaseChange(testCase.id, newContent)}
-                  onStatusChange={(newStatus) => handleStatusChange(testCase.id, newStatus)}
-                  onCheckboxChange={() => handleCheckboxChange(testCase.id)}
-                  isChecked={selectedTestCases.includes(testCase.id)}
-                  ref={(el) => (textareasRef.current[index] = el)}
-                />
-              ))}
+            {filteredTestCases.map((testCase, index) => (
+              <TestCase
+                key={testCase.id}
+                testCase={testCase}
+                onChange={(newContent) => handleTestCaseChange(testCase.id, newContent)}
+                onStatusChange={(newStatus) => handleStatusChange(testCase.id, newStatus)}
+                onCheckboxChange={() => handleCheckboxChange(testCase.id)}
+                isChecked={selectedTestCases.includes(testCase.id)}
+                ref={(el) => textareasRef.current[ testCases.findIndex(tc => tc.id === testCase.id)] = el}
+                onClick={() => handleTestCaseClick( testCases.findIndex(tc => tc.id === testCase.id))}
+              />
+            ))}
             </div>
 
             <div className="button-container sticky bottom-0 left-0 right-0 bg-[#1C1C1E] pt-5 space-x-3 z-10">
