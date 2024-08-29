@@ -37,36 +37,24 @@ select#status {
   margin-right: 1rem;
 }
 
-/* input[type="checkbox"] {
-  cursor: pointer;
-  transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  border: none;
-  outline: none;
-  background: transparent;
-} */
 
-.modal-body {
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #555 #1e1e1e;
-}
 
 .modal-body::-webkit-scrollbar {
-  width: 12px;
+  width: 7px;
 }
 
 .modal-body::-webkit-scrollbar-track {
-  background: #2d2d2d;
-  border-radius: 10px;
+  background: linear-gradient(to bottom, #1c1c1e, #2d2d2d, #1c1c1e);
 }
 
 .modal-body::-webkit-scrollbar-thumb {
-  background: #555;
+  background: #4b4848;
   border-radius: 10px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #a4a4b1;
+  cursor: pointer;
 }
 
 textarea {

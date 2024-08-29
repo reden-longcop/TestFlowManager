@@ -32,7 +32,7 @@ const COLOR_OPTIONS = {
 const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChange, onCheckboxChange, isChecked, onClick }, ref) => {
   return (
     <div
-      className={`py-2 flex items-center border-gray-600 space-x-5 overflow-x-hidden`}
+      className={`py-2 flex items-center border-gray-600 space-x-5 overflow-x-hidden mr-3`}
       key={testCase.id}
       data-replicated-value={testCase.content}
       onClick={onClick}
@@ -106,10 +106,6 @@ const Modal = ({
     toastSave: () => { toast.success('Changes Saved Successfully!', { autoClose: 1000 }); },
     toastSaveError: () => { toast.error('Failed to save data. Please try again.', { autoClose: 1000 }); },
   };
-
-  const filteredTestCases = testCases.filter(tc =>
-    tc.content.toLowerCase().includes(searchTerm.toLowerCase())
-  );  
   
   const debouncedSave = useCallback(debounce(async () => {
     try {
@@ -154,8 +150,8 @@ const Modal = ({
     requestAnimationFrame(() => {
       const heights = textareasRef.current.map((textarea) => {
         if (textarea) {
-          textarea.style.height = 'auto';  // Reset the height
-          return textarea.scrollHeight;    // Read the new scrollHeight
+          textarea.style.height = 'auto';
+          return textarea.scrollHeight;  
         }
         return 0;
       });
@@ -234,9 +230,13 @@ const Modal = ({
     });
   }, []);
 
+  const filteredTestCases = testCases.filter(tc =>
+    tc.content.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   const scrollToClicked = useCallback((index) => {
     if (textareasRef.current[index]) {
-      textareasRef.current[index].scrollIntoView({ behavior: "smooth" });
+      textareasRef.current[index].scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
       textareasRef.current[index].focus();
     }
   }, []);
@@ -384,14 +384,20 @@ const Modal = ({
               </label>
               <input
                 type="text"
-                className="search-input p-1 px-3 text-sm text-white rounded border border-gray-600 bg-inherit"
-                placeholder="Search keyword..."
+                className="search-input placeholder:italic p-1 px-3 text-sm text-white rounded border border-gray-600 bg-inherit"
+                placeholder="Search keywords..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
 
             <hr className="mb-4 mt-2 border-gray-600 border-1" />
+            {searchTerm && (
+              <label className="text-white text-xs">
+                {filteredTestCases.length} test case{filteredTestCases.length > 1 ? 's' : ''} found
+              </label>
+            )}
+            
             <div className="modal-body overflow-y-auto pb-[10px] divide-y divide-dashed">
             {filteredTestCases.map((testCase, index) => (
               <TestCase
