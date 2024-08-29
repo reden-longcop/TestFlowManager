@@ -240,8 +240,16 @@ const Modal = ({
       }
       addBoldTestCase();
       setShortcutTriggered(true);
+    } else if (event.ctrlKey && event.key.toLowerCase() === "s") {
+      event.preventDefault();
+      handleSave();
+      setShortcutTriggered(true);
     }
-  
+     else if (event.ctrlKey && event.key.toLowerCase() === "f") {
+      event.preventDefault();
+      document.querySelector('.search-input').focus()
+      setShortcutTriggered(true);
+    }
     setTimeout(() => {
       setShortcutTriggered(false);
     }, 100);
