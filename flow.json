@@ -1187,7 +1187,7 @@
                     },
                     {
                         "id": 1724740555268,
-                        "content": "Verify that CN and EN languages should be supported in the new page\nVerify that CN and EN languages should be supported in the new page\nVerify that CN and EN languages should be supported in the new page",
+                        "content": "Verify that CN and EN languages should be supported in the new page",
                         "status": "notstarted"
                     },
                     {
@@ -1267,7 +1267,7 @@
                 "width": 150,
                 "height": 48
             },
-            "selected": false,
+            "selected": true,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -2646,7 +2646,7 @@
                 "width": 150,
                 "height": 64
             },
-            "selected": true,
+            "selected": false,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -3034,12 +3034,12 @@
         }
     ],
     "viewport": {
-        "x": 251.30640592556153,
-        "y": 371.2113599929022,
-        "zoom": 1.0536274632528664
+        "x": 253.0137273304714,
+        "y": 370.41682977828947,
+        "zoom": 1.0510891579318455
     },
     "testCaseStats": {
-        "total": 372,
+        "total": 347,
         "notstarted": 347,
         "passed": 0,
         "failed": 0,
