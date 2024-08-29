@@ -30,7 +30,8 @@ import {
 } from "@xyflow/react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import * as XLSX from 'xlsx';
+import ExcelJS from 'exceljs'
+import { saveAs } from 'file-saver';
 import "@xyflow/react/dist/style.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -245,51 +246,121 @@ export default function App() {
   }, [selectedNode, setNodes, setTestCaseStats]);
   
 
-  const exportToExcel = useCallback((nodes) => {
+  // const exportToExcel = useCallback((nodes) => {
+  //     console.time('Export to Excel');
+
+  //     const workbook = XLSX.utils.book_new();
+  //     const sheetNames = new Set();
+
+  //     nodes
+  //         .filter((node) => (node.data.testCases && node.data.testCases.length > 0))
+  //         .forEach((node) => {
+  //             const nodeLabel = node.data.label || `Sheet${nodes.indexOf(node) + 1}`;
+  //             const sanitizedLabel = nodeLabel
+  //                 .replace(/[^a-zA-Z0-9_]/g, '_')
+  //                 .slice(0, 31);
+
+  //             let sheetName = sanitizedLabel;
+  //             let counter = 1;
+  //             while (sheetNames.has(sheetName)) {
+  //                 sheetName = `${sanitizedLabel}_${counter}`;
+  //                 counter++;
+  //                 if (sheetName.length > 31) {
+  //                     sheetName = sheetName.slice(0, 31);
+  //                 }
+  //             }
+  //             sheetNames.add(sheetName);
+
+  //             const nodeTestCases = node.data.testCases || [];
+  //             console.log(`Processing node: ${nodeLabel}`);
+  //             console.log('Test Cases:', nodeTestCases);
+
+  //             const worksheetData = nodeTestCases.map((testCase, index) => ({
+  //                 'Test Case ID': index + 1,
+  //                 'Test Case Name': testCase.content,
+  //                 'Test Case Status': testCase.status,
+  //                 'Test Case Description': testCase.description || '',
+  //             }));
+
+  //             console.time(`Creating sheet for ${sheetName}`);
+  //             const worksheet = XLSX.utils.json_to_sheet(worksheetData);
+  //             XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+  //             console.timeEnd(`Creating sheet for ${sheetName}`);
+  //         });
+
+  //     console.timeEnd('Export to Excel');
+      
+  //     XLSX.writeFile(workbook, 'test_cases.xlsx');
+  // }, []);
+
+
+    const exportToExcel = useCallback(async (nodes) => {
       console.time('Export to Excel');
 
-      const workbook = XLSX.utils.book_new();
+      const workbook = new ExcelJS.Workbook();
       const sheetNames = new Set();
 
-      nodes
-          .filter((node) => (node.data.testCases && node.data.testCases.length > 0))
-          .forEach((node) => {
-              const nodeLabel = node.data.label || `Sheet${nodes.indexOf(node) + 1}`;
-              const sanitizedLabel = nodeLabel
-                  .replace(/[^a-zA-Z0-9_]/g, '_')
-                  .slice(0, 31);
-
-              let sheetName = sanitizedLabel;
-              let counter = 1;
-              while (sheetNames.has(sheetName)) {
-                  sheetName = `${sanitizedLabel}_${counter}`;
-                  counter++;
-                  if (sheetName.length > 31) {
-                      sheetName = sheetName.slice(0, 31);
-                  }
+      const sanitizeSheetName = (name) => {
+          const sanitized = name.replace(/[^a-zA-Z0-9_]/g, '_').slice(0, 31);
+          let sheetName = sanitized;
+          let counter = 1;
+          while (sheetNames.has(sheetName)) {
+              sheetName = `${sanitized}_${counter}`;
+              counter++;
+              if (sheetName.length > 31) {
+                  sheetName = sheetName.slice(0, 31);
               }
-              sheetNames.add(sheetName);
+          }
+          sheetNames.add(sheetName);
+          return sheetName;
+      };
+
+      for (const node of nodes) {
+          if (node.data.testCases && node.data.testCases.length > 0) {
+              const nodeLabel = node.data.label || `Sheet${nodes.indexOf(node) + 1}`;
+              const sheetName = sanitizeSheetName(nodeLabel);
 
               const nodeTestCases = node.data.testCases || [];
               console.log(`Processing node: ${nodeLabel}`);
               console.log('Test Cases:', nodeTestCases);
 
-              const worksheetData = nodeTestCases.map((testCase, index) => ({
-                  'Test Case ID': index + 1,
-                  'Test Case Name': testCase.content,
-                  'Test Case Status': testCase.status,
-                  'Test Case Description': testCase.description || '',
-              }));
+              // Prepare worksheet data
+              const worksheet = workbook.addWorksheet(sheetName);
+              worksheet.addRow(['Test ID', 'Test Case', 'Status']);
+              
+              nodeTestCases.forEach((testCase, index) => {
+                  worksheet.addRow([
+                      index + 1,
+                      testCase.content,
+                      testCase.status,
+                      testCase.description || ''
+                  ]);
+              });
 
-              console.time(`Creating sheet for ${sheetName}`);
-              const worksheet = XLSX.utils.json_to_sheet(worksheetData);
-              XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+              const autoSizeColumns = () => {
+                worksheet.columns.forEach(column => {
+                    let maxLength = 0;
+                    column.eachCell({ includeEmpty: true }, cell => {
+                        const cellLength = cell.value ? cell.value.toString().length : 0;
+                        if (cellLength > maxLength) {
+                            maxLength = cellLength;
+                        }
+                    });
+                    column.width = maxLength;
+                });
+            };
+
+            autoSizeColumns();
+
               console.timeEnd(`Creating sheet for ${sheetName}`);
-          });
-
+          }
+      }
       console.timeEnd('Export to Excel');
-      
-      XLSX.writeFile(workbook, 'test_cases.xlsx');
+
+      const buffer = await workbook.xlsx.writeBuffer();
+      const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      saveAs(blob, 'test_cases.xlsx');
+      console.log('File saved!');
   }, []);
 
   const calculateTestCaseStats = useCallback((nodes) => {
@@ -304,22 +375,15 @@ export default function App() {
   
     nodes.forEach((node) => {
       if (node.data && node.data.testCases) {
-        stats.total += node.data.testCases.length;
         node.data.testCases.forEach((testCase) => {
-          if (testCase.status === "notstarted") {
-            stats.notstarted += 1;
-          } else if (testCase.status === "passed") {
-            stats.passed += 1;
-          } else if (testCase.status === "failed") {
-            stats.failed += 1;
-          } else if (testCase.status === "blocked") {
-            stats.blocked += 1;
-          } else if (testCase.status === "notapplicable") {
-            stats.notapplicable += 1;
+          if (stats[testCase.status] !== undefined) {
+            stats[testCase.status] += 1;
           }
         });
       }
     });
+
+    stats.total = Object.values(stats).reduce((sum, count) => sum + count, 0);
   
     return stats;
   }, []);

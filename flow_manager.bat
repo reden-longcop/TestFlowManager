@@ -20,4 +20,4 @@ start cmd /k "npm run dev --force"
 
 timeout /t 5 /nobreak > nul
 
-start http://localhost:5173/
+start chrome --incognito http://localhost:5173/
