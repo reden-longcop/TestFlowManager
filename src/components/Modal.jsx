@@ -49,7 +49,10 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
       <div className={`w-full ${testCase.status === "" ? "" : "border-dashed border-x border-gray-700"}`}>
         <textarea
           ref={ref}
-          className={`px-3 bg-inherit rounded overflow-hidden resize-none w-full flex items-center ${testCase.status === "" ? 'text-gray-400 pl-2' : 'text-[#FAF9F6] pl-6'}  ${testCase.isBold ? "bold-textarea focus:outline-none" : "text-sm"}`}
+          className={`px-3 bg-inherit rounded overflow-hidden resize-none w-full flex items-center 
+            ${testCase.status === "" ? 'text-gray-400 pl-2' : 'text-[#FAF9F6] pl-6'}  
+            ${testCase.isBold ? "bold-textarea focus:outline-none" : "text-sm"}
+          `}
           value={testCase.content}
           onChange={(e) => onChange(e.target.value)}
           placeholder={`Test case ${testCase.id}`}
@@ -95,11 +98,16 @@ const Modal = ({
   const [selectedTestCases, setSelectedTestCases] = useState([]);
   const textareasRef = useRef([]);
   const [borderColor, setBorderColor] = useState(nodeColor || COLOR_OPTIONS.DEFAULT);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const toastTypes = {
     toastSave: () => { toast.success('Changes Saved Successfully!', { autoClose: 1000 }); },
     toastSaveError: () => { toast.error('Failed to save data. Please try again.', { autoClose: 1000 }); },
   };
+
+  const filteredTestCases = testCases.filter(tc =>
+    tc.content.toLowerCase().includes(searchTerm.toLowerCase())
+  );  
 
   const debouncedSave = useCallback(debounce(async () => {
     try {
@@ -267,6 +275,10 @@ const Modal = ({
         event.preventDefault();
         handleSave();
       }
+      if (event.ctrlKey && event.key.toLowerCase() === "f") {
+        event.preventDefault();
+        document.querySelector('.search-input').focus()
+      }
     };
     document.addEventListener("keydown", handleKeyDown);
 
@@ -345,17 +357,27 @@ const Modal = ({
                 />
               </div>
             </div>
-            <label className="p-2 rounded flex items-center border-gray-600 cursor-pointer w-fit space-x-4 ">
+            <div className="flex items-center space-x-4">
+              <label className="p-2 rounded flex items-center border-gray-600 cursor-pointer space-x-4 ">
+                <input
+                  type="checkbox"
+                  onChange={handleSelectAll}
+                  checked={selectedTestCases.length === testCases.length && testCases.length > 0}
+                />
+                <span className="text-white">Select All</span>
+              </label>
               <input
-                type="checkbox"
-                onChange={handleSelectAll}
-                checked={selectedTestCases.length === testCases.length && testCases.length > 0}
+                type="text"
+                className="search-input p-1 px-3 text-sm text-white rounded border border-gray-600 bg-inherit"
+                placeholder="Search keyword..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
-              <span className="text-white">Select All</span>
-            </label>
+            </div>
+
             <hr className="mb-4 mt-2 border-gray-600 border-1" />
             <div className="modal-body overflow-y-auto pb-[10px] divide-y divide-dashed">
-              {testCases.map((testCase, index) => (
+              {filteredTestCases.map((testCase, index) => (
                 <TestCase
                   key={testCase.id}
                   testCase={testCase}
@@ -367,6 +389,7 @@ const Modal = ({
                 />
               ))}
             </div>
+
             <div className="button-container sticky bottom-0 left-0 right-0 bg-[#1C1C1E] pt-5 space-x-3 z-10">
               <button
                 className="p-2 rounded w-12 bg-[#3e3e3e] hover:bg-[#2980B9]"
