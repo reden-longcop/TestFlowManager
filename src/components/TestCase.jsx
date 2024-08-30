@@ -54,5 +54,4 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
       </div>
     );
 }));
-
 export default TestCase;

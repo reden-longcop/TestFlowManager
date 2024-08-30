@@ -1267,7 +1267,7 @@
                 "width": 150,
                 "height": 48
             },
-            "selected": true,
+            "selected": false,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -1967,11 +1967,38 @@
             "id": "02a2ed05-df7c-43a0-820a-155d282ca45b",
             "position": {
                 "x": 921.7927288070605,
-                "y": -257.2106124278164
+                "y": -260.06479466094197
             },
             "data": {
                 "label": "BL:BACK TO LOBBY (CLS-OGLS-GCLS-BPS-BL)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724988777249,
+                        "content": "Verify home button:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724988786207,
+                        "content": "- is placed on top left corner while in the game",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988791065,
+                        "content": "- is a house looking icon on top left side of the page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988793382,
+                        "content": "- is clickable",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988796103,
+                        "content": "- is working when clicked",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -1980,7 +2007,7 @@
                 "width": 150,
                 "height": 64
             },
-            "selected": false,
+            "selected": true,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -1994,7 +2021,28 @@
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-BPS-BLS)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724988966108,
+                        "content": "- OG Logo should be displayed after going back to lobby",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988979126,
+                        "content": "- OG Logo should not be visible after few seconds of loading",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988989735,
+                        "content": "- In-game content should not be displayed after going\n  back into the lobby",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989042910,
+                        "content": "- lobby should be fully functional",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -2013,7 +2061,7 @@
             "id": "98ade99e-e158-4f80-a893-37d8f3c14f41",
             "position": {
                 "x": 41.44870716386077,
-                "y": 330.25738553831593
+                "y": 332.160173693733
             },
             "type": "connector",
             "data": {
@@ -2049,7 +2097,7 @@
                     },
                     {
                         "id": 1724742213796,
-                        "content": "INTERFACE",
+                        "content": " INTERFACE",
                         "status": "",
                         "isBold": true
                     },
@@ -2185,9 +2233,1366 @@
                     },
                     {
                         "id": 1724742299528,
-                        "content": "EDIT CHIPS",
+                        "content": " EDIT CHIPS",
                         "status": "",
                         "isBold": true
+                    },
+                    {
+                        "id": 1724982402551,
+                        "content": "Chip set should display ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982451849,
+                        "content": "Edit Chip button should be placed on the right side of the Chip set",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982455242,
+                        "content": "Chips should display and accesible in In-Game",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982458958,
+                        "content": "Chips value should display a correct amount in the betting area",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982461445,
+                        "content": "Chips size should be consistent",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982463819,
+                        "content": "Chips size should be the same in Landscape and Portrait orientation",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982466559,
+                        "content": "Chips alignment should be adjusted properly",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982468964,
+                        "content": "Chips value should be able to read easily and displays text in appropriate size",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982471420,
+                        "content": "Maximum chips display should be 6 chips only",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982474599,
+                        "content": "Checking of the availability of Chips Edit Button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982476685,
+                        "content": "Chips Edit Modal should display complete list of components, should display a total of 14 chips in the chips selection panel.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982478894,
+                        "content": "Selected Chips value should be reflected in In game chips selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982481682,
+                        "content": "Player can select minimum of 5 chips to be displayed.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982483891,
+                        "content": "Verification of chips selection- Player should be able to select chips less than 10 chips",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982486294,
+                        "content": "Selected chips should display all in In game Chips selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982488686,
+                        "content": "Verification of chips selection- Player should be able to select chips 10 chips as maximum",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982491875,
+                        "content": "Selected maximum chips should display in In game Chips selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982494127,
+                        "content": "Verification of chips selection- Player should not be able to select more than 10 chips",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982496447,
+                        "content": "Customizing of chips should only accept numeric value",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982499064,
+                        "content": "Customizing of chips having amount more than 1000 should display correct figures represented by \" K \"",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982501320,
+                        "content": "Customizing of chips having amount more than million should display correct figures represented by \" M \"",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982504819,
+                        "content": "Customizing of chips should not allow inputs of decimal value",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982507140,
+                        "content": "Customizing of chips  should not allow inputs of alphabet characters",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982509682,
+                        "content": "Custumizing of chips should not allow inputs of any special characters",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982532096,
+                        "content": "Customizing of chips should not allow inputs of 0 value, a validation message should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982542009,
+                        "content": "Editing chips should only accept 11 digits",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982590780,
+                        "content": "The customized chip will replace the player selected chip",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982594118,
+                        "content": "There should be display \"Successfully change the chip amount\" when clicking save",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982601110,
+                        "content": "Should return to chip selection display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982603499,
+                        "content": "Doesn't accept duplicated value should have prompt \" Duplicated Value\"",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982605770,
+                        "content": "Edited chip should be the same on the selection panel",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982608120,
+                        "content": "The customized chip will replace the player selected chip",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982610410,
+                        "content": "Selected chip color should be retain when player customized selected chip default color or leave the table and reenter again",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982612722,
+                        "content": "Betting chips should not disappears upon betting before the time ends",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982614975,
+                        "content": "Simplified chip value should have a correct value based on the formula",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982620401,
+                        "content": "Chip value should not change when reentering the chip selection modal",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982625795,
+                        "content": " VIDEO STREAMING",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724982630001,
+                        "content": "Video stream should  displayed upon entering table and took not more than 2-3 seconds ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982645896,
+                        "content": "Animated dealer should be displayed when no video stream is available",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982653243,
+                        "content": "Video stream should turn off and animated dealer shoud display when the Close Video icon was clicked",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982655632,
+                        "content": "Video stream should not be delayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982657814,
+                        "content": "Video stream and betting timer should be in sync",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982660024,
+                        "content": "Video stream's card should be shown first before the digital cards\nNote: For none RNG tables",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982667655,
+                        "content": "Video stream audio when turned on should be audible and clear",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982688845,
+                        "content": " SOUNDS",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724982695134,
+                        "content": "Sound FX \"BET SUCCESSFUL \" should be heard after confirming bets",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982706735,
+                        "content": "Sound FX \"NO MORE BETTING IN THIS GAME, GOODLUCK\" should be heard ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982710762,
+                        "content": "Sound FX WINNING CHIPS should be heard \nNote: Can be heard if player has won",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982718688,
+                        "content": "Sound FX BUTTON CLICK should be heard ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982724205,
+                        "content": "Sound FX TIME TICKER should be heard \nNote: Applicable for ingame only , timer ticker start at the last 10 seconds",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982732355,
+                        "content": "Sound FX CHIP SELECTION should be heard \nNote: Every time the player clicks on the chips",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982738253,
+                        "content": "Sound FX PLACE YOUR BETS PLEASE should be heard at the start of the timer",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982742465,
+                        "content": "*Sound FX for \"Player and Banker Card Result number\" should be heard\nPlayer 0-9 Card numberResult\nBanker 0-9 Card Number result",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982750232,
+                        "content": "Sound FX \"PLAYER WIN\" should be heard ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982753899,
+                        "content": "Sound FX \"BANKER WIN\" should be heard ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982757530,
+                        "content": "Sound FX \"TIE\" should be heard \nNOTE: Applicable in BACCARAT, DT, and THREE CARDS GAME ONLY",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982766272,
+                        "content": "Soundfx should not be distorted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982769874,
+                        "content": "No soundfx should be heard when soundfx button is off",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982773562,
+                        "content": "Live sound should be heard",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982777109,
+                        "content": "Live should should not be heard if video stream is off",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982780904,
+                        "content": "Live sound should not be carried if player exit table ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982784560,
+                        "content": "Live sound should not be carried enter another table through sidebar",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982789604,
+                        "content": "By default, live sound should be muted upon entering the table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982793068,
+                        "content": "Sound icon without ( \\ ) should have a sound (not muted) \nin the game",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982796801,
+                        "content": "Clicking the sound icon without ( \\ ) should mute the sound and sound icon should have ( \\ ) in red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982803472,
+                        "content": "Clicking the sound icon with red ( \\ ) should unmute the sound in the game",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982807468,
+                        "content": "The default volume percentage of Live Sound when navigated ingame should be at 100%",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982830586,
+                        "content": "The default volume percentage of Sound FX when navigated ingame should be at 10%",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982832820,
+                        "content": "When the video is disabled, the in-game sound is also disabled",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982835582,
+                        "content": "lobby and in game toggled sound should be the same",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982840640,
+                        "content": "in-game voice over should be heared when sound fx is enabled",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982857499,
+                        "content": " BET LIMIT",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724982862438,
+                        "content": "Bet Limit icon should be clickable",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982878059,
+                        "content": "Bet Limit icon details should have no overlapping or truncation",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982887387,
+                        "content": " Clicking of Bet Limit should display the following details:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724982893743,
+                        "content": "PLAYER",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982896466,
+                        "content": "BANKER",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982898634,
+                        "content": "TIE",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982900605,
+                        "content": "P PAIR",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982902736,
+                        "content": "B PAIR",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982904728,
+                        "content": "BIG",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982906815,
+                        "content": "SMALL",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982908854,
+                        "content": "ANY PAIR",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982910782,
+                        "content": "PERFECT PAIR",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982912636,
+                        "content": "P BONUS",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982914566,
+                        "content": "B BONUS",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982916758,
+                        "content": "PLAYER betting area should have a (1:1) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982920021,
+                        "content": "BANKER betting area should have a (1:0.95) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982921822,
+                        "content": "TIE betting area should have a (1:8) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982923632,
+                        "content": "P PAIR betting area should have a (1:11) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982925574,
+                        "content": "B PAIR betting area should have a (1:11) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982927486,
+                        "content": "BIG betting area should have a (1:0.5) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982929351,
+                        "content": "SMALL betting area should have a (1:1.5) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982931348,
+                        "content": "ANY PAIR betting area should have a (1:5) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982933182,
+                        "content": "PERFECT PAIR betting area should have a (1:25) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982935091,
+                        "content": "Table Bet area & Limit  amount label should have no overlapping or truncation",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982936975,
+                        "content": "Can close bet limit panel when clicking outside the bet limit Modal",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982938864,
+                        "content": "Payrate details should have no overlapping or truncation",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982948255,
+                        "content": "Betting Area labels in Payrate Modal should display at the left most corner",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982950949,
+                        "content": "All labels should be readable",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982952865,
+                        "content": "Betting Area label in bet limit should change to more readable for the players",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982954671,
+                        "content": "PLAYER and BANKER bet limit should be the same in the bet limit modal",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982960252,
+                        "content": "Verify if the bet limit of both PLAYER and BANKER are the same when super 6 is turned on",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982962031,
+                        "content": "Verify if the max bet limit of both PLAYER and BANKER has the same maximum bet limit amount when the super 6 is turned off",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982963897,
+                        "content": "Verify if the max bet limit of both PLAYER and BANKER has the same maximum bet limit amount when the super 6 is turned on",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982966193,
+                        "content": "Verify the video zoom is 100% in Portrait orientation",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982969889,
+                        "content": "Verify the video zoom in Landscape orientation should not be applied",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982971792,
+                        "content": "Verify the video should only affect Baccarat and DT tables only",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982973697,
+                        "content": "Verify the video zoom if the player is using Ipad",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982986609,
+                        "content": "Verify the video zoom if the player is using Tablet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724982989942,
+                        "content": " BETTING AREA",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724982996080,
+                        "content": "PLAYER betting area should have a (1:1) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983003135,
+                        "content": "BANKER betting area should have a (1:0.95) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983006154,
+                        "content": "TIE betting area should have a (1:8) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983008083,
+                        "content": "P PAIR betting area should have a (1:11) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983009749,
+                        "content": "B PAIR betting area should have a (1:11) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983011477,
+                        "content": "BIG betting area should have a (1:0.5) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983013255,
+                        "content": "SMALL betting area should have a (1:1.5) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983015084,
+                        "content": "ANY PAIR betting area should have a (1:5) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983016902,
+                        "content": "PERFECT PAIR betting area should have a (1:25) betting payout",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983018720,
+                        "content": "After 30 rounds, SMALL betting area should be disabled",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983020613,
+                        "content": "After 30 rounds, BIG betting area should be disabled",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983022459,
+                        "content": "Baccarat betting area should displayed correctly and without truncation",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983024785,
+                        "content": "Player and Banker bet areas should be displayed bigger than sidebet areas",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983026770,
+                        "content": "Bet percentage should be correct - for single player",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983028613,
+                        "content": "Bet percentage should be correct - for multiple players",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983030614,
+                        "content": "Should display 5 allowable player seater  in the table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983032534,
+                        "content": "Should Display Player's avatar on the avatar seater",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983034529,
+                        "content": "Avatar on the avatar seater should be the same on player profile",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983036378,
+                        "content": "Player's Avatar should display realtime upon changing new avatar",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983038447,
+                        "content": "Player have to re-enter the table again until 3 times to see other players in the same table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983040422,
+                        "content": "Player username should be displayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983054334,
+                        "content": "Display the blinking effect on the betitng area who won the round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983056256,
+                        "content": "SUPER 6 should be automatically enabled when the betting phase is open if there's no confirmed bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983060280,
+                        "content": " BETTING TIMER",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724983065450,
+                        "content": "Timer size should be the same in Landscape and Portrait orientation",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983072837,
+                        "content": "Should Display GREEN when Betting Time is about 20-16 seconds",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983074905,
+                        "content": "Should Display YELLOW GREEN  when Betting Time is about 15-14 seconds",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983076617,
+                        "content": "Should Display YELLOW ORANGE when Betting Time is about 13-11 seconds",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983078355,
+                        "content": "Should Display ORANGE when Betting Time is about 10-8 seconds",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983080121,
+                        "content": "Should Display RED ORANGE when Betting Time is about 7-4 seconds",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983081850,
+                        "content": "Should Display RED when Betting Time is about 3-0 seconds",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983083671,
+                        "content": "Should Display WHITE when Betting Time is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983085615,
+                        "content": "Should display the word \"CLOSED\", if the betting time ends",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983087418,
+                        "content": "Betting time should be aligned closely with the Dealer",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983089457,
+                        "content": "There should have no truncation and overlapping on betting timer",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983095372,
+                        "content": "Player should be able to place bet when betting timer start",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983097269,
+                        "content": "Betting Time should not display negative during countdown",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983099215,
+                        "content": "Placing bet should be disabled when the timer ends",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983101186,
+                        "content": "Verify if betting timer is in lobby and ingame is sync",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983103275,
+                        "content": "Checking if betting timer is is sync in lobby",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983105237,
+                        "content": "Dafault status for supersix is disabled",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983107099,
+                        "content": "Enabled super6 and leave the game and log in again the same account supersix should be back to default",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983109123,
+                        "content": "When supersix betting area is turned on any baccarat. Table is not become deafult only when user's leave",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983111099,
+                        "content": "To Turn On Super 6 must be During Betting Time and without any CONFIRM Bets",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983121594,
+                        "content": "Should not be able Turn on/off super 6 when timer ends/during dealing",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983124091,
+                        "content": "If supers6 turn on in multitable and enter ingame table supersix will auto turn on",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983126063,
+                        "content": "Previous round bet at Banker and Super 6. If player turn super 6 off then rebet, only banker will be placed.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983128987,
+                        "content": "Unconfirm chip in Super 6 will be cancel once turn off (won't exist even turn on again)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983131213,
+                        "content": "If there have confirmed chip in Super 6 model (Super6, Banker No Commission), will auto turn on once player enter Table /Sidebar/Multi",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983254383,
+                        "content": "PRD-2202 | Betting timer's progress bar should always start at 100% ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983262874,
+                        "content": " ROADMAP",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724983267506,
+                        "content": "The roadmap should not be blurry",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983271927,
+                        "content": "Roadmap panel display in ingame panel",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983273802,
+                        "content": "Blue bead display if player wins the round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983275760,
+                        "content": "Blue bead with blue dot display at the lower right corner if player with player pair wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983277632,
+                        "content": "Blue bead with red dot display at upper left corner if player with banker pair wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983279819,
+                        "content": "Blue bead with red and blur dots display if player with player pair and banker pair wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983281725,
+                        "content": "Red Bead display if banker wins the round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983283665,
+                        "content": "Red bead with blue dot display at the lower right corner if player with player pair wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983285514,
+                        "content": "Red bead with red dot display at upper left corner if player with banker pair wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983287330,
+                        "content": "Red bead with red and blur dots display if player with player pair and banker pair wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983290296,
+                        "content": "Green TIE bead should be displayed ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983292079,
+                        "content": "TIE bead with blue dot at the lower right corner should be displayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983294016,
+                        "content": "TIE bead with red dot at the upper left corner should be displayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983295809,
+                        "content": "TIE bead with blue (PP)  and red (BP) dots should be displayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983297724,
+                        "content": "Red Outlined circle when display banker wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983300280,
+                        "content": "Blue outlined circle when display player wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983302403,
+                        "content": "Red circle with blue dot display when banker with player pair wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983307412,
+                        "content": "Blue circle with red dot display when player with banker pair wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983309396,
+                        "content": "Red circle with blue and red dor display when banker with banker pair and player pair wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983311436,
+                        "content": "Blue circle with blue and red dor display when Player with banker pair and player pair wins",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983313586,
+                        "content": "TIE count displayed at the center on the previous outlined circle",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983315476,
+                        "content": "Red/Blue dot when tie wins count on the previous outlined circle",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983317503,
+                        "content": "Display big eye road on roadmap",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983319476,
+                        "content": "Count 2 cells to the left from the latest result , If the length is the same, RED circle should be displayed else it must be BLUE circle",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983321449,
+                        "content": "Count 1 cell to the left of the latest result, If both cells have circles on it or are empty RED circle should be displayed else it must be BLUE circle",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983323325,
+                        "content": "Display small eye road on roadmap",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983325508,
+                        "content": "Count 3 cell to the left of the latest result, If both cells have circles on it or are empty RED circle should be displayed else it must be BLUE circle",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983327380,
+                        "content": "Display cockroach road result on roadmap",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983329221,
+                        "content": "Count 4 cells to the left of the latest result , If the length is the same, RED line should be displayed else it must be BLUE line",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983331026,
+                        "content": "Count 3 cell to the left of the latest result, If both cells have circles on it or are empty from each other RED line should be displayed else it must be BLUE line",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983334743,
+                        "content": "Ask B and Ask P should still work even when confirming a bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983343966,
+                        "content": " FUNCTION BUTTONS",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724983346444,
+                        "content": "Clicking rebet button when the previous balance is greater than the current balance, bet should not be placed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983353898,
+                        "content": "Should be able to switch to Classic when clicking Classic button, even on the 1st try",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983360124,
+                        "content": "PRD-2255 | Ingame Rebet button should not disable even when placing ALL IN unconfirmed bet \nNote: Given there's a rebet recorded",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983371814,
+                        "content": "PRD-2254 | Rebet button should not enable if there's no confirmed bet placed\nNote: Given there's no rebet record on three previous rounds",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983453469,
+                        "content": "DRAGON TIGER",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724983457899,
+                        "content": " INTERFACE",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724983463071,
+                        "content": "Shoe number should be blank during shuffling",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983467123,
+                        "content": "Shoe Number should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983468897,
+                        "content": "Player's total bet should be displayed correctly",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983470718,
+                        "content": "Table Number should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983472588,
+                        "content": "Game Name should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983474360,
+                        "content": "Player Avatar should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983476110,
+                        "content": "Player Nickname should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983477863,
+                        "content": "Player Balance should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983479539,
+                        "content": "Dealer Name should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983481271,
+                        "content": "Live Sound Button should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983483155,
+                        "content": "Baccarat Betting Area should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983484875,
+                        "content": "Supersix button should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983486845,
+                        "content": "The dealer should immediately start dealing when the betting timer closes",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983488629,
+                        "content": "Player seat should be random",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983490416,
+                        "content": "Player seat (avatar, player name, and balance) should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983492269,
+                        "content": "Player balance should have a comma separator on the balance of the current player",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983494104,
+                        "content": "Function Buttons should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983496671,
+                        "content": "Game Summary should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983498785,
+                        "content": "Probability Button should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983500968,
+                        "content": "Roadmap should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983502987,
+                        "content": "Betting Timer should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983504867,
+                        "content": "Payrate should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983506718,
+                        "content": "Good Tips sidebar should be displayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983508496,
+                        "content": "Settings Button should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983510405,
+                        "content": "Exit/Home Button should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983513162,
+                        "content": " EDIT CHIPS",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724983517403,
+                        "content": "Chip set should display ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983524496,
+                        "content": "Edit Chip button should be placed on the right side of the Chip set",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983526824,
+                        "content": "Chips should display and accesible in In-Game",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983528495,
+                        "content": "Chips value should display a correct amount in the betting area",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983530202,
+                        "content": "Chips size should be consistent",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983533205,
+                        "content": "Chips size should be the same in Landscape and Portrait orientation",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983535327,
+                        "content": "Chips alignment should be adjusted properly",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983537900,
+                        "content": "Chips value should be able to read easily and displays text in appropriate size",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983539745,
+                        "content": "Maximum chips display should be 6 chips only",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983541621,
+                        "content": "Checking of the availability of Chips Edit Button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983543493,
+                        "content": "Chips Edit Modal should display complete list of components, should display a total of 14 chips in the chips selection panel.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983545506,
+                        "content": "Selected Chips value should be reflected in In game chips selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983547918,
+                        "content": "Player can select minimum of 5 chips to be displayed.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983549808,
+                        "content": "Verification of chips selection- Player should be able to select chips less than 10 chips",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983551756,
+                        "content": "Selected chips should display all in In game Chips selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983553668,
+                        "content": "Verification of chips selection- Player should be able to select chips 10 chips as maximum",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983555523,
+                        "content": "Selected maximum chips should display in In game Chips selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983557335,
+                        "content": "Verification of chips selection- Player should not be able to select more than 10 chips",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983559262,
+                        "content": "Customizing of chips should only accept numeric value",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983561400,
+                        "content": "Customizing of chips having amount more than 1000 should display correct figures represented by \" K \"",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983563645,
+                        "content": "Customizing of chips having amount more than million should display correct figures represented by \" M \"",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983565617,
+                        "content": "customizing of chips should not allow inputs of decimal value",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983567639,
+                        "content": "customizing of chips  should not allow inputs of alphabet characters",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983573557,
+                        "content": "customizing of chips should not allow inputs of any special characterscustomizing of chips should not allow inputs of 0 value, a validation message should display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983575669,
+                        "content": "Editing chips should only accept 11 digits",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983589765,
+                        "content": "The customized chip will replace the player selected chip",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983591878,
+                        "content": "There should be display \"Successfully change the chip amount\" when clicking save",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983593594,
+                        "content": "Should return to chip selection display",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983595285,
+                        "content": "Doesn't accept duplicated value should have prompt \" Duplicated Value\"",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983596983,
+                        "content": "Edited chip should be the same on the selection panel",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983598708,
+                        "content": "The customized chip will replace the player selected chip",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983600877,
+                        "content": "Selected chip color should be retain when player customized selected chip default color or leave the table and reenter again",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983602778,
+                        "content": "Betting chips should not disappears upon betting before the time ends",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983605098,
+                        "content": "Simplified chip value should have a correct value based on the formula",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724983609753,
+                        "content": "Chip value should not change when reentering the chip selection modal",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724984330115,
+                        "content": " VIDEO STREAMING",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724984335779,
+                        "content": "Video stream should  displayed upon entering table and took not more than 2-3 seconds ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724984341144,
+                        "content": "Animated dealer should be displayed when no video stream is available",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724984347277,
+                        "content": "Video stream should turn off and animated dealer shoud display when the Close Video icon was clicked",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724984351482,
+                        "content": "Video stream should not be delayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724984353315,
+                        "content": "Video stream and betting timer should be in sync",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724984355335,
+                        "content": "Video stream's card should be shown first before the digital cards\nNote: For none RNG tables",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724984361333,
+                        "content": "Video stream audio when turned on should be audible and clear",
+                        "status": "notstarted"
                     }
                 ]
             },
@@ -2419,7 +3824,43 @@
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-NBFS-CTS)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724988510119,
+                        "content": "All icons should be loaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988516211,
+                        "content": "All function buttons should be loaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988518525,
+                        "content": "The video stream FLV should be downloaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988520384,
+                        "content": "The video stream should not load more than 5 seconds upon landing to the ingame page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988522292,
+                        "content": "The roadmap should be loaded less than 5 seconds upon entering the table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988524317,
+                        "content": "The dealers image PNG should be downloaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988526387,
+                        "content": "The betting table should be downloaded successfully",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -2591,7 +4032,38 @@
             },
             "data": {
                 "label": "CATEGORY CHOOSE (CLS-OGLS-CC)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724989205006,
+                        "content": "Default tab should be Featured(if player didn't entered a table yet)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989208348,
+                        "content": "Current tab should be the last chosen tab(if player returned to lobby from in-game)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989219526,
+                        "content": "All Game Category labels should be displayed clearly",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989222252,
+                        "content": "Category tabs should have corresponding icon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989224336,
+                        "content": "Category tabs should have an animation slidewhen choosing a category",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989227386,
+                        "content": "Chosen category should be highlightedwhen clicked",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "sourcePosition": "right",
             "targetPosition": "left",
@@ -2637,7 +4109,173 @@
             },
             "data": {
                 "label": "S: CATEGORY CHOOSE SUCCESS (CLS-OGLS-CCS)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724989330235,
+                        "content": "Switching / clicking of Category tabs should be responsive and load immediately",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989341401,
+                        "content": "Correct highlight color, text label, and icon color should be displayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989343903,
+                        "content": "Non-selected tabs should have the correct color for the label and icon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989346254,
+                        "content": "Clicking Featured Tab should display all the featured game tables",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989349288,
+                        "content": "Selected tab should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989351575,
+                        "content": "Highlight should be centered and not overlap with another tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989353920,
+                        "content": "Clicking Baccarat Game tab should display all Bacarrat games",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989358421,
+                        "content": "Selected Baccarat tab should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989362783,
+                        "content": "Baccarat Game tab should include all Baccarat Type such as Normal Baccarat, Bidding Baccarat & Speed Baccarat",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989364791,
+                        "content": "Other Baccarat game tables should be viewable when scrolled down or up",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989366591,
+                        "content": "There should be no delay in loading when scrolling for more game tables ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989368345,
+                        "content": "Clicking Card Games tab should display all card games",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989370067,
+                        "content": "Selected Card Games tab should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989371768,
+                        "content": "Card Games tab should include all Card Games such as\n-Classic and New DT\n-Win Three Cards\n-NiuNiu",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989382345,
+                        "content": "Other Card Game tables should be viewable when scrolled down or up",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989384607,
+                        "content": "There should be no delay in loading when scrolling for more Card game tables ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989386390,
+                        "content": "Clicking Others tab should display all games under the Others category",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989388253,
+                        "content": "Selected Others tab should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989390103,
+                        "content": "Card Games tab should include all Other Games such as\n- Roulette, Sedie, MW",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989395127,
+                        "content": "Other Other Game tables should be viewable when scrolled down or up",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989397687,
+                        "content": "There should be no delay in loading when scrolling for more Other game tables ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989399741,
+                        "content": "Clicking Maria Tab should display all the Maria game tables",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989401586,
+                        "content": "Selected Maria tab should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989406744,
+                        "content": "Highlight should be centered and not overlap with another tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989409558,
+                        "content": "Clicking Maria Game tab should display all Maria games",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989411455,
+                        "content": "Maria Game tab should include all Maria table games such as Classic Baccarat, Speed Baccarat",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989413377,
+                        "content": "Other Maria game tables should be viewable when scrolled down or up",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989415314,
+                        "content": "There should be no delay in loading when scrolling for more game tables ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989417234,
+                        "content": "When I enter any tables under a specific game category, I should be directed to the correct tab upon returning to the lobby.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989419318,
+                        "content": "Clicking  \"New Version\" button in Vue should should redirect to Laya ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989421381,
+                        "content": "Clicking  \"Change Theme\" button in Vue should should redirect to Laya ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989423398,
+                        "content": "\"Change Theme\" should reappear once the user leaves In-Game tables",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989425299,
+                        "content": "\"Change Theme\" button should not cover any existing function ",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "sourcePosition": "right",
             "targetPosition": "left",
@@ -3034,13 +4672,13 @@
         }
     ],
     "viewport": {
-        "x": 123.15281286699957,
-        "y": 395.1045562710909,
-        "zoom": 0.7461052041963157
+        "x": 253.0137273304714,
+        "y": 370.41682977828947,
+        "zoom": 1.0510891579318455
     },
     "testCaseStats": {
-        "total": 347,
-        "notstarted": 347,
+        "total": 658,
+        "notstarted": 658,
         "passed": 0,
         "failed": 0,
         "blocked": 0,

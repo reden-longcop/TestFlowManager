@@ -244,55 +244,6 @@ export default function App() {
       return updatedNodes;
     });
   }, [selectedNode, setNodes, setTestCaseStats]);
-  
-
-  // const exportToExcel = useCallback((nodes) => {
-  //     console.time('Export to Excel');
-
-  //     const workbook = XLSX.utils.book_new();
-  //     const sheetNames = new Set();
-
-  //     nodes
-  //         .filter((node) => (node.data.testCases && node.data.testCases.length > 0))
-  //         .forEach((node) => {
-  //             const nodeLabel = node.data.label || `Sheet${nodes.indexOf(node) + 1}`;
-  //             const sanitizedLabel = nodeLabel
-  //                 .replace(/[^a-zA-Z0-9_]/g, '_')
-  //                 .slice(0, 31);
-
-  //             let sheetName = sanitizedLabel;
-  //             let counter = 1;
-  //             while (sheetNames.has(sheetName)) {
-  //                 sheetName = `${sanitizedLabel}_${counter}`;
-  //                 counter++;
-  //                 if (sheetName.length > 31) {
-  //                     sheetName = sheetName.slice(0, 31);
-  //                 }
-  //             }
-  //             sheetNames.add(sheetName);
-
-  //             const nodeTestCases = node.data.testCases || [];
-  //             console.log(`Processing node: ${nodeLabel}`);
-  //             console.log('Test Cases:', nodeTestCases);
-
-  //             const worksheetData = nodeTestCases.map((testCase, index) => ({
-  //                 'Test Case ID': index + 1,
-  //                 'Test Case Name': testCase.content,
-  //                 'Test Case Status': testCase.status,
-  //                 'Test Case Description': testCase.description || '',
-  //             }));
-
-  //             console.time(`Creating sheet for ${sheetName}`);
-  //             const worksheet = XLSX.utils.json_to_sheet(worksheetData);
-  //             XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
-  //             console.timeEnd(`Creating sheet for ${sheetName}`);
-  //         });
-
-  //     console.timeEnd('Export to Excel');
-      
-  //     XLSX.writeFile(workbook, 'test_cases.xlsx');
-  // }, []);
-
 
     const exportToExcel = useCallback(async (nodes) => {
       console.time('Export to Excel');
