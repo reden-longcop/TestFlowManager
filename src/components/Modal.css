@@ -37,8 +37,6 @@ select#status {
   margin-right: 1rem;
 }
 
-
-
 .modal-body::-webkit-scrollbar {
   width: 7px;
 }

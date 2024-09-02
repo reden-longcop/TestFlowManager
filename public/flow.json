@@ -2007,7 +2007,7 @@
                 "width": 150,
                 "height": 64
             },
-            "selected": true,
+            "selected": false,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -4672,9 +4672,9 @@
         }
     ],
     "viewport": {
-        "x": 253.0137273304714,
-        "y": 370.41682977828947,
-        "zoom": 1.0510891579318455
+        "x": 135.86218315487395,
+        "y": 388.8717464782675,
+        "zoom": 0.8231032612693754
     },
     "testCaseStats": {
         "total": 658,

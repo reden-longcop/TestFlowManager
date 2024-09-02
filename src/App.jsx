@@ -43,11 +43,13 @@ import {
   faChevronDown,
   faChevronUp,
   faArrowAltCircleDown,
+  faHistory,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Modal from "./components/Modal";
 import CustomNode from "./nodes/CustomNode";
 import ConnectorNode from "./nodes/ConnectorNode";
+import VersionHistoryModal from "./components/VersionHistoryModal";
 
 import CustomEdge from "./edges/CustomEdge";
 
@@ -60,6 +62,11 @@ export default function App() {
   const [selectedNode, setSelectedNode] = useState(null);
   const [rfInstance, setRfInstance] = useState(null);
   const { setViewport } = useReactFlow();
+
+  const [isVersionHistoryOpen, setVersionHistoryOpen] = useState(false);
+
+  const handleVersionHistoryOpen = useCallback(() => setVersionHistoryOpen(true), []);
+  const handleVersionHistoryClose = useCallback(() => setVersionHistoryOpen(false), []);
   
   const nodeTypes = {
     customNode: CustomNode,
@@ -138,6 +145,7 @@ export default function App() {
   
     restoreFlow();
   }, [setNodes, setEdges, setViewport, setTestCaseStats, rfInstance]);  
+  
 
   const onConnect = useCallback(
     (connection) =>
@@ -244,7 +252,6 @@ export default function App() {
       return updatedNodes;
     });
   }, [selectedNode, setNodes, setTestCaseStats]);
-
     const exportToExcel = useCallback(async (nodes) => {
       console.time('Export to Excel');
 
@@ -339,6 +346,38 @@ export default function App() {
     return stats;
   }, []);
 
+  const handleSelectVersion = useCallback((flowData) => {
+    try {
+        const parsedFlow = typeof flowData === 'string' ? JSON.parse(flowData) : flowData;
+        
+        const updatedNodes = parsedFlow.nodes || [];
+        const updatedEdges = parsedFlow.edges || [];
+        const viewport = parsedFlow.viewport || { x: 0, y: 0, zoom: 1 }
+
+        console.log(testcase)
+
+        setNodes(updatedNodes);
+        setEdges(updatedEdges);
+        setViewport(viewport);
+
+        const selectedNodeId = selectedNode?.id;
+        if (selectedNodeId) {
+            const updatedSelectedNode = updatedNodes.find(node => node.id === selectedNodeId);
+            setSelectedNode(updatedSelectedNode || null);
+        } else {
+            setSelectedNode(null);
+        }
+
+        const updatedStats = calculateTestCaseStats(updatedNodes);
+        setTestCaseStats(updatedStats);
+
+        handleVersionHistoryClose();
+    } catch (error) {
+        console.error("Error selecting version:", error);
+    }
+  }, [selectedNode, setNodes, setEdges, setViewport, calculateTestCaseStats, handleVersionHistoryClose]);
+
+
   const deleteSelectedNode = useCallback(() => {
     if (selectedNode) {
       setNodes((nds) => nds.filter((node) => node.id !== selectedNode.id));
@@ -362,6 +401,31 @@ export default function App() {
       const updatedStats = calculateTestCaseStats(flow.nodes);
       const formattedFlow = JSON.stringify({ ...flow, testCaseStats: updatedStats }, null, 4);
   
+      const saveFlowToServerVersion = (flowData) => {
+        const timestamp = new Date().toISOString();
+        const newVersion = { timestamp, flowData };
+  
+        fetch("http://localhost:3000/flow/saveVersion", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newVersion),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data) {
+              console.log("Version saved to server:", data.message);
+            } else {
+              toastTypes.toastSaveError();
+            }
+          })
+          .catch((error) => {
+            console.error("Failed to save version to server:", error);
+            toastTypes.toastSaveError();
+          });
+      };
+  
       fetch("http://localhost:3000/flow", {
         method: "POST",
         headers: {
@@ -372,26 +436,30 @@ export default function App() {
         .then((response) => response.json())
         .then((data) => {
           if (data) {
-            toastTypes.toastSaveSuccess()
+            toastTypes.toastSaveSuccess(); 
+            saveFlowToServerVersion(formattedFlow); 
+          } else {
+            toastTypes.toastSaveError(); 
           }
         })
         .catch((error) => {
           console.error("Failed to save flow data to server:", error);
+          toastTypes.toastSaveError(); 
+  
+          
           try {
             localStorage.setItem("flowData", formattedFlow);
-            toastTypes.toastSaveLocalSuccess()
+            toastTypes.toastSaveLocalSuccess(); 
           } catch (localError) {
             console.error("Failed to save flow data to localStorage:", localError);
-  
-            toastTypes.toastSaveErrorLocal()
-          }
+            toastTypes.toastSaveErrorLocal(); 
+          }  
         });
     } else {
-      toastTypes.toastSaveError()
+      toastTypes.toastSaveError();
     }
-  }, [rfInstance]);
+  }, [rfInstance, calculateTestCaseStats]);
   
-
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <ReactFlow
@@ -419,6 +487,12 @@ export default function App() {
               onClick={deleteSelectedNode}
             >
               <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
+            </button>
+            <button
+              className="version-history-btn p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
+              onClick={handleVersionHistoryOpen}
+            >
+              <FontAwesomeIcon icon={faHistory} size="lg" color="white" />
             </button>
             <button
               className="download rounded rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
@@ -469,6 +543,11 @@ export default function App() {
         </Panel>
       </ReactFlow>
       <ToastContainer />
+      <VersionHistoryModal 
+        isOpen={isVersionHistoryOpen}
+        onClose={handleVersionHistoryClose}
+        onSelectVersion={handleSelectVersion}
+      />
       <Modal
         isOpen={modalOpen}
         onClose={handleCloseModal}

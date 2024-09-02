@@ -48,6 +48,10 @@ const Modal = ({
   const [searchTerm, setSearchTerm] = useState("");
   const [shortcutTriggered, setShortcutTriggered] = useState(false);
 
+  useEffect(() => {
+    setTestCases(initialTestCases);
+  }, [initialTestCases, nodeId]);  
+
   const toastTypes = {
     toastSave: () => { toast.success('Changes Saved Successfully!', { autoClose: 1000 }); },
     toastSaveError: () => { toast.error('Failed to save data. Please try again.', { autoClose: 1000 }); },
@@ -58,13 +62,13 @@ const Modal = ({
       if (!nodeId) {
         throw new Error('Node ID is not defined');
       }
-
+  
       const totalTestCases = testCases.length;
       const passed = testCases.filter((tc) => tc.status === "passed").length;
       const failed = testCases.filter((tc) => tc.status === "failed").length;
       const pending = testCases.filter((tc) => tc.status === "notstarted").length;
       const notApplicable = testCases.filter((tc) => tc.status === "notapplicable").length;
-
+  
       const updatedStats = {
         total: totalTestCases,
         passed,
@@ -72,26 +76,19 @@ const Modal = ({
         pending,
         notApplicable,
       };
-
-      localStorage.setItem(`testCases-${nodeId}`, JSON.stringify(testCases));
-      localStorage.setItem(`label-${nodeId}`, label);
-      localStorage.setItem(`color-${nodeId}`, color);
-      localStorage.setItem(`testCaseStats-${nodeId}`, JSON.stringify(updatedStats));
-
-      setBorderColor(color);
-
+  
       if (onSave) {
         onSave(testCases, label, color, updatedStats);
       }
-
+  
       toastTypes.toastSave();
-
+  
     } catch (error) {
       console.error("Failed to save data:", error);
       toastTypes.toastSaveError();
     }
   }, 1000), [testCases, label, color, nodeId, onSave, toastTypes]);
-
+  
   const adjustTextareasHeight = useCallback(() => {
     requestAnimationFrame(() => {
       const heights = textareasRef.current.map((textarea) => {
@@ -108,8 +105,8 @@ const Modal = ({
         }
       });
     });
-  }, []);  
-
+  }, []); 
+ 
   const handleSave = useCallback(() => {
     adjustTextareasHeight();
     debouncedSave();
@@ -195,11 +192,14 @@ const Modal = ({
   }, [searchTerm, scrollToClicked]);
 
   useEffect(() => {
-    setLabel(nodeLabel);
-    setColor(nodeColor || COLOR_OPTIONS.DEFAULT);
-    setTestCases(initialTestCases);
-    setSelectedTestCases([]);
+    if (isOpen) {
+      setLabel(nodeLabel);
+      setColor(nodeColor || COLOR_OPTIONS.DEFAULT);
+      setTestCases(initialTestCases);
+      setSelectedTestCases([]);
+    }
   }, [nodeLabel, initialTestCases, nodeColor, isOpen]);
+  
 
   useEffect(() => {
     const storedTestCases = JSON.parse(localStorage.getItem(`testCases-${nodeId}`));
@@ -242,6 +242,7 @@ const Modal = ({
       setShortcutTriggered(true);
     } else if (event.ctrlKey && event.key.toLowerCase() === "s") {
       event.preventDefault();
+      document.querySelector('.modal-save').focus()
       handleSave();
       setShortcutTriggered(true);
     }
@@ -275,7 +276,7 @@ const Modal = ({
       });
       textareasRef.current[textareasRef.current.length - 1]?.focus();
     }
-  }, [testCases.length]);
+  }, [testCases.length]);  
 
   useEffect(() => {
     const modalElement = document.querySelector('.modal-content');
@@ -380,7 +381,7 @@ const Modal = ({
                 <FontAwesomeIcon icon={faFileCirclePlus} size="lg" color="white" />
               </button>
               <button
-                className="p-2 rounded w-12 bg-[#3e3e3e] hover:bg-[#2980B9]"
+                className="modal-save p-2 rounded w-12 bg-[#3e3e3e] hover:bg-[#2980B9]"
                 onClick={handleSave}
               >
                 <FontAwesomeIcon icon={faSave} size="lg" color="white" />
