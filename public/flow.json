@@ -3801,7 +3801,199 @@
             },
             "data": {
                 "label": "CT: CHANGE TO OTHER TARGETED TABLE  (CLS-OGLS-GCLS-NBFS-CT)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1725257151390,
+                        "content": "OG loading logo should display when the player clicks the Baccarat M5 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257156070,
+                        "content": "OG loading logo should display when the player clicks the Baccarat M6 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257166263,
+                        "content": "OG loading logo should display when the player clicks the Baccarat M7 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257168211,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG001 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257170035,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG002 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257171877,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG003 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257173782,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG005 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257175657,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG012 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257177798,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG013 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257179859,
+                        "content": "OG loading logo should display when the player clicks the Baccarat RNG015 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257181967,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat C2 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257183894,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M1 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257185988,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M2 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257188236,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat M3 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257190052,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG006 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257191847,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG007 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257193673,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG016 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257195484,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG017 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257197299,
+                        "content": "OG loading logo should display when the player clicks the Speed Baccarat RNG018 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257199079,
+                        "content": "OG loading logo should display when the player clicks the Classic DT P7 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257200925,
+                        "content": "OG loading logo should display when the player clicks the Classic DT C9 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257202725,
+                        "content": "OG loading logo should display when the player clicks the Classic DT C10 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257204554,
+                        "content": "OG loading logo should display when the player clicks the Classic DT C11 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257206493,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG008 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257208537,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG009 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257210538,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG019 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257212469,
+                        "content": "OG loading logo should display when the player clicks the Classic DT RNG020 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257214435,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG010 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257216311,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG011 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257218135,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG021 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257220215,
+                        "content": "OG loading logo should display when the player clicks the New DT RNG022 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257222217,
+                        "content": "OG loading logo should display when the player clicks the Bull Bull P3 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257224330,
+                        "content": "OG loading logo should display when the player clicks the Three Cards P5 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257226253,
+                        "content": "OG loading logo should display when the player clicks the Sedie B01 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257228347,
+                        "content": "OG loading logo should display when the player clicks the Roulette P8 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257230745,
+                        "content": "OG loading logo should display when the player clicks the Roulette G11 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257232677,
+                        "content": "OG loading logo should display when the player clicks the Sicbo C12 table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725257235193,
+                        "content": "OG loading logo should display when the player clicks the Moneywheel MW1 table",
+                        "status": "notstarted"
+                    }
+                ],
+                "color": "#1C1C1E"
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -3810,7 +4002,7 @@
                 "width": 150,
                 "height": 80
             },
-            "selected": false,
+            "selected": true,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -4672,13 +4864,13 @@
         }
     ],
     "viewport": {
-        "x": 135.86218315487395,
-        "y": 388.8717464782675,
-        "zoom": 0.8231032612693754
+        "x": 253.0137273304714,
+        "y": 370.41682977828947,
+        "zoom": 1.0510891579318455
     },
     "testCaseStats": {
-        "total": 658,
-        "notstarted": 658,
+        "total": 696,
+        "notstarted": 696,
         "passed": 0,
         "failed": 0,
         "blocked": 0,

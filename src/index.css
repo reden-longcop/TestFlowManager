@@ -56,6 +56,10 @@ body,
   content: "Delete Test Scenario";
 }
 
+.panel .version-history::after {
+  content: "Version History";
+}
+
 .panel button:hover::after {
   opacity: 1;
   visibility: visible;
@@ -65,6 +69,5 @@ body,
   background: #3498db !important;
   width: 13px !important;
   height: 13px !important;
-  border: 3px solid #373737 !important;
+  border: 3px solid !important;
 }
-

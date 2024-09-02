@@ -13,7 +13,7 @@
  *
  * You should have received a copy of the GNU Lesser General Public License
  * along with Test Flow Manager. If not, see <http://www.gnu.org/licenses/>.
- */
+*/
 
 import { useCallback, useState, useEffect, useRef } from "react";
 import {
@@ -115,9 +115,6 @@ export default function App() {
               x: typeof node.position?.x === "number" ? node.position.x : 0,
               y: typeof node.position?.y === "number" ? node.position.y : 0,
             },
-            style: {
-              backgroundColor: node.style?.backgroundColor || 'inherit'
-            },
           }));
   
           const edgesWithDefaultStyle = (flow.edges || []).map((edge) => ({
@@ -175,7 +172,7 @@ export default function App() {
       data: { label: `Test Scenario ${nodes.length + 1}`, testCases: [] },
       sourcePosition: "right",
       targetPosition: "left",
-      type: "customNode",
+      type: "customNode"
     };
 
     setNodes((nds) => [...nds, newNode]);
@@ -233,7 +230,8 @@ export default function App() {
             data: { 
               ...node.data, 
               label, 
-              testCases 
+              testCases,
+              color: color || '#1C1C1E'
             }, 
             style: { 
               ...node.style, 
@@ -252,6 +250,7 @@ export default function App() {
       return updatedNodes;
     });
   }, [selectedNode, setNodes, setTestCaseStats]);
+
     const exportToExcel = useCallback(async (nodes) => {
       console.time('Export to Excel');
 
@@ -282,7 +281,6 @@ export default function App() {
               console.log(`Processing node: ${nodeLabel}`);
               console.log('Test Cases:', nodeTestCases);
 
-              // Prepare worksheet data
               const worksheet = workbook.addWorksheet(sheetName);
               worksheet.addRow(['Test ID', 'Test Case', 'Status']);
               
@@ -376,7 +374,6 @@ export default function App() {
         console.error("Error selecting version:", error);
     }
   }, [selectedNode, setNodes, setEdges, setViewport, calculateTestCaseStats, handleVersionHistoryClose]);
-
 
   const deleteSelectedNode = useCallback(() => {
     if (selectedNode) {
@@ -489,7 +486,7 @@ export default function App() {
               <FontAwesomeIcon icon={faTrashAlt} size="lg" color="white" />
             </button>
             <button
-              className="version-history-btn p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
+              className="version-history p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
               onClick={handleVersionHistoryOpen}
             >
               <FontAwesomeIcon icon={faHistory} size="lg" color="white" />
