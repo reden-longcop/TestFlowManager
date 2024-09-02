@@ -1967,11 +1967,38 @@
             "id": "02a2ed05-df7c-43a0-820a-155d282ca45b",
             "position": {
                 "x": 921.7927288070605,
-                "y": -257.2106124278164
+                "y": -260.06479466094197
             },
             "data": {
                 "label": "BL:BACK TO LOBBY (CLS-OGLS-GCLS-BPS-BL)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724988777249,
+                        "content": "Verify home button:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1724988786207,
+                        "content": "- is placed on top left corner while in the game",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988791065,
+                        "content": "- is a house looking icon on top left side of the page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988793382,
+                        "content": "- is clickable",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988796103,
+                        "content": "- is working when clicked",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -1994,7 +2021,28 @@
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-BPS-BLS)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724988966108,
+                        "content": "- OG Logo should be displayed after going back to lobby",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988979126,
+                        "content": "- OG Logo should not be visible after few seconds of loading",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988989735,
+                        "content": "- In-game content should not be displayed after going\n  back into the lobby",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989042910,
+                        "content": "- lobby should be fully functional",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -3776,7 +3824,43 @@
             },
             "data": {
                 "label": "S: SUCCESS (CLS-OGLS-GCLS-NBFS-CTS)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724988510119,
+                        "content": "All icons should be loaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988516211,
+                        "content": "All function buttons should be loaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988518525,
+                        "content": "The video stream FLV should be downloaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988520384,
+                        "content": "The video stream should not load more than 5 seconds upon landing to the ingame page",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988522292,
+                        "content": "The roadmap should be loaded less than 5 seconds upon entering the table",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988524317,
+                        "content": "The dealers image PNG should be downloaded successfully",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724988526387,
+                        "content": "The betting table should be downloaded successfully",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -3948,7 +4032,38 @@
             },
             "data": {
                 "label": "CATEGORY CHOOSE (CLS-OGLS-CC)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724989205006,
+                        "content": "Default tab should be Featured(if player didn't entered a table yet)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989208348,
+                        "content": "Current tab should be the last chosen tab(if player returned to lobby from in-game)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989219526,
+                        "content": "All Game Category labels should be displayed clearly",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989222252,
+                        "content": "Category tabs should have corresponding icon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989224336,
+                        "content": "Category tabs should have an animation slidewhen choosing a category",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989227386,
+                        "content": "Chosen category should be highlightedwhen clicked",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "sourcePosition": "right",
             "targetPosition": "left",
@@ -3994,7 +4109,173 @@
             },
             "data": {
                 "label": "S: CATEGORY CHOOSE SUCCESS (CLS-OGLS-CCS)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1724989330235,
+                        "content": "Switching / clicking of Category tabs should be responsive and load immediately",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989341401,
+                        "content": "Correct highlight color, text label, and icon color should be displayed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989343903,
+                        "content": "Non-selected tabs should have the correct color for the label and icon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989346254,
+                        "content": "Clicking Featured Tab should display all the featured game tables",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989349288,
+                        "content": "Selected tab should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989351575,
+                        "content": "Highlight should be centered and not overlap with another tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989353920,
+                        "content": "Clicking Baccarat Game tab should display all Bacarrat games",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989358421,
+                        "content": "Selected Baccarat tab should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989362783,
+                        "content": "Baccarat Game tab should include all Baccarat Type such as Normal Baccarat, Bidding Baccarat & Speed Baccarat",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989364791,
+                        "content": "Other Baccarat game tables should be viewable when scrolled down or up",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989366591,
+                        "content": "There should be no delay in loading when scrolling for more game tables ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989368345,
+                        "content": "Clicking Card Games tab should display all card games",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989370067,
+                        "content": "Selected Card Games tab should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989371768,
+                        "content": "Card Games tab should include all Card Games such as\n-Classic and New DT\n-Win Three Cards\n-NiuNiu",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989382345,
+                        "content": "Other Card Game tables should be viewable when scrolled down or up",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989384607,
+                        "content": "There should be no delay in loading when scrolling for more Card game tables ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989386390,
+                        "content": "Clicking Others tab should display all games under the Others category",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989388253,
+                        "content": "Selected Others tab should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989390103,
+                        "content": "Card Games tab should include all Other Games such as\n- Roulette, Sedie, MW",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989395127,
+                        "content": "Other Other Game tables should be viewable when scrolled down or up",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989397687,
+                        "content": "There should be no delay in loading when scrolling for more Other game tables ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989399741,
+                        "content": "Clicking Maria Tab should display all the Maria game tables",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989401586,
+                        "content": "Selected Maria tab should be highlighted",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989406744,
+                        "content": "Highlight should be centered and not overlap with another tab",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989409558,
+                        "content": "Clicking Maria Game tab should display all Maria games",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989411455,
+                        "content": "Maria Game tab should include all Maria table games such as Classic Baccarat, Speed Baccarat",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989413377,
+                        "content": "Other Maria game tables should be viewable when scrolled down or up",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989415314,
+                        "content": "There should be no delay in loading when scrolling for more game tables ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989417234,
+                        "content": "When I enter any tables under a specific game category, I should be directed to the correct tab upon returning to the lobby.",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989419318,
+                        "content": "Clicking  \"New Version\" button in Vue should should redirect to Laya ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989421381,
+                        "content": "Clicking  \"Change Theme\" button in Vue should should redirect to Laya ",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989423398,
+                        "content": "\"Change Theme\" should reappear once the user leaves In-Game tables",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1724989425299,
+                        "content": "\"Change Theme\" button should not cover any existing function ",
+                        "status": "notstarted"
+                    }
+                ]
             },
             "sourcePosition": "right",
             "targetPosition": "left",
@@ -4391,13 +4672,13 @@
         }
     ],
     "viewport": {
-        "x": 992.0137273304713,
-        "y": 1016.4168297782894,
-        "zoom": 1.0510891579318455
+        "x": 135.86218315487395,
+        "y": 388.8717464782675,
+        "zoom": 0.8231032612693754
     },
     "testCaseStats": {
-        "total": 604,
-        "notstarted": 604,
+        "total": 658,
+        "notstarted": 658,
         "passed": 0,
         "failed": 0,
         "blocked": 0,
