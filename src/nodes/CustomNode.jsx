@@ -17,6 +17,7 @@ const CustomNode = ({ data, selected }) => {
 
   const nodeStyling = {
     outline: `3px solid ${handleBorderColor}`,
+    background: `${color || "#1c1c1e"}`
   }
 
   return (

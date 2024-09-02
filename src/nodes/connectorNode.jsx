@@ -1,7 +1,7 @@
 import { Handle } from "@xyflow/react";
 
 const ConnectorNode = ({ data, selected }) => {
-  const { label, testCases, color } = data;
+  const { label } = data;
   const handleBorderColor = selected ? '#2980B9' : '#373737';
   const handleBG = selected ? '#373737' : '#2980B9';
 

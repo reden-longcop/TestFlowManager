@@ -16,7 +16,7 @@
 */
 
 import React, { useEffect, useState } from 'react';
-import "../components/Modal.css";
+import "../styles/Modal.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { format } from 'date-fns';

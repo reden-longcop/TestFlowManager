@@ -26,14 +26,10 @@ import {
   useEdgesState,
   useReactFlow,
   Panel,
-  MarkerType,
 } from "@xyflow/react";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import ExcelJS from 'exceljs'
-import { saveAs } from 'file-saver';
 import "@xyflow/react/dist/style.css";
 
+// icons and toasts
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFloppyDisk,
@@ -41,19 +37,23 @@ import {
   faPlusCircle,
   faPlusSquare,
   faChevronDown,
-  faChevronUp,
-  faArrowAltCircleDown,
+  faArrowAltCircleUp,
   faHistory,
 } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+
+// components
 import Modal from "./components/Modal";
+import VersionHistoryModal from "./components/VersionHistory";
+import Buttons from "./components/Buttons";
+
+// nodes and edges
 import CustomNode from "./nodes/CustomNode";
 import ConnectorNode from "./nodes/ConnectorNode";
-import VersionHistoryModal from "./components/VersionHistoryModal";
-
 import CustomEdge from "./edges/CustomEdge";
 
-import { v4 as uuidv4 } from "uuid";
 
 export default function App() {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
@@ -62,7 +62,6 @@ export default function App() {
   const [selectedNode, setSelectedNode] = useState(null);
   const [rfInstance, setRfInstance] = useState(null);
   const { setViewport } = useReactFlow();
-
   const [isVersionHistoryOpen, setVersionHistoryOpen] = useState(false);
 
   const handleVersionHistoryOpen = useCallback(() => setVersionHistoryOpen(true), []);
@@ -75,15 +74,6 @@ export default function App() {
 
   const edgeTypes = {
     customEdge: CustomEdge,
-  }
-
-  const toastTypes = {
-    toastDelete: useCallback(() => { toast.error('No node selected to delete.', { autoClose: 1000 }); }, []),
-    toastDeleteSuccess: useCallback(() => { toast.success('Node Deleted.', { autoClose: 1000 }); }, []),
-    toastSaveError: useCallback(() => { toast.error('Server Save Failed: Unable to save changes.', { autoClose: 1000 }); }, []),
-    toastSaveSuccess: useCallback(() => { toast.success('Changes saved successfully!', { autoClose: 1000 }); }, []),
-    toastSaveErrorLocal: useCallback(() => { toast.error('Local Save Failed: Unable to save changes locally.', { autoClose: 1000 }); }, []),
-    toastSaveLocalSuccess: useCallback(() => { toast.success('Changes saved locally!', { autoClose: 1000 }); }, []),
   }
 
   const [testCaseStats, setTestCaseStats] = useState({
@@ -99,6 +89,39 @@ export default function App() {
   const clickTimeoutRef = useRef(null);
 
   const toggleDetails = useCallback(() => { setShowDetails(prev => !prev); }, []);
+
+  const calculateTestCaseStats = useCallback((nodes) => {
+    const stats = {
+      total: 0,
+      notstarted: 0,
+      passed: 0,
+      failed: 0,
+      blocked: 0,
+      notapplicable: 0,
+    };
+
+    nodes.forEach((node) => {
+      if (node.data && node.data.testCases) {
+        node.data.testCases.forEach((testCase) => {
+          if (stats[testCase.status] !== undefined) {
+            stats[testCase.status] += 1;
+          }
+        });
+      }
+    });
+
+    stats.total = Object.values(stats).reduce((sum, count) => sum + count, 0);
+  
+    return stats;
+  }, []);
+
+  const {
+    addNode,
+    addConnectorNode,
+    exportToExcel,
+    deleteSelectedNode,
+    onSave,
+  } = Buttons(nodes, setNodes, setEdges, selectedNode, setModalOpen, setSelectedNode, rfInstance, calculateTestCaseStats);
 
   useEffect(() => {
     const restoreFlow = async () => {
@@ -159,43 +182,35 @@ export default function App() {
     [setEdges],
   );
 
-  const addNode = useCallback(() => {
-    const lastNode = nodes[nodes.length - 1];
-    const lastNodePosition = lastNode ? lastNode.position : { x: 0, y: 0 };
-
-    const newNode = {
-      id: uuidv4(),
-      position: {
-        x: lastNodePosition.x + 100,
-        y: lastNodePosition.y + 100,
-      },
-      data: { label: `Test Scenario ${nodes.length + 1}`, testCases: [] },
-      sourcePosition: "right",
-      targetPosition: "left",
-      type: "customNode"
-    };
-
-    setNodes((nds) => [...nds, newNode]);
-  }, [nodes, setNodes]);
-
-  const addConnectorNode = useCallback(() => {
-    const lastNode = nodes[nodes.length - 1];
-    const lastNodePosition = lastNode ? lastNode.position : { x: 0, y: 0 };
-
-    const newConnectorNode = {
-      id: uuidv4(),
-      position: {
-        x: lastNodePosition.x + 100,
-        y: lastNodePosition.y + 100,
-      },
-      type: "connector",
-      data: { label: `${nodes.length + 1}` },
-      sourcePosition: "right",
-      targetPosition: "left",
-    };
-
-    setNodes((nds) => [...nds, newConnectorNode]);
-  }, [nodes, setNodes]);
+  const handleSaveTestCases = useCallback((testCases, label, color) => {
+    setNodes((nds) => {
+        const updatedNodes = nds.map((node) => {
+        if (node.id === selectedNode.id) {
+            const updatedNode = { 
+            ...node, 
+            data: { 
+                ...node.data, 
+                label, 
+                testCases,
+                color: color
+            }, 
+            style: { 
+                ...node.style, 
+                backgroundColor: color,
+            },
+            type: 'customNode',
+            };
+            return updatedNode;
+        }
+        return node;
+        });
+    
+        const updatedStats = calculateTestCaseStats(updatedNodes);
+        setTestCaseStats(updatedStats);
+    
+        return updatedNodes;
+    });
+    }, [selectedNode, setNodes, setTestCaseStats]);
 
   const handleNodeClick = useCallback((event, node) => {
     if (clickTimeoutRef.current) {
@@ -221,129 +236,6 @@ export default function App() {
     setSelectedNode(null);
   }, []);
 
-  const handleSaveTestCases = useCallback((testCases, label, color) => {
-    setNodes((nds) => {
-      const updatedNodes = nds.map((node) => {
-        if (node.id === selectedNode.id) {
-          const updatedNode = { 
-            ...node, 
-            data: { 
-              ...node.data, 
-              label, 
-              testCases,
-              color: color || '#1C1C1E'
-            }, 
-            style: { 
-              ...node.style, 
-              backgroundColor: color || '#1C1C1E',
-            },
-            type: 'customNode',
-          };
-          return updatedNode;
-        }
-        return node;
-      });
-  
-      const updatedStats = calculateTestCaseStats(updatedNodes);
-      setTestCaseStats(updatedStats);
-  
-      return updatedNodes;
-    });
-  }, [selectedNode, setNodes, setTestCaseStats]);
-
-    const exportToExcel = useCallback(async (nodes) => {
-      console.time('Export to Excel');
-
-      const workbook = new ExcelJS.Workbook();
-      const sheetNames = new Set();
-
-      const sanitizeSheetName = (name) => {
-          const sanitized = name.replace(/[^a-zA-Z0-9_]/g, '_').slice(0, 31);
-          let sheetName = sanitized;
-          let counter = 1;
-          while (sheetNames.has(sheetName)) {
-              sheetName = `${sanitized}_${counter}`;
-              counter++;
-              if (sheetName.length > 31) {
-                  sheetName = sheetName.slice(0, 31);
-              }
-          }
-          sheetNames.add(sheetName);
-          return sheetName;
-      };
-
-      for (const node of nodes) {
-          if (node.data.testCases && node.data.testCases.length > 0) {
-              const nodeLabel = node.data.label || `Sheet${nodes.indexOf(node) + 1}`;
-              const sheetName = sanitizeSheetName(nodeLabel);
-
-              const nodeTestCases = node.data.testCases || [];
-              console.log(`Processing node: ${nodeLabel}`);
-              console.log('Test Cases:', nodeTestCases);
-
-              const worksheet = workbook.addWorksheet(sheetName);
-              worksheet.addRow(['Test ID', 'Test Case', 'Status']);
-              
-              nodeTestCases.forEach((testCase, index) => {
-                  worksheet.addRow([
-                      index + 1,
-                      testCase.content,
-                      testCase.status,
-                      testCase.description || ''
-                  ]);
-              });
-
-              const autoSizeColumns = () => {
-                worksheet.columns.forEach(column => {
-                    let maxLength = 0;
-                    column.eachCell({ includeEmpty: true }, cell => {
-                        const cellLength = cell.value ? cell.value.toString().length : 0;
-                        if (cellLength > maxLength) {
-                            maxLength = cellLength;
-                        }
-                    });
-                    column.width = maxLength;
-                });
-            };
-
-            autoSizeColumns();
-
-              console.timeEnd(`Creating sheet for ${sheetName}`);
-          }
-      }
-      console.timeEnd('Export to Excel');
-
-      const buffer = await workbook.xlsx.writeBuffer();
-      const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-      saveAs(blob, 'test_cases.xlsx');
-      console.log('File saved!');
-  }, []);
-
-  const calculateTestCaseStats = useCallback((nodes) => {
-    const stats = {
-      total: 0,
-      notstarted: 0,
-      passed: 0,
-      failed: 0,
-      blocked: 0,
-      notapplicable: 0,
-    };
-  
-    nodes.forEach((node) => {
-      if (node.data && node.data.testCases) {
-        node.data.testCases.forEach((testCase) => {
-          if (stats[testCase.status] !== undefined) {
-            stats[testCase.status] += 1;
-          }
-        });
-      }
-    });
-
-    stats.total = Object.values(stats).reduce((sum, count) => sum + count, 0);
-  
-    return stats;
-  }, []);
-
   const handleSelectVersion = useCallback((flowData) => {
     try {
         const parsedFlow = typeof flowData === 'string' ? JSON.parse(flowData) : flowData;
@@ -351,8 +243,6 @@ export default function App() {
         const updatedNodes = parsedFlow.nodes || [];
         const updatedEdges = parsedFlow.edges || [];
         const viewport = parsedFlow.viewport || { x: 0, y: 0, zoom: 1 }
-
-        console.log(testcase)
 
         setNodes(updatedNodes);
         setEdges(updatedEdges);
@@ -374,88 +264,6 @@ export default function App() {
         console.error("Error selecting version:", error);
     }
   }, [selectedNode, setNodes, setEdges, setViewport, calculateTestCaseStats, handleVersionHistoryClose]);
-
-  const deleteSelectedNode = useCallback(() => {
-    if (selectedNode) {
-      setNodes((nds) => nds.filter((node) => node.id !== selectedNode.id));
-      setEdges((eds) =>
-        eds.filter(
-          (edge) =>
-            edge.source !== selectedNode.id && edge.target !== selectedNode.id,
-        ),
-      );
-      toastTypes.toastDeleteSuccess();
-      setModalOpen(false);
-      setSelectedNode(null);
-    } else {
-      toastTypes.toastDelete();
-    }
-  }, [selectedNode, setNodes, setEdges, toastTypes]);
-
-  const onSave = useCallback(() => {
-    if (rfInstance) {
-      const flow = rfInstance.toObject();
-      const updatedStats = calculateTestCaseStats(flow.nodes);
-      const formattedFlow = JSON.stringify({ ...flow, testCaseStats: updatedStats }, null, 4);
-  
-      const saveFlowToServerVersion = (flowData) => {
-        const timestamp = new Date().toISOString();
-        const newVersion = { timestamp, flowData };
-  
-        fetch("http://localhost:3000/flow/saveVersion", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newVersion),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data) {
-              console.log("Version saved to server:", data.message);
-            } else {
-              toastTypes.toastSaveError();
-            }
-          })
-          .catch((error) => {
-            console.error("Failed to save version to server:", error);
-            toastTypes.toastSaveError();
-          });
-      };
-  
-      fetch("http://localhost:3000/flow", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: formattedFlow,
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data) {
-            toastTypes.toastSaveSuccess(); 
-            saveFlowToServerVersion(formattedFlow); 
-          } else {
-            toastTypes.toastSaveError(); 
-          }
-        })
-        .catch((error) => {
-          console.error("Failed to save flow data to server:", error);
-          toastTypes.toastSaveError(); 
-  
-          
-          try {
-            localStorage.setItem("flowData", formattedFlow);
-            toastTypes.toastSaveLocalSuccess(); 
-          } catch (localError) {
-            console.error("Failed to save flow data to localStorage:", localError);
-            toastTypes.toastSaveErrorLocal(); 
-          }  
-        });
-    } else {
-      toastTypes.toastSaveError();
-    }
-  }, [rfInstance, calculateTestCaseStats]);
   
   return (
     <div style={{ height: "100vh", width: "100%" }}>
@@ -493,9 +301,9 @@ export default function App() {
             </button>
             <button
               className="download rounded rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
-              onClick={() => exportToExcel(nodes)}
+              onClick={exportToExcel}
             >
-              <FontAwesomeIcon icon={faArrowAltCircleDown} size="lg" color="white" />
+              <FontAwesomeIcon icon={faArrowAltCircleUp} size="lg" color="white" />
             </button>
             <button
               className="add p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"

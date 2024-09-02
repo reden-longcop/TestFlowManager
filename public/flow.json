@@ -21,7 +21,8 @@
                         "content": "Verify that when the player does not have an account and clicks the OG link/button, the OG site should not launch",
                         "status": "notstarted"
                     }
-                ]
+                ],
+                "color": "#1C1C1E"
             },
             "measured": {
                 "width": 94,
@@ -1902,7 +1903,1224 @@
             },
             "data": {
                 "label": "BP:BETTING PLAY ALL SENAIRO (CLS-OGLS-GCLS-BP)",
-                "testCases": []
+                "testCases": [
+                    {
+                        "id": 1725268596063,
+                        "content": "BACCARAT",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725268604352,
+                        "content": " Verify player can place a bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725268624863,
+                        "content": "- Player",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268629401,
+                        "content": "- Banker",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268631366,
+                        "content": "- Tie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268633304,
+                        "content": "- Player Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268635323,
+                        "content": "- Any Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268637192,
+                        "content": "- Perfect Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268639028,
+                        "content": "- Banker Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268641111,
+                        "content": "- Player Bonus",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268643173,
+                        "content": "- Banker Bonus",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268645142,
+                        "content": "- Small",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268647046,
+                        "content": "- Big",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268649029,
+                        "content": "- Super 6",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268660762,
+                        "content": " Verify player can place a minimum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725268668559,
+                        "content": "- Player",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268671414,
+                        "content": "- Banker",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268673250,
+                        "content": "- Tie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268675455,
+                        "content": "- Player Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268677339,
+                        "content": "- Any Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268679213,
+                        "content": "- Perfect Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268681084,
+                        "content": "- Banker Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268682988,
+                        "content": "- Player Bonus",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268684920,
+                        "content": "- Banker Bonus",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268686951,
+                        "content": "- Small",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268689005,
+                        "content": "- Big",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268691051,
+                        "content": "- Super 6",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268700890,
+                        "content": " Verify player cannot place below minimum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725268706185,
+                        "content": "- Player",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268709221,
+                        "content": "- Banker",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268711072,
+                        "content": "- Tie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268712864,
+                        "content": "- Player Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268714598,
+                        "content": "- Any Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268716511,
+                        "content": "- Perfect Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268718310,
+                        "content": "- Banker Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268724406,
+                        "content": "- Player Bonus",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268726379,
+                        "content": "- Banker Bonus",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268728637,
+                        "content": "- Small",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268730474,
+                        "content": "- Big",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268732316,
+                        "content": "- Super 6",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268735118,
+                        "content": " Verify player can place a maximum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725268743373,
+                        "content": "- Player",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268746990,
+                        "content": "- Banker",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268748938,
+                        "content": "- Tie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268750705,
+                        "content": "- Player Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268752517,
+                        "content": "- Any Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268754404,
+                        "content": "- Perfect Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268756203,
+                        "content": "- Banker Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268757988,
+                        "content": "- Player Bonus",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268760267,
+                        "content": "- Banker Bonus",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268762164,
+                        "content": "- Small",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268764019,
+                        "content": "- Big",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268765854,
+                        "content": "- Super 6",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268778252,
+                        "content": " Verify player cannot place a beyond maximum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725268781469,
+                        "content": "- Player",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268783687,
+                        "content": "- Banker",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268785474,
+                        "content": "- Tie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268787299,
+                        "content": "- Player Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268789114,
+                        "content": "- Any Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268791014,
+                        "content": "- Perfect Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268792625,
+                        "content": "- Banker Pair",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268799257,
+                        "content": "- Player Bonus",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268801027,
+                        "content": "- Banker Bonus",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268802907,
+                        "content": "- Small",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268804688,
+                        "content": "- Big",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268806457,
+                        "content": "- Super 6",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268821702,
+                        "content": " Verify player can bet continuously on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725268836208,
+                        "content": "- Banker up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268839035,
+                        "content": "- Player up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268840826,
+                        "content": "- Tie up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268842646,
+                        "content": "- Super 6 up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268844528,
+                        "content": "- Player Pair up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268846371,
+                        "content": "- Banker Pair up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268848219,
+                        "content": "- Any Pair up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268850004,
+                        "content": "- Perfect Pair up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268851770,
+                        "content": "- Small up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725268853646,
+                        "content": "- Big up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269042091,
+                        "content": " Verify player can:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269052434,
+                        "content": "- click cancel button after placing a bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269055183,
+                        "content": "- bet on super six beting area after\n  enabling super six",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269064298,
+                        "content": "- bet on 1 second remaining betting timer",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269068236,
+                        "content": "- bet all-in chips",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269072240,
+                        "content": "- enable super 6 during betting area is open",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269076739,
+                        "content": "- disable super 6 during betting area is open",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269079777,
+                        "content": "- place bet on the side bet betting area\n  after clicking sidebet panel",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269084003,
+                        "content": "- place a bet starting from 15 seconds to 1 second",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269087403,
+                        "content": "- place a bet on \"small\" bet area in a 30 round game",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269090893,
+                        "content": "- place a chip on betting area less than 100 ms\n   with a good internet connection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269099760,
+                        "content": "- place a chip on betting area less than 200 ms with a\n   fast 3G data connection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269105541,
+                        "content": "- place a chip on betting area less than 300 ms with a\n   slow 3G data connection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269108503,
+                        "content": "- not place a bet on \"small\" bet area after round 30 game",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269111335,
+                        "content": "- not place a bet on with insufficient balance",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269114834,
+                        "content": "- not place a bet when betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269118230,
+                        "content": "- not confirm bets when betting timer is 0",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269121936,
+                        "content": "- not disable super 6 after confirming a bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269124690,
+                        "content": "- see validation message \"Below Minimum Limit\" after\n   betting below minimum bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269128020,
+                        "content": "- see validation message \"Over Maximum Limit!\" after\n   betting beyond maximum bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269131619,
+                        "content": "- see the balance is not deducted after clicking cancel\n  button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269134686,
+                        "content": "- can place a chip and confirm one by one per bet area",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269137945,
+                        "content": "- place a chip with enough balance",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269149726,
+                        "content": " Verify button:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269170884,
+                        "content": "- confirm is disabled after clicking cancel button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269173828,
+                        "content": "- confirm is enabled after clicking rebet button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269175953,
+                        "content": "- confirm is disabled after betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269177837,
+                        "content": "- confirm button is disabled with no bets placed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269179942,
+                        "content": "- confirm button is working and functional after betting all-in",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269181979,
+                        "content": "- cancel is enabled after clicking rebet button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269184023,
+                        "content": "- cancel is disabled after betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269186135,
+                        "content": "- cancel button is disabled with no bets placed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269188265,
+                        "content": "- rebet is disabled when placing a bet for the first time",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269191063,
+                        "content": "- rebet button is disabled without recent placed bets",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269194122,
+                        "content": "- rebet is disabled after betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269212927,
+                        "content": " Verify betting area:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269216061,
+                        "content": "- has a highlight when placing a bet (hovered)",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269220002,
+                        "content": "- placed chips should be the same amount or value as\n  the selected chips amount on the chips selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269222326,
+                        "content": "- placed chips on super 6 is removed after\n  disabling super 6 without clicking confirm button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269238452,
+                        "content": "- placed chips are removed after betting timer is CLOSED\n  and confirm button is not clicked",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269412632,
+                        "content": "- placed chips value is increasing when betting\n  continuously on the same bet area",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269424256,
+                        "content": "- placed chips color is the same as the selected chip on\n  the chip selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269425786,
+                        "content": "- banker betting area ratio is changed to 1:1 after\n  enabling super 6",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269429471,
+                        "content": "- banker betting area ratio is changed to 1:0.95 after\n  disabling super 6",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269432645,
+                        "content": "- chips is removed after clicking cancel button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269557809,
+                        "content": "DRAGON TIGER",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269562367,
+                        "content": " Verify player can place a bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269567426,
+                        "content": "- Dragon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269570280,
+                        "content": "- Tiger",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269572087,
+                        "content": "- Tie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269573816,
+                        "content": "- Dragon Red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269575653,
+                        "content": "- Dragon Black",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269577428,
+                        "content": "- Dragon Odd",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269579268,
+                        "content": "- Dragon Even",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269581387,
+                        "content": "- Tiger Black",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269583153,
+                        "content": "- Tiger Red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269585017,
+                        "content": "- Tiger Odd",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269586859,
+                        "content": "- Tiger Even",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269600571,
+                        "content": " Verify player can place a minimum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269602484,
+                        "content": "- Dragon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269605155,
+                        "content": "- Tiger",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269607164,
+                        "content": "- Tie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269609160,
+                        "content": "- Dragon Red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269611134,
+                        "content": "- Dragon Black",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269613008,
+                        "content": "- Dragon Odd",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269614951,
+                        "content": "- Dragon Even",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269616803,
+                        "content": "- Tiger Black",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269618632,
+                        "content": "- Tiger Red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269620500,
+                        "content": "- Tiger Odd",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269622389,
+                        "content": "- Tiger Even",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269639745,
+                        "content": " Verify player cannot place below minimum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269646976,
+                        "content": "- Dragon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269650115,
+                        "content": "- Tiger",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269652130,
+                        "content": "- Tie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269654094,
+                        "content": "- Dragon Red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269655904,
+                        "content": "- Dragon Black",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269657739,
+                        "content": "- Dragon Odd",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269659510,
+                        "content": "- Dragon Even",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269661354,
+                        "content": "- Tiger Black",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269663256,
+                        "content": "- Tiger Red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269665404,
+                        "content": "- Tiger Odd",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269667266,
+                        "content": "- Tiger Even",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269677433,
+                        "content": " Verify player can place a maximum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269682140,
+                        "content": "- Dragon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269684509,
+                        "content": "- Tiger",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269686305,
+                        "content": "- Tie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269688151,
+                        "content": "- Dragon Red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269690028,
+                        "content": "- Dragon Black",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269692039,
+                        "content": "- Dragon Odd",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269693946,
+                        "content": "- Dragon Even",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269696176,
+                        "content": "- Tiger Black",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269697955,
+                        "content": "- Tiger Red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269699889,
+                        "content": "- Tiger Odd",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269701663,
+                        "content": "- Tiger Even",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269706106,
+                        "content": " Verify player cannot place a beyond maximum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269713167,
+                        "content": "- Dragon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269715534,
+                        "content": "- Tiger",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269717655,
+                        "content": "- Tie",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269719425,
+                        "content": "- Dragon Red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269721261,
+                        "content": "- Dragon Black",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269723033,
+                        "content": "- Dragon Odd",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269724746,
+                        "content": "- Dragon Even",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269726527,
+                        "content": "- Tiger Black",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269728473,
+                        "content": "- Tiger Red",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269730476,
+                        "content": "- Tiger Odd",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269733694,
+                        "content": "- Tiger Even",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269874183,
+                        "content": " Verify player can bet continuously on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269880141,
+                        "content": "- Dragon up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269883465,
+                        "content": "- Tiger up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269886474,
+                        "content": "- Tie up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269888491,
+                        "content": "- Dragon Red up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269890282,
+                        "content": "- Dragon Black up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269892018,
+                        "content": "- Dragon Odd up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269893721,
+                        "content": "- Dragon Even up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269895437,
+                        "content": "- Tiger Black up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269897132,
+                        "content": "- Tiger Red up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269898734,
+                        "content": "- Tiger Odd up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269900624,
+                        "content": "- Tiger Even up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269903595,
+                        "content": " Verify player can:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725269907004,
+                        "content": "- click confirm button after placing a bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269912890,
+                        "content": "- click cancel button after placing a bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269914956,
+                        "content": "- bet on 1 second remaining betting timer",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269917094,
+                        "content": "- bet all-in chips",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269918829,
+                        "content": "- not place a bet when betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269920664,
+                        "content": "- not place a bet on with insufficient balance",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269922434,
+                        "content": "- not confirm bets when betting timer is 0",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269924144,
+                        "content": "- see validation message \"Below Minimum Limit\" after\n   betting below minimum bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269926703,
+                        "content": "- see validation message \"Over Maximum Limit!\" after\n   betting beyond maximum bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269948033,
+                        "content": "- see the balance is not deducted after clicking cancel\n  button without confirmed bets",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269951920,
+                        "content": "- place a bet starting from 20 seconds to 1 second or\n  15 seconds to 1 for Speed Baccarat",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269955519,
+                        "content": "- place a chip on betting area less than 100 ms\n   with a good internet connection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269959129,
+                        "content": "- place a chip on betting area less than 200 ms with a\n   fast 3G data connection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269962456,
+                        "content": "- place a chip on betting area less than 300 ms with a\n   slow 3G data connection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269965658,
+                        "content": "- place a bet on \"Dragon Red\" bet area on 1-30 game round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269969061,
+                        "content": "- place a bet on \"Dragon Black\" bet area on 1-30 game round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269972398,
+                        "content": "- place a bet on \"Tiger Black\" bet area on 1-30 game round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269975267,
+                        "content": "- place a bet on \"Tiger Red\" bet area on 1-30 game round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269978214,
+                        "content": "- not place a bet on \"Dragon Red\" bet area after 1-30 game round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269981218,
+                        "content": "- not place a bet on \"Dragon Black\" bet area after 1-30 game round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269983902,
+                        "content": "- not place a bet on \"Tiger Black\" bet area after 1-30 game round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269986983,
+                        "content": "- not place a bet on \"Tiger Red\" bet area after 1-30 game round",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269989538,
+                        "content": "- can place a chip and confirm one by one per bet area",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725269992440,
+                        "content": "- place a chip with enough balance",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270009772,
+                        "content": " Verify button:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725270018501,
+                        "content": "- confirm is disabled after clicking cancel button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270024831,
+                        "content": "- confirm is enabled after clicking rebet button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270026664,
+                        "content": "- confirm is disabled after betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270028604,
+                        "content": "- confirm button is disabled with no bets placed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270030243,
+                        "content": "- confirm button is working and functional after betting all-in",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270031953,
+                        "content": "- cancel is enabled after clicking rebet button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270033692,
+                        "content": "- cancel is disabled after betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270035482,
+                        "content": "- cancel button is disabled with no bets placed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270037323,
+                        "content": "- rebet is disabled when placing a bet for the first time",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270039174,
+                        "content": "- rebet button is disabled without recent placed bets",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270040982,
+                        "content": "- rebet is disabled after betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270043972,
+                        "content": " Verify betting area:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725270052076,
+                        "content": "- has a highlight when placing a bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270055096,
+                        "content": "- placed chips should be the same amount or value as\n  the selected chips amount on the chips selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270056887,
+                        "content": "- placed chips are removed after betting timer is CLOSED\n  and confirm button is not clicked",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270073532,
+                        "content": "- placed chips value is increasing when betting\n  continuously on the same bet area",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270076376,
+                        "content": "- placed chips color is the same as the selected chip on\n  the chip selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725270079648,
+                        "content": "- chips is removed after clicking cancel button",
+                        "status": "notstarted"
+                    }
+                ],
+                "color": "#1C1C1E"
             },
             "type": "customNode",
             "sourcePosition": "right",
@@ -4002,7 +5220,7 @@
                 "width": 150,
                 "height": 80
             },
-            "selected": true,
+            "selected": false,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -4864,13 +6082,13 @@
         }
     ],
     "viewport": {
-        "x": 253.0137273304714,
-        "y": 370.41682977828947,
-        "zoom": 1.0510891579318455
+        "x": 135.86218315487395,
+        "y": 388.8717464782675,
+        "zoom": 0.8231032612693754
     },
     "testCaseStats": {
-        "total": 696,
-        "notstarted": 696,
+        "total": 915,
+        "notstarted": 915,
         "passed": 0,
         "failed": 0,
         "blocked": 0,

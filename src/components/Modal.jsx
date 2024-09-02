@@ -20,7 +20,7 @@ import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCirclePlus, faSave, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import "react-toastify/dist/ReactToastify.css";
-import '../components/Modal.css';
+import '../styles/Modal.css';
 import { debounce } from "../utils";
 import TestCase from "./TestCase";
 
