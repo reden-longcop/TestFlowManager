@@ -15,6 +15,9 @@ dist-ssr
 .env
 .env.production
 
+output/*.html
+output/*.xml
+
 
 # Editor directories and files
 .vscode/*
