@@ -18,7 +18,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileCirclePlus, faSave, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCirclePlay, faFileCirclePlus, faSave, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import "react-toastify/dist/ReactToastify.css";
 import '../styles/Modal.css';
 import { debounce } from "../utils";
@@ -88,6 +88,8 @@ const Modal = ({
       toastTypes.toastSaveError();
     }
   }, 1000), [testCases, label, color, nodeId, onSave, toastTypes]);
+
+  
   
   const adjustTextareasHeight = useCallback(() => {
     requestAnimationFrame(() => {
@@ -256,6 +258,7 @@ const Modal = ({
     }, 100);
   }, [searchTerm, addTestCase, addBoldTestCase, shortcutTriggered]);
   
+  
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
     return () => {
@@ -367,11 +370,12 @@ const Modal = ({
                 onStatusChange={(newStatus) => handleStatusChange(testCase.id, newStatus)}
                 onCheckboxChange={() => handleCheckboxChange(testCase.id)}
                 isChecked={selectedTestCases.includes(testCase.id)}
-                ref={(el) => textareasRef.current[ testCases.findIndex(tc => tc.id === testCase.id)] = el}
-                onClick={() => handleTestCaseClick( testCases.findIndex(tc => tc.id === testCase.id))}
+                ref={(el) => textareasRef.current[testCases.findIndex(tc => tc.id === testCase.id)] = el}
+                onClick={() => handleTestCaseClick(testCases.findIndex(tc => tc.id === testCase.id))}
               />
             ))}
             </div>
+            
 
             <div className="button-container sticky bottom-0 left-0 right-0 bg-[#1C1C1E] pt-5 space-x-3 z-10">
               <button

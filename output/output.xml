@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-09-06T18:12:06.273434" rpa="false" schemaversion="5">
+<suite id="s1" name="Testsuites" source="C:\Users\ITA-40138\Documents\sanity-test\testsuites">
+<suite id="s1-s1" name="Fe Sanity Test" source="C:\Users\ITA-40138\Documents\sanity-test\testsuites\fe_sanity_test.robot">
+<test id="s1-s1-t1" name="Test Scenario 5: Validate Featured game tabs only displays featured games" line="33">
+<kw name="Launch Testing Website" owner="setup_teardown" type="SETUP">
+<kw name="Main Setup" owner="setup_teardown">
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2024-09-06T18:12:07.112599" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\ITA-40138\Documents\TestFlowManager\testsuites\screenshots"&gt;C:\Users\ITA-40138\Documents\TestFlowManager\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-09-06T18:12:07.112599" level="FAIL">Directory 'C:\Users\ITA-40138\Documents\TestFlowManager\testsuites\screenshots' does not exist.</msg>
+<arg>testsuites/screenshots</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="FAIL" start="2024-09-06T18:12:07.112599" elapsed="0.000000">Directory 'C:\Users\ITA-40138\Documents\TestFlowManager\testsuites\screenshots' does not exist.</status>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>testsuites/screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="NOT RUN" start="2024-09-06T18:12:07.112599" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-06T18:12:07.111600" elapsed="0.000999">Directory 'C:\Users\ITA-40138\Documents\TestFlowManager\testsuites\screenshots' does not exist.</status>
+</kw>
+<kw name="Mobile Browser 2" owner="global_keywords">
+<status status="NOT RUN" start="2024-09-06T18:12:07.112599" elapsed="0.000000"/>
+</kw>
+<kw name="Get Url">
+<var>${url}</var>
+<status status="NOT RUN" start="2024-09-06T18:12:07.112599" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2024-09-06T18:12:07.113599" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-06T18:12:07.111600" elapsed="0.001999">Directory 'C:\Users\ITA-40138\Documents\TestFlowManager\testsuites\screenshots' does not exist.</status>
+</kw>
+<kw name="Main Teardown" owner="setup_teardown" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-06T18:12:07.113599" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-06T18:12:07.113599" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-09-06T18:12:07.113599" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-06T18:12:07.113599" elapsed="0.000000"/>
+</kw>
+<tag>featured</tag>
+<tag>navigation</tag>
+<status status="FAIL" start="2024-09-06T18:12:07.110586" elapsed="0.003013">Setup failed:
+Directory 'C:\Users\ITA-40138\Documents\TestFlowManager\testsuites\screenshots' does not exist.</status>
+</test>
+<status status="FAIL" start="2024-09-06T18:12:06.336105" elapsed="0.777494"/>
+</suite>
+<status status="FAIL" start="2024-09-06T18:12:06.275408" elapsed="0.839191"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">featured</stat>
+<stat pass="0" fail="1" skip="0">navigation</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Fe Sanity Test">Testsuites.Fe Sanity Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-06T18:12:06.724999" level="ERROR">Error in file 'C:\Users\ITA-40138\Documents\sanity-test\settings\main_resources.robot' on line 2: Importing library 'C:\Users\ITA-40138\Documents\sanity-test\helpers\api_handler.py' failed: FileNotFoundError: [Errno 2] No such file or directory: 'helpers/creds.json'
+Traceback (most recent call last):
+  File "C:\Users\ITA-40138\Documents\sanity-test\helpers\api_handler.py", line 12, in &lt;module&gt;
+    creds = load_json('helpers/creds.json')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ITA-40138\Documents\sanity-test\helpers\api_handler.py", line 8, in load_json
+    with open(filename) as json_file:
+         ^^^^^^^^^^^^^^
+PYTHONPATH:
+  C:\Users\ITA-40138\Documents\sanity-test\helpers
+  C:\Users\ITA-40138\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
+  C:\Users\ITA-40138\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\ITA-40138\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\ITA-40138\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\ITA-40138\AppData\Local\Programs\Python\Python312
+  C:\Users\ITA-40138\AppData\Local\Programs\Python\Python312\Lib\site-packages</msg>
+</errors>
+</robot>

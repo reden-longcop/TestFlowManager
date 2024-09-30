@@ -43,7 +43,6 @@ import {
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 // components
 import Modal from "./components/Modal";
 import VersionHistoryModal from "./components/VersionHistory";
@@ -53,7 +52,6 @@ import Buttons from "./components/Buttons";
 import CustomNode from "./nodes/CustomNode";
 import ConnectorNode from "./nodes/ConnectorNode";
 import CustomEdge from "./edges/CustomEdge";
-
 
 export default function App() {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);

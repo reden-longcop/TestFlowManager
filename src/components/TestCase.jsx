@@ -15,9 +15,33 @@
  * along with Test Flow Manager. If not, see <http://www.gnu.org/licenses/>.
 */
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import { toast } from "react-toastify";
 
 const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChange, onCheckboxChange, isChecked, onClick }, ref) => {
+  const runPythonScript = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/run-script', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ testCaseId: testCase.id }),
+      });
+
+      if (response.ok) {
+        toast.success('Python script executed successfully!', { autoClose: 1000 });
+      } else {
+        throw new Error('Failed to execute script');
+      }
+    } catch (error) {
+      console.error('Error running Python script:', error);
+      toast.error('Failed to execute Python script.', { autoClose: 1000 });
+    }
+  };
+
     return (
       <div
         className={`py-2 flex items-center border-gray-600 space-x-5 overflow-x-hidden mr-3`}
@@ -48,6 +72,7 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
             rows={testCase.status === "" ? 1 : ""}
           />
         </div>
+
         {testCase.status !== "" && (
           <select
             className={`p-1 cursor-pointer text-sm rounded focus:outline-none ${
@@ -68,7 +93,16 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
             <option className="bg-slate-200" value="notapplicable">NOT APPLICABLE</option>
           </select>
         )}
+        {testCase.status != "" && (
+          <button
+            className="automate p-2 rounded w-12 bg-[#3e3e3e] hover:bg-[#2980B9]"
+            onClick={runPythonScript}
+          >
+            <FontAwesomeIcon icon={faCirclePlay} size="lg" color="white" />
+          </button>
+        )}
       </div>
     );
 }));
+
 export default TestCase;

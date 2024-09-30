@@ -20,13 +20,14 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import cors from "cors";
+import { exec } from "child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 app.use(cors());
-app.use(express.json({ limit: "100mb" }));
-app.use(express.static("public"));
+app.use(express.json({ limit: "150mb" }));
+app.use(express.static(path.join(__dirname, "public")));
 
 const flowFilePath = path.join(__dirname, "public", "versions.json");
 if (!fs.existsSync(flowFilePath)) {
@@ -110,6 +111,33 @@ app.get("/flow/getVersions", (req, res) => {
     res.json({ versions: parsedVersions });
   });
 });
+
+app.post('/run-script', (req, res) => {
+  const { testCaseId } = req.body;
+
+  if (!testCaseId) {
+    return res.status(400).json({ message: 'Test case ID is required.' });
+  }
+
+  exec(`python run_automation.py ${testCaseId}`, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error executing script: ${error}`);
+      return res.status(500).json({ message: 'Failed to execute script.' });
+    }
+
+    console.log(`Script output: ${stdout}`);
+    if (stderr) {
+      console.error(`Script errors: ${stderr}`);
+    }
+
+    res.status(200).json({ message: 'Script executed successfully.' });
+  });
+});
+
+app.post('/test', (req, res) => {
+  res.send('POST request received');
+});
+
 
 app.listen(3000, () => {
   console.log("Server is running on http://localhost:3000");

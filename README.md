@@ -1,7 +1,7 @@
 <h1>Vite Project - Test Flow Manager</h1>
 
 <h2>Overview</h2>
-<p>This project is a web application built using Vite, React Flow, and TypeScript. It allows you to visualize and manage test scenarios and test cases using nodes and edges. The application is designed to help with the organization and documentation of test scenarios in a clear, visual format. This test flow focuses on the user's journey in navigating through the features and pages of a project</p>
+<p>This project is a web application built using Vite, React Flow, and Javascript. It allows you to visualize and manage test scenarios and test cases using nodes and edges. The application is designed to help with the organization and documentation of test scenarios in a clear, visual format. This test flow focuses on the user's journey in navigating through the features and pages of a project</p>
 
 <i>Note: This website still being developed and there's still a lot of issues with the project and functions. Feel free to message me If you have suggestions or comments! redenlongcop5@gmail.com</i>
 
@@ -12,7 +12,7 @@
 <h2>Features</h2>
 <ul>
     <li><strong>Dynamic Node Management:</strong> Easily add, connect, and manage nodes representing test scenarios.</li>
-    <li><strong>Connector Nodes::</strong> Create circular connector nodes that link different scenarios.</li>
+    <li><strong>Connector Nodes:</strong> Create circular connector nodes that link different scenarios.</li>
     <li><strong>Test Case Management:</strong> Add, edit, and delete test cases associated with each node.</li>
     <li><strong>Custom Node Types:</strong>  Utilize predefined node types and edges to represent specific test elements.</li>
     <li><strong>Local Save Functionality:</strong>  Utilize predefined node types and edges to represent specific test elements.</li>
