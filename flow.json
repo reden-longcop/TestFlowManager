@@ -3118,6 +3118,310 @@
                         "id": 1725270079648,
                         "content": "- chips is removed after clicking cancel button",
                         "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325515928,
+                        "content": " Verify player can place a bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725325517780,
+                        "content": "- Dragon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325520869,
+                        "content": "- Lucky",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325523070,
+                        "content": "- Phoenix",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325527886,
+                        "content": " Verify player can place a minimum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725325536553,
+                        "content": "- Dragon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325539015,
+                        "content": "- Lucky",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325541055,
+                        "content": "- Phoenix",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325544503,
+                        "content": " Verify player cannot place below minimum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725325550249,
+                        "content": "- Dragon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325552418,
+                        "content": "- Lucky",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325554014,
+                        "content": "- Phoenix",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325562791,
+                        "content": "  Verify player can place a maximum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725325568944,
+                        "content": "- Dragon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325571797,
+                        "content": "- Lucky",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325573751,
+                        "content": "- Phoenix",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325576937,
+                        "content": " Verify player cannot place a beyond maximum bet on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725325582997,
+                        "content": "- Dragon",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325601567,
+                        "content": "- Lucky",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325603920,
+                        "content": "- Phoenix",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325607450,
+                        "content": " Verify player can bet continuously on:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725325613660,
+                        "content": "- Dragon up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325616200,
+                        "content": "- Lucky up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325618353,
+                        "content": "- Phoenix up until maximum bet is reached",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325626388,
+                        "content": " Verify player can:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725325630450,
+                        "content": "- click confirm button after placing a bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325633503,
+                        "content": "- click cancel button after placing a bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325635490,
+                        "content": "- bet on 1 second remaining betting timer",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325637385,
+                        "content": "- bet all-in chips",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325639345,
+                        "content": "- place a bet starting from 20 seconds to 1 second",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325641373,
+                        "content": "- place a chip on betting area less than 100 ms\n   with a good internet connection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325643380,
+                        "content": "- place a chip on betting area less than 200 ms with a\n   fast 3G data connection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325653986,
+                        "content": "- place a chip on betting area less than 300 ms with a\n   slow 3G data connection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325657112,
+                        "content": "- not place a bet when betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325660666,
+                        "content": "- not place a bet on with insufficient balance",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325664040,
+                        "content": "- not confirm bets when betting timer is 0",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325668731,
+                        "content": "- see validation message \"Below Minimum Limit\" after\n   betting below minimum bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325673928,
+                        "content": "- see validation message \"Over Maximum Limit!\" after\n   betting beyond maximum bet",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325679950,
+                        "content": "- see the balance is not deducted after clicking cancel\n  button without confirmed bets",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325685418,
+                        "content": "- can place a chip and confirm one by one per bet area",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325689663,
+                        "content": "- place a chip with enough balance",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325704424,
+                        "content": " Verify button:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725325706375,
+                        "content": "- confirm is disabled after clicking cancel button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325719053,
+                        "content": "- confirm is enabled after clicking rebet button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325721285,
+                        "content": "- confirm is disabled after betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325723296,
+                        "content": "- confirm button is disabled with no bets placed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325725283,
+                        "content": "- confirm button is working and functional after betting all-in",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325727373,
+                        "content": "- cancel is enabled after clicking rebet button",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325729352,
+                        "content": "- cancel is disabled after betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325731945,
+                        "content": "- cancel button is disabled with no bets placed",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325734990,
+                        "content": "- rebet is disabled when placing a bet for the first time",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325736966,
+                        "content": "- rebet button is disabled without recent placed bets",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325738957,
+                        "content": "- rebet is disabled after betting timer is CLOSED",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325803681,
+                        "content": " Verify betting area:",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1725325809760,
+                        "content": "- placed chips should be the same amount or value as\n  the selected chips amount on the\n  chips selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325816714,
+                        "content": "- placed chips are removed after betting timer is CLOSED\n  and confirm button is not clicked",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325820101,
+                        "content": "- placed chips value is increasing when betting\n  continuously on the same bet area",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325823217,
+                        "content": "- placed chips color is the same as the selected chip on\n  the chip selection",
+                        "status": "notstarted"
+                    },
+                    {
+                        "id": 1725325827617,
+                        "content": "- chips is removed after clicking cancel button",
+                        "status": "notstarted"
                     }
                 ],
                 "color": "#1C1C1E"
@@ -3129,7 +3433,7 @@
                 "width": 150,
                 "height": 64
             },
-            "selected": false,
+            "selected": true,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -6082,13 +6386,13 @@
         }
     ],
     "viewport": {
-        "x": 135.86218315487395,
-        "y": 388.8717464782675,
-        "zoom": 0.8231032612693754
+        "x": 253.0137273304714,
+        "y": 370.41682977828947,
+        "zoom": 1.0510891579318455
     },
     "testCaseStats": {
-        "total": 915,
-        "notstarted": 915,
+        "total": 965,
+        "notstarted": 965,
         "passed": 0,
         "failed": 0,
         "blocked": 0,
