@@ -292,7 +292,7 @@ const Modal = ({
     <>
       {isOpen && (
         <div className="modal-overlay z-0 select-none">
-          <div className="modal-content bg-[#1C1C1E] flex flex-col max-h-[90vh] min-w-[800px] border-t-4"
+          <div className="modal-content bg-[#1C1C1E] flex flex-col max-h-[90vh] min-w-[70%] border-t-4"
             style={{borderColor: color}}
           >
             <span
@@ -354,12 +354,18 @@ const Modal = ({
               />
             </div>
 
-            <hr className="mb-4 mt-2 border-gray-600 border-1" />
+            <hr className="mt-2 border-gray-600 border-1" />
             {searchTerm && (
               <label className="text-gray-400 text-xs">
                 {filteredTestCases.length} test case{filteredTestCases.length > 1 ? 's' : ''} found
               </label>
             )}
+            <header className="test-header flex text-center text-white p-2 divide-x divide-gray-600 border-b border-gray-600">
+              <div className="w-[10%]">Test ID</div>
+              <div className="w-[60%]">Test Case</div>
+              <div className="w-[15%]">Status</div>
+              <div className="w-[12%] ml-auto">Automation</div>
+            </header>
             
             <div className="modal-body overflow-y-auto pb-[10px] divide-y divide-dashed">
             {filteredTestCases.map((testCase, index) => (

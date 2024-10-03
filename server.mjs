@@ -116,23 +116,35 @@ app.post('/run-script', (req, res) => {
   const { testCaseId } = req.body;
 
   if (!testCaseId) {
-    return res.status(400).json({ message: 'Test case ID is required.' });
+      return res.status(400).json({ message: 'Test case ID is required.' });
   }
 
+  // Execute the Python script
   exec(`python run_automation.py ${testCaseId}`, (error, stdout, stderr) => {
-    if (error) {
-      console.error(`Error executing script: ${error}`);
-      return res.status(500).json({ message: 'Failed to execute script.' });
-    }
+      if (error) {
+          console.error(`Error executing script: ${error.message}`);
+          return res.status(500).json({ message: 'Failed to execute script.' });
+      }
+      
+      console.log('eh');
+      console.log(`Script output: ${stdout}`);
 
-    console.log(`Script output: ${stdout}`);
-    if (stderr) {
-      console.error(`Script errors: ${stderr}`);
-    }
+      // Log the type of stdout
+      console.log(`Type of stdout: ${typeof stdout}`);
+      
+      var result = stdout; // Assuming stdout is correctly captured as a string
+      console.log(`Result: ${result}`);
 
-    res.status(200).json({ message: 'Script executed successfully.' });
+      if (stderr) {
+          console.error(`Script errors: ${stderr}`);
+      }
+
+      // Send the test result back to the client
+      res.status(200).json({ message: 'Script executed successfully.', result });
   });
 });
+
+
 
 app.post('/test', (req, res) => {
   res.send('POST request received');

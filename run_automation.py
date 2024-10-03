@@ -2,7 +2,7 @@ import subprocess
 import sys
 
 def run_automation(test_case_id):
-    command = f'cd C:\\Users\\ITA-40138\\Documents\\sanity-test && robot -d output -i {test_case_id} testsuites'
+    command = f'cd C:\\Users\\ITA-40138\\Documents\\robot-test-login && robot -d output -i {test_case_id} testsuites'
 
     subprocess.run(['cmd', '/c', command])
 
