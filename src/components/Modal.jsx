@@ -288,6 +288,47 @@ const Modal = ({
     }
   }, [borderColor]);
 
+  const runPythonScript = useCallback(async (id, status) => {
+    try {
+      const response = await fetch('http://localhost:3000/run-script', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ testCaseId: id }),
+      });
+  
+      const result = await response.json(); // Read the response as JSON
+  
+      if (response.ok && result.result != '') {
+        toast.success('Python script executed successfully!', { autoClose: 1000 });
+        const scriptOutput = result.result;
+  
+        const passMatch = scriptOutput.match(/(\| PASS \|)/);
+        const failMatch = scriptOutput.match(/(\| FAIL \|)/);
+        let updatedStatus;
+
+        if (passMatch) {
+          updatedStatus = 'passed';
+        } else if (failMatch) {
+          updatedStatus = 'failed';
+        } else {
+          updatedStatus = status;
+        }
+      
+        handleStatusChange(id, updatedStatus);
+
+      } else if (result.result == ''){
+        toast.error(`[ ERROR ] Suite 'Testsuites' contains no tests or tasks matching tag ${id}.`, { autoClose: 1000 })
+      }else {
+        throw new Error('Failed to execute script: ' + result.message);
+      }
+    } catch (error) {
+      console.error('Error running Python script:', error);
+      toast.error('Failed to execute Python script.', { autoClose: 1000 });
+    }
+  }, [handleStatusChange, handleSave]);
+
   return (
     <>
       {isOpen && (
@@ -378,6 +419,7 @@ const Modal = ({
                 isChecked={selectedTestCases.includes(testCase.id)}
                 ref={(el) => textareasRef.current[testCases.findIndex(tc => tc.id === testCase.id)] = el}
                 onClick={() => handleTestCaseClick(testCases.findIndex(tc => tc.id === testCase.id))}
+                runAutomation={() => runPythonScript(testCase.id, testCase.status)}
               />
             ))}
             </div>

@@ -20,7 +20,7 @@ import React, { useState } from "react";
 import { faCirclePlay, faCopy } from "@fortawesome/free-solid-svg-icons";
 import { toast } from "react-toastify";
 
-const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChange, onCheckboxChange, isChecked, onClick }, ref) => {
+const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChange, onCheckboxChange, isChecked, onClick, runAutomation}, ref) => {
   const [isCopied, setIsCopied] = useState(false);
   const [testResult, setTestResult] = useState(null);
 
@@ -32,51 +32,7 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
     }).catch(() => {
       toast.error("Failed to copy ID.", {autoClose: 1000 });
     });
-  };
-
-  const runPythonScript = async () => {
-    try {
-      const response = await fetch('http://localhost:3000/run-script', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ testCaseId: testCase.id }),
-      });
-  
-      const result = await response.json(); // Read the response as JSON
-  
-      if (response.ok && result.result != '') {
-        toast.success('Python script executed successfully!', { autoClose: 1000 });
-        const scriptOutput = result.result;
-
-        console.log(`Script Result: ${scriptOutput}`)
-        console.log(`Error?: ${result.Error}`)
-  
-        const passMatch = scriptOutput.match(/(\| PASS \|)/);
-        const failMatch = scriptOutput.match(/(\| FAIL \|)/);
-        let updatedStatus;
-
-        if (passMatch) {
-          updatedStatus = 'passed';
-        } else if (failMatch) {
-          updatedStatus = 'failed';
-        } else {
-          updatedStatus = testCase.status;
-        }
-  
-        onStatusChange(updatedStatus);
-      } else if (result.result == ''){
-        toast.error(`[ ERROR ] Suite 'Testsuites' contains no tests or tasks matching tag ${testCase.id}.`, { autoClose: 1000 })
-      }else {
-        throw new Error('Failed to execute script: ' + result.message);
-      }
-    } catch (error) {
-      console.error('Error running Python script:', error);
-      toast.error('Failed to execute Python script.', { autoClose: 1000 });
-    }
-  };
-  
+  };  
 
     return (
       <div
@@ -127,9 +83,9 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
         <div className="status-con w-[20%] flex items-center justify-center">
           {testCase.status !== "" && (
             <select
-              className={`p-1 cursor-pointer text-sm rounded focus:outline-none ${
+              className={`p-1 cursor-pointer text-sm rounded focus:outline-none font-bold ${
                 testCase.status === "notstarted" ? "bg-yellow-200"
-                : testCase.status === "passed" ? "bg-green-200"
+                : testCase.status === "passed" ? "bg-[#A5DD9B]"
                 : testCase.status === "failed" ? "bg-rose-300"
                 : testCase.status === "blocked" ? "bg-indigo-200"
                 : testCase.status === "notapplicable" ? "bg-gray-300"
@@ -138,11 +94,11 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
               value={testCase.status}
               onChange={(e) => onStatusChange(e.target.value)}
             >
-              <option className="bg-slate-200" value="notstarted">NOT STARTED</option>
-              <option className="bg-slate-200" value="passed">PASSED</option>
-              <option className="bg-slate-200" value="failed">FAILED</option>
-              <option className="bg-slate-200" value="blocked">BLOCKED</option>
-              <option className="bg-slate-200" value="notapplicable">NOT APPLICABLE</option>
+              <option className="bg-slate-200 font-bold" value="notstarted">NOT STARTED</option>
+              <option className="bg-slate-200 font-bold" value="passed">PASSED</option>
+              <option className="bg-slate-200 font-bold" value="failed">FAILED</option>
+              <option className="bg-slate-200 font-bold" value="blocked">BLOCKED</option>
+              <option className="bg-slate-200 font-bold" value="notapplicable">NOT APPLICABLE</option>
             </select>
           )}
         </div>
@@ -151,7 +107,7 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
           {testCase.status != "" && (
             <button
               className="automate p-2 rounded w-12 bg-[#3e3e3e] hover:bg-[#2980B9] "
-              onClick={runPythonScript}
+              onClick={runAutomation}
             >
               <FontAwesomeIcon icon={faCirclePlay} size="lg" color="white" />
             </button>

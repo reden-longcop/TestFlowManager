@@ -18,7 +18,7 @@
                     {
                         "id": 1727863167021,
                         "content": "Verify that entering a registered username and password should redirect the user to the Product Page",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727863195423,
@@ -29,22 +29,22 @@
                     {
                         "id": 1727863204556,
                         "content": "Verify that entering a unregistered username with registered password should prompt an error",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727863246041,
                         "content": "Verify that entering a registered username with unregistered password should prompt an error",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727863267274,
                         "content": "Verify that entering an empty username value should prompt an error",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727863300910,
                         "content": "Verify that entering an empty password value should prompt an error",
-                        "status": "notstarted"
+                        "status": "passed"
                     }
                 ],
                 "color": "#1C1C1E"
@@ -80,22 +80,22 @@
                     {
                         "id": 1727863394254,
                         "content": "Verify that upon landing on the Product Page, the default product display should be sorted by Name from A to Z",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727863448336,
                         "content": "Verify that the products should be correctly sorted descendingly when the user modify the sort function by Name on Descending Order",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727863533523,
                         "content": "Verify that the products should be correctly sorted when the user modify the sort function by Price from low to high",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727863634391,
                         "content": "Verify that the products should be correctly sorted when the user modify the sort function by Price from high to low",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727863845493,
@@ -106,12 +106,12 @@
                     {
                         "id": 1727863860935,
                         "content": "Verify that when the user add a product, the button's text should be changed to \"Remove\"",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727863897914,
-                        "content": "Verify that when the user add a product, the shopping cart should display a number on the upper right corder of the cart icon",
-                        "status": "notstarted"
+                        "content": "Verify that when the user add a product, the shopping cart should display a number on the upper right corner of the cart icon",
+                        "status": "passed"
                     },
                     {
                         "id": 1727863970854,
@@ -122,12 +122,12 @@
                     {
                         "id": 1727863976927,
                         "content": "Verify that when the user add a product, then clicked the remove again, the cart's number should be removed",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864014637,
                         "content": "Verify that when the user clicked the remove button, the button's text should be changed to \"Add to cart\"",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864156015,
@@ -138,12 +138,12 @@
                     {
                         "id": 1727864184534,
                         "content": "Verify that when the user clicked the product, the user should be redirected to the View Product Page",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864215514,
                         "content": "Verify that when the user clicked the cart icon, the user should be redirected to the Cart Page",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864252804,
@@ -195,6 +195,17 @@
                         "id": 1727864974837,
                         "content": "Verify that the product's label should match with the product's image",
                         "status": "notstarted"
+                    },
+                    {
+                        "id": 1728355050836,
+                        "content": "BADGE NUMBER",
+                        "status": "",
+                        "isBold": true
+                    },
+                    {
+                        "id": 1728355056490,
+                        "content": "Verify that when adding two products and removing one product, the badge number should update accordingly",
+                        "status": "passed"
                     }
                 ],
                 "color": "#1C1C1E"
@@ -206,7 +217,7 @@
                 "width": 115,
                 "height": 32
             },
-            "selected": false,
+            "selected": true,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -470,14 +481,14 @@
         }
     ],
     "viewport": {
-        "x": 450,
-        "y": 268,
-        "zoom": 2
+        "x": 281.6435331230285,
+        "y": 306.71479782047606,
+        "zoom": 1.6128477201032403
     },
     "testCaseStats": {
-        "total": 48,
-        "notstarted": 48,
-        "passed": 0,
+        "total": 49,
+        "notstarted": 33,
+        "passed": 16,
         "failed": 0,
         "blocked": 0,
         "notapplicable": 0

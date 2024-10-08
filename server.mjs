@@ -144,12 +144,9 @@ app.post('/run-script', (req, res) => {
   });
 });
 
-
-
 app.post('/test', (req, res) => {
   res.send('POST request received');
 });
-
 
 app.listen(3000, () => {
   console.log("Server is running on http://localhost:3000");
