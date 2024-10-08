@@ -9,6 +9,13 @@
 
 <pre><code id='code-block'>https://code-me-n0t.github.io/TestFlowManager/</code></pre>z
 
+<h2>New Update/s:</h2>
+<span><strong>Test Automation:</strong> Added a new feature where you can integrate your robotframework automation script on each test cases.<br><br>
+    This works by using the unique ID of the testcase as a <i>tag</i> to run your robotframework automation. You can clone this sample test script: <a href='https://github.com/Code-Me-N0t/Test-Login'>Sample Robotframework Test</a> or you can create a seperate project on your local computer.
+    <br><br>
+    <p><i>Note: Make sure that you modify the <em>run_automation.py</em> with your robot's project name along with its directory.</i></p>
+</span>
+
 <h2>Features</h2>
 <ul>
     <li><strong>Dynamic Node Management:</strong> Easily add, connect, and manage nodes representing test scenarios.</li>
