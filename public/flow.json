@@ -148,42 +148,42 @@
                     {
                         "id": 1727864252804,
                         "content": "Verify that when the user clicks the sort dropdown, it should display the sort options",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864286008,
                         "content": "Verify that when the user clicked the menu icon, a side navigation bar should display",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864375142,
                         "content": "Verify that when the user clicked the menu icon, \"All Items\" navigation tab should display",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864425425,
                         "content": "Verify that when the user clicked the menu icon, \"About\" navigation tab should display",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864432640,
                         "content": "Verify that when the user clicked the menu icon, \"Logout\" navigation tab should display",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864441733,
                         "content": "Verify that when the user clicked the menu icon, \"Reset App State\" navigation tab should display",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864456775,
                         "content": "Verify than when the user clicked the about tab, the user should be redirected to the About Page",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864498189,
                         "content": "Verify that when the user clicked the logout button, the user should be redirected to the Login Page",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727864965536,
@@ -194,7 +194,7 @@
                     {
                         "id": 1727864974837,
                         "content": "Verify that the product's label should match with the product's image",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1728355050836,
@@ -204,7 +204,12 @@
                     },
                     {
                         "id": 1728355056490,
-                        "content": "Verify that when adding two products and removing one product, the badge number should update accordingly",
+                        "content": "Verify that when adding two products and removing one product, the badge number should update correctly",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728367884314,
+                        "content": "Verify that when adding five products, and removing two products, the badge number should update correctly",
                         "status": "passed"
                     }
                 ],
@@ -481,14 +486,14 @@
         }
     ],
     "viewport": {
-        "x": 281.6435331230285,
-        "y": 306.71479782047606,
-        "zoom": 1.6128477201032403
+        "x": 437.5,
+        "y": 255,
+        "zoom": 2
     },
     "testCaseStats": {
-        "total": 49,
-        "notstarted": 33,
-        "passed": 16,
+        "total": 50,
+        "notstarted": 24,
+        "passed": 26,
         "failed": 0,
         "blocked": 0,
         "notapplicable": 0
