@@ -1,7 +1,7 @@
 {
     "versions": [
         {
-            "timestamp": "2024-10-09T01:32:54.626Z",
+            "timestamp": "2024-10-09T08:09:11.645Z",
             "flowData": {
                 "nodes": [
                     {
@@ -49,6 +49,11 @@
                                     "id": 1727863300910,
                                     "content": "Verify that entering an empty password value should prompt an error",
                                     "status": "passed"
+                                },
+                                {
+                                    "id": 1728461337546,
+                                    "content": "",
+                                    "status": "notstarted"
                                 }
                             ],
                             "color": "#1C1C1E"
@@ -60,7 +65,7 @@
                             "width": 93,
                             "height": 32
                         },
-                        "selected": false,
+                        "selected": true,
                         "style": {
                             "backgroundColor": "#1C1C1E"
                         },
@@ -162,32 +167,32 @@
                                 {
                                     "id": 1727864375142,
                                     "content": "Verify that when the user clicked the menu icon, \"All Items\" navigation tab should display",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864425425,
                                     "content": "Verify that when the user clicked the menu icon, \"About\" navigation tab should display",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864432640,
                                     "content": "Verify that when the user clicked the menu icon, \"Logout\" navigation tab should display",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864441733,
                                     "content": "Verify that when the user clicked the menu icon, \"Reset App State\" navigation tab should display",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864456775,
                                     "content": "Verify than when the user clicked the about tab, the user should be redirected to the About Page",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864498189,
                                     "content": "Verify that when the user clicked the logout button, the user should be redirected to the Login Page",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864965536,
@@ -198,7 +203,7 @@
                                 {
                                     "id": 1727864974837,
                                     "content": "Verify that the product's label should match with the product's image",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1728355050836,
@@ -226,7 +231,511 @@
                             "width": 115,
                             "height": 32
                         },
+                        "selected": false,
+                        "dragging": false,
+                        "style": {
+                            "backgroundColor": "#1C1C1E"
+                        }
+                    },
+                    {
+                        "id": "513f8155-937d-4183-b73d-4fd90b1a2edc",
+                        "position": {
+                            "x": 187,
+                            "y": 44
+                        },
+                        "data": {
+                            "label": "CART PAGE",
+                            "testCases": [
+                                {
+                                    "id": 1727865195624,
+                                    "content": "Verify that when the user add a product to the cart then navigates to the Cart Page, the product should be displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865280336,
+                                    "content": "Verify that when the user clicks the checkout button, the page should be navigated to the Checkout Page",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865323037,
+                                    "content": "Verify that when the user clicks the cart icon, the user should be navigated to the Cart Page",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865354177,
+                                    "content": "Verify that when the user clicked the \"Continue Shopping\" icon, the user should be back to the Product Page",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865393775,
+                                    "content": "Verify that when the user clicks the \"Continue Shopping\", the added product should still be in the cart",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865424706,
+                                    "content": "Verify that when the user clicks the \"All Items\", the user page should be redirected to the Product Page",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865511602,
+                                    "content": "Verify that when the user added a product and navigates to the Cart Page, the product displayed should have Quantity displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865540066,
+                                    "content": "Verify that when the user added a product and navigates to the Cart Page, The product displayed should have Price displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865580993,
+                                    "content": "Verify that when the user added a product and navigates to the Cart Page, The product displayed should have Product Name displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865594900,
+                                    "content": "Verify that when the user added a product and navigates to the Cart Page, The product displayed should have Product Description displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865606124,
+                                    "content": "Verify that the product should removed when the user clicked the remove button",
+                                    "status": "notstarted"
+                                }
+                            ],
+                            "color": "#1C1C1E"
+                        },
+                        "sourcePosition": "right",
+                        "targetPosition": "left",
+                        "type": "customNode",
+                        "measured": {
+                            "width": 85,
+                            "height": 32
+                        },
+                        "selected": false,
+                        "dragging": false,
+                        "style": {
+                            "backgroundColor": "#1C1C1E"
+                        }
+                    },
+                    {
+                        "id": "158f052e-8b7b-41d7-b12e-eebda6b09926",
+                        "position": {
+                            "x": 185.5,
+                            "y": 117
+                        },
+                        "data": {
+                            "label": "VIEW PRODUCT PAGE",
+                            "testCases": [
+                                {
+                                    "id": 1727865703667,
+                                    "content": "Verify that the clicked product's image should match with the image clicked on the Product Page",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865753676,
+                                    "content": "Verify that when the user clicks a product, the page should be navigated to the Product View Page",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865785934,
+                                    "content": "Verify that when the user navigates to the Product View Page, the Product Name should be displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865810678,
+                                    "content": "Verify that when the user navigates to the Product View Page, the Product Description should be displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865817955,
+                                    "content": "Verify that when the user navigates to the Product View Page, the Product Price should be displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865830040,
+                                    "content": "Verify that when the user navigates to the Product View Page, the button Add to cart/remove should be displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865850332,
+                                    "content": "Verify that when the user clicked the \"Back to products\", the page should be navigated to the Product Page",
+                                    "status": "notstarted"
+                                }
+                            ],
+                            "color": "#1C1C1E"
+                        },
+                        "sourcePosition": "right",
+                        "targetPosition": "left",
+                        "type": "customNode",
+                        "measured": {
+                            "width": 150,
+                            "height": 48
+                        },
+                        "selected": false,
+                        "style": {
+                            "backgroundColor": "#1C1C1E"
+                        },
+                        "dragging": false
+                    },
+                    {
+                        "id": "c0014268-e67e-49bf-b651-965a8e9c6a34",
+                        "position": {
+                            "x": 318,
+                            "y": 36
+                        },
+                        "data": {
+                            "label": "CHECKOUT: INFORMATION PAGE",
+                            "testCases": [
+                                {
+                                    "id": 1727865907818,
+                                    "content": "Verify that when the user clicks the checkout button in the Cart Page, the page should be navigated to the Checkout Page",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865948362,
+                                    "content": "Verify that when the user navigates to the checkout page, the First Name input should be displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865981074,
+                                    "content": "Verify that when the user navigates to the checkout page, the Last Name input should be displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727865985348,
+                                    "content": "Verify that when the user navigates to the checkout page, the Zip/Postal Code input should be displayed",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727866000019,
+                                    "content": "Verify that when the user clicks the Continue button with empty values should prompt an error",
+                                    "status": "notstarted"
+                                },
+                                {
+                                    "id": 1727866029129,
+                                    "content": "Verify that when the user clicks the Continue button with valid inputs, the user should be navigated to the Checkout Overview Page",
+                                    "status": "notstarted"
+                                }
+                            ],
+                            "color": "#1C1C1E"
+                        },
+                        "sourcePosition": "right",
+                        "targetPosition": "left",
+                        "type": "customNode",
+                        "measured": {
+                            "width": 150,
+                            "height": 48
+                        },
+                        "selected": false,
+                        "style": {
+                            "backgroundColor": "#1C1C1E"
+                        },
+                        "dragging": false
+                    },
+                    {
+                        "id": "d894731f-7ea3-4bbd-bedd-4309a3c8eb8d",
+                        "position": {
+                            "x": 507.5,
+                            "y": 35.5
+                        },
+                        "data": {
+                            "label": "CHECKOUT: OVERVIEW PAGE",
+                            "testCases": [],
+                            "color": "#1C1C1E"
+                        },
+                        "sourcePosition": "right",
+                        "targetPosition": "left",
+                        "type": "customNode",
+                        "measured": {
+                            "width": 150,
+                            "height": 48
+                        },
+                        "selected": false,
+                        "dragging": false,
+                        "style": {
+                            "backgroundColor": "#1C1C1E"
+                        }
+                    }
+                ],
+                "edges": [
+                    {
+                        "source": "b9856d96-44f4-48db-a7c4-b530bfa59b0f",
+                        "target": "4ebd4319-c11d-42c5-ae15-9e939cac2fa0",
+                        "animated": true,
+                        "type": "customEdge",
+                        "id": "xy-edge__b9856d96-44f4-48db-a7c4-b530bfa59b0f-4ebd4319-c11d-42c5-ae15-9e939cac2fa0"
+                    },
+                    {
+                        "source": "4ebd4319-c11d-42c5-ae15-9e939cac2fa0",
+                        "target": "513f8155-937d-4183-b73d-4fd90b1a2edc",
+                        "animated": true,
+                        "type": "customEdge",
+                        "id": "xy-edge__4ebd4319-c11d-42c5-ae15-9e939cac2fa0-513f8155-937d-4183-b73d-4fd90b1a2edc"
+                    },
+                    {
+                        "source": "4ebd4319-c11d-42c5-ae15-9e939cac2fa0",
+                        "target": "158f052e-8b7b-41d7-b12e-eebda6b09926",
+                        "animated": true,
+                        "type": "customEdge",
+                        "id": "xy-edge__4ebd4319-c11d-42c5-ae15-9e939cac2fa0-158f052e-8b7b-41d7-b12e-eebda6b09926"
+                    },
+                    {
+                        "source": "513f8155-937d-4183-b73d-4fd90b1a2edc",
+                        "target": "c0014268-e67e-49bf-b651-965a8e9c6a34",
+                        "animated": true,
+                        "type": "customEdge",
+                        "id": "xy-edge__513f8155-937d-4183-b73d-4fd90b1a2edc-c0014268-e67e-49bf-b651-965a8e9c6a34"
+                    },
+                    {
+                        "source": "c0014268-e67e-49bf-b651-965a8e9c6a34",
+                        "target": "d894731f-7ea3-4bbd-bedd-4309a3c8eb8d",
+                        "animated": true,
+                        "type": "customEdge",
+                        "id": "xy-edge__c0014268-e67e-49bf-b651-965a8e9c6a34-d894731f-7ea3-4bbd-bedd-4309a3c8eb8d"
+                    }
+                ],
+                "viewport": {
+                    "x": 281.6435331230285,
+                    "y": 293.81201605965015,
+                    "zoom": 1.6128477201032403
+                },
+                "testCaseStats": {
+                    "total": 51,
+                    "notstarted": 25,
+                    "passed": 26,
+                    "failed": 0,
+                    "blocked": 0,
+                    "notapplicable": 0
+                }
+            }
+        },
+        {
+            "timestamp": "2024-10-09T08:10:03.564Z",
+            "flowData": {
+                "nodes": [
+                    {
+                        "id": "b9856d96-44f4-48db-a7c4-b530bfa59b0f",
+                        "position": {
+                            "x": -135,
+                            "y": 83.5
+                        },
+                        "data": {
+                            "label": "LOGIN PAGE",
+                            "testCases": [
+                                {
+                                    "id": 1727863156138,
+                                    "content": "POSITIVE LOGIN TEST",
+                                    "status": "",
+                                    "isBold": true
+                                },
+                                {
+                                    "id": 1727863167021,
+                                    "content": "Verify that entering a registered username and password should redirect the user to the Product Page",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727863195423,
+                                    "content": "NEGATIVE LOGIN TEST",
+                                    "status": "",
+                                    "isBold": true
+                                },
+                                {
+                                    "id": 1727863204556,
+                                    "content": "Verify that entering a unregistered username with registered password should prompt an error",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727863246041,
+                                    "content": "Verify that entering a registered username with unregistered password should prompt an error",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727863267274,
+                                    "content": "Verify that entering an empty username value should prompt an error",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727863300910,
+                                    "content": "Verify that entering an empty password value should prompt an error",
+                                    "status": "passed"
+                                }
+                            ],
+                            "color": "#1C1C1E"
+                        },
+                        "sourcePosition": "right",
+                        "targetPosition": "left",
+                        "type": "customNode",
+                        "measured": {
+                            "width": 93,
+                            "height": 32
+                        },
                         "selected": true,
+                        "style": {
+                            "backgroundColor": "#1C1C1E"
+                        },
+                        "dragging": false
+                    },
+                    {
+                        "id": "4ebd4319-c11d-42c5-ae15-9e939cac2fa0",
+                        "position": {
+                            "x": 8,
+                            "y": 84.5
+                        },
+                        "data": {
+                            "label": "PRODUCT PAGE",
+                            "testCases": [
+                                {
+                                    "id": 1727863388715,
+                                    "content": "SORT PRODUCTS",
+                                    "status": "",
+                                    "isBold": true
+                                },
+                                {
+                                    "id": 1727863394254,
+                                    "content": "Verify that upon landing on the Product Page, the default product display should be sorted by Name from A to Z",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727863448336,
+                                    "content": "Verify that the products should be correctly sorted descendingly when the user modify the sort function by Name on Descending Order",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727863533523,
+                                    "content": "Verify that the products should be correctly sorted when the user modify the sort function by Price from low to high",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727863634391,
+                                    "content": "Verify that the products should be correctly sorted when the user modify the sort function by Price from high to low",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727863845493,
+                                    "content": "ADDING PRODUCTS TO CART",
+                                    "status": "",
+                                    "isBold": true
+                                },
+                                {
+                                    "id": 1727863860935,
+                                    "content": "Verify that when the user add a product, the button's text should be changed to \"Remove\"",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727863897914,
+                                    "content": "Verify that when the user add a product, the shopping cart should display a number on the upper right corner of the cart icon",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727863970854,
+                                    "content": "REMOVING PRODUCTS TO CART",
+                                    "status": "",
+                                    "isBold": true
+                                },
+                                {
+                                    "id": 1727863976927,
+                                    "content": "Verify that when the user add a product, then clicked the remove again, the cart's number should be removed",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864014637,
+                                    "content": "Verify that when the user clicked the remove button, the button's text should be changed to \"Add to cart\"",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864156015,
+                                    "content": "NAVIGATION",
+                                    "status": "",
+                                    "isBold": true
+                                },
+                                {
+                                    "id": 1727864184534,
+                                    "content": "Verify that when the user clicked the product, the user should be redirected to the View Product Page",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864215514,
+                                    "content": "Verify that when the user clicked the cart icon, the user should be redirected to the Cart Page",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864252804,
+                                    "content": "Verify that when the user clicks the sort dropdown, it should display the sort options",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864286008,
+                                    "content": "Verify that when the user clicked the menu icon, a side navigation bar should display",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864375142,
+                                    "content": "Verify that when the user clicked the menu icon, \"All Items\" navigation tab should display",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864425425,
+                                    "content": "Verify that when the user clicked the menu icon, \"About\" navigation tab should display",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864432640,
+                                    "content": "Verify that when the user clicked the menu icon, \"Logout\" navigation tab should display",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864441733,
+                                    "content": "Verify that when the user clicked the menu icon, \"Reset App State\" navigation tab should display",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864456775,
+                                    "content": "Verify than when the user clicked the about tab, the user should be redirected to the About Page",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864498189,
+                                    "content": "Verify that when the user clicked the logout button, the user should be redirected to the Login Page",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1727864965536,
+                                    "content": "VALIDATE PRODUCT",
+                                    "status": "",
+                                    "isBold": true
+                                },
+                                {
+                                    "id": 1727864974837,
+                                    "content": "Verify that the product's label should match with the product's image",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1728355050836,
+                                    "content": "BADGE NUMBER",
+                                    "status": "",
+                                    "isBold": true
+                                },
+                                {
+                                    "id": 1728355056490,
+                                    "content": "Verify that when adding two products and removing one product, the badge number should update correctly",
+                                    "status": "passed"
+                                },
+                                {
+                                    "id": 1728367884314,
+                                    "content": "Verify that when adding five products, and removing two products, the badge number should update correctly",
+                                    "status": "passed"
+                                }
+                            ],
+                            "color": "#1C1C1E"
+                        },
+                        "sourcePosition": "right",
+                        "targetPosition": "left",
+                        "type": "customNode",
+                        "measured": {
+                            "width": 115,
+                            "height": 32
+                        },
+                        "selected": false,
                         "dragging": false,
                         "style": {
                             "backgroundColor": "#1C1C1E"
@@ -496,8 +1005,8 @@
                 },
                 "testCaseStats": {
                     "total": 50,
-                    "notstarted": 31,
-                    "passed": 19,
+                    "notstarted": 24,
+                    "passed": 26,
                     "failed": 0,
                     "blocked": 0,
                     "notapplicable": 0
@@ -505,7 +1014,7 @@
             }
         },
         {
-            "timestamp": "2024-10-09T01:43:42.231Z",
+            "timestamp": "2024-10-09T08:12:58.359Z",
             "flowData": {
                 "nodes": [
                     {
@@ -564,7 +1073,7 @@
                             "width": 93,
                             "height": 32
                         },
-                        "selected": false,
+                        "selected": true,
                         "style": {
                             "backgroundColor": "#1C1C1E"
                         },
@@ -666,32 +1175,32 @@
                                 {
                                     "id": 1727864375142,
                                     "content": "Verify that when the user clicked the menu icon, \"All Items\" navigation tab should display",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864425425,
                                     "content": "Verify that when the user clicked the menu icon, \"About\" navigation tab should display",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864432640,
                                     "content": "Verify that when the user clicked the menu icon, \"Logout\" navigation tab should display",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864441733,
                                     "content": "Verify that when the user clicked the menu icon, \"Reset App State\" navigation tab should display",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864456775,
                                     "content": "Verify than when the user clicked the about tab, the user should be redirected to the About Page",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864498189,
                                     "content": "Verify that when the user clicked the logout button, the user should be redirected to the Login Page",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1727864965536,
@@ -702,7 +1211,7 @@
                                 {
                                     "id": 1727864974837,
                                     "content": "Verify that the product's label should match with the product's image",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1728355050836,
@@ -730,7 +1239,7 @@
                             "width": 115,
                             "height": 32
                         },
-                        "selected": true,
+                        "selected": false,
                         "dragging": false,
                         "style": {
                             "backgroundColor": "#1C1C1E"
@@ -1000,8 +1509,8 @@
                 },
                 "testCaseStats": {
                     "total": 50,
-                    "notstarted": 31,
-                    "passed": 19,
+                    "notstarted": 24,
+                    "passed": 26,
                     "failed": 0,
                     "blocked": 0,
                     "notapplicable": 0
@@ -1009,7 +1518,7 @@
             }
         },
         {
-            "timestamp": "2024-10-09T02:13:15.959Z",
+            "timestamp": "2024-10-09T08:13:47.479Z",
             "flowData": {
                 "nodes": [
                     {
@@ -1068,7 +1577,7 @@
                             "width": 93,
                             "height": 32
                         },
-                        "selected": false,
+                        "selected": true,
                         "style": {
                             "backgroundColor": "#1C1C1E"
                         },
@@ -1206,7 +1715,7 @@
                                 {
                                     "id": 1727864974837,
                                     "content": "Verify that the product's label should match with the product's image",
-                                    "status": "notstarted"
+                                    "status": "passed"
                                 },
                                 {
                                     "id": 1728355050836,
@@ -1234,511 +1743,7 @@
                             "width": 115,
                             "height": 32
                         },
-                        "selected": true,
-                        "dragging": false,
-                        "style": {
-                            "backgroundColor": "#1C1C1E"
-                        }
-                    },
-                    {
-                        "id": "513f8155-937d-4183-b73d-4fd90b1a2edc",
-                        "position": {
-                            "x": 187,
-                            "y": 44
-                        },
-                        "data": {
-                            "label": "CART PAGE",
-                            "testCases": [
-                                {
-                                    "id": 1727865195624,
-                                    "content": "Verify that when the user add a product to the cart then navigates to the Cart Page, the product should be displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865280336,
-                                    "content": "Verify that when the user clicks the checkout button, the page should be navigated to the Checkout Page",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865323037,
-                                    "content": "Verify that when the user clicks the cart icon, the user should be navigated to the Cart Page",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865354177,
-                                    "content": "Verify that when the user clicked the \"Continue Shopping\" icon, the user should be back to the Product Page",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865393775,
-                                    "content": "Verify that when the user clicks the \"Continue Shopping\", the added product should still be in the cart",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865424706,
-                                    "content": "Verify that when the user clicks the \"All Items\", the user page should be redirected to the Product Page",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865511602,
-                                    "content": "Verify that when the user added a product and navigates to the Cart Page, the product displayed should have Quantity displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865540066,
-                                    "content": "Verify that when the user added a product and navigates to the Cart Page, The product displayed should have Price displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865580993,
-                                    "content": "Verify that when the user added a product and navigates to the Cart Page, The product displayed should have Product Name displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865594900,
-                                    "content": "Verify that when the user added a product and navigates to the Cart Page, The product displayed should have Product Description displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865606124,
-                                    "content": "Verify that the product should removed when the user clicked the remove button",
-                                    "status": "notstarted"
-                                }
-                            ],
-                            "color": "#1C1C1E"
-                        },
-                        "sourcePosition": "right",
-                        "targetPosition": "left",
-                        "type": "customNode",
-                        "measured": {
-                            "width": 85,
-                            "height": 32
-                        },
                         "selected": false,
-                        "dragging": false,
-                        "style": {
-                            "backgroundColor": "#1C1C1E"
-                        }
-                    },
-                    {
-                        "id": "158f052e-8b7b-41d7-b12e-eebda6b09926",
-                        "position": {
-                            "x": 185.5,
-                            "y": 117
-                        },
-                        "data": {
-                            "label": "VIEW PRODUCT PAGE",
-                            "testCases": [
-                                {
-                                    "id": 1727865703667,
-                                    "content": "Verify that the clicked product's image should match with the image clicked on the Product Page",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865753676,
-                                    "content": "Verify that when the user clicks a product, the page should be navigated to the Product View Page",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865785934,
-                                    "content": "Verify that when the user navigates to the Product View Page, the Product Name should be displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865810678,
-                                    "content": "Verify that when the user navigates to the Product View Page, the Product Description should be displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865817955,
-                                    "content": "Verify that when the user navigates to the Product View Page, the Product Price should be displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865830040,
-                                    "content": "Verify that when the user navigates to the Product View Page, the button Add to cart/remove should be displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865850332,
-                                    "content": "Verify that when the user clicked the \"Back to products\", the page should be navigated to the Product Page",
-                                    "status": "notstarted"
-                                }
-                            ],
-                            "color": "#1C1C1E"
-                        },
-                        "sourcePosition": "right",
-                        "targetPosition": "left",
-                        "type": "customNode",
-                        "measured": {
-                            "width": 150,
-                            "height": 48
-                        },
-                        "selected": false,
-                        "style": {
-                            "backgroundColor": "#1C1C1E"
-                        },
-                        "dragging": false
-                    },
-                    {
-                        "id": "c0014268-e67e-49bf-b651-965a8e9c6a34",
-                        "position": {
-                            "x": 318,
-                            "y": 36
-                        },
-                        "data": {
-                            "label": "CHECKOUT: INFORMATION PAGE",
-                            "testCases": [
-                                {
-                                    "id": 1727865907818,
-                                    "content": "Verify that when the user clicks the checkout button in the Cart Page, the page should be navigated to the Checkout Page",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865948362,
-                                    "content": "Verify that when the user navigates to the checkout page, the First Name input should be displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865981074,
-                                    "content": "Verify that when the user navigates to the checkout page, the Last Name input should be displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727865985348,
-                                    "content": "Verify that when the user navigates to the checkout page, the Zip/Postal Code input should be displayed",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727866000019,
-                                    "content": "Verify that when the user clicks the Continue button with empty values should prompt an error",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1727866029129,
-                                    "content": "Verify that when the user clicks the Continue button with valid inputs, the user should be navigated to the Checkout Overview Page",
-                                    "status": "notstarted"
-                                }
-                            ],
-                            "color": "#1C1C1E"
-                        },
-                        "sourcePosition": "right",
-                        "targetPosition": "left",
-                        "type": "customNode",
-                        "measured": {
-                            "width": 150,
-                            "height": 48
-                        },
-                        "selected": false,
-                        "style": {
-                            "backgroundColor": "#1C1C1E"
-                        },
-                        "dragging": false
-                    },
-                    {
-                        "id": "d894731f-7ea3-4bbd-bedd-4309a3c8eb8d",
-                        "position": {
-                            "x": 507.5,
-                            "y": 35.5
-                        },
-                        "data": {
-                            "label": "CHECKOUT: OVERVIEW PAGE",
-                            "testCases": [],
-                            "color": "#1C1C1E"
-                        },
-                        "sourcePosition": "right",
-                        "targetPosition": "left",
-                        "type": "customNode",
-                        "measured": {
-                            "width": 150,
-                            "height": 48
-                        },
-                        "selected": false,
-                        "dragging": false,
-                        "style": {
-                            "backgroundColor": "#1C1C1E"
-                        }
-                    }
-                ],
-                "edges": [
-                    {
-                        "source": "b9856d96-44f4-48db-a7c4-b530bfa59b0f",
-                        "target": "4ebd4319-c11d-42c5-ae15-9e939cac2fa0",
-                        "animated": true,
-                        "type": "customEdge",
-                        "id": "xy-edge__b9856d96-44f4-48db-a7c4-b530bfa59b0f-4ebd4319-c11d-42c5-ae15-9e939cac2fa0"
-                    },
-                    {
-                        "source": "4ebd4319-c11d-42c5-ae15-9e939cac2fa0",
-                        "target": "513f8155-937d-4183-b73d-4fd90b1a2edc",
-                        "animated": true,
-                        "type": "customEdge",
-                        "id": "xy-edge__4ebd4319-c11d-42c5-ae15-9e939cac2fa0-513f8155-937d-4183-b73d-4fd90b1a2edc"
-                    },
-                    {
-                        "source": "4ebd4319-c11d-42c5-ae15-9e939cac2fa0",
-                        "target": "158f052e-8b7b-41d7-b12e-eebda6b09926",
-                        "animated": true,
-                        "type": "customEdge",
-                        "id": "xy-edge__4ebd4319-c11d-42c5-ae15-9e939cac2fa0-158f052e-8b7b-41d7-b12e-eebda6b09926"
-                    },
-                    {
-                        "source": "513f8155-937d-4183-b73d-4fd90b1a2edc",
-                        "target": "c0014268-e67e-49bf-b651-965a8e9c6a34",
-                        "animated": true,
-                        "type": "customEdge",
-                        "id": "xy-edge__513f8155-937d-4183-b73d-4fd90b1a2edc-c0014268-e67e-49bf-b651-965a8e9c6a34"
-                    },
-                    {
-                        "source": "c0014268-e67e-49bf-b651-965a8e9c6a34",
-                        "target": "d894731f-7ea3-4bbd-bedd-4309a3c8eb8d",
-                        "animated": true,
-                        "type": "customEdge",
-                        "id": "xy-edge__c0014268-e67e-49bf-b651-965a8e9c6a34-d894731f-7ea3-4bbd-bedd-4309a3c8eb8d"
-                    }
-                ],
-                "viewport": {
-                    "x": 437.5,
-                    "y": 271,
-                    "zoom": 2
-                },
-                "testCaseStats": {
-                    "total": 50,
-                    "notstarted": 25,
-                    "passed": 25,
-                    "failed": 0,
-                    "blocked": 0,
-                    "notapplicable": 0
-                }
-            }
-        },
-        {
-            "timestamp": "2024-10-09T02:14:03.226Z",
-            "flowData": {
-                "nodes": [
-                    {
-                        "id": "b9856d96-44f4-48db-a7c4-b530bfa59b0f",
-                        "position": {
-                            "x": -135,
-                            "y": 83.5
-                        },
-                        "data": {
-                            "label": "LOGIN PAGE",
-                            "testCases": [
-                                {
-                                    "id": 1727863156138,
-                                    "content": "POSITIVE LOGIN TEST",
-                                    "status": "",
-                                    "isBold": true
-                                },
-                                {
-                                    "id": 1727863167021,
-                                    "content": "Verify that entering a registered username and password should redirect the user to the Product Page",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727863195423,
-                                    "content": "NEGATIVE LOGIN TEST",
-                                    "status": "",
-                                    "isBold": true
-                                },
-                                {
-                                    "id": 1727863204556,
-                                    "content": "Verify that entering a unregistered username with registered password should prompt an error",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727863246041,
-                                    "content": "Verify that entering a registered username with unregistered password should prompt an error",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727863267274,
-                                    "content": "Verify that entering an empty username value should prompt an error",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727863300910,
-                                    "content": "Verify that entering an empty password value should prompt an error",
-                                    "status": "passed"
-                                }
-                            ],
-                            "color": "#1C1C1E"
-                        },
-                        "sourcePosition": "right",
-                        "targetPosition": "left",
-                        "type": "customNode",
-                        "measured": {
-                            "width": 93,
-                            "height": 32
-                        },
-                        "selected": false,
-                        "style": {
-                            "backgroundColor": "#1C1C1E"
-                        },
-                        "dragging": false
-                    },
-                    {
-                        "id": "4ebd4319-c11d-42c5-ae15-9e939cac2fa0",
-                        "position": {
-                            "x": 8,
-                            "y": 84.5
-                        },
-                        "data": {
-                            "label": "PRODUCT PAGE",
-                            "testCases": [
-                                {
-                                    "id": 1727863388715,
-                                    "content": "SORT PRODUCTS",
-                                    "status": "",
-                                    "isBold": true
-                                },
-                                {
-                                    "id": 1727863394254,
-                                    "content": "Verify that upon landing on the Product Page, the default product display should be sorted by Name from A to Z",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727863448336,
-                                    "content": "Verify that the products should be correctly sorted descendingly when the user modify the sort function by Name on Descending Order",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727863533523,
-                                    "content": "Verify that the products should be correctly sorted when the user modify the sort function by Price from low to high",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727863634391,
-                                    "content": "Verify that the products should be correctly sorted when the user modify the sort function by Price from high to low",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727863845493,
-                                    "content": "ADDING PRODUCTS TO CART",
-                                    "status": "",
-                                    "isBold": true
-                                },
-                                {
-                                    "id": 1727863860935,
-                                    "content": "Verify that when the user add a product, the button's text should be changed to \"Remove\"",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727863897914,
-                                    "content": "Verify that when the user add a product, the shopping cart should display a number on the upper right corner of the cart icon",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727863970854,
-                                    "content": "REMOVING PRODUCTS TO CART",
-                                    "status": "",
-                                    "isBold": true
-                                },
-                                {
-                                    "id": 1727863976927,
-                                    "content": "Verify that when the user add a product, then clicked the remove again, the cart's number should be removed",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864014637,
-                                    "content": "Verify that when the user clicked the remove button, the button's text should be changed to \"Add to cart\"",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864156015,
-                                    "content": "NAVIGATION",
-                                    "status": "",
-                                    "isBold": true
-                                },
-                                {
-                                    "id": 1727864184534,
-                                    "content": "Verify that when the user clicked the product, the user should be redirected to the View Product Page",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864215514,
-                                    "content": "Verify that when the user clicked the cart icon, the user should be redirected to the Cart Page",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864252804,
-                                    "content": "Verify that when the user clicks the sort dropdown, it should display the sort options",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864286008,
-                                    "content": "Verify that when the user clicked the menu icon, a side navigation bar should display",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864375142,
-                                    "content": "Verify that when the user clicked the menu icon, \"All Items\" navigation tab should display",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864425425,
-                                    "content": "Verify that when the user clicked the menu icon, \"About\" navigation tab should display",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864432640,
-                                    "content": "Verify that when the user clicked the menu icon, \"Logout\" navigation tab should display",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864441733,
-                                    "content": "Verify that when the user clicked the menu icon, \"Reset App State\" navigation tab should display",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864456775,
-                                    "content": "Verify than when the user clicked the about tab, the user should be redirected to the About Page",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864498189,
-                                    "content": "Verify that when the user clicked the logout button, the user should be redirected to the Login Page",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1727864965536,
-                                    "content": "VALIDATE PRODUCT",
-                                    "status": "",
-                                    "isBold": true
-                                },
-                                {
-                                    "id": 1727864974837,
-                                    "content": "Verify that the product's label should match with the product's image",
-                                    "status": "notstarted"
-                                },
-                                {
-                                    "id": 1728355050836,
-                                    "content": "BADGE NUMBER",
-                                    "status": "",
-                                    "isBold": true
-                                },
-                                {
-                                    "id": 1728355056490,
-                                    "content": "Verify that when adding two products and removing one product, the badge number should update correctly",
-                                    "status": "passed"
-                                },
-                                {
-                                    "id": 1728367884314,
-                                    "content": "Verify that when adding five products, and removing two products, the badge number should update correctly",
-                                    "status": "passed"
-                                }
-                            ],
-                            "color": "#1C1C1E"
-                        },
-                        "sourcePosition": "right",
-                        "targetPosition": "left",
-                        "type": "customNode",
-                        "measured": {
-                            "width": 115,
-                            "height": 32
-                        },
-                        "selected": true,
                         "dragging": false,
                         "style": {
                             "backgroundColor": "#1C1C1E"
@@ -2008,8 +2013,8 @@
                 },
                 "testCaseStats": {
                     "total": 50,
-                    "notstarted": 25,
-                    "passed": 25,
+                    "notstarted": 24,
+                    "passed": 26,
                     "failed": 0,
                     "blocked": 0,
                     "notapplicable": 0
@@ -2017,7 +2022,7 @@
             }
         },
         {
-            "timestamp": "2024-10-09T06:08:08.853Z",
+            "timestamp": "2024-10-09T08:16:08.639Z",
             "flowData": {
                 "nodes": [
                     {
@@ -2076,7 +2081,7 @@
                             "width": 93,
                             "height": 32
                         },
-                        "selected": false,
+                        "selected": true,
                         "style": {
                             "backgroundColor": "#1C1C1E"
                         },
@@ -2242,7 +2247,7 @@
                             "width": 115,
                             "height": 32
                         },
-                        "selected": true,
+                        "selected": false,
                         "dragging": false,
                         "style": {
                             "backgroundColor": "#1C1C1E"

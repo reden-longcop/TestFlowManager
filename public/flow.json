@@ -56,7 +56,7 @@
                 "width": 93,
                 "height": 32
             },
-            "selected": false,
+            "selected": true,
             "style": {
                 "backgroundColor": "#1C1C1E"
             },
@@ -222,7 +222,7 @@
                 "width": 115,
                 "height": 32
             },
-            "selected": true,
+            "selected": false,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"

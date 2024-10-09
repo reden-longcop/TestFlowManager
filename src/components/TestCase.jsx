@@ -85,7 +85,7 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
             <select
               className={`p-1 cursor-pointer text-sm rounded focus:outline-none font-bold ${
                 testCase.status === "notstarted" ? "bg-yellow-200"
-                : testCase.status === "passed" ? "bg-[#A5DD9B]"
+                : testCase.status === "passed" ? "bg-[#97BD61]"
                 : testCase.status === "failed" ? "bg-rose-300"
                 : testCase.status === "blocked" ? "bg-indigo-200"
                 : testCase.status === "notapplicable" ? "bg-gray-300"

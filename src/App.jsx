@@ -61,6 +61,7 @@ export default function App() {
   const [rfInstance, setRfInstance] = useState(null);
   const { setViewport } = useReactFlow();
   const [isVersionHistoryOpen, setVersionHistoryOpen] = useState(false);
+  const [unsavedChanges, setUnsavedChanges] = useState(false);
 
   const handleVersionHistoryOpen = useCallback(() => setVersionHistoryOpen(true), []);
   const handleVersionHistoryClose = useCallback(() => setVersionHistoryOpen(false), []);
@@ -120,6 +121,31 @@ export default function App() {
     deleteSelectedNode,
     onSave,
   } = Buttons(nodes, setNodes, setEdges, selectedNode, setModalOpen, setSelectedNode, rfInstance, calculateTestCaseStats);
+
+  const handleSave = useCallback(() => {
+    onSave(); // Call your save function
+    setUnsavedChanges(false); // Reset the unsaved changes flag
+  }, [onSave]);
+
+  useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      if (unsavedChanges) {
+        const confirmationMessage = "You have unsaved changes. Are you sure you want to leave?";
+        event.returnValue = confirmationMessage; // For most browsers
+        return confirmationMessage; // For some older browsers
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, [unsavedChanges]);
+
+  const handleChange = () => {
+    setUnsavedChanges(true);
+  };
 
   useEffect(() => {
     const restoreFlow = async () => {
@@ -211,16 +237,6 @@ export default function App() {
     }, [selectedNode, setNodes, setTestCaseStats]);
 
   const handleNodeClick = useCallback((event, node) => {
-    if (clickTimeoutRef.current) {
-      clearTimeout(clickTimeoutRef.current);
-      clickTimeoutRef.current = null;
-      setModalOpen(true);
-    } else {
-      clickTimeoutRef.current = setTimeout(() => {
-        clickTimeoutRef.current = null;
-      }, 200);
-    }
-  
     setNodes((nds) =>
       nds.map((n) =>
         n.id === node.id ? { ...n, selected: true } : { ...n, selected: false }
@@ -228,6 +244,10 @@ export default function App() {
     );
     setSelectedNode(node);
   }, [setNodes]);
+
+  const handleNodeDoubleClick = useCallback(() => {
+    setModalOpen(true);
+  }, []);
 
   const handleCloseModal = useCallback(() => {
     setModalOpen(false);
@@ -269,7 +289,7 @@ export default function App() {
         colorMode="dark"
         nodes={nodes}
         nodeTypes={nodeTypes}
-        onNodesChange={onNodesChange}
+        onNodesChange={handleChange}
         edges={edges}
         edgeTypes={edgeTypes}
         onEdgesChange={onEdgesChange}
@@ -279,6 +299,7 @@ export default function App() {
         zoomOnScroll={false}
         zoomOnDoubleClick={false}
         onNodeClick={handleNodeClick}
+        onNodeDoubleClick={handleNodeDoubleClick}
       >
         <Background />
         <MiniMap />
@@ -317,7 +338,7 @@ export default function App() {
             </button>
             <button
               className="save p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
-              onClick={onSave}
+              onClick={handleSave}
             >
               <FontAwesomeIcon icon={faFloppyDisk} size="lg" color="white" />
             </button>
