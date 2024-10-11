@@ -335,9 +335,10 @@ const Modal = ({
   return (
     <>
       {isOpen && (
-        <div className="modal-overlay z-0 select-none">
+        <div className="modal-overlay z-0 select-none" onClick={onClose}>
           <div className="modal-content bg-[#1C1C1E] flex flex-col max-h-[90vh] min-w-[70%] border-t-4"
             style={{borderColor: color}}
+            onClick={(e) => e.stopPropagation()}
           >
             <span
               className="close bg-inherit text-white text-5xl hover:bg-rose-500"

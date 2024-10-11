@@ -380,7 +380,7 @@
                     {
                         "id": 1727865907818,
                         "content": "Verify that when the user clicks the checkout button in the Cart Page, the page should be navigated to the Checkout Page",
-                        "status": "notstarted"
+                        "status": "blocked"
                     },
                     {
                         "id": 1727865948362,
@@ -486,16 +486,16 @@
         }
     ],
     "viewport": {
-        "x": 281.64353312302853,
-        "y": 293.81201605965015,
+        "x": 281.6435331230285,
+        "y": 306.71479782047606,
         "zoom": 1.6128477201032403
     },
     "testCaseStats": {
         "total": 50,
-        "notstarted": 6,
+        "notstarted": 5,
         "passed": 37,
         "failed": 2,
-        "blocked": 3,
+        "blocked": 4,
         "notapplicable": 2
     }
 }

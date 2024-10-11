@@ -1,8 +1,22 @@
-// PieChart.jsx
+/*
+ * This file is part of Test Flow Manager.
+ *
+ * Test Flow Manager is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Test Flow Manager is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Test Flow Manager. If not, see <http://www.gnu.org/licenses/>.
+*/
+
 import React from 'react';
 import "../styles/Modal.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
@@ -21,10 +35,10 @@ const PieChartModal = ({ isOpen, onClose, testCaseData }) => {
                 data: [notstarted, passed, failed, blocked, notapplicable],
                 backgroundColor: [
                     'rgba(254, 240, 138, 0.6)',    // Not Started - Yellow
-                    'rgba(151, 189, 97, 0.6)',    // Passed - Green
+                    'rgba(151, 189, 97, 0.6)',     // Passed - Green
                     'rgba(253, 164, 175, 0.6)',    // Failed - Red
-                    'rgba(199, 210, 254, 0.6)',    // Blocked - Orange
-                    'rgba(209, 213, 219, 0.6)',   // Not Applicable - Grey
+                    'rgba(199, 210, 254, 0.6)',    // Blocked - Indigo
+                    'rgba(209, 213, 219, 0.6)',    // Not Applicable - Grey
                 ],
                 borderColor: [
                     'rgba(254, 240, 138, 1)',
@@ -38,15 +52,15 @@ const PieChartModal = ({ isOpen, onClose, testCaseData }) => {
         ],
     };
 
-    // Optional: Customize chart options
     const options = {
         responsive: true,
         plugins: {
             legend: {
                 position: 'bottom',
                 labels: {
+                    boxHeight: 10,
                     boxWidth: 20,
-                    padding: 15,
+                    padding: 10,
                 },
             },
             tooltip: {
@@ -65,10 +79,10 @@ const PieChartModal = ({ isOpen, onClose, testCaseData }) => {
         <div className="modal-overlay z-50 select-none" onClick={onClose}>
             <div 
                 className="modal-content bg-[#1C1C1E] flex flex-col p-6 max-h-[90vh] min-w-[500px] relative"
-                onClick={(e) => e.stopPropagation()} // Prevent modal from closing when clicking inside
+                onClick={(e) => e.stopPropagation()}
             >
-                <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-xl font-semibold text-white">Test Cases Status</h2>
+                <div className="flex justify-between items-center mb-5">
+                    <h2 className="text-xl font-semibold text-white">Test Status Chart</h2>
                     <span
                         className="close bg-inherit text-white text-5xl hover:bg-rose-500"
                         onClick={onClose}
