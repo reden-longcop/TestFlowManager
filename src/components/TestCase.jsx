@@ -52,7 +52,7 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
         </label>
 
         {testCase.status !== "" && (
-          <label className="test-id-con truncate w-[7%] p-1 hover:bg-gray-800 rounded-lg">
+          <label className="test-id-con  p-1 hover:bg-gray-800 rounded-lg">
             <div
               className="cursor-pointer text-gray-600 flex items-center group"
               onClick={handleCopyId}
@@ -61,7 +61,7 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
                 icon={faCopy}
                 className="ease-in mr-1 text-gray-400 text-gray-600 invisible group-hover:visible transition-opacity duration-200"
               />
-              <p className="ease-in">{testCase.id}</p>
+              <p className="ease-in">{String(testCase.id).slice(-4)}</p>
             </div>
           </label>
         )}

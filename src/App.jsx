@@ -355,7 +355,7 @@ export default function App() {
               <FontAwesomeIcon icon={faChartPie} size="lg" color="white" />
             </button>
           </div>
-          <div className="relative">
+          <div className="w-[70%]">
             <div className="flex justify-between items-center text-sm p-2 bg-[#2d2d2d] opacity-70 rounded text-white">
               <p>Total Test Count: {testCaseStats.total}</p>
               <button

@@ -17,10 +17,41 @@
 
 import React from 'react';
 import "../styles/Modal.css";
-import { Pie } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
+
+const centerTextPlugin = {
+    id: 'centerText',
+    beforeDraw: (chart) => {
+        const { width, height, ctx } = chart;
+        ctx.save();
+
+        const totalFontSize = (height / 160).toFixed(2);
+        ctx.font = `${totalFontSize}em sans-serif`;
+        ctx.textBaseline = "middle";
+        ctx.textAlign = 'center';
+
+        const total = chart.config.data.datasets[0].data.reduce((a, b) => a + b, 0);
+        const totalText = `${total}`;
+        const subText = "Test Cases";
+
+        const textX = width / 2;
+        const textY = height / 2;
+
+        ctx.fillStyle = '#fff';
+        ctx.fillText(totalText, textX, textY -30);
+
+        ctx.font = `2em sans-serif`;
+        ctx.fillText(subText, textX, textY + 20);
+
+        ctx.restore();
+    }
+};
+
+ChartJS.register(centerTextPlugin);
 
 const PieChartModal = ({ isOpen, onClose, testCaseData }) => {
     if (!isOpen) return null;
@@ -60,7 +91,7 @@ const PieChartModal = ({ isOpen, onClose, testCaseData }) => {
                 labels: {
                     boxHeight: 10,
                     boxWidth: 20,
-                    padding: 10,
+                    padding: 10
                 },
             },
             tooltip: {
@@ -71,8 +102,34 @@ const PieChartModal = ({ isOpen, onClose, testCaseData }) => {
                         return `${label}: ${value}`;
                     }
                 }
+            },
+            datalabels: {
+                color: '#fff',
+                formatter: (value, context) => {
+                    const total = context.chart._metasets[0].total;
+                    const percentage = (value / total * 100);
+                    if (percentage % 1 === 0) {
+                        return `${percentage.toFixed(0)}%`;
+                    } else {
+                        return `${percentage.toFixed(2)}%`;
+                    }
+                },
+                align: 'center',
+                offset: -10,
+                borderRadius: 3,
+                font: { 
+                    weight: 'bold',
+                    size: 20,
+                    family: 'Space Mono',
+                }
             }
         },
+        layout: {
+            padding: {
+                top: 10,
+                // bottom: 10,
+            }
+        }
     };
 
     return (
@@ -91,10 +148,7 @@ const PieChartModal = ({ isOpen, onClose, testCaseData }) => {
                     </span>
                 </div>
                 <div className="flex justify-center items-center flex-1">
-                    <Pie data={data} options={options} />
-                </div>
-                <div className="mt-4 text-center text-slate-200">
-                    <p>Total Test Cases: {testCaseData.total}</p>
+                    <Doughnut data={data} options={options} />
                 </div>
             </div>
         </div>

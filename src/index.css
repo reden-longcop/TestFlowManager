@@ -75,3 +75,18 @@ body,
   height: 13px !important;
   border: 3px solid !important;
 }
+
+table{
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+tr, td{
+  /* border: 1px solid white; */
+  width: 50%;
+  /* padding: 5px; */
+}
+
+td:last-of-type{
+  text-align: center;
+}
