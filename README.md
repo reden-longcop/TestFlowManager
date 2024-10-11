@@ -7,7 +7,7 @@
 
 <b>URL Link:</b>
 
-<pre><code id='code-block'>https://code-me-n0t.github.io/TestFlowManager/</code></pre>z
+<pre><code id='code-block'>https://code-me-n0t.github.io/TestFlowManager/</code></pre>
 
 <h2>New Update/s:</h2>
 <span><strong>Test Automation:</strong> Added a new feature where you can integrate your robotframework automation script on each test cases.<br><br>
