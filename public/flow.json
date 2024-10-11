@@ -335,22 +335,22 @@
                     {
                         "id": 1727865810678,
                         "content": "Verify that when the user navigates to the Product View Page, the Product Description should be displayed",
-                        "status": "notstarted"
+                        "status": "failed"
                     },
                     {
                         "id": 1727865817955,
                         "content": "Verify that when the user navigates to the Product View Page, the Product Price should be displayed",
-                        "status": "notstarted"
+                        "status": "failed"
                     },
                     {
                         "id": 1727865830040,
                         "content": "Verify that when the user navigates to the Product View Page, the button Add to cart/remove should be displayed",
-                        "status": "notstarted"
+                        "status": "notapplicable"
                     },
                     {
                         "id": 1727865850332,
                         "content": "Verify that when the user clicked the \"Back to products\", the page should be navigated to the Product Page",
-                        "status": "notstarted"
+                        "status": "notapplicable"
                     }
                 ],
                 "color": "#1C1C1E"
@@ -362,7 +362,7 @@
                 "width": 150,
                 "height": 48
             },
-            "selected": true,
+            "selected": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
             },
@@ -441,7 +441,7 @@
                 "width": 150,
                 "height": 48
             },
-            "selected": false,
+            "selected": true,
             "dragging": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
@@ -486,16 +486,16 @@
         }
     ],
     "viewport": {
-        "x": 437.5,
-        "y": 271,
-        "zoom": 2
+        "x": 281.64353312302853,
+        "y": 293.81201605965015,
+        "zoom": 1.6128477201032403
     },
     "testCaseStats": {
         "total": 50,
-        "notstarted": 10,
+        "notstarted": 6,
         "passed": 37,
-        "failed": 0,
+        "failed": 2,
         "blocked": 3,
-        "notapplicable": 0
+        "notapplicable": 2
     }
 }

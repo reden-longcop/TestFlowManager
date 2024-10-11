@@ -39,6 +39,7 @@ import {
   faChevronDown,
   faArrowAltCircleUp,
   faHistory,
+  faChartPie,
 } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -47,6 +48,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Modal from "./components/Modal";
 import VersionHistoryModal from "./components/VersionHistory";
 import Buttons from "./components/Buttons";
+import PieChart from "./components/PieChart";
 
 // nodes and edges
 import CustomNode from "./nodes/CustomNode";
@@ -61,10 +63,14 @@ export default function App() {
   const [rfInstance, setRfInstance] = useState(null);
   const { setViewport } = useReactFlow();
   const [isVersionHistoryOpen, setVersionHistoryOpen] = useState(false);
+  const [isPieChartOpen, setPieChartOpen] = useState(false);
   const [unsavedChanges, setUnsavedChanges] = useState(false);
 
   const handleVersionHistoryOpen = useCallback(() => setVersionHistoryOpen(true), []);
   const handleVersionHistoryClose = useCallback(() => setVersionHistoryOpen(false), []);
+
+  const handlePieChartOpen = useCallback(() => setPieChartOpen(true), []);
+  const handlePieChartClose = useCallback(() => setPieChartOpen(false), []);
   
   const nodeTypes = {
     customNode: CustomNode,
@@ -342,6 +348,12 @@ export default function App() {
             >
               <FontAwesomeIcon icon={faFloppyDisk} size="lg" color="white" />
             </button>
+            <button
+              className="chart p-2 rounded bg-[#3E3E3E] hover:bg-[#2980B9] size-12"
+              onClick={handlePieChartOpen}
+            >
+              <FontAwesomeIcon icon={faChartPie} size="lg" color="white" />
+            </button>
           </div>
           <div className="relative">
             <div className="flex justify-between items-center text-sm p-2 bg-[#2d2d2d] opacity-70 rounded text-white">
@@ -371,6 +383,11 @@ export default function App() {
         isOpen={isVersionHistoryOpen}
         onClose={handleVersionHistoryClose}
         onSelectVersion={handleSelectVersion}
+      />
+      <PieChart 
+        isOpen={isPieChartOpen}
+        onClose={handlePieChartClose}
+        testCaseData={testCaseStats}
       />
       <Modal
         isOpen={modalOpen}

@@ -60,6 +60,10 @@ body,
   content: "Version History";
 }
 
+.panel .chart::after {
+  content: "Test Status Chart";
+}
+
 .panel button:hover::after {
   opacity: 1;
   visibility: visible;
