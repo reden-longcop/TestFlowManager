@@ -56,7 +56,7 @@
                 "width": 93,
                 "height": 32
             },
-            "selected": true,
+            "selected": false,
             "style": {
                 "backgroundColor": "#1C1C1E"
             },
@@ -240,57 +240,57 @@
                     {
                         "id": 1727865195624,
                         "content": "Verify that when the user add a product to the cart then navigates to the Cart Page, the product should be displayed",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865280336,
                         "content": "Verify that when the user clicks the checkout button, the page should be navigated to the Checkout Page",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865323037,
                         "content": "Verify that when the user clicks the cart icon, the user should be navigated to the Cart Page",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865354177,
                         "content": "Verify that when the user clicked the \"Continue Shopping\" icon, the user should be back to the Product Page",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865393775,
                         "content": "Verify that when the user clicks the \"Continue Shopping\", the added product should still be in the cart",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865424706,
                         "content": "Verify that when the user clicks the \"All Items\", the user page should be redirected to the Product Page",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865511602,
                         "content": "Verify that when the user added a product and navigates to the Cart Page, the product displayed should have Quantity displayed",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865540066,
                         "content": "Verify that when the user added a product and navigates to the Cart Page, The product displayed should have Price displayed",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865580993,
                         "content": "Verify that when the user added a product and navigates to the Cart Page, The product displayed should have Product Name displayed",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865594900,
                         "content": "Verify that when the user added a product and navigates to the Cart Page, The product displayed should have Product Description displayed",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865606124,
-                        "content": "Verify that the product should removed when the user clicked the remove button",
-                        "status": "notstarted"
+                        "content": "Verify that the product should be removed when the user clicked the remove button",
+                        "status": "passed"
                     }
                 ],
                 "color": "#1C1C1E"
@@ -320,17 +320,17 @@
                     {
                         "id": 1727865703667,
                         "content": "Verify that the clicked product's image should match with the image clicked on the Product Page",
-                        "status": "notstarted"
+                        "status": "blocked"
                     },
                     {
                         "id": 1727865753676,
                         "content": "Verify that when the user clicks a product, the page should be navigated to the Product View Page",
-                        "status": "notstarted"
+                        "status": "blocked"
                     },
                     {
                         "id": 1727865785934,
                         "content": "Verify that when the user navigates to the Product View Page, the Product Name should be displayed",
-                        "status": "notstarted"
+                        "status": "blocked"
                     },
                     {
                         "id": 1727865810678,
@@ -362,7 +362,7 @@
                 "width": 150,
                 "height": 48
             },
-            "selected": false,
+            "selected": true,
             "style": {
                 "backgroundColor": "#1C1C1E"
             },
@@ -487,15 +487,15 @@
     ],
     "viewport": {
         "x": 437.5,
-        "y": 255,
+        "y": 271,
         "zoom": 2
     },
     "testCaseStats": {
         "total": 50,
-        "notstarted": 24,
-        "passed": 26,
+        "notstarted": 10,
+        "passed": 37,
         "failed": 0,
-        "blocked": 0,
+        "blocked": 3,
         "notapplicable": 0
     }
 }

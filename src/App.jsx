@@ -123,16 +123,16 @@ export default function App() {
   } = Buttons(nodes, setNodes, setEdges, selectedNode, setModalOpen, setSelectedNode, rfInstance, calculateTestCaseStats);
 
   const handleSave = useCallback(() => {
-    onSave(); // Call your save function
-    setUnsavedChanges(false); // Reset the unsaved changes flag
+    onSave();
+    setUnsavedChanges(false);
   }, [onSave]);
 
   useEffect(() => {
     const handleBeforeUnload = (event) => {
       if (unsavedChanges) {
         const confirmationMessage = "You have unsaved changes. Are you sure you want to leave?";
-        event.returnValue = confirmationMessage; // For most browsers
-        return confirmationMessage; // For some older browsers
+        event.returnValue = confirmationMessage;
+        return confirmationMessage;
       }
     };
 

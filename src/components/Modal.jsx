@@ -67,6 +67,7 @@ const Modal = ({
       const passed = testCases.filter((tc) => tc.status === "passed").length;
       const failed = testCases.filter((tc) => tc.status === "failed").length;
       const pending = testCases.filter((tc) => tc.status === "notstarted").length;
+      const blocked = testCases.filter((tc) => tc.status === "blocked").length;
       const notApplicable = testCases.filter((tc) => tc.status === "notapplicable").length;
   
       const updatedStats = {
@@ -74,6 +75,7 @@ const Modal = ({
         passed,
         failed,
         pending,
+        blocked,
         notApplicable,
       };
   
@@ -319,7 +321,8 @@ const Modal = ({
         handleStatusChange(id, updatedStatus);
 
       } else if (result.result == ''){
-        toast.error(`[ ERROR ] Suite 'Testsuites' contains no tests or tasks matching tag ${id}.`, { autoClose: 1000 })
+        toast.error(`Suite 'Testsuites' contains no tests or tasks matching tag ${id}.`, { autoClose: 1000 })
+        handleStatusChange(id, 'blocked');
       }else {
         throw new Error('Failed to execute script: ' + result.message);
       }
