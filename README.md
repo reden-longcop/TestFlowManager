@@ -17,7 +17,7 @@
     <p><i>Note: Make sure that you modify the <em>run_automation.py</em> with your robot's project name along with its directory.</i></p>
 </span>
 <span>
-    <h3>• Pie Chart Modal</h3> Created a new feature for better visualization of the status of test cases with an interactive pie chart, displaying the breakdown of test cases into categories like Not Started, Passed, Failed, Blocked, and Not Applicable.
+    <h3>• Pie Chart Modal:</h3> Created a new feature for better visualization of the status of test cases with an interactive pie chart, displaying the breakdown of test cases into categories like Not Started, Passed, Failed, Blocked, and Not Applicable.
 </span>
 
 <h2>Features</h2>
