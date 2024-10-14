@@ -90,7 +90,6 @@ export default function App() {
   });
 
   const [showDetails, setShowDetails] = useState(false);
-  const clickTimeoutRef = useRef(null);
 
   const toggleDetails = useCallback(() => { setShowDetails(prev => !prev); }, []);
 
@@ -243,16 +242,6 @@ export default function App() {
     }, [selectedNode, setNodes, setTestCaseStats]);
 
   const handleNodeClick = useCallback((event, node) => {
-    if (clickTimeoutRef.current) {
-      clearTimeout(clickTimeoutRef.current);
-      clickTimeoutRef.current = null;
-      setModalOpen(true);
-    } else {
-      clickTimeoutRef.current = setTimeout(() => {
-        clickTimeoutRef.current = null;
-      }, 200);
-    }
-  
     setNodes((nds) =>
       nds.map((n) =>
         n.id === node.id ? { ...n, selected: true } : { ...n, selected: false }
