@@ -68,10 +68,9 @@ export default function App() {
 
   const handleVersionHistoryOpen = useCallback(() => setVersionHistoryOpen(true), []);
   const handleVersionHistoryClose = useCallback(() => setVersionHistoryOpen(false), []);
-
   const handlePieChartOpen = useCallback(() => setPieChartOpen(true), []);
   const handlePieChartClose = useCallback(() => setPieChartOpen(false), []);
-  
+
   const nodeTypes = {
     customNode: CustomNode,
     connector: ConnectorNode,
@@ -149,9 +148,10 @@ export default function App() {
     };
   }, [unsavedChanges]);
 
-  const handleChange = () => {
+  const handleChange = useCallback((changes) => {
+    onNodesChange(changes);
     setUnsavedChanges(true);
-  };
+  }, [onNodesChange]);
 
   useEffect(() => {
     const restoreFlow = async () => {
@@ -243,6 +243,16 @@ export default function App() {
     }, [selectedNode, setNodes, setTestCaseStats]);
 
   const handleNodeClick = useCallback((event, node) => {
+    if (clickTimeoutRef.current) {
+      clearTimeout(clickTimeoutRef.current);
+      clickTimeoutRef.current = null;
+      setModalOpen(true);
+    } else {
+      clickTimeoutRef.current = setTimeout(() => {
+        clickTimeoutRef.current = null;
+      }, 200);
+    }
+  
     setNodes((nds) =>
       nds.map((n) =>
         n.id === node.id ? { ...n, selected: true } : { ...n, selected: false }
@@ -295,6 +305,7 @@ export default function App() {
         colorMode="dark"
         nodes={nodes}
         nodeTypes={nodeTypes}
+        // previously: onNodesChange
         onNodesChange={handleChange}
         edges={edges}
         edgeTypes={edgeTypes}

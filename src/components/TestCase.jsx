@@ -52,9 +52,9 @@ const TestCase = React.memo(React.forwardRef(({ testCase, onChange, onStatusChan
         </label>
 
         {testCase.status !== "" && (
-          <label className="test-id-con  p-1 hover:bg-gray-800 rounded-lg">
+          <label className="test-id-con  p-1 hover:bg-gray-800 rounded-lg  w-15">
             <div
-              className="cursor-pointer text-gray-600 flex items-center group"
+              className="cursor-pointer text-gray-600 flex items-center group w-[60px]"
               onClick={handleCopyId}
             >
               <FontAwesomeIcon

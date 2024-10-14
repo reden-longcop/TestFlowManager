@@ -37,22 +37,26 @@ select#status {
   margin-right: 1rem;
 }
 
-.modal-body::-webkit-scrollbar {
-  width: 7px;
-}
-
-.modal-body::-webkit-scrollbar-track {
-  background: linear-gradient(to bottom, #1c1c1e, #2d2d2d, #1c1c1e);
-}
-
-.modal-body::-webkit-scrollbar-thumb {
-  background: #4b4848;
-  border-radius: 10px;
-}
-
-.modal-body::-webkit-scrollbar-thumb:hover {
-  background: #a4a4b1;
-  cursor: pointer;
+.modal-body{
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: linear-gradient(
+      to bottom, 
+      #1c1c1e, 
+      #2d2d2d, 
+      #1c1c1e
+    );
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #4b4848;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a4a4b1;
+    cursor: pointer;
+  }
 }
 
 textarea {
@@ -85,6 +89,12 @@ textarea {
   cursor: pointer;
   height: 0;
   width: 0;
+
+  &:checked{
+    &~.checkmark:after{
+      display: block;
+    }
+  }
 }
 
 .checkmark {
@@ -95,26 +105,19 @@ textarea {
   width: 25px;
   background-color: transparent;
   transform: translate(-50%, -50%);
-}
 
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.container .checkmark:after {
-  left: 25%;
-  top: 50%;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg) scale(1.5) translate(-50%, -50%);
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 25%;
+    top: 50%;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg) scale(1.5) translate(-50%, -50%);
+  }
 }

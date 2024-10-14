@@ -108,10 +108,14 @@ const PieChartModal = ({ isOpen, onClose, testCaseData }) => {
                 formatter: (value, context) => {
                     const total = context.chart._metasets[0].total;
                     const percentage = (value / total * 100);
-                    if (percentage % 1 === 0) {
-                        return `${percentage.toFixed(0)}%`;
+                    if (percentage > 0) {
+                        if (percentage % 1 === 0) {
+                            return `${percentage.toFixed(0)}%`;
+                        } else {
+                            return `${percentage.toFixed(2)}%`;
+                        }
                     } else {
-                        return `${percentage.toFixed(2)}%`;
+                        return '';
                     }
                 },
                 align: 'center',
@@ -127,7 +131,6 @@ const PieChartModal = ({ isOpen, onClose, testCaseData }) => {
         layout: {
             padding: {
                 top: 10,
-                // bottom: 10,
             }
         }
     };
