@@ -320,37 +320,37 @@
                     {
                         "id": 1727865703667,
                         "content": "Verify that the clicked product's image should match with the image clicked on the Product Page",
-                        "status": "blocked"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865753676,
                         "content": "Verify that when the user clicks a product, the page should be navigated to the Product View Page",
-                        "status": "blocked"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865785934,
                         "content": "Verify that when the user navigates to the Product View Page, the Product Name should be displayed",
-                        "status": "blocked"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865810678,
                         "content": "Verify that when the user navigates to the Product View Page, the Product Description should be displayed",
-                        "status": "failed"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865817955,
                         "content": "Verify that when the user navigates to the Product View Page, the Product Price should be displayed",
-                        "status": "failed"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865830040,
                         "content": "Verify that when the user navigates to the Product View Page, the button Add to cart/remove should be displayed",
-                        "status": "notapplicable"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865850332,
                         "content": "Verify that when the user clicked the \"Back to products\", the page should be navigated to the Product Page",
-                        "status": "notapplicable"
+                        "status": "passed"
                     }
                 ],
                 "color": "#1C1C1E"
@@ -380,32 +380,42 @@
                     {
                         "id": 1727865907818,
                         "content": "Verify that when the user clicks the checkout button in the Cart Page, the page should be navigated to the Checkout Page",
-                        "status": "blocked"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865948362,
                         "content": "Verify that when the user navigates to the checkout page, the First Name input should be displayed",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865981074,
                         "content": "Verify that when the user navigates to the checkout page, the Last Name input should be displayed",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727865985348,
                         "content": "Verify that when the user navigates to the checkout page, the Zip/Postal Code input should be displayed",
-                        "status": "notstarted"
+                        "status": "passed"
                     },
                     {
                         "id": 1727866000019,
-                        "content": "Verify that when the user clicks the Continue button with empty values should prompt an error",
-                        "status": "notstarted"
+                        "content": "Verify that when the user clicks the Continue button with empty firstname value should prompt an error",
+                        "status": "passed"
                     },
                     {
                         "id": 1727866029129,
+                        "content": "Verify that when the user clicks the Continue button with empty lastname value should prompt an error",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728877481552,
+                        "content": "Verify that when the user clicks the Continue button with empty postal code value should prompt an error",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728877482037,
                         "content": "Verify that when the user clicks the Continue button with valid inputs, the user should be navigated to the Checkout Overview Page",
-                        "status": "notstarted"
+                        "status": "passed"
                     }
                 ],
                 "color": "#1C1C1E"
@@ -431,7 +441,53 @@
             },
             "data": {
                 "label": "CHECKOUT: OVERVIEW PAGE",
-                "testCases": [],
+                "testCases": [
+                    {
+                        "id": 1728883243563,
+                        "content": "Verify when I navigate click the \"Continue\" button from Checkout Information Page, I should be redirected to the Checkout Overview Page",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728883302521,
+                        "content": "Verify the correct added Product Name should be displayed",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728883401697,
+                        "content": "Verify the correct added Product Description should be displayed",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728883419542,
+                        "content": "Verify the correct added Product Price should be displayed",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728883449191,
+                        "content": "Verify added tax should be correct",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728883464459,
+                        "content": "Verify total price with added tax should be correct",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728883492100,
+                        "content": "Verify clicking the cancel button should redirect the user to the Product Page",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728883512303,
+                        "content": "Verify clicking the \"Finish\" button should redirect the page to the Checkout Complete Page",
+                        "status": "passed"
+                    },
+                    {
+                        "id": 1728883788167,
+                        "content": "Verify clicking the \"Finish\" button should display a successful message",
+                        "status": "passed"
+                    }
+                ],
                 "color": "#1C1C1E"
             },
             "sourcePosition": "right",
@@ -486,16 +542,16 @@
         }
     ],
     "viewport": {
-        "x": 272.6293375394322,
-        "y": 298.98695153427013,
-        "zoom": 1.5612274161170059
+        "x": 437.5,
+        "y": 271,
+        "zoom": 2
     },
     "testCaseStats": {
-        "total": 50,
-        "notstarted": 5,
-        "passed": 37,
-        "failed": 2,
-        "blocked": 4,
-        "notapplicable": 2
+        "total": 61,
+        "notstarted": 0,
+        "passed": 61,
+        "failed": 0,
+        "blocked": 0,
+        "notapplicable": 0
     }
 }
