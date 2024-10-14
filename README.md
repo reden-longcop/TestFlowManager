@@ -10,13 +10,14 @@
 <pre><code id='code-block'>https://code-me-n0t.github.io/TestFlowManager/</code></pre>
 
 <h2>New Update/s:</h2>
-<span><h3>Test Automation:</h3> Added a new feature where you can integrate your robotframework automation script on each test cases.<br><br>
+<span>
+    <h3>• Test Automation:</h3> Added a new feature where you can integrate your robotframework automation script on each test cases.<br><br>
     This works by using the unique ID of the testcase as a <i>tag</i> to run your robotframework automation. You can clone this sample test script: <a href='https://github.com/Code-Me-N0t/Test-Login'>Sample Robotframework Test</a> or you can create a seperate project on your local computer.
     <br><br>
     <p><i>Note: Make sure that you modify the <em>run_automation.py</em> with your robot's project name along with its directory.</i></p>
 </span>
 <span>
-    <h3>Pie Chart Modal</h3> Created a new feature for better visualization of the status of test cases with an interactive pie chart, displaying the breakdown of test cases into categories like Not Started, Passed, Failed, Blocked, and Not Applicable.
+    <h3>• Pie Chart Modal</h3> Created a new feature for better visualization of the status of test cases with an interactive pie chart, displaying the breakdown of test cases into categories like Not Started, Passed, Failed, Blocked, and Not Applicable.
 </span>
 
 <h2>Features</h2>
