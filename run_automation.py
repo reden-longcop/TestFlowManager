@@ -1,8 +1,9 @@
 import subprocess
-import sys
+import sys, os
 
 def run_automation(test_case_id):
-    command = f'cd C:\\Users\\ITA-40138\\Documents\\Test-Robot && robot -d output -i {test_case_id} testsuites'
+    documents_dir = os.path.join(os.path.expanduser('~'), 'Documents')
+    command = f'cd {documents_dir}\\Test-Robot && robot -d output -i {test_case_id} testsuites'
 
     subprocess.run(['cmd', '/c', command])
 
